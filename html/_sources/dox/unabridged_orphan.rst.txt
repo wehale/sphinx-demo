@@ -1,0 +1,28 @@
+:orphan:
+
+
+Full API
+========
+
+Directories
+***********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_silabs.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_silabs_src.rst
+
+Files
+*****
+
+
+.. toctree::
+   :maxdepth: 5
+
+   file_silabs_src_common.cpp.rst

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ozone Environment Setup for a SiWx917 SoC Device &mdash; Silicon Labs Matter 2.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Silicon Labs Matter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../OVERVIEW.html">Silicon Labs Matter User’s Guide Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW_FEATURES.html">Silicon Labs Matter New Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_1_overview.html">Matter Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_2_prereq.html">Matter Development Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_3_general.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_6_faq.html">FAQ</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Silicon Labs Matter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Ozone Environment Setup for a SiWx917 SoC Device</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/wifi/SiWx917_Enablement_For_Ozone.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ozone-environment-setup-for-a-siwx917-soc-device">
+<h1>Ozone Environment Setup for a SiWx917 SoC Device<a class="headerlink" href="#ozone-environment-setup-for-a-siwx917-soc-device" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Auto detection of SiWx917 SoC device in Ozone is not enabled.</p></li>
+<li><p>Follow the steps to manually configure the SiWx917 SoC with Latest Ozone Debugger.</p></li>
+</ul>
+<section id="steps-to-configure-the-siwx917-soc-on-the-ozone-debugger">
+<h2>Steps to Configure the SiWx917 SoC on the Ozone Debugger<a class="headerlink" href="#steps-to-configure-the-siwx917-soc-on-the-ozone-debugger" title="Permalink to this headline"></a></h2>
+<ol class="arabic simple">
+<li><p>Update the <strong>JlinkDevices.xml</strong> and <strong>ELF</strong> files found in the <a class="reference internal" href="../general/ARTIFACTS.html"><span class="std std-doc">Matter Artifacts page</span></a>.</p>
+<ul class="simple">
+<li><p>Download the <strong>JLinkDevices.xml</strong> file and copy it in your Ozone installation path shown in this  <a class="reference external" href="https://wiki.segger.com/J-Link_Device_Support_Kit#JLinkDevices_folder">JLinkDevices folder</a>. If there is no JLinkDevices Folder, create a JLinkDevices folder and copy the <strong>JlinkDevices.xml</strong> file.</p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">JLinkDevices</span></code> folder, create a <code class="docutils literal notranslate"><span class="pre">Devices</span></code> folder and then create a sub-folder named <code class="docutils literal notranslate"><span class="pre">SiliconLabs</span></code>.</p></li>
+<li><p>Download the <strong>ELF</strong> file (Flash driver) and copy it in the created <code class="docutils literal notranslate"><span class="pre">SiliconLabs</span></code> folder.</p></li>
+</ul>
+</li>
+<li><p>Launch Ozone. The SiWx917 Dual Flash SoC device should be visible in the <strong>Device</strong> field’s selection list.</p></li>
+</ol>
+<p><img alt="Silicon Labs - SiWx917 SoC" src="../_images/SiWx917_Target_Ozone.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p>If the above steps are successful, you can download and flash the Matter application</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="RUN_DEMO_SiWx917_SoC.html"><span class="std std-doc">Flashing the Application with Ozone</span></a></p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<p><a class="reference internal" href="../README.html"><span class="std std-doc">Table of Contents</span></a> | <a class="reference internal" href="../thread/DEMO_OVERVIEW.html"><span class="std std-doc">Thread Demo</span></a> |
+<a class="reference internal" href="DEMO_OVERVIEW.html"><span class="std std-doc">Wi-Fi Demo</span></a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Silicon Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

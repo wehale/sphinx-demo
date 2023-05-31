@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commissioning Wi-Fi Device using Android &mdash; Silicon Labs Matter 2.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Silicon Labs Matter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../OVERVIEW.html">Silicon Labs Matter User’s Guide Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW_FEATURES.html">Silicon Labs Matter New Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_1_overview.html">Matter Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_2_prereq.html">Matter Development Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_3_general.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_6_faq.html">FAQ</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Silicon Labs Matter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Commissioning Wi-Fi Device using Android</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/wifi/WIFI_ANDROID.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="commissioning-wi-fi-device-using-android">
+<h1>Commissioning Wi-Fi Device using Android<a class="headerlink" href="#commissioning-wi-fi-device-using-android" title="Permalink to this headline"></a></h1>
+<p>Commissioning can be done using an Android Phone through the following steps.</p>
+<p>Download pre-built application from the
+<a class="reference internal" href="../general/ARTIFACTS.html"><span class="std std-doc">Matter Artifacts page</span></a>.</p>
+<ol class="arabic simple">
+<li><p>Open the .apk that is installed in the Android mobile.</p></li>
+<li><p>Connect the Android phone to the Wi-Fi Access Point that is going to be used.</p></li>
+<li><p>Run the installed CHIP app.</p></li>
+<li><p>Click ‘Provision Chip device with Wi-Fi’.</p></li>
+<li><p>The app will bring up the camera:</p>
+<ul class="simple">
+<li><p>Hold the camera to the LCD on the WSTK board</p></li>
+<li><p>Scan the QR Code displayed on LCD screen of EFR32 MG12 Platform</p></li>
+</ul>
+</li>
+<li><p>Input the SSID/Passphrase of the Wi-Fi Access Point on the next screen. You will see messages (Toasts) pop up - saying that the App is ‘Scanning’, then ‘Pairing’, followed by ‘Commissioning Done’</p></li>
+<li><p>Once commissioning is completed, the app will go back to the original/home
+screen</p></li>
+<li><p>Click on ‘Light ON/OFF &amp; Level Cluster’</p></li>
+<li><p>You can then bring up the On/Off Cluster and send On/Off Commands (Toggle
+does not work as required currently) - this will cause LED 1 on the WSTK to
+change states</p></li>
+</ol>
+<p>If the Commissioning is not successful, try rebooting your mobile and try
+again.</p>
+<p>Once commissioning is completed, if you want to repeat the test, follow these
+steps:</p>
+<ul class="simple">
+<li><p>Disconnect the system (EFR32MG12 + RS9116) from power.</p></li>
+<li><p>Power up the system again - this should cause the LCD to turn on and the QR
+code to show up</p></li>
+<li><p>Press the BTN0 button and keep it pressed for about 1 min - this should
+cause LED0 and LED1 to turns ON and OFF for 3 times. You can then release
+the button</p></li>
+</ul>
+<hr class="docutils" />
+<p><a class="reference internal" href="../README.html"><span class="std std-doc">Table of Contents</span></a> | <a class="reference internal" href="../thread/DEMO_OVERVIEW.html"><span class="std std-doc">Thread Demo</span></a> |
+<a class="reference internal" href="DEMO_OVERVIEW.html"><span class="std std-doc">Wi-Fi Demo</span></a></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Silicon Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
