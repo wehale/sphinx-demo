@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File GenericConnectivityManagerImpl_NoThread.h &mdash; Silicon Labs Matter 2.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Silicon Labs Matter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../OVERVIEW.html">Silicon Labs Matter User’s Guide Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW_FEATURES.html">Silicon Labs Matter New Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_1_overview.html">Matter Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_2_prereq.html">Matter Development Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_3_general.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_6_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Library API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Silicon Labs Matter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Program Listing for File GenericConnectivityManagerImpl_NoThread.h</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dox/program_listing_file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_NoThread.h.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-genericconnectivitymanagerimpl-nothread-h">
+<span id="program-listing-file-users-wehale-git-matter-stash-src-include-platform-internal-genericconnectivitymanagerimpl-nothread-h"></span><h1>Program Listing for File GenericConnectivityManagerImpl_NoThread.h<a class="headerlink" href="#program-listing-for-file-genericconnectivitymanagerimpl-nothread-h" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_NoThread.h.html#file-users-wehale-git-matter-stash-src-include-platform-internal-genericconnectivitymanagerimpl-nothread-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/Users/wehale/git/matter-stash/src/include/platform/internal/GenericConnectivityManagerImpl_NoThread.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> *</span>
+<span class="cm"> *    Copyright (c) 2020 Project CHIP Authors</span>
+<span class="cm"> *    Copyright (c) 2019 Nest Labs, Inc.</span>
+<span class="cm"> *</span>
+<span class="cm"> *    Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="cm"> *    you may not use this file except in compliance with the License.</span>
+<span class="cm"> *    You may obtain a copy of the License at</span>
+<span class="cm"> *</span>
+<span class="cm"> *        http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="cm"> *</span>
+<span class="cm"> *    Unless required by applicable law or agreed to in writing, software</span>
+<span class="cm"> *    distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="cm"> *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="cm"> *    See the License for the specific language governing permissions and</span>
+<span class="cm"> *    limitations under the License.</span>
+<span class="cm"> */</span>
+
+<span class="cp">#pragma once</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;app/AttributeAccessInterface.h&gt;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">chip</span><span class="w"> </span><span class="p">{</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">DeviceLayer</span><span class="w"> </span><span class="p">{</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Internal</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">GenericConnectivityManagerImpl_NoThread</span>
+<span class="p">{</span>
+<span class="k">protected</span><span class="o">:</span>
+<span class="w">    </span><span class="c1">// ===== Methods that implement the ConnectivityManager abstract interface.</span>
+
+<span class="w">    </span><span class="n">ConnectivityManager</span><span class="o">::</span><span class="n">ThreadMode</span><span class="w"> </span><span class="n">_GetThreadMode</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">    </span><span class="n">CHIP_ERROR</span><span class="w"> </span><span class="nf">_SetThreadMode</span><span class="p">(</span><span class="n">ConnectivityManager</span><span class="o">::</span><span class="n">ThreadMode</span><span class="w"> </span><span class="n">val</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">_IsThreadEnabled</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">_IsThreadApplicationControlled</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ConnectivityManager</span><span class="o">::</span><span class="n">ThreadDeviceType</span><span class="w"> </span><span class="nf">_GetThreadDeviceType</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">    </span><span class="n">CHIP_ERROR</span><span class="w"> </span><span class="nf">_SetThreadDeviceType</span><span class="p">(</span><span class="n">ConnectivityManager</span><span class="o">::</span><span class="n">ThreadDeviceType</span><span class="w"> </span><span class="n">deviceType</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">_IsThreadAttached</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">_IsThreadProvisioned</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">_ErasePersistentInfo</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">_ResetThreadNetworkDiagnosticsCounts</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="w">    </span><span class="n">CHIP_ERROR</span><span class="w"> </span><span class="nf">_WriteThreadNetworkDiagnosticAttributeToTlv</span><span class="p">(</span><span class="n">AttributeId</span><span class="w"> </span><span class="n">attributeId</span><span class="p">,</span><span class="w"> </span><span class="n">app</span><span class="o">::</span><span class="n">AttributeValueEncoder</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">encoder</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">ImplClass</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">Impl</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">ConnectivityManager</span><span class="o">::</span><span class="n">ThreadMode</span><span class="w"> </span><span class="n">GenericConnectivityManagerImpl_NoThread</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_GetThreadMode</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ConnectivityManager</span><span class="o">::</span><span class="n">kThreadMode_NotSupported</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericConnectivityManagerImpl_NoThread</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_SetThreadMode</span><span class="p">(</span><span class="n">ConnectivityManager</span><span class="o">::</span><span class="n">ThreadMode</span><span class="w"> </span><span class="n">val</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_ERROR_UNSUPPORTED_CHIP_FEATURE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">GenericConnectivityManagerImpl_NoThread</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_IsThreadEnabled</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">GenericConnectivityManagerImpl_NoThread</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_IsThreadApplicationControlled</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">GenericConnectivityManagerImpl_NoThread</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_IsThreadAttached</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">GenericConnectivityManagerImpl_NoThread</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_IsThreadProvisioned</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">GenericConnectivityManagerImpl_NoThread</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_ErasePersistentInfo</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">ConnectivityManager</span><span class="o">::</span><span class="n">ThreadDeviceType</span><span class="w"> </span><span class="n">GenericConnectivityManagerImpl_NoThread</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_GetThreadDeviceType</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ConnectivityManager</span><span class="o">::</span><span class="n">kThreadDeviceType_NotSupported</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">CHIP_ERROR</span>
+<span class="n">GenericConnectivityManagerImpl_NoThread</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_SetThreadDeviceType</span><span class="p">(</span><span class="n">ConnectivityManager</span><span class="o">::</span><span class="n">ThreadDeviceType</span><span class="w"> </span><span class="n">deviceType</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_ERROR_UNSUPPORTED_CHIP_FEATURE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">GenericConnectivityManagerImpl_NoThread</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_ResetThreadNetworkDiagnosticsCounts</span><span class="p">()</span>
+<span class="p">{}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericConnectivityManagerImpl_NoThread</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_WriteThreadNetworkDiagnosticAttributeToTlv</span><span class="p">(</span>
+<span class="w">    </span><span class="n">AttributeId</span><span class="w"> </span><span class="n">attributeId</span><span class="p">,</span><span class="w"> </span><span class="n">app</span><span class="o">::</span><span class="n">AttributeValueEncoder</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">encoder</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_ERROR_UNSUPPORTED_CHIP_FEATURE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace Internal</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace DeviceLayer</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace chip</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Silicon Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

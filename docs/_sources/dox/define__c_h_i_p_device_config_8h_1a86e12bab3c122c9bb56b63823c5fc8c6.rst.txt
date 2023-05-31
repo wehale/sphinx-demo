@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1a86e12bab3c122c9bb56b63823c5fc8c6:
+
+Define CHIP_DEVICE_CONFIG_BG_MAX_EVENT_QUEUE_SIZE
+=================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_BG_MAX_EVENT_QUEUE_SIZE
+   :project: My Project

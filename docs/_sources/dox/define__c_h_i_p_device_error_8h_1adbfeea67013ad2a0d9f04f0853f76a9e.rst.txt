@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_error_8h_1adbfeea67013ad2a0d9f04f0853f76a9e:
+
+Define CHIP_DEVICE_ERROR
+========================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceError.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_ERROR
+   :project: My Project

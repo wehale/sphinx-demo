@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File CHIPDeviceEvent.h &mdash; Silicon Labs Matter 2.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Silicon Labs Matter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../OVERVIEW.html">Silicon Labs Matter User’s Guide Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW_FEATURES.html">Silicon Labs Matter New Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_1_overview.html">Matter Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_2_prereq.html">Matter Development Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_3_general.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_6_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Library API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Silicon Labs Matter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">File CHIPDeviceEvent.h</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dox/file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceEvent.h.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="file-chipdeviceevent-h">
+<span id="file-users-wehale-git-matter-stash-src-include-platform-chipdeviceevent-h"></span><h1>File CHIPDeviceEvent.h<a class="headerlink" href="#file-chipdeviceevent-h" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="dir__Users_wehale_git_matter-stash_src_include_platform.html#dir-users-wehale-git-matter-stash-src-include-platform"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">/Users/wehale/git/matter-stash/src/include/platform</span></code>)</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-users-wehale-git-matter-stash-src-include-platform-chipdeviceevent-h" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">/Users/wehale/git/matter-stash/src/include/platform/CHIPDeviceEvent.h</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#detailed-description" id="id2">Detailed Description</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id3">Includes</a></p></li>
+<li><p><a class="reference internal" href="#included-by" id="id4">Included By</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id5">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#classes" id="id6">Classes</a></p></li>
+<li><p><a class="reference internal" href="#enums" id="id7">Enums</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id8">Functions</a></p></li>
+<li><p><a class="reference internal" href="#typedefs" id="id9">Typedefs</a></p></li>
+</ul>
+</div>
+<section id="definition-users-wehale-git-matter-stash-src-include-platform-chipdeviceevent-h">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">/Users/wehale/git/matter-stash/src/include/platform/CHIPDeviceEvent.h</span></code>)<a class="headerlink" href="#definition-users-wehale-git-matter-stash-src-include-platform-chipdeviceevent-h" title="Permalink to this headline"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceEvent.h.html">Program Listing for File CHIPDeviceEvent.h</a></li>
+</ul>
+</div>
+</section>
+<section id="detailed-description">
+<h2>Detailed Description<a class="headerlink" href="#detailed-description" title="Permalink to this headline"></a></h2>
+<p>Defines events used by the chip Device Layer to signal actions or changes in device state.</p>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ble/BleConfig.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inet/IPAddress.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inet/InetInterface.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lib/core/DataModelTypes.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lib/support/LambdaBridge.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stdint.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">system/SystemEvent.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">system/SystemLayer.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">system/SystemPacketBuffer.h</span></code></p></li>
+</ul>
+</section>
+<section id="included-by">
+<h2>Included By<a class="headerlink" href="#included-by" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="file__Users_wehale_git_matter-stash_src_include_platform_ConnectivityManager.h.html#file-users-wehale-git-matter-stash-src-include-platform-connectivitymanager-h"><span class="std std-ref">File ConnectivityManager.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__Users_wehale_git_matter-stash_src_include_platform_PlatformManager.h.html#file-users-wehale-git-matter-stash-src-include-platform-platformmanager-h"><span class="std std-ref">File PlatformManager.h</span></a></p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_chip.html#namespace-chip"><span class="std std-ref">Namespace chip</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_chip__DeviceLayer.html#namespace-chip-devicelayer"><span class="std std-ref">Namespace chip::DeviceLayer</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_chip__DeviceLayer__DeviceEventType.html#namespace-chip-devicelayer-deviceeventtype"><span class="std std-ref">Namespace chip::DeviceLayer::DeviceEventType</span></a></p></li>
+</ul>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="structchip_1_1_device_layer_1_1_chip_device_event.html#exhale-struct-structchip-1-1-device-layer-1-1-chip-device-event"><span class="std std-ref">Struct ChipDeviceEvent</span></a></p></li>
+</ul>
+</section>
+<section id="enums">
+<h2>Enums<a class="headerlink" href="#enums" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="enum__c_h_i_p_device_event_8h_1aef1c7e674b01ee668caab41f66047360.html#exhale-enum-c-h-i-p-device-event-8h-1aef1c7e674b01ee668caab41f66047360"><span class="std std-ref">Enum ActivityChange</span></a></p></li>
+<li><p><a class="reference internal" href="enum__c_h_i_p_device_event_8h_1ab3c3ea311c2305ed17b0cf44ccddf534.html#exhale-enum-c-h-i-p-device-event-8h-1ab3c3ea311c2305ed17b0cf44ccddf534"><span class="std std-ref">Enum ConnectivityChange</span></a></p></li>
+<li><p><a class="reference internal" href="enum__c_h_i_p_device_event_8h_1ab38aad425385be65cc64005db7ee84a5.html#exhale-enum-c-h-i-p-device-event-8h-1ab38aad425385be65cc64005db7ee84a5"><span class="std std-ref">Enum &#64;0</span></a></p></li>
+<li><p><a class="reference internal" href="enum__c_h_i_p_device_event_8h_1a1eb90a44684ec0cbd04ac9987461ce96.html#exhale-enum-c-h-i-p-device-event-8h-1a1eb90a44684ec0cbd04ac9987461ce96"><span class="std std-ref">Enum EventTypeRanges</span></a></p></li>
+<li><p><a class="reference internal" href="enum__c_h_i_p_device_event_8h_1a7aa0be93d6d46d98e312115703b9fd50.html#exhale-enum-c-h-i-p-device-event-8h-1a7aa0be93d6d46d98e312115703b9fd50"><span class="std std-ref">Enum InternalEventTypes</span></a></p></li>
+<li><p><a class="reference internal" href="enum__c_h_i_p_device_event_8h_1a06d37ccd4891b45fe9303a788558c41c.html#exhale-enum-c-h-i-p-device-event-8h-1a06d37ccd4891b45fe9303a788558c41c"><span class="std std-ref">Enum PublicEventTypes</span></a></p></li>
+<li><p><a class="reference internal" href="enum__c_h_i_p_device_event_8h_1acd34780ae8bc11253bd2878bd038de81.html#exhale-enum-c-h-i-p-device-event-8h-1acd34780ae8bc11253bd2878bd038de81"><span class="std std-ref">Enum InterfaceIpChangeType</span></a></p></li>
+<li><p><a class="reference internal" href="enum__c_h_i_p_device_event_8h_1a7116e568dd927b2769c4f6314284e766.html#exhale-enum-c-h-i-p-device-event-8h-1a7116e568dd927b2769c4f6314284e766"><span class="std std-ref">Enum OtaState</span></a></p></li>
+</ul>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="function__c_h_i_p_device_event_8h_1a4ff7472e7c3a7dfca140e7b18798cd2b.html#exhale-function-c-h-i-p-device-event-8h-1a4ff7472e7c3a7dfca140e7b18798cd2b"><span class="std std-ref">Function chip::DeviceLayer::DeviceEventType::IsInternal</span></a></p></li>
+<li><p><a class="reference internal" href="function__c_h_i_p_device_event_8h_1afb2445b2c3f713f86143a7aae18ea659.html#exhale-function-c-h-i-p-device-event-8h-1afb2445b2c3f713f86143a7aae18ea659"><span class="std std-ref">Function chip::DeviceLayer::DeviceEventType::IsPlatformGeneric</span></a></p></li>
+<li><p><a class="reference internal" href="function__c_h_i_p_device_event_8h_1af7c3e483f285aeb1d39ecf4b92d5d9c6.html#exhale-function-c-h-i-p-device-event-8h-1af7c3e483f285aeb1d39ecf4b92d5d9c6"><span class="std std-ref">Function chip::DeviceLayer::DeviceEventType::IsPlatformSpecific</span></a></p></li>
+<li><p><a class="reference internal" href="function__c_h_i_p_device_event_8h_1a7d1dc096420ee05b923d1cb67bb38dfd.html#exhale-function-c-h-i-p-device-event-8h-1a7d1dc096420ee05b923d1cb67bb38dfd"><span class="std std-ref">Function chip::DeviceLayer::DeviceEventType::IsPublic</span></a></p></li>
+<li><p><a class="reference internal" href="function__c_h_i_p_device_event_8h_1ae023912fc2c263a09ad7f43f92f7e84a.html#exhale-function-c-h-i-p-device-event-8h-1ae023912fc2c263a09ad7f43f92f7e84a"><span class="std std-ref">Function chip::DeviceLayer::GetConnectivityChange</span></a></p></li>
+</ul>
+</section>
+<section id="typedefs">
+<h2>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="typedef__c_h_i_p_device_event_8h_1a4536f0203bb21f8661c3fa8aacbf20e4.html#exhale-typedef-c-h-i-p-device-event-8h-1a4536f0203bb21f8661c3fa8aacbf20e4"><span class="std std-ref">Typedef chip::DeviceLayer::AsyncWorkFunct</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Silicon Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

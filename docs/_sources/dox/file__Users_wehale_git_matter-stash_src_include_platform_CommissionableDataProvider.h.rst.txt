@@ -1,0 +1,84 @@
+
+.. _file__Users_wehale_git_matter-stash_src_include_platform_CommissionableDataProvider.h:
+
+File CommissionableDataProvider.h
+=================================
+
+|exhale_lsh| :ref:`Parent directory <dir__Users_wehale_git_matter-stash_src_include_platform>` (``/Users/wehale/git/matter-stash/src/include/platform``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/Users/wehale/git/matter-stash/src/include/platform/CommissionableDataProvider.h``)
+-------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__Users_wehale_git_matter-stash_src_include_platform_CommissionableDataProvider.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``lib/core/CHIPError.h``
+
+- ``lib/support/Span.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_TestOnlyCommissionableDataProvider.h`
+
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConfigurationManagerImpl.ipp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_chip`
+
+- :ref:`namespace_chip__DeviceLayer`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classchip_1_1_device_layer_1_1_commissionable_data_provider`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function__commissionable_data_provider_8h_1acd06f23db6069f04c172fb1422518d7c`
+
+- :ref:`exhale_function__commissionable_data_provider_8h_1a8cc35b9789acc3f35c8416069bc0a59c`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_namespacechip_1a95c22fdb1278477588b4253c346019e8`
+
+- :ref:`exhale_variable_namespacechip_1ad20186de757cae5664a16c0dc1a2c85c`
+
+- :ref:`exhale_variable_namespacechip_1a71e3d0a42e5aac9e633793b2fdff341d`
+

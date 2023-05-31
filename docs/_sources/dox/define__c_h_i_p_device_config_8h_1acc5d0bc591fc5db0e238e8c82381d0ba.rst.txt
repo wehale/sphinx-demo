@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1acc5d0bc591fc5db0e238e8c82381d0ba:
+
+Define CHIP_DEVICE_CONFIG_BG_TASK_STACK_SIZE
+============================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_BG_TASK_STACK_SIZE
+   :project: My Project

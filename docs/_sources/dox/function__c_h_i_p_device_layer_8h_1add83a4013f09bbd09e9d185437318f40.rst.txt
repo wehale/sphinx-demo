@@ -1,0 +1,14 @@
+.. _exhale_function__c_h_i_p_device_layer_8h_1add83a4013f09bbd09e9d185437318f40:
+
+Function chip::DeviceLayer::SystemLayer
+=======================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceLayer.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: chip::DeviceLayer::SystemLayer()
+   :project: My Project

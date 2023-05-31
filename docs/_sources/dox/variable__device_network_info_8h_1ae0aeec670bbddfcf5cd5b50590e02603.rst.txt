@@ -1,0 +1,14 @@
+.. _exhale_variable__device_network_info_8h_1ae0aeec670bbddfcf5cd5b50590e02603:
+
+Variable chip::DeviceLayer::Internal::kMaxWiFiKeyLength
+=======================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_DeviceNetworkInfo.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: chip::DeviceLayer::Internal::kMaxWiFiKeyLength
+   :project: My Project

@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1a918c71529f45eabffdc36f31fad57a4a:
+
+Define CHIP_DEVICE_CONFIG_APP_PLATFORM_ENABLED
+==============================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_APP_PLATFORM_ENABLED
+   :project: My Project

@@ -1,0 +1,20 @@
+
+.. _namespace_app__Clusters__SoftwareDiagnostics:
+
+Namespace app::Clusters::SoftwareDiagnostics
+============================================
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_app__Clusters__SoftwareDiagnostics__Structs`

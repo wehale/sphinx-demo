@@ -1,0 +1,14 @@
+.. _exhale_define__generic_connectivity_manager_impl___u_d_p_8ipp_1a97088e2cf633761cf21195222b72aad2:
+
+Define GENERIC_CONNECTIVITY_MANAGER_IMPL_UDP_CPP
+================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_UDP.ipp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: GENERIC_CONNECTIVITY_MANAGER_IMPL_UDP_CPP
+   :project: My Project

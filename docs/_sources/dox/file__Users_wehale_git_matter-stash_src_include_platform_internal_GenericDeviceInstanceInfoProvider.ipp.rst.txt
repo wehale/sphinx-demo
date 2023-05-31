@@ -1,0 +1,55 @@
+
+.. _file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericDeviceInstanceInfoProvider.ipp:
+
+File GenericDeviceInstanceInfoProvider.ipp
+==========================================
+
+|exhale_lsh| :ref:`Parent directory <dir__Users_wehale_git_matter-stash_src_include_platform_internal>` (``/Users/wehale/git/matter-stash/src/include/platform/internal``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/Users/wehale/git/matter-stash/src/include/platform/internal/GenericDeviceInstanceInfoProvider.ipp``)
+-------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericDeviceInstanceInfoProvider.ipp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``platform/internal/GenericDeviceInstanceInfoProvider.h`` (:ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericDeviceInstanceInfoProvider.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConfigurationManagerImpl.ipp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_chip`
+
+- :ref:`namespace_chip__DeviceLayer`
+
+- :ref:`namespace_chip__DeviceLayer__Internal`
+

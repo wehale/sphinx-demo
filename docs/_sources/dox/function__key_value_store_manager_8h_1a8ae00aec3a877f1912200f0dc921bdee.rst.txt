@@ -1,0 +1,14 @@
+.. _exhale_function__key_value_store_manager_8h_1a8ae00aec3a877f1912200f0dc921bdee:
+
+Function chip::DeviceLayer::PersistedStorage::KeyValueStoreMgrImpl
+==================================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_KeyValueStoreManager.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: chip::DeviceLayer::PersistedStorage::KeyValueStoreMgrImpl()
+   :project: My Project

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Define CHIP_DEVICE_CONFIG_ENABLE_THREAD_DNS_CLIENT &mdash; Silicon Labs Matter 2.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Define CHIP_DEVICE_CONFIG_ENABLE_THREAD_SRP_CLIENT" href="define__c_h_i_p_device_config_8h_1aebc41f873239ec77215bec5351d471c6.html" />
+    <link rel="prev" title="Define CHIP_DEVICE_CONFIG_ENABLE_THREAD_COMMISSIONABLE_DISCOVERY" href="define__c_h_i_p_device_config_8h_1a8aabc7179cc0b379f884f2851fd5e03a.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Silicon Labs Matter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../OVERVIEW.html">Silicon Labs Matter User’s Guide Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW_FEATURES.html">Silicon Labs Matter New Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_1_overview.html">Matter Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_2_prereq.html">Matter Development Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_3_general.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_6_faq.html">FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Library API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#variables">Variables</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#defines">Defines</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="define__lock_tracker_8h_1a9cf41b4e94ed476937bde5d172ddf2a9.html">Define assertChipStackLockedByCurrentThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__generic_configuration_manager_impl_8ipp_1a0ed484a952706d14f73551e18fab6363.html">Define BLE_ADVERTISEMENT_VERSION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1a2a1cef5ff894002f4df8594255e3e2e3.html">Define BUILD_DATE_IS_BAD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1a8eea278a53911a42e95b4115661c0971.html">Define BUILD_MONTH_IS_APR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1a70017f10407d95a3109853e0c3153675.html">Define BUILD_MONTH_IS_AUG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1a5ff2d1d8bf18dee19104bd2695db0d2f.html">Define BUILD_MONTH_IS_DEC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1a679cb0e9c4ee654e16129caf33d4e40a.html">Define BUILD_MONTH_IS_FEB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1a81603c2ce60299604f19ab338eca9589.html">Define BUILD_MONTH_IS_JAN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1a16c22a42c7ced25f68d9ded6984a9686.html">Define BUILD_MONTH_IS_JUL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1a9c37384ee5426b220c77103a5a8e15e3.html">Define BUILD_MONTH_IS_JUN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1ac878f833c015d1439615c676295aed54.html">Define BUILD_MONTH_IS_MAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1ad594fd88c89d99c76ada19c10d16137f.html">Define BUILD_MONTH_IS_MAY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1aa453724060b838040fa13e0f4d0d13b1.html">Define BUILD_MONTH_IS_NOV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1a129bdfd4ea98b0bdeed6096b0fd94d10.html">Define BUILD_MONTH_IS_OCT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1a30160c16b1fb5c25cf7d4a42ac4afc0d.html">Define BUILD_MONTH_IS_SEP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1a053a61e8ed905f044ffdc16a034f9620.html">Define BUILD_TIME_IS_BAD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ad7ba524b6ec3bdc7e43c1d833f0d402e.html">Define CHIP_CONFIG_UNSAFE_SUBSCRIPTION_EXCHANGE_MANAGER_USE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a918c71529f45eabffdc36f31fad57a4a.html">Define CHIP_DEVICE_CONFIG_APP_PLATFORM_ENABLED</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ab83b4f78da28cee2c44272cd02e48bee.html">Define CHIP_DEVICE_CONFIG_AUTOMATIC_CASE_RETRY_INITIAL_DELAY_SECONDS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ac507f75954cb283de9dca92d1e7a41b4.html">Define CHIP_DEVICE_CONFIG_AUTOMATIC_CASE_RETRY_MAX_BACKOFF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a86e12bab3c122c9bb56b63823c5fc8c6.html">Define CHIP_DEVICE_CONFIG_BG_MAX_EVENT_QUEUE_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ab9adb0c691aee2d055ddf5847493b7f4.html">Define CHIP_DEVICE_CONFIG_BG_TASK_NAME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a2adb860f05d747107ee9b4b922436d9a.html">Define CHIP_DEVICE_CONFIG_BG_TASK_PRIORITY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1acc5d0bc591fc5db0e238e8c82381d0ba.html">Define CHIP_DEVICE_CONFIG_BG_TASK_STACK_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1af2af703ef83fd54ecd7591f3f7c49786.html">Define CHIP_DEVICE_CONFIG_BLE_ADVERTISING_INTERVAL_CHANGE_TIME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a06a57965efec9eee144b77c18706002a.html">Define CHIP_DEVICE_CONFIG_BLE_DEVICE_NAME_PREFIX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a6d93590f25ff351de91d577287b321be.html">Define CHIP_DEVICE_CONFIG_BLE_FAST_ADVERTISING_INTERVAL_MAX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1af7077975fa78cacdfba2e66b6c23a585.html">Define CHIP_DEVICE_CONFIG_BLE_FAST_ADVERTISING_INTERVAL_MIN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1af4f17adc59c48ce77ca360e617837170.html">Define CHIP_DEVICE_CONFIG_BLE_SLOW_ADVERTISING_INTERVAL_MAX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a98344879243755d79c3d590ddda25fff.html">Define CHIP_DEVICE_CONFIG_BLE_SLOW_ADVERTISING_INTERVAL_MIN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a7845d97884f3a31de9c7438915054f01.html">Define CHIP_DEVICE_CONFIG_CHIP_TASK_NAME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a900305532bdf6e3b4b2d8edc306d43bb.html">Define CHIP_DEVICE_CONFIG_CHIP_TASK_PRIORITY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a594dfc267fc3e383e768e05a2ebf9ab8.html">Define CHIP_DEVICE_CONFIG_CHIP_TASK_STACK_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a66145c1b40a752120e05ce2ed15249af.html">Define CHIP_DEVICE_CONFIG_CHIPOBLE_ENABLE_ADVERTISING_AUTOSTART</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1af208201041d2136b01c9062b1460651c.html">Define CHIP_DEVICE_CONFIG_CHIPOBLE_SINGLE_CONNECTION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a204f3b0d97718cd26d39c117d0c119dc.html">Define CHIP_DEVICE_CONFIG_DEFAULT_DEVICE_HARDWARE_VERSION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a9006aff63ca8cb7037dd7b4fa11c63a7.html">Define CHIP_DEVICE_CONFIG_DEFAULT_DEVICE_HARDWARE_VERSION_STRING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1af107289963ac86b868271d4beff6bca6.html">Define CHIP_DEVICE_CONFIG_DEFAULT_TELEMETRY_INTERVAL_MS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a3f91758aff7d3a7acccd1dd83991727a.html">Define CHIP_DEVICE_CONFIG_DEFAULT_THREAD_NETWORK_NAME_PREFIX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a374abd9472c88f2d68ad7a9c742cb574.html">Define CHIP_DEVICE_CONFIG_DEVICE_NAME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1afcd348c4551d05c630645358da5b24ac.html">Define CHIP_DEVICE_CONFIG_DEVICE_PRODUCT_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1acd231322b81161e91e3c1b868f998d8d.html">Define CHIP_DEVICE_CONFIG_DEVICE_PRODUCT_NAME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a2c64818357640acb040d83ec6370e092.html">Define CHIP_DEVICE_CONFIG_DEVICE_SOFTWARE_VERSION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1abc4fea6b7e1ab2cd1ace347da0a9ffaa.html">Define CHIP_DEVICE_CONFIG_DEVICE_SOFTWARE_VERSION_STRING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a5703e07494ec0d0a5b67c9e4d1a4d992.html">Define CHIP_DEVICE_CONFIG_DEVICE_TYPE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a2abef9e3d99bcbbbdf79a340ad3465cc.html">Define CHIP_DEVICE_CONFIG_DEVICE_VENDOR_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ac1d1a8c2fc43688e70616803f78d66a3.html">Define CHIP_DEVICE_CONFIG_DEVICE_VENDOR_NAME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a1034585ff3668e50b4ca6bb247b3e1e2.html">Define CHIP_DEVICE_CONFIG_DISCOVERY_DISABLED</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a32ba499bd0ad30c32b8c4b0e226f5976.html">Define CHIP_DEVICE_CONFIG_DISCOVERY_NO_TIMEOUT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a8f6aa3ea9ab41db0156f2e874f534068.html">Define CHIP_DEVICE_CONFIG_DISCOVERY_TIMEOUT_SECS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1af4823f4513a2aaac2fed2fad2fc13eda.html">Define CHIP_DEVICE_CONFIG_DYNAMIC_ENDPOINT_COUNT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a6b177febd2fb01e55b9e1c9f75cd6333.html">Define CHIP_DEVICE_CONFIG_ENABLE_AUTOMATIC_CASE_RETRIES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a1722575f6cd4dfc108213a6cc77ad40d.html">Define CHIP_DEVICE_CONFIG_ENABLE_BG_EVENT_PROCESSING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ae416513dc42434b77f519668712a1c17.html">Define CHIP_DEVICE_CONFIG_ENABLE_BOTH_COMMISSIONER_AND_COMMISSIONEE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a7eb537e0f4aa1407f231867b27e798bc.html">Define CHIP_DEVICE_CONFIG_ENABLE_CHIPOBLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1af0e2ce9580ae9d6e0e145488a1f26458.html">Define CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONABLE_DEVICE_NAME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1aa5b0a746a7e139e7a871c92a997dfa22.html">Define CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONABLE_DEVICE_TYPE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a502e7c454de99dbb006f736e7992de7e.html">Define CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONER_DISCOVERY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a4631b35db9b6b57bc78fbbb2588e40ca.html">Define CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONER_DISCOVERY_CLIENT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a40085e8f02a94dec41e9231b1744f3b1.html">Define CHIP_DEVICE_CONFIG_ENABLE_EXTENDED_DISCOVERY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a2e5807fbba29597af696bf8671501b61.html">Define CHIP_DEVICE_CONFIG_ENABLE_NETWORK_TELEMETRY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a1b1b0bd39deaca1675c4353a35d4e398.html">Define CHIP_DEVICE_CONFIG_ENABLE_PAIRING_AUTOSTART</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ad4953d6854b5c2705c8012d1367ad117.html">Define CHIP_DEVICE_CONFIG_ENABLE_SED</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1abb118a1cca6d244a3a4f0e8ee4254791.html">Define CHIP_DEVICE_CONFIG_ENABLE_SOFTWARE_UPDATE_MANAGER</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a48424b39bdbde85bfa4991c9c7e5a61f.html">Define CHIP_DEVICE_CONFIG_ENABLE_TEST_SETUP_PARAMS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a034d03cc01b1cb09f3f85767fce8b11b.html">Define CHIP_DEVICE_CONFIG_ENABLE_THREAD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a8aabc7179cc0b379f884f2851fd5e03a.html">Define CHIP_DEVICE_CONFIG_ENABLE_THREAD_COMMISSIONABLE_DISCOVERY</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Define CHIP_DEVICE_CONFIG_ENABLE_THREAD_DNS_CLIENT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1aebc41f873239ec77215bec5351d471c6.html">Define CHIP_DEVICE_CONFIG_ENABLE_THREAD_SRP_CLIENT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a2e0e2d7e88fb0465575b2b6697dbf831.html">Define CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a1a08e34432ba21fab7d9c754f9b3ef85.html">Define CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY_FULL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ac0549bd8a7ac13d3811c5bcd5435b13d.html">Define CHIP_DEVICE_CONFIG_ENABLE_WIFI_AP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a0a20364371553a6de171ff402117fbf7.html">Define CHIP_DEVICE_CONFIG_ENABLE_WIFI_STATION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1acad19e7385da5f597eb0fee94773aed3.html">Define CHIP_DEVICE_CONFIG_ENABLE_WIFI_TELEMETRY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a2eec42409c5be61762b33ab08d393afb.html">Define CHIP_DEVICE_CONFIG_EVENT_ID_COUNTER_EPOCH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ac96c32acdda5b4159686e88105eae377.html">Define CHIP_DEVICE_CONFIG_EVENT_LOGGING_CRIT_BUFFER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a48ae0d2e7642d0354a86904f0601e261.html">Define CHIP_DEVICE_CONFIG_EVENT_LOGGING_DEBUG_BUFFER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ac4e42896da5958ced01b7e2c2cbafdd2.html">Define CHIP_DEVICE_CONFIG_EVENT_LOGGING_INFO_BUFFER_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1add3bae7e490f692413e782a1c6521365.html">Define CHIP_DEVICE_CONFIG_EVENT_LOGGING_UTC_TIMESTAMPS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a78f761c93f8241fd71c5a6322493d4b9.html">Define CHIP_DEVICE_CONFIG_EXTENDED_DISCOVERY_TIMEOUT_SECS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ab8dd73ecba07f069e42b0253d67a20f9.html">Define CHIP_DEVICE_CONFIG_FAILSAFE_EXPIRY_LENGTH_SEC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1aa88088f88170ed6532f7ab91df1911d2.html">Define CHIP_DEVICE_CONFIG_FILE_DOWNLOAD_ENDPOINT_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a96056d7db7be93147c2e2b1ac596d14f.html">Define CHIP_DEVICE_CONFIG_FILE_DOWNLOAD_RESPONSE_TIMEOUT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a768322a49998e8f90697f01749148aba.html">Define CHIP_DEVICE_CONFIG_FIRMWARE_BUILD_DATE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a5598ac87257179cf89e366d89196b582.html">Define CHIP_DEVICE_CONFIG_FIRMWARE_BUILD_TIME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a43d86d4dfb4ade83802c1d6ad9272122.html">Define CHIP_DEVICE_CONFIG_LWIP_THREAD_IF_NAME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a210d96b6b8ebec5b87f9eec1b3db4a3c.html">Define CHIP_DEVICE_CONFIG_LWIP_WIFI_AP_IF_NAME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ada5c4f72801c0af330bf3739cae2dafe.html">Define CHIP_DEVICE_CONFIG_LWIP_WIFI_STATION_IF_NAME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a6b7bac384ae4f6e72ad7333e5a89ccf1.html">Define CHIP_DEVICE_CONFIG_MAX_CUMULATIVE_FAILSAFE_SEC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a87721a44d64695cb6178fa55e57a5600.html">Define CHIP_DEVICE_CONFIG_MAX_DISCOVERED_NODES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ac93a8e595f5571df77ed9a9a98d7827a.html">Define CHIP_DEVICE_CONFIG_MAX_EVENT_QUEUE_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a05064919d42eb56139dec1af3eeec6bf.html">Define CHIP_DEVICE_CONFIG_MAX_SCAN_NETWORKS_RESULTS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a4fffd0f0bcd78c77a3972861d95fc479.html">Define CHIP_DEVICE_CONFIG_PAIRING_INITIAL_HINT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a10839254ac83e592337ba6545b6045bb.html">Define CHIP_DEVICE_CONFIG_PAIRING_INITIAL_INSTRUCTION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a1ed801e3ccd7c3740d05eca1672b4500.html">Define CHIP_DEVICE_CONFIG_PAIRING_SECONDARY_HINT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ab61744f5649f56287e83696f3ace785e.html">Define CHIP_DEVICE_CONFIG_PAIRING_SECONDARY_INSTRUCTION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a523537bdedf8806e8a0d08db220ac1ec.html">Define CHIP_DEVICE_CONFIG_ROTATING_DEVICE_ID_UNIQUE_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ae2e566731446ead205f33646ba0e4b9d.html">Define CHIP_DEVICE_CONFIG_ROTATING_DEVICE_ID_UNIQUE_ID_LENGTH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a7e25b8ffcce8b2d917bfbd9000c95c85.html">Define CHIP_DEVICE_CONFIG_SED_ACTIVE_INTERVAL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1aa612fd082d19dcc97a2a8e33eaf97da4.html">Define CHIP_DEVICE_CONFIG_SED_ACTIVE_THRESHOLD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a48a9d59b1f557ebfa2ead3b8b280d592.html">Define CHIP_DEVICE_CONFIG_SED_IDLE_INTERVAL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a8080a7bfc22d55b3823318210bca61ca.html">Define CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_CONNECTIVITY_TIMEOUT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a1909d0b6d29ecca1bc84445c1a9ddb16.html">Define CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_ENDPOINT_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a221e4c185f68e800d0b405ffec7cb56a.html">Define CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_REQUEST_TIMEOUT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1af6d420ff8c610f84456bcbff1def17c0.html">Define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_ENDPOINT_ID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1aee8beeaa4bf8ac22b6f2d083d00b8a09.html">Define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_MAX_RETRIES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ac7a6763ea0801dc71acc54bc4d9a6e36.html">Define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_MAX_WAIT_TIME_INTERVAL_MS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a9aff2e1bcfe11618206a23f2349cb1a6.html">Define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_RESPONSE_TIMEOUT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a30918440005df2737588a4abc9022762.html">Define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_URI_LEN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1aff392dfffa95bdae91b83c33ef4d5cb7.html">Define CHIP_DEVICE_CONFIG_SUPPORTS_CONCURRENT_CONNECTION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a544f3da800d071b1611322100bd1f976.html">Define CHIP_DEVICE_CONFIG_SWU_BDX_BLOCK_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a2ae53038ff4009af57d0623db0ddd0eb.html">Define CHIP_DEVICE_CONFIG_SWU_MIN_WAIT_TIME_INTERVAL_PERCENT_PER_STEP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a8ef2b946a5fa9217742e06898fe9d104.html">Define CHIP_DEVICE_CONFIG_SWU_WAIT_TIME_MULTIPLIER_MS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ae79d5e66e856f8a9650a0d9167b15848.html">Define CHIP_DEVICE_CONFIG_TEST_SERIAL_NUMBER</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a011c0553246ac8255672464353a94f57.html">Define CHIP_DEVICE_CONFIG_THREAD_CONNECTIVITY_TIMEOUT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a251731ac16e20687975cc2a086be63bf.html">Define CHIP_DEVICE_CONFIG_THREAD_ENABLE_CLI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a756d1617d7a9b4b471711fc3dee3f3ab.html">Define CHIP_DEVICE_CONFIG_THREAD_FTD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a3deefb6a1b7079fa20fad7890f06db54.html">Define CHIP_DEVICE_CONFIG_THREAD_IF_MTU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a3ddd5aa8f5572a09996051460193f8ad.html">Define CHIP_DEVICE_CONFIG_THREAD_SRP_MAX_SERVICES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1aaea3a0d781534ed3ef20167f32effa6d.html">Define CHIP_DEVICE_CONFIG_THREAD_SSED</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a02a24f49cf82ab8f756f036f7cb7524d.html">Define CHIP_DEVICE_CONFIG_THREAD_TASK_NAME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a99ddbe69365c8dadefa7e2c63217fb03.html">Define CHIP_DEVICE_CONFIG_THREAD_TASK_PRIORITY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ae2f0c36e9f8810fff719653ab3e94883.html">Define CHIP_DEVICE_CONFIG_THREAD_TASK_STACK_SIZE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ad44384f98aee26c598fb584d691adbe3.html">Define CHIP_DEVICE_CONFIG_USE_TEST_SETUP_DISCRIMINATOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a9f0ff90cda205a3bbbf7cd2a14b85236.html">Define CHIP_DEVICE_CONFIG_USE_TEST_SETUP_PIN_CODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a2597ffa2d35404effdd85157a9f7d89e.html">Define CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_ITERATION_COUNT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a0b9338cf489dd75b6f2aa24e4bc7d194.html">Define CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_SALT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a6a4fbc541d90a8d20f789fb14b7ba262.html">Define CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_SALT_DEFAULT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a753bfbfef7683758e82517bc14185ca1.html">Define CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_VERIFIER</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ab79f373b4f6a7d8303869a3043972981.html">Define CHIP_DEVICE_CONFIG_USER_SELECTED_MODE_TIMEOUT_SEC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1acf4883003a8662304bd246902794ebc1.html">Define CHIP_DEVICE_CONFIG_WIFI_AP_BEACON_INTERVAL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1afa296d20b60a42cdfd9e5032d5d34e73.html">Define CHIP_DEVICE_CONFIG_WIFI_AP_CHANNEL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a8a7039418f59daf3e009a9c0f1897de3.html">Define CHIP_DEVICE_CONFIG_WIFI_AP_IDLE_TIMEOUT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a9786db5dfc21e735970fc0fc7d9c69ac.html">Define CHIP_DEVICE_CONFIG_WIFI_AP_MAX_STATIONS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a47697684558834017494951e557d9fbe.html">Define CHIP_DEVICE_CONFIG_WIFI_AP_SSID_PREFIX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a35a05089cb958f2d90a7979fb7175308.html">Define CHIP_DEVICE_CONFIG_WIFI_CONNECTIVITY_TIMEOUT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1a087e091adae8e9476414deda0a512d56.html">Define CHIP_DEVICE_CONFIG_WIFI_SCAN_COMPLETION_TIMEOUT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ad7eac9e450a7627e6a7acd6aa244e7ab.html">Define CHIP_DEVICE_CONFIG_WIFI_STATION_IF_NAME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1ad432aab478a95ce7be50aed2c89b23a1.html">Define CHIP_DEVICE_CONFIG_WIFI_STATION_RECONNECT_INTERVAL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_error_8h_1adbfeea67013ad2a0d9f04f0853f76a9e.html">Define CHIP_DEVICE_ERROR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_error_8h_1a6f269b54456d88e9ecaeccf9438e7f72.html">Define CHIP_DEVICE_ERROR_CONFIG_NOT_FOUND</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_error_8h_1ace89120df5bbd796be334a35c4f29cdb.html">Define CHIP_DEVICE_ERROR_NOT_SERVICE_PROVISIONED</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_error_8h_1a3b80e302252c87b832b7648a87f509d1.html">Define CHIP_DEVICE_ERROR_SOFTWARE_UPDATE_ABORTED</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_error_8h_1a51627818ad3b27df4bdeed5851ab7538.html">Define CHIP_DEVICE_ERROR_SOFTWARE_UPDATE_IGNORED</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__c_h_i_p_device_config_8h_1aeec4592fff6f4ca3036a3de6b5e151d6.html">Define CHIP_DISPATCH_EVENT_LONG_DISPATCH_TIME_WARNING_THRESHOLD_MS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1a1354634a0ae6eaf9d42e3931fde0d65b.html">Define COMPUTE_BUILD_DAY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1a21157681a8341eeb8800af48c2b7384a.html">Define COMPUTE_BUILD_HOUR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1a5248fbe208bc1a65a2a21a41314e520b.html">Define COMPUTE_BUILD_MIN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1a824bbb48a51ed3393db62aa1ed95924a.html">Define COMPUTE_BUILD_MONTH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1afb8f71d8f4a70be5785b7423087065d1.html">Define COMPUTE_BUILD_SEC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__build_time_8h_1a3aa00ea14d793a4c0102c51e21fd10cc.html">Define COMPUTE_BUILD_YEAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__generic_platform_manager_impl___zephyr_8ipp_1ace4a974d03334cd9d6ec71471e2f6b92.html">Define DEFAULT_MIN_SLEEP_PERIOD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__generic_configuration_manager_impl_8ipp_1ae6e218842d5307e0d42cb5dc4e9a71e7.html">Define GENERIC_CONFIGURATION_MANAGER_IMPL_CPP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__generic_connectivity_manager_impl___b_l_e_8ipp_1a43fa817215159bea8b6d7203c5936336.html">Define GENERIC_CONNECTIVITY_MANAGER_IMPL_BLE_CPP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__generic_connectivity_manager_impl___t_c_p_8ipp_1aea46469067a5e4056b0237e604ea0d4a.html">Define GENERIC_CONNECTIVITY_MANAGER_IMPL_TCP_CPP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__generic_connectivity_manager_impl___thread_8ipp_1a8b9bdf5b53564a5bc0da670e6eae8cc8.html">Define GENERIC_CONNECTIVITY_MANAGER_IMPL_THREAD_CPP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__generic_connectivity_manager_impl___u_d_p_8ipp_1a97088e2cf633761cf21195222b72aad2.html">Define GENERIC_CONNECTIVITY_MANAGER_IMPL_UDP_CPP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__generic_connectivity_manager_impl___wi_fi_8ipp_1a0aeaaad188ba029b21b9a380e68850ef.html">Define GENERIC_CONNECTIVITY_MANAGER_IMPL_WIFI_CPP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__generic_platform_manager_impl_8ipp_1abafa485000e9a9641af4725d2462885e.html">Define GENERIC_PLATFORM_MANAGER_IMPL_CPP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__generic_platform_manager_impl___free_r_t_o_s_8ipp_1a77ebc17fbd6f57ea77784ccc5fb3cb49.html">Define GENERIC_PLATFORM_MANAGER_IMPL_FREERTOS_CPP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__generic_platform_manager_impl___p_o_s_i_x_8ipp_1a5c815a0580f67ee4733f9c14fbd6c6bc.html">Define GENERIC_PLATFORM_MANAGER_IMPL_POSIX_CPP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define__generic_platform_manager_impl___zephyr_8ipp_1ad3b10b2b5747687d003217aaba44b058.html">Define GENERIC_PLATFORM_MANAGER_IMPL_ZEPHYR_CPP</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Silicon Labs Matter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Library API</a></li>
+      <li class="breadcrumb-item active">Define CHIP_DEVICE_CONFIG_ENABLE_THREAD_DNS_CLIENT</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dox/define__c_h_i_p_device_config_8h_1ab0f5a18211dd5023f58245eef8c2bea7.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="define-chip-device-config-enable-thread-dns-client">
+<span id="exhale-define-c-h-i-p-device-config-8h-1ab0f5a18211dd5023f58245eef8c2bea7"></span><h1>Define CHIP_DEVICE_CONFIG_ENABLE_THREAD_DNS_CLIENT<a class="headerlink" href="#define-chip-device-config-enable-thread-dns-client" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h.html#file-users-wehale-git-matter-stash-src-include-platform-chipdeviceconfig-h"><span class="std std-ref">File CHIPDeviceConfig.h</span></a></p></li>
+</ul>
+<section id="define-documentation">
+<h2>Define Documentation<a class="headerlink" href="#define-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.CHIP_DEVICE_CONFIG_ENABLE_THREAD_DNS_CLIENT">
+<span class="target" id="_c_h_i_p_device_config_8h_1ab0f5a18211dd5023f58245eef8c2bea7"></span><span class="sig-name descname"><span class="n"><span class="pre">CHIP_DEVICE_CONFIG_ENABLE_THREAD_DNS_CLIENT</span></span></span><a class="headerlink" href="#c.CHIP_DEVICE_CONFIG_ENABLE_THREAD_DNS_CLIENT" title="Permalink to this definition"></a><br /></dt>
+<dd><p>CHIP_DEVICE_CONFIG_ENABLE_THREAD_DNS_CLIENT</p>
+<p>Enable support to DNS client usage for resolving and browsing services in CHIP. </p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="define__c_h_i_p_device_config_8h_1a8aabc7179cc0b379f884f2851fd5e03a.html" class="btn btn-neutral float-left" title="Define CHIP_DEVICE_CONFIG_ENABLE_THREAD_COMMISSIONABLE_DISCOVERY" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="define__c_h_i_p_device_config_8h_1aebc41f873239ec77215bec5351d471c6.html" class="btn btn-neutral float-right" title="Define CHIP_DEVICE_CONFIG_ENABLE_THREAD_SRP_CLIENT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Silicon Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

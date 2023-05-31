@@ -1,0 +1,14 @@
+.. _exhale_variable__diagnostic_data_provider_8h_1af94fa9ba326b339facafbd7cc2e589cb:
+
+Variable chip::DeviceLayer::kMaxHardwareAddrSize
+================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_DiagnosticDataProvider.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: chip::DeviceLayer::kMaxHardwareAddrSize
+   :project: My Project

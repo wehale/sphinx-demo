@@ -1,0 +1,92 @@
+
+.. _file__Users_wehale_git_matter-stash_src_include_platform_DeviceInfoProvider.h:
+
+File DeviceInfoProvider.h
+=========================
+
+|exhale_lsh| :ref:`Parent directory <dir__Users_wehale_git_matter-stash_src_include_platform>` (``/Users/wehale/git/matter-stash/src/include/platform``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/Users/wehale/git/matter-stash/src/include/platform/DeviceInfoProvider.h``)
+-----------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__Users_wehale_git_matter-stash_src_include_platform_DeviceInfoProvider.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``algorithm``
+
+- ``app-common/zap-generated/cluster-objects.h``
+
+- ``app/util/basic-types.h``
+
+- ``lib/core/CHIPError.h``
+
+- ``lib/core/CHIPPersistentStorageDelegate.h``
+
+- ``platform/AttributeList.h`` (:ref:`file__Users_wehale_git_matter-stash_src_include_platform_AttributeList.h`)
+
+- ``stdint.h``
+
+- ``sys/types.h``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_chip`
+
+- :ref:`namespace_chip__DeviceLayer`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classchip_1_1_device_layer_1_1_device_info_provider`
+
+- :ref:`exhale_class_classchip_1_1_device_layer_1_1_device_info_provider_1_1_iterator`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function__device_info_provider_8h_1afb48da216f98d403fd7ee9f161c8e54c`
+
+- :ref:`exhale_function__device_info_provider_8h_1a720e8b7643574e4abfceca88fb12dacd`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable__device_info_provider_8h_1abc3abf1b6a659fba8b978790aee2fa07`
+
+- :ref:`exhale_variable__device_info_provider_8h_1acb93bb02672567db89b8fba5dfff7dad`
+
+- :ref:`exhale_variable__device_info_provider_8h_1a5cdb845ccc9b605a08196364ccfe0b4b`
+
+- :ref:`exhale_variable__device_info_provider_8h_1a77c0dad0cca0e72f141b570993c968ff`
+

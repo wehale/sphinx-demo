@@ -1,0 +1,38 @@
+.. _exhale_class_classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl:
+
+Template Class GenericPlatformManagerImpl
+=========================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl.h`
+
+
+Nested Relationships
+--------------------
+
+
+Nested Types
+************
+
+- :ref:`exhale_struct_structchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl_1_1_app_event_handler`
+
+
+Inheritance Relationships
+-------------------------
+
+Derived Types
+*************
+
+- ``public chip::DeviceLayer::Internal::GenericPlatformManagerImpl_FreeRTOS< ImplClass >`` (:ref:`exhale_class_classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___free_r_t_o_s`)
+- ``public chip::DeviceLayer::Internal::GenericPlatformManagerImpl_POSIX< ImplClass >`` (:ref:`exhale_class_classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___p_o_s_i_x`)
+- ``public chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr< ImplClass >`` (:ref:`exhale_class_classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: chip::DeviceLayer::Internal::GenericPlatformManagerImpl
+   :project: My Project
+   :members:
+   :protected-members:
+   :undoc-members:

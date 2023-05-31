@@ -1,0 +1,14 @@
+.. _exhale_variable__persisted_storage_8h_1ad39231975df18a9c448124bd372c603a:
+
+Variable chip::Platform::PersistedStorage::kEmptyKey
+====================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_PersistedStorage.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: chip::Platform::PersistedStorage::kEmptyKey
+   :project: My Project

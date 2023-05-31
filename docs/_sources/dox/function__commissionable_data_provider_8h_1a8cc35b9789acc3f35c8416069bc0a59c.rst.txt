@@ -1,0 +1,14 @@
+.. _exhale_function__commissionable_data_provider_8h_1a8cc35b9789acc3f35c8416069bc0a59c:
+
+Function chip::DeviceLayer::SetCommissionableDataProvider
+=========================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CommissionableDataProvider.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: chip::DeviceLayer::SetCommissionableDataProvider(CommissionableDataProvider *)
+   :project: My Project

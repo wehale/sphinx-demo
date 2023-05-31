@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1a02a24f49cf82ab8f756f036f7cb7524d:
+
+Define CHIP_DEVICE_CONFIG_THREAD_TASK_NAME
+==========================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_THREAD_TASK_NAME
+   :project: My Project

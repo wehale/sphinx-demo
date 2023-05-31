@@ -1,0 +1,14 @@
+.. _exhale_variable__device_info_provider_8h_1a5cdb845ccc9b605a08196364ccfe0b4b:
+
+Variable chip::DeviceLayer::kMaxLabelValueLength
+================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_DeviceInfoProvider.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: chip::DeviceLayer::kMaxLabelValueLength
+   :project: My Project

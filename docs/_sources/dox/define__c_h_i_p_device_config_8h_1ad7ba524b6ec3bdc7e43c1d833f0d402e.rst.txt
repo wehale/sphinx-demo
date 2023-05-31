@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1ad7ba524b6ec3bdc7e43c1d833f0d402e:
+
+Define CHIP_CONFIG_UNSAFE_SUBSCRIPTION_EXCHANGE_MANAGER_USE
+===========================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_CONFIG_UNSAFE_SUBSCRIPTION_EXCHANGE_MANAGER_USE
+   :project: My Project

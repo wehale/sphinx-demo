@@ -1,0 +1,14 @@
+.. _exhale_function__configuration_manager_8h_1abdd0571e16ba2d3c7517d81997d32da4:
+
+Function chip::DeviceLayer::SetConfigurationMgr
+===============================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_ConfigurationManager.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: chip::DeviceLayer::SetConfigurationMgr(ConfigurationManager *)
+   :project: My Project

@@ -1,0 +1,14 @@
+.. _exhale_define__lock_tracker_8h_1a9cf41b4e94ed476937bde5d172ddf2a9:
+
+Define assertChipStackLockedByCurrentThread
+===========================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_LockTracker.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: assertChipStackLockedByCurrentThread
+   :project: My Project

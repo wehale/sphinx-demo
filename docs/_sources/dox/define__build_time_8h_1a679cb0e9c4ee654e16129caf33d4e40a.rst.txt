@@ -1,0 +1,14 @@
+.. _exhale_define__build_time_8h_1a679cb0e9c4ee654e16129caf33d4e40a:
+
+Define BUILD_MONTH_IS_FEB
+=========================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_BuildTime.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: BUILD_MONTH_IS_FEB
+   :project: My Project

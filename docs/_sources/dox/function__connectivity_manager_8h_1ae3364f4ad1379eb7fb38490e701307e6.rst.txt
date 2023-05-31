@@ -1,0 +1,14 @@
+.. _exhale_function__connectivity_manager_8h_1ae3364f4ad1379eb7fb38490e701307e6:
+
+Function chip::DeviceLayer::ConnectivityMgr
+===========================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_ConnectivityManager.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: chip::DeviceLayer::ConnectivityMgr()
+   :project: My Project

@@ -1,0 +1,84 @@
+
+.. _program_listing_file__Users_wehale_git_matter-stash_src_include_platform_DeviceInstanceInfoProvider.h:
+
+Program Listing for File DeviceInstanceInfoProvider.h
+=====================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__Users_wehale_git_matter-stash_src_include_platform_DeviceInstanceInfoProvider.h>` (``/Users/wehale/git/matter-stash/src/include/platform/DeviceInstanceInfoProvider.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+    *
+    *    Copyright (c) 2022 Project CHIP Authors
+    *
+    *    Licensed under the Apache License, Version 2.0 (the "License");
+    *    you may not use this file except in compliance with the License.
+    *    You may obtain a copy of the License at
+    *
+    *        http://www.apache.org/licenses/LICENSE-2.0
+    *
+    *    Unless required by applicable law or agreed to in writing, software
+    *    distributed under the License is distributed on an "AS IS" BASIS,
+    *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    *    See the License for the specific language governing permissions and
+    *    limitations under the License.
+    */
+   #pragma once
+   
+   #include <lib/core/CHIPError.h>
+   #include <lib/core/ClusterEnums.h>
+   #include <lib/support/Span.h>
+   
+   namespace chip {
+   namespace DeviceLayer {
+   
+   class DeviceInstanceInfoProvider
+   {
+   public:
+       DeviceInstanceInfoProvider()          = default;
+       virtual ~DeviceInstanceInfoProvider() = default;
+   
+       virtual CHIP_ERROR GetVendorName(char * buf, size_t bufSize) = 0;
+   
+       virtual CHIP_ERROR GetVendorId(uint16_t & vendorId) = 0;
+   
+       virtual CHIP_ERROR GetProductName(char * buf, size_t bufSize) = 0;
+   
+       virtual CHIP_ERROR GetProductId(uint16_t & productId) = 0;
+   
+       virtual CHIP_ERROR GetPartNumber(char * buf, size_t bufSize) = 0;
+   
+       virtual CHIP_ERROR GetProductURL(char * buf, size_t bufSize) = 0;
+   
+       virtual CHIP_ERROR GetProductLabel(char * buf, size_t bufSize) = 0;
+   
+       virtual CHIP_ERROR GetSerialNumber(char * buf, size_t bufSize) = 0;
+   
+       virtual CHIP_ERROR GetManufacturingDate(uint16_t & year, uint8_t & month, uint8_t & day) = 0;
+   
+       virtual CHIP_ERROR GetHardwareVersion(uint16_t & hardwareVersion) = 0;
+   
+       virtual CHIP_ERROR GetHardwareVersionString(char * buf, size_t bufSize) = 0;
+   
+       virtual CHIP_ERROR GetRotatingDeviceIdUniqueId(MutableByteSpan & uniqueIdSpan) = 0;
+   
+       virtual CHIP_ERROR GetProductFinish(app::Clusters::BasicInformation::ProductFinishEnum * finish)
+       {
+           return CHIP_ERROR_NOT_IMPLEMENTED;
+       }
+   
+       virtual CHIP_ERROR GetProductPrimaryColor(app::Clusters::BasicInformation::ColorEnum * primaryColor)
+       {
+           return CHIP_ERROR_NOT_IMPLEMENTED;
+       }
+   };
+   
+   DeviceInstanceInfoProvider * GetDeviceInstanceInfoProvider();
+   
+   void SetDeviceInstanceInfoProvider(DeviceInstanceInfoProvider * provider);
+   
+   } // namespace DeviceLayer
+   } // namespace chip

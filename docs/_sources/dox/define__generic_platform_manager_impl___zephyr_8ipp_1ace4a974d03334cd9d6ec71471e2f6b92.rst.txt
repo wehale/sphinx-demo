@@ -1,0 +1,14 @@
+.. _exhale_define__generic_platform_manager_impl___zephyr_8ipp_1ace4a974d03334cd9d6ec71471e2f6b92:
+
+Define DEFAULT_MIN_SLEEP_PERIOD
+===============================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl_Zephyr.ipp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEFAULT_MIN_SLEEP_PERIOD
+   :project: My Project

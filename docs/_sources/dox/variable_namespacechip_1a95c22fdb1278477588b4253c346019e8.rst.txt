@@ -1,0 +1,14 @@
+.. _exhale_variable_namespacechip_1a95c22fdb1278477588b4253c346019e8:
+
+Variable chip::kMaxDiscriminatorValue
+=====================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CommissionableDataProvider.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: chip::kMaxDiscriminatorValue
+   :project: My Project

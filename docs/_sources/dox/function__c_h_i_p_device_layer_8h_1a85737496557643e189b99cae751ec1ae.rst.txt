@@ -1,0 +1,14 @@
+.. _exhale_function__c_h_i_p_device_layer_8h_1a85737496557643e189b99cae751ec1ae:
+
+Function chip::DeviceLayer::SetSystemLayerForTesting
+====================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceLayer.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: chip::DeviceLayer::SetSystemLayerForTesting(System::Layer *)
+   :project: My Project

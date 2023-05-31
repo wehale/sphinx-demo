@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class PlatformManager &mdash; Silicon Labs Matter 2.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class PlatformManagerDelegate" href="classchip_1_1_device_layer_1_1_platform_manager_delegate.html" />
+    <link rel="prev" title="Class KeyValueStoreManager" href="classchip_1_1_device_layer_1_1_persisted_storage_1_1_key_value_store_manager.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Silicon Labs Matter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../OVERVIEW.html">Silicon Labs Matter User’s Guide Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW_FEATURES.html">Silicon Labs Matter New Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_1_overview.html">Matter Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_2_prereq.html">Matter Development Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_3_general.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_6_faq.html">FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Library API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_chip_device_event.html">Struct ChipDeviceEvent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_connectivity_manager_1_1_s_e_d_intervals_config.html">Struct ConnectivityManager::SEDIntervalsConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl_1_1_app_event_handler.html">Struct GenericPlatformManagerImpl::AppEventHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_network.html">Struct Network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_scan_response.html">Struct ThreadScanResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_scan_response.html">Struct WiFiScanResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_interface.html">Struct NetworkInterface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_thread_metrics.html">Struct ThreadMetrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_o_t_a_image_progress.html">Struct OTAImageProgress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_platform_1_1_persisted_storage_1_1internal_1_1_empty_key.html">Template Struct EmptyKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_platform_1_1_persisted_storage_1_1internal_1_1_empty_key_3_01const_01char_01_5_01_4.html">Template Struct EmptyKey&lt; const char * &gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_attribute_list.html">Template Class AttributeList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_attribute_list_1_1_iterator.html">Class AttributeList::Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_commissionable_data_provider.html">Class CommissionableDataProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_configuration_manager.html">Class ConfigurationManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager.html">Class ConnectivityManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager_delegate.html">Class ConnectivityManagerDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_control_server.html">Class DeviceControlServer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_info_provider.html">Class DeviceInfoProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_info_provider_1_1_iterator.html">Template Class DeviceInfoProvider::Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_instance_info_provider.html">Class DeviceInstanceInfoProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_diagnostic_data_provider.html">Class DiagnosticDataProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_general_faults.html">Template Class GeneralFaults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_general_faults_1_1_iterator.html">Class GeneralFaults::Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_device_network_info.html">Class DeviceNetworkInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_configuration_manager_impl.html">Template Class GenericConfigurationManagerImpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl.html">Template Class GenericConnectivityManagerImpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___b_l_e.html">Template Class GenericConnectivityManagerImpl_BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___no_b_l_e.html">Template Class GenericConnectivityManagerImpl_NoBLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___no_thread.html">Template Class GenericConnectivityManagerImpl_NoThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___no_wi_fi.html">Template Class GenericConnectivityManagerImpl_NoWiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___t_c_p.html">Template Class GenericConnectivityManagerImpl_TCP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread.html">Template Class GenericConnectivityManagerImpl_Thread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___u_d_p.html">Template Class GenericConnectivityManagerImpl_UDP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___wi_fi.html">Template Class GenericConnectivityManagerImpl_WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_device_instance_info_provider.html">Template Class GenericDeviceInstanceInfoProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl.html">Template Class GenericPlatformManagerImpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___free_r_t_o_s.html">Template Class GenericPlatformManagerImpl_FreeRTOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___p_o_s_i_x.html">Template Class GenericPlatformManagerImpl_POSIX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr.html">Template Class GenericPlatformManagerImpl_Zephyr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___free_r_t_o_s.html">Template Class GenericThreadStackManagerImpl_FreeRTOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___open_thread.html">Template Class GenericThreadStackManagerImpl_OpenThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___open_thread___lw_i_p.html">Template Class GenericThreadStackManagerImpl_OpenThread_LwIP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_ethernet_driver.html">Class EthernetDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_base_driver.html">Class BaseDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_base_driver_1_1_network_status_change_callback.html">Class BaseDriver::NetworkStatusChangeCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_wireless_driver.html">Class WirelessDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_wireless_driver_1_1_connect_callback.html">Class WirelessDriver::ConnectCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_iterator.html">Template Class Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_driver.html">Class ThreadDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_driver_1_1_scan_callback.html">Class ThreadDriver::ScanCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_driver.html">Class WiFiDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_driver_1_1_scan_callback.html">Class WiFiDriver::ScanCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_n_f_c_manager.html">Class NFCManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_persisted_storage_1_1_key_value_store_manager.html">Class KeyValueStoreManager</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class PlatformManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_platform_manager_delegate.html">Class PlatformManagerDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_stack_lock.html">Class StackLock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_stack_unlock.html">Class StackUnlock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_test_only_commissionable_data_provider.html">Class TestOnlyCommissionableDataProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_thread_stack_manager.html">Class ThreadStackManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_wi_fi_diagnostics_delegate.html">Class WiFiDiagnosticsDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_kvs_persistent_storage_delegate.html">Class KvsPersistentStorageDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_o_t_a_image_processor_interface.html">Class OTAImageProcessorInterface</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Silicon Labs Matter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Library API</a></li>
+      <li class="breadcrumb-item active">Class PlatformManager</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dox/classchip_1_1_device_layer_1_1_platform_manager.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-platformmanager">
+<span id="exhale-class-classchip-1-1-device-layer-1-1-platform-manager"></span><h1>Class PlatformManager<a class="headerlink" href="#class-platformmanager" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__Users_wehale_git_matter-stash_src_include_platform_PlatformManager.h.html#file-users-wehale-git-matter-stash-src-include-platform-platformmanager-h"><span class="std std-ref">File PlatformManager.h</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManagerE">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManagerE"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManagerE"></span><span id="chip::DeviceLayer::PlatformManager"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PlatformManager</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManagerE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Provides features for initializing and interacting with the chip network stack on a chip-enabled device. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager17EventHandlerFunctE">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager17EventHandlerFunctE"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager17EventHandlerFunctE"></span><span id="chip::DeviceLayer::PlatformManager::EventHandlerFunct"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a61da86a211bc12e7b5a8649aa38b7385"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">EventHandlerFunct</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structchip_1_1_device_layer_1_1_chip_device_event.html#_CPPv4N4chip11DeviceLayer15ChipDeviceEventE" title="chip::DeviceLayer::ChipDeviceEvent"><span class="n"><span class="pre">ChipDeviceEvent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">intptr_t</span></span><span class="w"> </span><span class="n"><span class="pre">arg</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager17EventHandlerFunctE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager13InitChipStackEv">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager13InitChipStackEv"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager13InitChipStackEv"></span><span id="chip::DeviceLayer::PlatformManager::InitChipStack"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a4c1372af7e3d001e2857e6f14c9a1554"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">InitChipStack</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager13InitChipStackEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p><a class="reference internal" href="#classchip_1_1_device_layer_1_1_platform_manager_1a4c1372af7e3d001e2857e6f14c9a1554"><span class="std std-ref">InitChipStack()</span></a> initializes the <a class="reference internal" href="#classchip_1_1_device_layer_1_1_platform_manager"><span class="std std-ref">PlatformManager</span></a>. After calling that, a consumer is allowed to call either StartEventLoopTask or RunEventLoop to process pending work. Calling both is not allowed: it must be one or the other. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager15AddEventHandlerE17EventHandlerFunct8intptr_t">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager15AddEventHandlerE17EventHandlerFunct8intptr_t"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager15AddEventHandlerE17EventHandlerFunct8intptr_t"></span><span id="chip::DeviceLayer::PlatformManager::AddEventHandler__EventHandlerFunct.intptr_t"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a40b9e3aa86bd17703ed7c1566505da3e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AddEventHandler</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer15PlatformManager17EventHandlerFunctE" title="chip::DeviceLayer::PlatformManager::EventHandlerFunct"><span class="n"><span class="pre">EventHandlerFunct</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">handler</span></span>, <span class="n"><span class="pre">intptr_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arg</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager15AddEventHandlerE17EventHandlerFunct8intptr_t" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager18RemoveEventHandlerE17EventHandlerFunct8intptr_t">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager18RemoveEventHandlerE17EventHandlerFunct8intptr_t"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager18RemoveEventHandlerE17EventHandlerFunct8intptr_t"></span><span id="chip::DeviceLayer::PlatformManager::RemoveEventHandler__EventHandlerFunct.intptr_t"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a5fe71645c08ad0f7dc93a432b14bbeb5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RemoveEventHandler</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer15PlatformManager17EventHandlerFunctE" title="chip::DeviceLayer::PlatformManager::EventHandlerFunct"><span class="n"><span class="pre">EventHandlerFunct</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">handler</span></span>, <span class="n"><span class="pre">intptr_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arg</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager18RemoveEventHandlerE17EventHandlerFunct8intptr_t" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager11SetDelegateEP23PlatformManagerDelegate">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager11SetDelegateEP23PlatformManagerDelegate"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager11SetDelegateEP23PlatformManagerDelegate"></span><span id="chip::DeviceLayer::PlatformManager::SetDelegate__PlatformManagerDelegateP"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a92473a1cdb4cdbd14d2a06a27fbdfc82"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetDelegate</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classchip_1_1_device_layer_1_1_platform_manager_delegate.html#_CPPv4N4chip11DeviceLayer23PlatformManagerDelegateE" title="chip::DeviceLayer::PlatformManagerDelegate"><span class="n"><span class="pre">PlatformManagerDelegate</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">delegate</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager11SetDelegateEP23PlatformManagerDelegate" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4chip11DeviceLayer15PlatformManager11GetDelegateEv">
+<span id="_CPPv3NK4chip11DeviceLayer15PlatformManager11GetDelegateEv"></span><span id="_CPPv2NK4chip11DeviceLayer15PlatformManager11GetDelegateEv"></span><span id="chip::DeviceLayer::PlatformManager::GetDelegateC"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a770c84364c504f0eb510ff000f08903f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="classchip_1_1_device_layer_1_1_platform_manager_delegate.html#_CPPv4N4chip11DeviceLayer23PlatformManagerDelegateE" title="chip::DeviceLayer::PlatformManagerDelegate"><span class="n"><span class="pre">PlatformManagerDelegate</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetDelegate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4chip11DeviceLayer15PlatformManager11GetDelegateEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager19HandleServerStartedEv">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager19HandleServerStartedEv"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager19HandleServerStartedEv"></span><span id="chip::DeviceLayer::PlatformManager::HandleServerStarted"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a398db9d0c0bd1049c90ba5a92977bf51"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HandleServerStarted</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager19HandleServerStartedEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Should be called after initializing all layers of the Matter stack to run all needed post-startup actions. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager24HandleServerShuttingDownEv">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager24HandleServerShuttingDownEv"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager24HandleServerShuttingDownEv"></span><span id="chip::DeviceLayer::PlatformManager::HandleServerShuttingDown"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a5e0db77bdab7a833061fe341eba933cf"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HandleServerShuttingDown</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager24HandleServerShuttingDownEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Should be called before shutting down the Matter stack or restarting the application to run all needed pre-shutdown actions. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager12ScheduleWorkE14AsyncWorkFunct8intptr_t">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager12ScheduleWorkE14AsyncWorkFunct8intptr_t"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager12ScheduleWorkE14AsyncWorkFunct8intptr_t"></span><span id="chip::DeviceLayer::PlatformManager::ScheduleWork__AsyncWorkFunct.intptr_t"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a8a1daf9aaf8eb75f6c743c8dd1935d29"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScheduleWork</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef__c_h_i_p_device_event_8h_1a4536f0203bb21f8661c3fa8aacbf20e4.html#_CPPv4N4chip11DeviceLayer14AsyncWorkFunctE" title="chip::DeviceLayer::AsyncWorkFunct"><span class="n"><span class="pre">AsyncWorkFunct</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">workFunct</span></span>, <span class="n"><span class="pre">intptr_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arg</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager12ScheduleWorkE14AsyncWorkFunct8intptr_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>ScheduleWork can be called after InitChipStack has been called. Calls that happen before either StartEventLoopTask or RunEventLoop will queue the work up but that work will NOT run until one of those functions is called.</p>
+<p>ScheduleWork can be called safely on any thread without locking the stack. When called from a thread that is not doing the stack work item processing, the callback function may be called (on the work item processing thread) before ScheduleWork returns. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager12RunEventLoopEv">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager12RunEventLoopEv"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager12RunEventLoopEv"></span><span id="chip::DeviceLayer::PlatformManager::RunEventLoop"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a4cff33452d1f380bfd46c984e45df31c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RunEventLoop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager12RunEventLoopEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Process work items until StopEventLoopTask is called. RunEventLoop will not return until work item processing is stopped. Once it returns it guarantees that no more work items will be processed unless there’s another call to RunEventLoop.</p>
+<p>Consumers that call RunEventLoop must not call StartEventLoopTask.</p>
+<p>Consumers that call RunEventLoop must ensure that RunEventLoop returns before calling Shutdown. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager18StartEventLoopTaskEv">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager18StartEventLoopTaskEv"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager18StartEventLoopTaskEv"></span><span id="chip::DeviceLayer::PlatformManager::StartEventLoopTask"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a8492de263e64ccd18e1a138264aebc9d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StartEventLoopTask</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager18StartEventLoopTaskEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Starts the stack on its own task with an associated event queue to dispatch and handle events posted to that task. </p>
+<p>Process work items until StopEventLoopTask is called.</p>
+<p>StartEventLoopTask processes items asynchronously. It can return before any items are processed, or after some items have been processed, or while an item is being processed, or even after <a class="reference internal" href="#classchip_1_1_device_layer_1_1_platform_manager_1a45ec9f9b795dcb62d2fb8963fbfe431f"><span class="std std-ref">StopEventLoopTask()</span></a> has been called (e.g. if <a class="reference internal" href="#classchip_1_1_device_layer_1_1_platform_manager_1a8a1daf9aaf8eb75f6c743c8dd1935d29"><span class="std std-ref">ScheduleWork()</span></a> was called before StartEventLoopTask was called, with a work item that calls StopEventLoopTask).</p>
+<p>Consumers that call StartEventLoopTask must not call RunEventLoop.</p>
+<p>Consumers that call StartEventLoopTask must ensure that they call StopEventLoopTask before calling Shutdown.</p>
+<p>This is thread-safe. This is <em>NOT SAFE</em> to call from within the CHIP event loop since it can grab the stack lock. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager17StopEventLoopTaskEv">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager17StopEventLoopTaskEv"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager17StopEventLoopTaskEv"></span><span id="chip::DeviceLayer::PlatformManager::StopEventLoopTask"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a45ec9f9b795dcb62d2fb8963fbfe431f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StopEventLoopTask</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager17StopEventLoopTaskEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>This will trigger the event loop to exit and block till it has exited the loop. This prevents the processing of any further events in the queue. </p>
+<p>Stop processing of work items by the event loop.</p>
+<p>If called from outside work item processing, StopEventLoopTask guarantees that any currently-executing work item completes execution and no more work items will run after StopEventLoopTask returns. This is generally how StopEventLoopTask is used in conjunction with StartEventLoopTask.</p>
+<p>If called from inside work item processing, StopEventLoopTask makes no guarantees about exactly when work item processing will stop. What it does guarantee is that if it is used this way in conjunction with RunEventLoop then all work item processing will stop before RunEventLoop returns.</p>
+<p>Additionally, this stops the CHIP task if the following criteria are met:<ol class="lowerroman simple">
+<li><p>One was created earlier through a call to StartEventLoopTask</p></li>
+<li><p>This call isn’t being made from that task.</p></li>
+</ol>
+</p>
+<p>This is safe to call from any task. This is safe to call from within the CHIP event loop. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager13LockChipStackEv">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager13LockChipStackEv"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager13LockChipStackEv"></span><span id="chip::DeviceLayer::PlatformManager::LockChipStack"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1ac8acb26d5d8adcd1f5709f3f4fecb588"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LockChipStack</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager13LockChipStackEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager16TryLockChipStackEv">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager16TryLockChipStackEv"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager16TryLockChipStackEv"></span><span id="chip::DeviceLayer::PlatformManager::TryLockChipStack"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a8a27948111e2d94228526dd92105aeb0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TryLockChipStack</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager16TryLockChipStackEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager15UnlockChipStackEv">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager15UnlockChipStackEv"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager15UnlockChipStackEv"></span><span id="chip::DeviceLayer::PlatformManager::UnlockChipStack"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a3f35d6ee56ac54c996387c24bdfc023c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UnlockChipStack</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager15UnlockChipStackEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager8ShutdownEv">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager8ShutdownEv"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager8ShutdownEv"></span><span id="chip::DeviceLayer::PlatformManager::Shutdown"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a8e0bbc9cee2cfc64849e6c84eb1fc686"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Shutdown</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager8ShutdownEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Shuts down and cleans up the main objects in the CHIP stack. This DOES NOT stop the chip thread or event queue from running. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager9PostEventEPK15ChipDeviceEvent">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager9PostEventEPK15ChipDeviceEvent"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager9PostEventEPK15ChipDeviceEvent"></span><span id="chip::DeviceLayer::PlatformManager::PostEvent__ChipDeviceEventCP"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a74fcc71cf01edc5d7874ecaa4a2165e2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PostEvent</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structchip_1_1_device_layer_1_1_chip_device_event.html#_CPPv4N4chip11DeviceLayer15ChipDeviceEventE" title="chip::DeviceLayer::ChipDeviceEvent"><span class="n"><span class="pre">ChipDeviceEvent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">event</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager9PostEventEPK15ChipDeviceEvent" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager14PostEventOrDieEPK15ChipDeviceEvent">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager14PostEventOrDieEPK15ChipDeviceEvent"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager14PostEventOrDieEPK15ChipDeviceEvent"></span><span id="chip::DeviceLayer::PlatformManager::PostEventOrDie__ChipDeviceEventCP"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a047ce7e7e2c66b7f6b485b062554768e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PostEventOrDie</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structchip_1_1_device_layer_1_1_chip_device_event.html#_CPPv4N4chip11DeviceLayer15ChipDeviceEventE" title="chip::DeviceLayer::ChipDeviceEvent"><span class="n"><span class="pre">ChipDeviceEvent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">event</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager14PostEventOrDieEPK15ChipDeviceEvent" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager22ScheduleBackgroundWorkE14AsyncWorkFunct8intptr_t">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager22ScheduleBackgroundWorkE14AsyncWorkFunct8intptr_t"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager22ScheduleBackgroundWorkE14AsyncWorkFunct8intptr_t"></span><span id="chip::DeviceLayer::PlatformManager::ScheduleBackgroundWork__AsyncWorkFunct.intptr_t"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a7f044320dd1c463521b7f56295d3da3a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScheduleBackgroundWork</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef__c_h_i_p_device_event_8h_1a4536f0203bb21f8661c3fa8aacbf20e4.html#_CPPv4N4chip11DeviceLayer14AsyncWorkFunctE" title="chip::DeviceLayer::AsyncWorkFunct"><span class="n"><span class="pre">AsyncWorkFunct</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">workFunct</span></span>, <span class="n"><span class="pre">intptr_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arg</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager22ScheduleBackgroundWorkE14AsyncWorkFunct8intptr_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Generally this function has the same semantics as ScheduleWork except it applies to background processing.</p>
+<p>Delegates to PostBackgroundEvent (which will delegate to PostEvent if CHIP_DEVICE_CONFIG_ENABLE_BG_EVENT_PROCESSING is not true). </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager19PostBackgroundEventEPK15ChipDeviceEvent">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager19PostBackgroundEventEPK15ChipDeviceEvent"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager19PostBackgroundEventEPK15ChipDeviceEvent"></span><span id="chip::DeviceLayer::PlatformManager::PostBackgroundEvent__ChipDeviceEventCP"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1af5a46c1946d3a0e3caf4f816c6004952"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PostBackgroundEvent</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structchip_1_1_device_layer_1_1_chip_device_event.html#_CPPv4N4chip11DeviceLayer15ChipDeviceEventE" title="chip::DeviceLayer::ChipDeviceEvent"><span class="n"><span class="pre">ChipDeviceEvent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">event</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager19PostBackgroundEventEPK15ChipDeviceEvent" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Generally this function has the same semantics as PostEvent except it applies to background processing.</p>
+<p>If CHIP_DEVICE_CONFIG_ENABLE_BG_EVENT_PROCESSING is not true, will delegate to PostEvent.</p>
+<p>Only accepts events of type kCallWorkFunct or kNoOp.</p>
+<p>Returns CHIP_ERROR_INVALID_ARGUMENT if the event type is not acceptable. Returns CHIP_ERROR_NO_MEMORY if resources are exhausted. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager22RunBackgroundEventLoopEv">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager22RunBackgroundEventLoopEv"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager22RunBackgroundEventLoopEv"></span><span id="chip::DeviceLayer::PlatformManager::RunBackgroundEventLoop"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1aeb9857c970df94b74fb8ed42fdeca25c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RunBackgroundEventLoop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager22RunBackgroundEventLoopEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Generally this function has the same semantics as RunEventLoop except it applies to background processing. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager28StartBackgroundEventLoopTaskEv">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager28StartBackgroundEventLoopTaskEv"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager28StartBackgroundEventLoopTaskEv"></span><span id="chip::DeviceLayer::PlatformManager::StartBackgroundEventLoopTask"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1ad13a9ca5ec68a96432eca775db71a78c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StartBackgroundEventLoopTask</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager28StartBackgroundEventLoopTaskEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Generally this function has the same semantics as StartEventLoopTask except it applies to background processing. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager27StopBackgroundEventLoopTaskEv">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager27StopBackgroundEventLoopTaskEv"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager27StopBackgroundEventLoopTaskEv"></span><span id="chip::DeviceLayer::PlatformManager::StopBackgroundEventLoopTask"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a7d639c42bd58e64d9dd040edcc11b06e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StopBackgroundEventLoopTask</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager27StopBackgroundEventLoopTaskEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Generally this function has the same semantics as StopEventLoopTask except it applies to background processing. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager15PlatformManagerEv">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager15PlatformManagerEv"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager15PlatformManagerEv"></span><span id="chip::DeviceLayer::PlatformManager::PlatformManager"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a1f3cfb5351e38ee32a5b5e6ecac675d3"></span><span class="sig-name descname"><span class="n"><span class="pre">PlatformManager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager15PlatformManagerEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManagerD0Ev">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManagerD0Ev"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManagerD0Ev"></span><span id="chip::DeviceLayer::PlatformManager::~PlatformManager"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1af761c1ce7972980df8c6ee72822e48a0"></span><span class="sig-name descname"><span class="n"><span class="pre">~PlatformManager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManagerD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager15PlatformManagerERK15PlatformManager">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager15PlatformManagerERK15PlatformManager"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager15PlatformManagerERK15PlatformManager"></span><span id="chip::DeviceLayer::PlatformManager::PlatformManager__PlatformManagerCR"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1afaa19637e419ef10064eedeb17be2226"></span><span class="sig-name descname"><span class="n"><span class="pre">PlatformManager</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer15PlatformManager15PlatformManagerERK15PlatformManager" title="chip::DeviceLayer::PlatformManager::PlatformManager"><span class="n"><span class="pre">PlatformManager</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager15PlatformManagerERK15PlatformManager" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManager15PlatformManagerERRK15PlatformManager">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManager15PlatformManagerERRK15PlatformManager"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManager15PlatformManagerERRK15PlatformManager"></span><span id="chip::DeviceLayer::PlatformManager::PlatformManager__PlatformManagerCRR"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a3de9fcd6afb9ba8344c4e6b237950332"></span><span class="sig-name descname"><span class="n"><span class="pre">PlatformManager</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer15PlatformManager15PlatformManagerERRK15PlatformManager" title="chip::DeviceLayer::PlatformManager::PlatformManager"><span class="n"><span class="pre">PlatformManager</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManager15PlatformManagerERRK15PlatformManager" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer15PlatformManageraSERK15PlatformManager">
+<span id="_CPPv3N4chip11DeviceLayer15PlatformManageraSERK15PlatformManager"></span><span id="_CPPv2N4chip11DeviceLayer15PlatformManageraSERK15PlatformManager"></span><span id="chip::DeviceLayer::PlatformManager::assign-operator__PlatformManagerCR"></span><span class="target" id="classchip_1_1_device_layer_1_1_platform_manager_1a9dbe8d62bde794dba8354b184d91940c"></span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer15PlatformManagerE" title="chip::DeviceLayer::PlatformManager"><span class="n"><span class="pre">PlatformManager</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer15PlatformManagerE" title="chip::DeviceLayer::PlatformManager"><span class="n"><span class="pre">PlatformManager</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer15PlatformManageraSERK15PlatformManager" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">Dnssd::DiscoveryImplPlatform</span></dt>
+</dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">Internal::BLEManagerImpl</span></dt>
+</dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">Internal::GenericPlatformManagerImpl</span></dt>
+</dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">Internal::GenericPlatformManagerImpl_FreeRTOS</span></dt>
+</dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">Internal::GenericPlatformManagerImpl_POSIX</span></dt>
+</dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">Internal::GenericPlatformManagerImpl_Zephyr</span></dt>
+</dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">Internal::GenericConnectivityManagerImpl_Thread</span></dt>
+</dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">Internal::GenericThreadStackManagerImpl_OpenThread</span></dt>
+</dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">Internal::GenericThreadStackManagerImpl_OpenThread_LwIP</span></dt>
+</dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">Internal::GenericConfigurationManagerImpl</span></dt>
+</dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">System::PlatformEventing</span></dt>
+</dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classchip_1_1_device_layer_1_1_persisted_storage_1_1_key_value_store_manager.html" class="btn btn-neutral float-left" title="Class KeyValueStoreManager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classchip_1_1_device_layer_1_1_platform_manager_delegate.html" class="btn btn-neutral float-right" title="Class PlatformManagerDelegate" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Silicon Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

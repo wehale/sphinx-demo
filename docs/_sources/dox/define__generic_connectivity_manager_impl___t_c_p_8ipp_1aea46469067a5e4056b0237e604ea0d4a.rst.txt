@@ -1,0 +1,14 @@
+.. _exhale_define__generic_connectivity_manager_impl___t_c_p_8ipp_1aea46469067a5e4056b0237e604ea0d4a:
+
+Define GENERIC_CONNECTIVITY_MANAGER_IMPL_TCP_CPP
+================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_TCP.ipp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: GENERIC_CONNECTIVITY_MANAGER_IMPL_TCP_CPP
+   :project: My Project

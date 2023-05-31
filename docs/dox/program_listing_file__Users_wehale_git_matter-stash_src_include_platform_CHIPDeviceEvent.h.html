@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File CHIPDeviceEvent.h &mdash; Silicon Labs Matter 2.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Silicon Labs Matter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../OVERVIEW.html">Silicon Labs Matter User’s Guide Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW_FEATURES.html">Silicon Labs Matter New Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_1_overview.html">Matter Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_2_prereq.html">Matter Development Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_3_general.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_6_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Library API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Silicon Labs Matter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Program Listing for File CHIPDeviceEvent.h</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dox/program_listing_file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceEvent.h.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-chipdeviceevent-h">
+<span id="program-listing-file-users-wehale-git-matter-stash-src-include-platform-chipdeviceevent-h"></span><h1>Program Listing for File CHIPDeviceEvent.h<a class="headerlink" href="#program-listing-for-file-chipdeviceevent-h" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceEvent.h.html#file-users-wehale-git-matter-stash-src-include-platform-chipdeviceevent-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/Users/wehale/git/matter-stash/src/include/platform/CHIPDeviceEvent.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> *</span>
+<span class="cm"> *    Copyright (c) 2020 Project CHIP Authors</span>
+<span class="cm"> *    Copyright (c) 2018 Nest Labs, Inc.</span>
+<span class="cm"> *</span>
+<span class="cm"> *    Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="cm"> *    you may not use this file except in compliance with the License.</span>
+<span class="cm"> *    You may obtain a copy of the License at</span>
+<span class="cm"> *</span>
+<span class="cm"> *        http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="cm"> *</span>
+<span class="cm"> *    Unless required by applicable law or agreed to in writing, software</span>
+<span class="cm"> *    distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="cm"> *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="cm"> *    See the License for the specific language governing permissions and</span>
+<span class="cm"> *    limitations under the License.</span>
+<span class="cm"> */</span>
+
+<span class="cp">#pragma once</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdint.h&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;inet/IPAddress.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lib/core/DataModelTypes.h&gt;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">chip</span><span class="w"> </span><span class="p">{</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">DeviceLayer</span><span class="w"> </span><span class="p">{</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">DeviceEventType</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">enum</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">kFlag_IsPublic</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="mh">0x8000</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kFlag_IsPlatformSpecific</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x4000</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kFlag_Reserved1</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mh">0x2000</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kFlag_Reserved2</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mh">0x1000</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kMaxEventNum</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="mh">0x0FFF</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="k">enum</span><span class="w"> </span><span class="nc">EventTypeRanges</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">kRange_Public</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kFlag_IsPublic</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kRange_PublicPlatformSpecific</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kFlag_IsPublic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">kFlag_IsPlatformSpecific</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kRange_Internal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kRange_InternalPlatformSpecific</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kFlag_IsPlatformSpecific</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsPublic</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">eventType</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">eventType</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">kFlag_IsPublic</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsInternal</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">eventType</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">eventType</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">kFlag_IsPublic</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsPlatformSpecific</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">eventType</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">eventType</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">kFlag_IsPlatformSpecific</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsPlatformGeneric</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">eventType</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">eventType</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">kFlag_IsPlatformSpecific</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">enum</span><span class="w"> </span><span class="nc">PublicEventTypes</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">kWiFiConnectivityChange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kRange_Public</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kThreadConnectivityChange</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kInternetConnectivityChange</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kServiceConnectivityChange</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kServiceProvisioningChange</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kTimeSyncChange</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kSEDIntervalChange</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kCHIPoBLEConnectionEstablished</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kCHIPoBLEConnectionClosed</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kThreadStateChange</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kThreadInterfaceStateChange</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kCHIPoBLEAdvertisingChange</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kInterfaceIpAddressChanged</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kCommissioningComplete</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kFailSafeTimerExpired</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kOperationalNetworkEnabled</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kDnssdInitialized</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kDnssdRestartNeeded</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kBindingsChangedViaCluster</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kOtaStateChanged</span><span class="p">,</span>
+
+<span class="w">    </span><span class="n">kServerReady</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="k">enum</span><span class="w"> </span><span class="nc">InternalEventTypes</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">kEventTypeNotSet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kRange_Internal</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kNoOp</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kCallWorkFunct</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kChipLambdaEvent</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kChipSystemLayerEvent</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kCHIPoBLESubscribe</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kCHIPoBLEUnsubscribe</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kCHIPoBLEWriteReceived</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kCHIPoBLEIndicateConfirm</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kCHIPoBLEConnectionError</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kCHIPoBLENotifyConfirm</span>
+<span class="p">};</span>
+
+<span class="k">static_assert</span><span class="p">(</span><span class="n">kEventTypeNotSet</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;kEventTypeNotSet must be defined as 0&quot;</span><span class="p">);</span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace DeviceEventType</span>
+
+<span class="k">enum</span><span class="w"> </span><span class="nc">ConnectivityChange</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">kConnectivity_NoChange</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kConnectivity_Established</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kConnectivity_Lost</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span>
+<span class="p">};</span>
+
+<span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">InterfaceIpChangeType</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">kIpV4_Assigned</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kIpV4_Lost</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kIpV6_Assigned</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kIpV6_Lost</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="k">enum</span><span class="w"> </span><span class="nc">ActivityChange</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">kActivity_NoChange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kActivity_Started</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kActivity_Stopped</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="k">enum</span><span class="w"> </span><span class="nc">OtaState</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">kOtaSpaceAvailable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kOtaDownloadInProgress</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kOtaDownloadComplete</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kOtaDownloadFailed</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kOtaDownloadAborted</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kOtaApplyInProgress</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kOtaApplyComplete</span><span class="p">,</span>
+<span class="w">    </span><span class="n">kOtaApplyFailed</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kr">inline</span><span class="w"> </span><span class="n">ConnectivityChange</span><span class="w"> </span><span class="nf">GetConnectivityChange</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">prevState</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">newState</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">prevState</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">newState</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">kConnectivity_NoChange</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">newState</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">kConnectivity_Established</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">kConnectivity_Lost</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">typedef</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">AsyncWorkFunct</span><span class="p">)(</span><span class="kt">intptr_t</span><span class="w"> </span><span class="n">arg</span><span class="p">);</span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace DeviceLayer</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace chip</span>
+
+<span class="cm">/* Include a header file containing platform-specific event definitions.</span>
+<span class="cm"> */</span>
+<span class="cp">#ifdef EXTERNAL_CHIPDEVICEPLATFORMEVENT_HEADER</span>
+<span class="cp">#include EXTERNAL_CHIPDEVICEPLATFORMEVENT_HEADER</span>
+<span class="cp">#elif defined(CHIP_DEVICE_LAYER_TARGET)</span>
+<span class="cp">#define CHIPDEVICEPLATFORMEVENT_HEADER &lt;platform/CHIP_DEVICE_LAYER_TARGET/CHIPDevicePlatformEvent.h&gt;</span>
+<span class="cp">#include CHIPDEVICEPLATFORMEVENT_HEADER</span>
+<span class="cp">#endif </span><span class="c1">// defined(CHIP_DEVICE_LAYER_TARGET)</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ble/BleConfig.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;inet/InetInterface.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lib/support/LambdaBridge.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;system/SystemEvent.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;system/SystemLayer.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;system/SystemPacketBuffer.h&gt;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">chip</span><span class="w"> </span><span class="p">{</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">DeviceLayer</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">ChipDeviceEvent</span><span class="w"> </span><span class="k">final</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">Type</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">union</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ChipDevicePlatformEvent</span><span class="w"> </span><span class="n">Platform</span><span class="p">;</span>
+<span class="w">        </span><span class="n">LambdaBridge</span><span class="w"> </span><span class="n">LambdaEvent</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">AsyncWorkFunct</span><span class="w"> </span><span class="n">WorkFunct</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">intptr_t</span><span class="w"> </span><span class="n">Arg</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">CallWorkFunct</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">ConnectivityChange</span><span class="w"> </span><span class="n">Result</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">WiFiConnectivityChange</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">ConnectivityChange</span><span class="w"> </span><span class="n">Result</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">ThreadConnectivityChange</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">ConnectivityChange</span><span class="w"> </span><span class="n">IPv4</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ConnectivityChange</span><span class="w"> </span><span class="n">IPv6</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// WARNING: There used to be `char address[INET6_ADDRSTRLEN]` here and it is</span>
+<span class="w">            </span><span class="c1">//          deprecated/removed since it was too large and only used for logging.</span>
+<span class="w">            </span><span class="c1">//          Consider not relying on ipAddress field either since the platform</span>
+<span class="w">            </span><span class="c1">//          layer *does not actually validate* that the actual internet is reachable</span>
+<span class="w">            </span><span class="c1">//          before issuing this event *and* there may be multiple addresses</span>
+<span class="w">            </span><span class="c1">//          (especially IPv6) so it&#39;s recommended to use `ChipDevicePlatformEvent`</span>
+<span class="w">            </span><span class="c1">//          instead and do something that is better for your platform.</span>
+<span class="w">            </span><span class="n">chip</span><span class="o">::</span><span class="n">Inet</span><span class="o">::</span><span class="n">IPAddress</span><span class="w"> </span><span class="n">ipAddress</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">InternetConnectivityChange</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">struct</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">ConnectivityChange</span><span class="w"> </span><span class="n">Result</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="n">Overall</span><span class="p">;</span>
+<span class="w">            </span><span class="k">struct</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">ConnectivityChange</span><span class="w"> </span><span class="n">Result</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="n">ViaThread</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">ServiceConnectivityChange</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">ConnectivityChange</span><span class="w"> </span><span class="n">Result</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">ServiceSubscriptionStateChange</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">IsMemberOfFabric</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">FabricMembershipChange</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">IsServiceProvisioned</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">ServiceConfigUpdated</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">ServiceProvisioningChange</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">IsPairedToAccount</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">AccountPairingChange</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">IsTimeSynchronized</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">TimeSyncChange</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">PeerNodeId</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">SessionKeyId</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">SessionType</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">IsCommissioner</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">SessionEstablished</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">BLE_CONNECTION_OBJECT</span><span class="w"> </span><span class="n">ConId</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">CHIPoBLESubscribe</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">BLE_CONNECTION_OBJECT</span><span class="w"> </span><span class="n">ConId</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">CHIPoBLEUnsubscribe</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">BLE_CONNECTION_OBJECT</span><span class="w"> </span><span class="n">ConId</span><span class="p">;</span>
+<span class="w">            </span><span class="n">chip</span><span class="o">::</span><span class="n">System</span><span class="o">::</span><span class="n">PacketBuffer</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Data</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">CHIPoBLEWriteReceived</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">BLE_CONNECTION_OBJECT</span><span class="w"> </span><span class="n">ConId</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">CHIPoBLEIndicateConfirm</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">BLE_CONNECTION_OBJECT</span><span class="w"> </span><span class="n">ConId</span><span class="p">;</span>
+<span class="w">            </span><span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">Reason</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">CHIPoBLEConnectionError</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">BLE_CONNECTION_OBJECT</span><span class="w"> </span><span class="n">ConId</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">CHIPoBLENotifyConfirm</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">RoleChanged</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">AddressChanged</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">NetDataChanged</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">ChildNodesChanged</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">            </span><span class="k">struct</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">Flags</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="n">OpenThread</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">ThreadStateChange</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">ActivityChange</span><span class="w"> </span><span class="n">Result</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">CHIPoBLEAdvertisingChange</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">InterfaceIpChangeType</span><span class="w"> </span><span class="n">Type</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">InterfaceIpAddressChanged</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">nodeId</span><span class="p">;</span>
+<span class="w">            </span><span class="n">FabricIndex</span><span class="w"> </span><span class="n">fabricIndex</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">CommissioningComplete</span><span class="p">;</span>
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">FabricIndex</span><span class="w"> </span><span class="n">fabricIndex</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">BindingsChanged</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">FabricIndex</span><span class="w"> </span><span class="n">fabricIndex</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">addNocCommandHasBeenInvoked</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">updateNocCommandHasBeenInvoked</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">FailSafeTimerExpired</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// TODO(cecille): This should just specify wifi or thread since we assume at most 1.</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">network</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">OperationalNetwork</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">struct</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">OtaState</span><span class="w"> </span><span class="n">newState</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">OtaStateChanged</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Clear</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">memset</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">));</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsPublic</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">DeviceEventType</span><span class="o">::</span><span class="n">IsPublic</span><span class="p">(</span><span class="n">Type</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsInternal</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">DeviceEventType</span><span class="o">::</span><span class="n">IsInternal</span><span class="p">(</span><span class="n">Type</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsPlatformSpecific</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">DeviceEventType</span><span class="o">::</span><span class="n">IsPlatformSpecific</span><span class="p">(</span><span class="n">Type</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsPlatformGeneric</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">DeviceEventType</span><span class="o">::</span><span class="n">IsPlatformGeneric</span><span class="p">(</span><span class="n">Type</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace DeviceLayer</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace chip</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Silicon Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_error_8h_1a6f269b54456d88e9ecaeccf9438e7f72:
+
+Define CHIP_DEVICE_ERROR_CONFIG_NOT_FOUND
+=========================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceError.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_ERROR_CONFIG_NOT_FOUND
+   :project: My Project

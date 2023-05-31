@@ -1,0 +1,88 @@
+
+.. _file__Users_wehale_git_matter-stash_src_include_platform_KeyValueStoreManager.h:
+
+File KeyValueStoreManager.h
+===========================
+
+|exhale_lsh| :ref:`Parent directory <dir__Users_wehale_git_matter-stash_src_include_platform>` (``/Users/wehale/git/matter-stash/src/include/platform``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+
+API function declarations for using persistent key value storage. 
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/Users/wehale/git/matter-stash/src/include/platform/KeyValueStoreManager.h``)
+-------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__Users_wehale_git_matter-stash_src_include_platform_KeyValueStoreManager.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``climits``
+
+- ``cstddef``
+
+- ``cstdint``
+
+- ``lib/core/CHIPError.h``
+
+- ``platform/CHIPDeviceBuildConfig.h``
+
+- ``type_traits``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceLayer.h`
+
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_KvsPersistentStorageDelegate.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_chip`
+
+- :ref:`namespace_chip__DeviceLayer`
+
+- :ref:`namespace_chip__DeviceLayer__PersistedStorage`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classchip_1_1_device_layer_1_1_persisted_storage_1_1_key_value_store_manager`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function__key_value_store_manager_8h_1ae1007815349979758e1535e5561dfe79`
+
+- :ref:`exhale_function__key_value_store_manager_8h_1a8ae00aec3a877f1912200f0dc921bdee`
+

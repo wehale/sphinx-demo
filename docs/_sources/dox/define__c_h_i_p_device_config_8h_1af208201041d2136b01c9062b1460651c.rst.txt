@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1af208201041d2136b01c9062b1460651c:
+
+Define CHIP_DEVICE_CONFIG_CHIPOBLE_SINGLE_CONNECTION
+====================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_CHIPOBLE_SINGLE_CONNECTION
+   :project: My Project

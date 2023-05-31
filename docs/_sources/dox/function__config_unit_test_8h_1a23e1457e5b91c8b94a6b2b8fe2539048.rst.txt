@@ -1,0 +1,14 @@
+.. _exhale_function__config_unit_test_8h_1a23e1457e5b91c8b94a6b2b8fe2539048:
+
+Template Function chip::DeviceLayer::Internal::RunConfigUnitTest
+================================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_testing_ConfigUnitTest.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: chip::DeviceLayer::Internal::RunConfigUnitTest()
+   :project: My Project

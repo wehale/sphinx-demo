@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File GenericDeviceInstanceInfoProvider.ipp &mdash; Silicon Labs Matter 2.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Silicon Labs Matter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../OVERVIEW.html">Silicon Labs Matter User’s Guide Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW_FEATURES.html">Silicon Labs Matter New Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_1_overview.html">Matter Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_2_prereq.html">Matter Development Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_3_general.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_6_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Library API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Silicon Labs Matter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Program Listing for File GenericDeviceInstanceInfoProvider.ipp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dox/program_listing_file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericDeviceInstanceInfoProvider.ipp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-genericdeviceinstanceinfoprovider-ipp">
+<span id="program-listing-file-users-wehale-git-matter-stash-src-include-platform-internal-genericdeviceinstanceinfoprovider-ipp"></span><h1>Program Listing for File GenericDeviceInstanceInfoProvider.ipp<a class="headerlink" href="#program-listing-for-file-genericdeviceinstanceinfoprovider-ipp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericDeviceInstanceInfoProvider.ipp.html#file-users-wehale-git-matter-stash-src-include-platform-internal-genericdeviceinstanceinfoprovider-ipp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/Users/wehale/git/matter-stash/src/include/platform/internal/GenericDeviceInstanceInfoProvider.ipp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> *</span>
+<span class="cm"> *    Copyright (c) 2022 Project CHIP Authors</span>
+<span class="cm"> *</span>
+<span class="cm"> *    Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="cm"> *    you may not use this file except in compliance with the License.</span>
+<span class="cm"> *    You may obtain a copy of the License at</span>
+<span class="cm"> *</span>
+<span class="cm"> *        http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="cm"> *</span>
+<span class="cm"> *    Unless required by applicable law or agreed to in writing, software</span>
+<span class="cm"> *    distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="cm"> *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="cm"> *    See the License for the specific language governing permissions and</span>
+<span class="cm"> *    limitations under the License.</span>
+<span class="cm"> */</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;platform/internal/GenericDeviceInstanceInfoProvider.h&gt;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">chip</span><span class="w"> </span><span class="p">{</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">DeviceLayer</span><span class="w"> </span><span class="p">{</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Internal</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ConfigClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericDeviceInstanceInfoProvider</span><span class="o">&lt;</span><span class="n">ConfigClass</span><span class="o">&gt;::</span><span class="n">GetVendorId</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">vendorId</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">vendorId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint16_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">CHIP_DEVICE_CONFIG_DEVICE_VENDOR_ID</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_NO_ERROR</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ConfigClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericDeviceInstanceInfoProvider</span><span class="o">&lt;</span><span class="n">ConfigClass</span><span class="o">&gt;::</span><span class="n">GetProductId</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">productId</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">productId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint16_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">CHIP_DEVICE_CONFIG_DEVICE_PRODUCT_ID</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_NO_ERROR</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ConfigClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericDeviceInstanceInfoProvider</span><span class="o">&lt;</span><span class="n">ConfigClass</span><span class="o">&gt;::</span><span class="n">GetVendorName</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">bufSize</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ReturnErrorCodeIf</span><span class="p">(</span><span class="n">bufSize</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">CHIP_DEVICE_CONFIG_DEVICE_VENDOR_NAME</span><span class="p">),</span><span class="w"> </span><span class="n">CHIP_ERROR_BUFFER_TOO_SMALL</span><span class="p">);</span>
+<span class="w">    </span><span class="n">strcpy</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">CHIP_DEVICE_CONFIG_DEVICE_VENDOR_NAME</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_NO_ERROR</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ConfigClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericDeviceInstanceInfoProvider</span><span class="o">&lt;</span><span class="n">ConfigClass</span><span class="o">&gt;::</span><span class="n">GetProductName</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">bufSize</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ReturnErrorCodeIf</span><span class="p">(</span><span class="n">bufSize</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">CHIP_DEVICE_CONFIG_DEVICE_PRODUCT_NAME</span><span class="p">),</span><span class="w"> </span><span class="n">CHIP_ERROR_BUFFER_TOO_SMALL</span><span class="p">);</span>
+<span class="w">    </span><span class="n">strcpy</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">CHIP_DEVICE_CONFIG_DEVICE_PRODUCT_NAME</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_NO_ERROR</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ConfigClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericDeviceInstanceInfoProvider</span><span class="o">&lt;</span><span class="n">ConfigClass</span><span class="o">&gt;::</span><span class="n">GetPartNumber</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">bufSize</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_ERROR_UNSUPPORTED_CHIP_FEATURE</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ConfigClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericDeviceInstanceInfoProvider</span><span class="o">&lt;</span><span class="n">ConfigClass</span><span class="o">&gt;::</span><span class="n">GetProductURL</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">bufSize</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="cp">#if CHIP_DEVICE_LAYER_TARGET_ESP32</span>
+<span class="w">    </span><span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mGenericConfigManager</span><span class="p">.</span><span class="n">ReadConfigValueStr</span><span class="p">(</span><span class="n">ConfigClass</span><span class="o">::</span><span class="n">kConfigKey_ProductURL</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">bufSize</span><span class="p">,</span><span class="w"> </span><span class="n">bufSize</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">CHIP_ERROR_PERSISTED_STORAGE_VALUE_NOT_FOUND</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_DEVICE_ERROR_CONFIG_NOT_FOUND</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">err</span><span class="p">;</span>
+<span class="cp">#else</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_ERROR_UNSUPPORTED_CHIP_FEATURE</span><span class="p">;</span>
+<span class="cp">#endif</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ConfigClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericDeviceInstanceInfoProvider</span><span class="o">&lt;</span><span class="n">ConfigClass</span><span class="o">&gt;::</span><span class="n">GetProductLabel</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">bufSize</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="cp">#if CHIP_DEVICE_LAYER_TARGET_ESP32</span>
+<span class="w">    </span><span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mGenericConfigManager</span><span class="p">.</span><span class="n">ReadConfigValueStr</span><span class="p">(</span><span class="n">ConfigClass</span><span class="o">::</span><span class="n">kConfigKey_ProductLabel</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">bufSize</span><span class="p">,</span><span class="w"> </span><span class="n">bufSize</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">CHIP_ERROR_PERSISTED_STORAGE_VALUE_NOT_FOUND</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_DEVICE_ERROR_CONFIG_NOT_FOUND</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">err</span><span class="p">;</span>
+<span class="cp">#else</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_ERROR_UNSUPPORTED_CHIP_FEATURE</span><span class="p">;</span>
+<span class="cp">#endif</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ConfigClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericDeviceInstanceInfoProvider</span><span class="o">&lt;</span><span class="n">ConfigClass</span><span class="o">&gt;::</span><span class="n">GetSerialNumber</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">bufSize</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ChipError</span><span class="w"> </span><span class="n">err</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">CHIP_NO_ERROR</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">serialNumLen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// without counting null-terminator</span>
+
+<span class="w">    </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mGenericConfigManager</span><span class="p">.</span><span class="n">ReadConfigValueStr</span><span class="p">(</span><span class="n">ConfigClass</span><span class="o">::</span><span class="n">kConfigKey_SerialNum</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">bufSize</span><span class="p">,</span><span class="w"> </span><span class="n">serialNumLen</span><span class="p">);</span>
+
+<span class="cp">#ifdef CHIP_DEVICE_CONFIG_TEST_SERIAL_NUMBER</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">CHIP_DEVICE_CONFIG_TEST_SERIAL_NUMBER</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">CHIP_DEVICE_ERROR_CONFIG_NOT_FOUND</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ReturnErrorCodeIf</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">CHIP_DEVICE_CONFIG_TEST_SERIAL_NUMBER</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">bufSize</span><span class="p">,</span><span class="w"> </span><span class="n">CHIP_ERROR_BUFFER_TOO_SMALL</span><span class="p">);</span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">CHIP_DEVICE_CONFIG_TEST_SERIAL_NUMBER</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">CHIP_DEVICE_CONFIG_TEST_SERIAL_NUMBER</span><span class="p">));</span>
+<span class="w">        </span><span class="n">serialNumLen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">CHIP_DEVICE_CONFIG_TEST_SERIAL_NUMBER</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">err</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="n">CHIP_NO_ERROR</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="cp">#endif </span><span class="c1">// CHIP_DEVICE_CONFIG_TEST_SERIAL_NUMBER</span>
+<span class="w">    </span><span class="n">ReturnErrorOnFailure</span><span class="p">(</span><span class="n">err</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">ReturnErrorCodeIf</span><span class="p">(</span><span class="n">serialNumLen</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">bufSize</span><span class="p">,</span><span class="w"> </span><span class="n">CHIP_ERROR_BUFFER_TOO_SMALL</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ReturnErrorCodeIf</span><span class="p">(</span><span class="n">buf</span><span class="p">[</span><span class="n">serialNumLen</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">CHIP_ERROR_INVALID_STRING_LENGTH</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">err</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ConfigClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericDeviceInstanceInfoProvider</span><span class="o">&lt;</span><span class="n">ConfigClass</span><span class="o">&gt;::</span><span class="n">GetManufacturingDate</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">year</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">month</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">day</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">err</span><span class="p">;</span>
+<span class="w">    </span><span class="k">enum</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">kDateStringLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="c1">// YYYY-MM-DD</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">dateStr</span><span class="p">[</span><span class="n">kDateStringLength</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">dateLen</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">parseEnd</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mGenericConfigManager</span><span class="p">.</span><span class="n">ReadConfigValueStr</span><span class="p">(</span><span class="n">ConfigClass</span><span class="o">::</span><span class="n">kConfigKey_ManufacturingDate</span><span class="p">,</span><span class="w"> </span><span class="n">dateStr</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">dateStr</span><span class="p">),</span><span class="w"> </span><span class="n">dateLen</span><span class="p">);</span>
+<span class="w">    </span><span class="n">SuccessOrExit</span><span class="p">(</span><span class="n">err</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">VerifyOrExit</span><span class="p">(</span><span class="n">dateLen</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">kDateStringLength</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CHIP_ERROR_INVALID_ARGUMENT</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Cast does not lose information, because we then check that we only parsed</span>
+<span class="w">    </span><span class="c1">// 4 digits, so our number can&#39;t be bigger than 9999.</span>
+<span class="w">    </span><span class="n">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint16_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">strtoul</span><span class="p">(</span><span class="n">dateStr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">parseEnd</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">));</span>
+<span class="w">    </span><span class="n">VerifyOrExit</span><span class="p">(</span><span class="n">parseEnd</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">dateStr</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CHIP_ERROR_INVALID_ARGUMENT</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Cast does not lose information, because we then check that we only parsed</span>
+<span class="w">    </span><span class="c1">// 2 digits, so our number can&#39;t be bigger than 99.</span>
+<span class="w">    </span><span class="n">month</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">strtoul</span><span class="p">(</span><span class="n">dateStr</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">parseEnd</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">));</span>
+<span class="w">    </span><span class="n">VerifyOrExit</span><span class="p">(</span><span class="n">parseEnd</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">dateStr</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CHIP_ERROR_INVALID_ARGUMENT</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Cast does not lose information, because we then check that we only parsed</span>
+<span class="w">    </span><span class="c1">// 2 digits, so our number can&#39;t be bigger than 99.</span>
+<span class="w">    </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">strtoul</span><span class="p">(</span><span class="n">dateStr</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">parseEnd</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">));</span>
+<span class="w">    </span><span class="n">VerifyOrExit</span><span class="p">(</span><span class="n">parseEnd</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">dateStr</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CHIP_ERROR_INVALID_ARGUMENT</span><span class="p">);</span>
+
+<span class="nl">exit</span><span class="p">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">CHIP_NO_ERROR</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">CHIP_DEVICE_ERROR_CONFIG_NOT_FOUND</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ChipLogError</span><span class="p">(</span><span class="n">DeviceLayer</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Invalid manufacturing date: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dateStr</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">err</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ConfigClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericDeviceInstanceInfoProvider</span><span class="o">&lt;</span><span class="n">ConfigClass</span><span class="o">&gt;::</span><span class="n">GetHardwareVersion</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">hardwareVersion</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ChipError</span><span class="w"> </span><span class="n">err</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">CHIP_NO_ERROR</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">valInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mGenericConfigManager</span><span class="p">.</span><span class="n">ReadConfigValue</span><span class="p">(</span><span class="n">ConfigClass</span><span class="o">::</span><span class="n">kConfigKey_HardwareVersion</span><span class="p">,</span><span class="w"> </span><span class="n">valInt</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">CHIP_DEVICE_ERROR_CONFIG_NOT_FOUND</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">hardwareVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint16_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">CHIP_DEVICE_CONFIG_DEFAULT_DEVICE_HARDWARE_VERSION</span><span class="p">);</span>
+<span class="w">        </span><span class="n">err</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="n">CHIP_NO_ERROR</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">hardwareVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint16_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">valInt</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">err</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ConfigClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericDeviceInstanceInfoProvider</span><span class="o">&lt;</span><span class="n">ConfigClass</span><span class="o">&gt;::</span><span class="n">GetHardwareVersionString</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">bufSize</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ReturnErrorCodeIf</span><span class="p">(</span><span class="n">bufSize</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">CHIP_DEVICE_CONFIG_DEFAULT_DEVICE_HARDWARE_VERSION_STRING</span><span class="p">),</span><span class="w"> </span><span class="n">CHIP_ERROR_BUFFER_TOO_SMALL</span><span class="p">);</span>
+<span class="w">    </span><span class="n">strcpy</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">CHIP_DEVICE_CONFIG_DEFAULT_DEVICE_HARDWARE_VERSION_STRING</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_NO_ERROR</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ConfigClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericDeviceInstanceInfoProvider</span><span class="o">&lt;</span><span class="n">ConfigClass</span><span class="o">&gt;::</span><span class="n">GetRotatingDeviceIdUniqueId</span><span class="p">(</span><span class="n">MutableByteSpan</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uniqueIdSpan</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ChipError</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CHIP_ERROR_WRONG_KEY_TYPE</span><span class="p">;</span>
+<span class="cp">#if CHIP_ENABLE_ROTATING_DEVICE_ID &amp;&amp; defined(CHIP_DEVICE_CONFIG_ROTATING_DEVICE_ID_UNIQUE_ID)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">chip</span><span class="o">::</span><span class="n">DeviceLayer</span><span class="o">::</span><span class="n">ConfigurationMgr</span><span class="p">().</span><span class="n">GetRotatingDeviceIdUniqueId</span><span class="p">(</span><span class="n">uniqueIdSpan</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">CHIP_NO_ERROR</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">static_assert</span><span class="p">(</span><span class="n">ConfigurationManager</span><span class="o">::</span><span class="n">kRotatingDeviceIDUniqueIDLength</span><span class="w"> </span><span class="o">&gt;=</span>
+<span class="w">                          </span><span class="n">ConfigurationManager</span><span class="o">::</span><span class="n">kMinRotatingDeviceIDUniqueIDLength</span><span class="p">,</span>
+<span class="w">                      </span><span class="s">&quot;Length of unique ID for rotating device ID is smaller than minimum.&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">uniqueId</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CHIP_DEVICE_CONFIG_ROTATING_DEVICE_ID_UNIQUE_ID</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">ReturnErrorCodeIf</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">uniqueId</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uniqueIdSpan</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="n">CHIP_ERROR_BUFFER_TOO_SMALL</span><span class="p">);</span>
+<span class="w">        </span><span class="n">ReturnErrorCodeIf</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">uniqueId</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">ConfigurationManager</span><span class="o">::</span><span class="n">kRotatingDeviceIDUniqueIDLength</span><span class="p">,</span><span class="w"> </span><span class="n">CHIP_ERROR_BUFFER_TOO_SMALL</span><span class="p">);</span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="n">uniqueIdSpan</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">uniqueId</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">uniqueId</span><span class="p">));</span>
+<span class="w">        </span><span class="n">uniqueIdSpan</span><span class="p">.</span><span class="n">reduce_size</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">uniqueId</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_NO_ERROR</span><span class="p">;</span>
+<span class="cp">#endif</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">err</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace Internal</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace DeviceLayer</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace chip</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Silicon Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

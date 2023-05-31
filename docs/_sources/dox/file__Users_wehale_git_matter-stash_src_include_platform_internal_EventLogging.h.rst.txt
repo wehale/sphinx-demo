@@ -1,0 +1,68 @@
+
+.. _file__Users_wehale_git_matter-stash_src_include_platform_internal_EventLogging.h:
+
+File EventLogging.h
+===================
+
+|exhale_lsh| :ref:`Parent directory <dir__Users_wehale_git_matter-stash_src_include_platform_internal>` (``/Users/wehale/git/matter-stash/src/include/platform/internal``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/Users/wehale/git/matter-stash/src/include/platform/internal/EventLogging.h``)
+--------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__Users_wehale_git_matter-stash_src_include_platform_internal_EventLogging.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Defines the chip Device Layer Event Logging functions. 
+
+
+
+
+Includes
+--------
+
+
+- ``lib/core/CHIPError.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl.ipp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_chip`
+
+- :ref:`namespace_chip__DeviceLayer`
+
+- :ref:`namespace_chip__DeviceLayer__Internal`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function__event_logging_8h_1a6b704a6a52b7ff09ea49ef77169a5176`
+

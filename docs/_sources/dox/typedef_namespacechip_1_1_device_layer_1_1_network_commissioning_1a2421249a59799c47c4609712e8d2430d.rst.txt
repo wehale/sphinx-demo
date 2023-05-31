@@ -1,0 +1,14 @@
+.. _exhale_typedef_namespacechip_1_1_device_layer_1_1_network_commissioning_1a2421249a59799c47c4609712e8d2430d:
+
+Typedef chip::DeviceLayer::NetworkCommissioning::WiFiScanResponseIterator
+=========================================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_NetworkCommissioning.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: chip::DeviceLayer::NetworkCommissioning::WiFiScanResponseIterator
+   :project: My Project

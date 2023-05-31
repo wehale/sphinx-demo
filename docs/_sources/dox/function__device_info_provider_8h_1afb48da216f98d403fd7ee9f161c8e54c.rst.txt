@@ -1,0 +1,14 @@
+.. _exhale_function__device_info_provider_8h_1afb48da216f98d403fd7ee9f161c8e54c:
+
+Function chip::DeviceLayer::GetDeviceInfoProvider
+=================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_DeviceInfoProvider.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: chip::DeviceLayer::GetDeviceInfoProvider()
+   :project: My Project

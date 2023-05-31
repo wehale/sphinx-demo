@@ -18,7 +18,7 @@ Welcome to Silicon Labs' Matter documentation!
    ./nav_5_wifi
    ./nav_3_general
    ./nav_6_faq
-   .. dox/index
+   dox/index
 
 This is the first set of informational tabs:
 

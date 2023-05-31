@@ -1,0 +1,14 @@
+.. _exhale_function__persisted_storage_8h_1a562e2fd2665578a6e231a69b8365d521:
+
+Function chip::Platform::PersistedStorage::Read
+===============================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_PersistedStorage.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: chip::Platform::PersistedStorage::Read(Key, uint32_t&)
+   :project: My Project

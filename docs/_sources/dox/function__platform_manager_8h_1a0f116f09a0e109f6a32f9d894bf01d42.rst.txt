@@ -1,0 +1,14 @@
+.. _exhale_function__platform_manager_8h_1a0f116f09a0e109f6a32f9d894bf01d42:
+
+Function chip::DeviceLayer::PlatformMgrImpl
+===========================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_PlatformManager.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: chip::DeviceLayer::PlatformMgrImpl()
+   :project: My Project

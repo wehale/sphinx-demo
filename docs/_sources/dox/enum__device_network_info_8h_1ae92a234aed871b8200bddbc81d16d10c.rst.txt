@@ -1,0 +1,14 @@
+.. _exhale_enum__device_network_info_8h_1ae92a234aed871b8200bddbc81d16d10c:
+
+Enum WiFiAuthSecurityType
+=========================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_DeviceNetworkInfo.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: chip::DeviceLayer::Internal::WiFiAuthSecurityType
+   :project: My Project

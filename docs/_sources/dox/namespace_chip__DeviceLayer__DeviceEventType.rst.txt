@@ -1,0 +1,39 @@
+
+.. _namespace_chip__DeviceLayer__DeviceEventType:
+
+Namespace chip::DeviceLayer::DeviceEventType
+============================================
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+
+
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum__c_h_i_p_device_event_8h_1ab38aad425385be65cc64005db7ee84a5`
+
+- :ref:`exhale_enum__c_h_i_p_device_event_8h_1a1eb90a44684ec0cbd04ac9987461ce96`
+
+- :ref:`exhale_enum__c_h_i_p_device_event_8h_1a7aa0be93d6d46d98e312115703b9fd50`
+
+- :ref:`exhale_enum__c_h_i_p_device_event_8h_1a06d37ccd4891b45fe9303a788558c41c`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function__c_h_i_p_device_event_8h_1a4ff7472e7c3a7dfca140e7b18798cd2b`
+
+- :ref:`exhale_function__c_h_i_p_device_event_8h_1afb2445b2c3f713f86143a7aae18ea659`
+
+- :ref:`exhale_function__c_h_i_p_device_event_8h_1af7c3e483f285aeb1d39ecf4b92d5d9c6`
+
+- :ref:`exhale_function__c_h_i_p_device_event_8h_1a7d1dc096420ee05b923d1cb67bb38dfd`
