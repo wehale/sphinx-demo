@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1a756d1617d7a9b4b471711fc3dee3f3ab:
+
+Define CHIP_DEVICE_CONFIG_THREAD_FTD
+====================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_THREAD_FTD
+   :project: My Project

@@ -1,0 +1,14 @@
+.. _exhale_typedef_namespacechip_1_1_device_layer_1_1_network_commissioning_1af412008b10bfdc95f33a96c6dfde44e0:
+
+Typedef chip::DeviceLayer::NetworkCommissioning::ThreadScanResponseIterator
+===========================================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_NetworkCommissioning.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: chip::DeviceLayer::NetworkCommissioning::ThreadScanResponseIterator
+   :project: My Project

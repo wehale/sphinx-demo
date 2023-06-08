@@ -1,0 +1,14 @@
+.. _exhale_function__general_utils_8h_1ae4ba48b04af7eb19db0bc42304eeb872:
+
+Function chip::DeviceLayer::FormatDeviceLayerError
+==================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_GeneralUtils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: chip::DeviceLayer::FormatDeviceLayerError(char *, uint16_t, CHIP_ERROR)
+   :project: My Project

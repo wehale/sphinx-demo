@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class CommissionableDataProvider &mdash; Silicon Labs Matter 2.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class ConfigurationManager" href="classchip_1_1_device_layer_1_1_configuration_manager.html" />
+    <link rel="prev" title="Class AttributeList::Iterator" href="classchip_1_1_device_layer_1_1_attribute_list_1_1_iterator.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Silicon Labs Matter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../OVERVIEW.html">Silicon Labs Matter User’s Guide Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW_FEATURES.html">Silicon Labs Matter New Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_1_overview.html">Matter Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_2_prereq.html">Matter Development Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_3_general.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_6_faq.html">FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Library API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_chip_device_event.html">Struct ChipDeviceEvent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_connectivity_manager_1_1_s_e_d_intervals_config.html">Struct ConnectivityManager::SEDIntervalsConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl_1_1_app_event_handler.html">Struct GenericPlatformManagerImpl::AppEventHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_network.html">Struct Network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_scan_response.html">Struct ThreadScanResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_scan_response.html">Struct WiFiScanResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_interface.html">Struct NetworkInterface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_thread_metrics.html">Struct ThreadMetrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_o_t_a_image_progress.html">Struct OTAImageProgress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_platform_1_1_persisted_storage_1_1internal_1_1_empty_key.html">Template Struct EmptyKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_platform_1_1_persisted_storage_1_1internal_1_1_empty_key_3_01const_01char_01_5_01_4.html">Template Struct EmptyKey&lt; const char * &gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_attribute_list.html">Template Class AttributeList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_attribute_list_1_1_iterator.html">Class AttributeList::Iterator</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class CommissionableDataProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_configuration_manager.html">Class ConfigurationManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager.html">Class ConnectivityManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager_delegate.html">Class ConnectivityManagerDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_control_server.html">Class DeviceControlServer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_info_provider.html">Class DeviceInfoProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_info_provider_1_1_iterator.html">Template Class DeviceInfoProvider::Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_instance_info_provider.html">Class DeviceInstanceInfoProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_diagnostic_data_provider.html">Class DiagnosticDataProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_general_faults.html">Template Class GeneralFaults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_general_faults_1_1_iterator.html">Class GeneralFaults::Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_device_network_info.html">Class DeviceNetworkInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_configuration_manager_impl.html">Template Class GenericConfigurationManagerImpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl.html">Template Class GenericConnectivityManagerImpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___b_l_e.html">Template Class GenericConnectivityManagerImpl_BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___no_b_l_e.html">Template Class GenericConnectivityManagerImpl_NoBLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___no_thread.html">Template Class GenericConnectivityManagerImpl_NoThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___no_wi_fi.html">Template Class GenericConnectivityManagerImpl_NoWiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___t_c_p.html">Template Class GenericConnectivityManagerImpl_TCP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread.html">Template Class GenericConnectivityManagerImpl_Thread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___u_d_p.html">Template Class GenericConnectivityManagerImpl_UDP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___wi_fi.html">Template Class GenericConnectivityManagerImpl_WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_device_instance_info_provider.html">Template Class GenericDeviceInstanceInfoProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl.html">Template Class GenericPlatformManagerImpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___free_r_t_o_s.html">Template Class GenericPlatformManagerImpl_FreeRTOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___p_o_s_i_x.html">Template Class GenericPlatformManagerImpl_POSIX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr.html">Template Class GenericPlatformManagerImpl_Zephyr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___free_r_t_o_s.html">Template Class GenericThreadStackManagerImpl_FreeRTOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___open_thread.html">Template Class GenericThreadStackManagerImpl_OpenThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___open_thread___lw_i_p.html">Template Class GenericThreadStackManagerImpl_OpenThread_LwIP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_ethernet_driver.html">Class EthernetDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_base_driver.html">Class BaseDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_base_driver_1_1_network_status_change_callback.html">Class BaseDriver::NetworkStatusChangeCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_wireless_driver.html">Class WirelessDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_wireless_driver_1_1_connect_callback.html">Class WirelessDriver::ConnectCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_iterator.html">Template Class Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_driver.html">Class ThreadDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_driver_1_1_scan_callback.html">Class ThreadDriver::ScanCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_driver.html">Class WiFiDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_driver_1_1_scan_callback.html">Class WiFiDriver::ScanCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_n_f_c_manager.html">Class NFCManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_persisted_storage_1_1_key_value_store_manager.html">Class KeyValueStoreManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_platform_manager.html">Class PlatformManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_platform_manager_delegate.html">Class PlatformManagerDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_stack_lock.html">Class StackLock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_stack_unlock.html">Class StackUnlock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_test_only_commissionable_data_provider.html">Class TestOnlyCommissionableDataProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_thread_stack_manager.html">Class ThreadStackManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_wi_fi_diagnostics_delegate.html">Class WiFiDiagnosticsDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_kvs_persistent_storage_delegate.html">Class KvsPersistentStorageDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_o_t_a_image_processor_interface.html">Class OTAImageProcessorInterface</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Silicon Labs Matter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Library API</a></li>
+      <li class="breadcrumb-item active">Class CommissionableDataProvider</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dox/classchip_1_1_device_layer_1_1_commissionable_data_provider.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-commissionabledataprovider">
+<span id="exhale-class-classchip-1-1-device-layer-1-1-commissionable-data-provider"></span><h1>Class CommissionableDataProvider<a class="headerlink" href="#class-commissionabledataprovider" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__Users_wehale_git_matter-stash_src_include_platform_CommissionableDataProvider.h.html#file-users-wehale-git-matter-stash-src-include-platform-commissionabledataprovider-h"><span class="std std-ref">File CommissionableDataProvider.h</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<section id="derived-type">
+<h3>Derived Type<a class="headerlink" href="#derived-type" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">chip::DeviceLayer::TestOnlyCommissionableDataProvider</span></code> (<a class="reference internal" href="classchip_1_1_device_layer_1_1_test_only_commissionable_data_provider.html#exhale-class-classchip-1-1-device-layer-1-1-test-only-commissionable-data-provider"><span class="std std-ref">Class TestOnlyCommissionableDataProvider</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer26CommissionableDataProviderE">
+<span id="_CPPv3N4chip11DeviceLayer26CommissionableDataProviderE"></span><span id="_CPPv2N4chip11DeviceLayer26CommissionableDataProviderE"></span><span id="chip::DeviceLayer::CommissionableDataProvider"></span><span class="target" id="classchip_1_1_device_layer_1_1_commissionable_data_provider"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CommissionableDataProvider</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer26CommissionableDataProviderE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Subclassed by <a class="reference internal" href="classchip_1_1_device_layer_1_1_test_only_commissionable_data_provider.html#classchip_1_1_device_layer_1_1_test_only_commissionable_data_provider"><span class="std std-ref">chip::DeviceLayer::TestOnlyCommissionableDataProvider</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer26CommissionableDataProvider26CommissionableDataProviderEv">
+<span id="_CPPv3N4chip11DeviceLayer26CommissionableDataProvider26CommissionableDataProviderEv"></span><span id="_CPPv2N4chip11DeviceLayer26CommissionableDataProvider26CommissionableDataProviderEv"></span><span id="chip::DeviceLayer::CommissionableDataProvider::CommissionableDataProvider"></span><span class="target" id="classchip_1_1_device_layer_1_1_commissionable_data_provider_1aac9fb5d845733a6bf05d8c8f88d3e44b"></span><span class="sig-name descname"><span class="n"><span class="pre">CommissionableDataProvider</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer26CommissionableDataProvider26CommissionableDataProviderEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer26CommissionableDataProviderD0Ev">
+<span id="_CPPv3N4chip11DeviceLayer26CommissionableDataProviderD0Ev"></span><span id="_CPPv2N4chip11DeviceLayer26CommissionableDataProviderD0Ev"></span><span id="chip::DeviceLayer::CommissionableDataProvider::~CommissionableDataProvider"></span><span class="target" id="classchip_1_1_device_layer_1_1_commissionable_data_provider_1ace6f703583bbacc243ff0bf4a2637404"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~CommissionableDataProvider</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer26CommissionableDataProviderD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer26CommissionableDataProvider26CommissionableDataProviderERK26CommissionableDataProvider">
+<span id="_CPPv3N4chip11DeviceLayer26CommissionableDataProvider26CommissionableDataProviderERK26CommissionableDataProvider"></span><span id="_CPPv2N4chip11DeviceLayer26CommissionableDataProvider26CommissionableDataProviderERK26CommissionableDataProvider"></span><span id="chip::DeviceLayer::CommissionableDataProvider::CommissionableDataProvider__CommissionableDataProviderCR"></span><span class="target" id="classchip_1_1_device_layer_1_1_commissionable_data_provider_1a83f6d3bc4a95519332a8021c840d0494"></span><span class="sig-name descname"><span class="n"><span class="pre">CommissionableDataProvider</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer26CommissionableDataProvider26CommissionableDataProviderERK26CommissionableDataProvider" title="chip::DeviceLayer::CommissionableDataProvider::CommissionableDataProvider"><span class="n"><span class="pre">CommissionableDataProvider</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer26CommissionableDataProvider26CommissionableDataProviderERK26CommissionableDataProvider" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer26CommissionableDataProvideraSERK26CommissionableDataProvider">
+<span id="_CPPv3N4chip11DeviceLayer26CommissionableDataProvideraSERK26CommissionableDataProvider"></span><span id="_CPPv2N4chip11DeviceLayer26CommissionableDataProvideraSERK26CommissionableDataProvider"></span><span id="chip::DeviceLayer::CommissionableDataProvider::assign-operator__CommissionableDataProviderCR"></span><span class="target" id="classchip_1_1_device_layer_1_1_commissionable_data_provider_1ab6a3e6fa5942a19a2dc1a4192289d571"></span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer26CommissionableDataProviderE" title="chip::DeviceLayer::CommissionableDataProvider"><span class="n"><span class="pre">CommissionableDataProvider</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer26CommissionableDataProviderE" title="chip::DeviceLayer::CommissionableDataProvider"><span class="n"><span class="pre">CommissionableDataProvider</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer26CommissionableDataProvideraSERK26CommissionableDataProvider" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer26CommissionableDataProvider21GetSetupDiscriminatorER8uint16_t">
+<span id="_CPPv3N4chip11DeviceLayer26CommissionableDataProvider21GetSetupDiscriminatorER8uint16_t"></span><span id="_CPPv2N4chip11DeviceLayer26CommissionableDataProvider21GetSetupDiscriminatorER8uint16_t"></span><span id="chip::DeviceLayer::CommissionableDataProvider::GetSetupDiscriminator__uint16_tR"></span><span class="target" id="classchip_1_1_device_layer_1_1_commissionable_data_provider_1abe5ac0aa7391d1aef19405c00f5d49cf"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetSetupDiscriminator</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">setupDiscriminator</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer26CommissionableDataProvider21GetSetupDiscriminatorER8uint16_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Obtain the default setup discriminator for the device used for commissionable advertising. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>setupDiscriminator</strong> – <strong>[inout]</strong> Reference to location where discriminator will be copied </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CHIP_NO_ERROR on success, or another CHIP_ERROR from the underlying implementation if access fails. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer26CommissionableDataProvider21SetSetupDiscriminatorE8uint16_t">
+<span id="_CPPv3N4chip11DeviceLayer26CommissionableDataProvider21SetSetupDiscriminatorE8uint16_t"></span><span id="_CPPv2N4chip11DeviceLayer26CommissionableDataProvider21SetSetupDiscriminatorE8uint16_t"></span><span id="chip::DeviceLayer::CommissionableDataProvider::SetSetupDiscriminator__uint16_t"></span><span class="target" id="classchip_1_1_device_layer_1_1_commissionable_data_provider_1a78532777b95898e1589760a01a3271e8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetSetupDiscriminator</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">setupDiscriminator</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer26CommissionableDataProvider21SetSetupDiscriminatorE8uint16_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set the setup discriminator <em>if supported</em>. </p>
+<p>This API is optional to support, but present to support integration with some examples which use a common test PAKE verifier but want to disambiguate multiple instances at runtime. This is generally not applicable to production usecases of commissionable devices with nominal random discriminator. There are no guarantees that this API, in general, will persist the discriminator across restarts.</p>
+<p>If not supported, return CHIP_ERROR_NOT_IMPLEMENTED.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>setupDiscriminator</strong> – <strong>[in]</strong> Setup discriminator to set. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CHIP_NO_ERROR on success, CHIP_ERROR_INVALID_ARGUMENT if discriminator is out of range, CHIP_ERROR_NOT_IMPLEMENTED if not implemented, or another CHIP_ERROR from the underlying implementation if storage fails. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer26CommissionableDataProvider24GetSpake2pIterationCountER8uint32_t">
+<span id="_CPPv3N4chip11DeviceLayer26CommissionableDataProvider24GetSpake2pIterationCountER8uint32_t"></span><span id="_CPPv2N4chip11DeviceLayer26CommissionableDataProvider24GetSpake2pIterationCountER8uint32_t"></span><span id="chip::DeviceLayer::CommissionableDataProvider::GetSpake2pIterationCount__uint32_tR"></span><span class="target" id="classchip_1_1_device_layer_1_1_commissionable_data_provider_1ae3362e26c79083405195f2d40b77c26a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetSpake2pIterationCount</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">iterationCount</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer26CommissionableDataProvider24GetSpake2pIterationCountER8uint32_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Obtain the default PAKE verifier’s PBKDF2 iteration count. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>iterationCount</strong> – <strong>[inout]</strong> Reference to location where the iteration count will be stored </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CHIP_NO_ERROR on success, or another CHIP_ERROR from the underlying implementation if access fails. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer26CommissionableDataProvider14GetSpake2pSaltER15MutableByteSpan">
+<span id="_CPPv3N4chip11DeviceLayer26CommissionableDataProvider14GetSpake2pSaltER15MutableByteSpan"></span><span id="_CPPv2N4chip11DeviceLayer26CommissionableDataProvider14GetSpake2pSaltER15MutableByteSpan"></span><span id="chip::DeviceLayer::CommissionableDataProvider::GetSpake2pSalt__MutableByteSpanR"></span><span class="target" id="classchip_1_1_device_layer_1_1_commissionable_data_provider_1a211bf01ffa02ff4fd4cd417595807cf5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetSpake2pSalt</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MutableByteSpan</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">saltBuf</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer26CommissionableDataProvider14GetSpake2pSaltER15MutableByteSpan" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Obtain the default PAKE verifier’s PBKDF2 salt in the provided <code class="docutils literal notranslate"><span class="pre">saltBuf</span></code></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">saltBuf</span></code> must be large enough to contain the salt. It will be resized on success to reflect the actual size of the salt.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>saltBuf</strong> – <strong>[inout]</strong> Reference to buffer where the salt value will be copied.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CHIP_NO_ERROR on success, CHIP_ERROR_BUFFER_TOO_SMALL if saltBuf was too small, or another CHIP_ERROR from the underlying implementation if access fails. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer26CommissionableDataProvider18GetSpake2pVerifierER15MutableByteSpanR6size_t">
+<span id="_CPPv3N4chip11DeviceLayer26CommissionableDataProvider18GetSpake2pVerifierER15MutableByteSpanR6size_t"></span><span id="_CPPv2N4chip11DeviceLayer26CommissionableDataProvider18GetSpake2pVerifierER15MutableByteSpanR6size_t"></span><span id="chip::DeviceLayer::CommissionableDataProvider::GetSpake2pVerifier__MutableByteSpanR.sR"></span><span class="target" id="classchip_1_1_device_layer_1_1_commissionable_data_provider_1a5ae7816c355bda84764e70cb5c93bfe5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetSpake2pVerifier</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MutableByteSpan</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">verifierBuf</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">outVerifierLen</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer26CommissionableDataProvider18GetSpake2pVerifierER15MutableByteSpanR6size_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Obtain the default PAKE verifier in the provided <code class="docutils literal notranslate"><span class="pre">verifierBuf</span></code></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">verifierBuf</span></code> must be large enough to contain the verifier. It will be resized on success to reflect the actual size of the verifier and match the value in verifierLen.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verifierBuf</strong> – <strong>[inout]</strong> Reference to buffer where the verifier value will be copied. </p></li>
+<li><p><strong>outVerifierLen</strong> – <strong>[out]</strong> Reference to location where the length of the verifier will be stored, including if the buffer provided is too small. This value is valid if the return value is either CHIP_NO_ERROR or CHIP_ERROR_BUFFER_TOO_SMALL.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CHIP_NO_ERROR on success, CHIP_ERROR_BUFFER_TOO_SMALL if verifierBuf was too small, or another CHIP_ERROR from the underlying implementation if access fails. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer26CommissionableDataProvider16GetSetupPasscodeER8uint32_t">
+<span id="_CPPv3N4chip11DeviceLayer26CommissionableDataProvider16GetSetupPasscodeER8uint32_t"></span><span id="_CPPv2N4chip11DeviceLayer26CommissionableDataProvider16GetSetupPasscodeER8uint32_t"></span><span id="chip::DeviceLayer::CommissionableDataProvider::GetSetupPasscode__uint32_tR"></span><span class="target" id="classchip_1_1_device_layer_1_1_commissionable_data_provider_1aa3709bdd06dd2cd93b683e8d94c82318"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetSetupPasscode</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">setupPasscode</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer26CommissionableDataProvider16GetSetupPasscodeER8uint32_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Obtain the default setup passcode for the device <em>if supported</em></p>
+<p>This API is optional to support, but present to support integration with some examples which allow runtime setting of a passcode to generate onboarding payloads and QR codes as well as PAKE verifier. This is generally not applicable to production usecases of commissionable devices with nominal random verifier/passcode and with usage of verifier rather than passcode (which safeguards the passcode from ever leaking). There are no guarantees that this API, in general, will persist the passcode across restarts.</p>
+<p>If not supported, return CHIP_ERROR_NOT_IMPLEMENTED.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>setupPasscode</strong> – <strong>[inout]</strong> Reference to location where passcode will be copied </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CHIP_NO_ERROR on success, CHIP_ERROR_NOT_IMPLEMENTED if not implemented or not available, or another CHIP_ERROR from the underlying implementation if access fails. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer26CommissionableDataProvider16SetSetupPasscodeE8uint32_t">
+<span id="_CPPv3N4chip11DeviceLayer26CommissionableDataProvider16SetSetupPasscodeE8uint32_t"></span><span id="_CPPv2N4chip11DeviceLayer26CommissionableDataProvider16SetSetupPasscodeE8uint32_t"></span><span id="chip::DeviceLayer::CommissionableDataProvider::SetSetupPasscode__uint32_t"></span><span class="target" id="classchip_1_1_device_layer_1_1_commissionable_data_provider_1aeea530377b86a08cf000a4ca71e0bf03"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetSetupPasscode</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">setupPasscode</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer26CommissionableDataProvider16SetSetupPasscodeE8uint32_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set the setup discriminator <em>if supported</em>. </p>
+<p>This API is optional to support, but present to support integration with some examples which allow runtime setting of a passcode to generate onboarding payloads and QR codes as well as PAKE verifier. This is generally not applicable to production usecases of commissionable devices with nominal random verifier/passcode and with usage of verifier rather than passcode (which safeguards the passcode from ever leaking). There are no guarantees that this API, in general, will persist the passcode across restarts.</p>
+<p>If not supported, return CHIP_ERROR_NOT_IMPLEMENTED.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>setupPasscode</strong> – <strong>[in]</strong> Setup passcode to set </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CHIP_NO_ERROR on success, CHIP_ERROR_INVALID_ARGUMENT if discriminator is invalid according to spec (out of range or forbidden value), CHIP_ERROR_NOT_IMPLEMENTED if not implemented, or another CHIP_ERROR from the underlying implementation if storage fails. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classchip_1_1_device_layer_1_1_attribute_list_1_1_iterator.html" class="btn btn-neutral float-left" title="Class AttributeList::Iterator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classchip_1_1_device_layer_1_1_configuration_manager.html" class="btn btn-neutral float-right" title="Class ConfigurationManager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Silicon Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

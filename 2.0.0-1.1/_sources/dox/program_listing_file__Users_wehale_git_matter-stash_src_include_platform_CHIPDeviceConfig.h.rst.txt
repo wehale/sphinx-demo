@@ -1,0 +1,629 @@
+
+.. _program_listing_file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h:
+
+Program Listing for File CHIPDeviceConfig.h
+===========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h>` (``/Users/wehale/git/matter-stash/src/include/platform/CHIPDeviceConfig.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+    *
+    *    Copyright (c) 2020 Project CHIP Authors
+    *    Copyright (c) 2019-2020 Google LLC.
+    *    Copyright (c) 2018 Nest Labs, Inc.
+    *
+    *    Licensed under the Apache License, Version 2.0 (the "License");
+    *    you may not use this file except in compliance with the License.
+    *    You may obtain a copy of the License at
+    *
+    *        http://www.apache.org/licenses/LICENSE-2.0
+    *
+    *    Unless required by applicable law or agreed to in writing, software
+    *    distributed under the License is distributed on an "AS IS" BASIS,
+    *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    *    See the License for the specific language governing permissions and
+    *    limitations under the License.
+    */
+   
+   #pragma once
+   
+   #if CHIP_HAVE_CONFIG_H
+   #include <platform/CHIPDeviceBuildConfig.h>
+   #endif
+   
+   #include <lib/core/CHIPConfig.h>
+   
+   /* Include a project-specific configuration file, if defined.
+    *
+    * An application or module that incorporates the chip Device Layer can define a project
+    * configuration file to override standard chip configuration with application-specific
+    * values.  The project config file is typically located outside the Openchip source
+    * tree, alongside the source code for the application.
+    */
+   #ifdef CHIP_DEVICE_PROJECT_CONFIG_INCLUDE
+   #include CHIP_DEVICE_PROJECT_CONFIG_INCLUDE
+   #endif
+   
+   /* Include a platform-specific configuration file, if defined.
+    *
+    * A platform configuration file contains overrides to standard chip Device Layer
+    * configuration that are specific to the platform or OS on which chip is running.
+    * It is typically provided as apart of an adaptation layer that adapts Openchip
+    * to the target environment.  This adaptation layer may be included in the Openchip
+    * source tree itself or implemented externally.
+    */
+   #ifdef CHIP_DEVICE_PLATFORM_CONFIG_INCLUDE
+   #include CHIP_DEVICE_PLATFORM_CONFIG_INCLUDE
+   #endif
+   
+   // -------------------- General Configuration --------------------
+   
+   #ifndef CHIP_DEVICE_CONFIG_CHIP_TASK_NAME
+   #define CHIP_DEVICE_CONFIG_CHIP_TASK_NAME "CHIP"
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_CHIP_TASK_STACK_SIZE
+   #define CHIP_DEVICE_CONFIG_CHIP_TASK_STACK_SIZE 4096
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_CHIP_TASK_PRIORITY
+   #define CHIP_DEVICE_CONFIG_CHIP_TASK_PRIORITY 2
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_MAX_EVENT_QUEUE_SIZE
+   #define CHIP_DEVICE_CONFIG_MAX_EVENT_QUEUE_SIZE 100
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_BG_EVENT_PROCESSING
+   #define CHIP_DEVICE_CONFIG_ENABLE_BG_EVENT_PROCESSING 0
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_BG_TASK_NAME
+   #define CHIP_DEVICE_CONFIG_BG_TASK_NAME "BG"
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_BG_TASK_STACK_SIZE
+   #define CHIP_DEVICE_CONFIG_BG_TASK_STACK_SIZE (6 * 1024)
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_BG_TASK_PRIORITY
+   #define CHIP_DEVICE_CONFIG_BG_TASK_PRIORITY 1
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_BG_MAX_EVENT_QUEUE_SIZE
+   #define CHIP_DEVICE_CONFIG_BG_MAX_EVENT_QUEUE_SIZE 1
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_SED
+   #define CHIP_DEVICE_CONFIG_ENABLE_SED 0
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_SED_IDLE_INTERVAL
+   #define CHIP_DEVICE_CONFIG_SED_IDLE_INTERVAL 5000_ms32
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_SED_ACTIVE_INTERVAL
+   #define CHIP_DEVICE_CONFIG_SED_ACTIVE_INTERVAL 200_ms32
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_SED_ACTIVE_THRESHOLD
+   #define CHIP_DEVICE_CONFIG_SED_ACTIVE_THRESHOLD System::Clock::Milliseconds32(4000)
+   #endif
+   
+   // -------------------- Device Identification Configuration --------------------
+   
+   #ifndef CHIP_DEVICE_CONFIG_DEVICE_VENDOR_NAME
+   #define CHIP_DEVICE_CONFIG_DEVICE_VENDOR_NAME "TEST_VENDOR"
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_DEVICE_VENDOR_ID
+   #define CHIP_DEVICE_CONFIG_DEVICE_VENDOR_ID 0xFFF1
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_DEVICE_PRODUCT_NAME
+   #define CHIP_DEVICE_CONFIG_DEVICE_PRODUCT_NAME "TEST_PRODUCT"
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_DEVICE_PRODUCT_ID
+   #define CHIP_DEVICE_CONFIG_DEVICE_PRODUCT_ID 0x8001
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_DEFAULT_DEVICE_HARDWARE_VERSION_STRING
+   #define CHIP_DEVICE_CONFIG_DEFAULT_DEVICE_HARDWARE_VERSION_STRING "TEST_VERSION"
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_DEFAULT_DEVICE_HARDWARE_VERSION
+   #define CHIP_DEVICE_CONFIG_DEFAULT_DEVICE_HARDWARE_VERSION 0
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_DEVICE_SOFTWARE_VERSION_STRING
+   #define CHIP_DEVICE_CONFIG_DEVICE_SOFTWARE_VERSION_STRING "1.0"
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_DEVICE_SOFTWARE_VERSION
+   #define CHIP_DEVICE_CONFIG_DEVICE_SOFTWARE_VERSION 1
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_TEST_SERIAL_NUMBER
+   #define CHIP_DEVICE_CONFIG_TEST_SERIAL_NUMBER "TEST_SN"
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_FAILSAFE_EXPIRY_LENGTH_SEC
+   #define CHIP_DEVICE_CONFIG_FAILSAFE_EXPIRY_LENGTH_SEC 60
+   #endif // CHIP_DEVICE_CONFIG_FAILSAFE_EXPIRY_LENGTH_SEC
+   
+   #ifndef CHIP_DEVICE_CONFIG_MAX_CUMULATIVE_FAILSAFE_SEC
+   #define CHIP_DEVICE_CONFIG_MAX_CUMULATIVE_FAILSAFE_SEC 900
+   #endif // CHIP_DEVICE_CONFIG_MAX_CUMULATIVE_FAILSAFE_SEC
+   
+   #ifndef CHIP_DEVICE_CONFIG_SUPPORTS_CONCURRENT_CONNECTION
+   #define CHIP_DEVICE_CONFIG_SUPPORTS_CONCURRENT_CONNECTION 1
+   #endif // CHIP_DEVICE_CONFIG_SUPPORTS_CONCURRENT_CONNECTION
+   
+   #ifndef CHIP_DEVICE_CONFIG_USER_SELECTED_MODE_TIMEOUT_SEC
+   #define CHIP_DEVICE_CONFIG_USER_SELECTED_MODE_TIMEOUT_SEC 30
+   #endif // CHIP_DEVICE_CONFIG_USER_SELECTED_MODE_TIMEOUT_SEC
+   
+   #ifndef CHIP_DEVICE_CONFIG_ROTATING_DEVICE_ID_UNIQUE_ID
+   #define CHIP_DEVICE_CONFIG_ROTATING_DEVICE_ID_UNIQUE_ID                                                                            \
+       {                                                                                                                              \
+           0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff                             \
+       }
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_ROTATING_DEVICE_ID_UNIQUE_ID_LENGTH
+   #define CHIP_DEVICE_CONFIG_ROTATING_DEVICE_ID_UNIQUE_ID_LENGTH 16
+   #endif
+   
+   // -------------------- WiFi Station Configuration --------------------
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_WIFI_STATION
+   #define CHIP_DEVICE_CONFIG_ENABLE_WIFI_STATION 1
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_WIFI_STATION_RECONNECT_INTERVAL
+   #define CHIP_DEVICE_CONFIG_WIFI_STATION_RECONNECT_INTERVAL 5000
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_MAX_SCAN_NETWORKS_RESULTS
+   #define CHIP_DEVICE_CONFIG_MAX_SCAN_NETWORKS_RESULTS 10
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_WIFI_SCAN_COMPLETION_TIMEOUT
+   #define CHIP_DEVICE_CONFIG_WIFI_SCAN_COMPLETION_TIMEOUT 10000
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_WIFI_CONNECTIVITY_TIMEOUT
+   #define CHIP_DEVICE_CONFIG_WIFI_CONNECTIVITY_TIMEOUT 30000
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_LWIP_WIFI_STATION_IF_NAME
+   #define CHIP_DEVICE_CONFIG_LWIP_WIFI_STATION_IF_NAME "wl"
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_WIFI_STATION_IF_NAME
+   #define CHIP_DEVICE_CONFIG_WIFI_STATION_IF_NAME "wlan0"
+   #endif
+   
+   // -------------------- WiFi AP Configuration --------------------
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_WIFI_AP
+   #define CHIP_DEVICE_CONFIG_ENABLE_WIFI_AP 0
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_WIFI_AP_SSID_PREFIX
+   #define CHIP_DEVICE_CONFIG_WIFI_AP_SSID_PREFIX "MATTER-"
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_WIFI_AP_CHANNEL
+   #define CHIP_DEVICE_CONFIG_WIFI_AP_CHANNEL 1
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_WIFI_AP_MAX_STATIONS
+   #define CHIP_DEVICE_CONFIG_WIFI_AP_MAX_STATIONS 4
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_WIFI_AP_BEACON_INTERVAL
+   #define CHIP_DEVICE_CONFIG_WIFI_AP_BEACON_INTERVAL 100
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_WIFI_AP_IDLE_TIMEOUT
+   #define CHIP_DEVICE_CONFIG_WIFI_AP_IDLE_TIMEOUT 120000
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_LWIP_WIFI_AP_IF_NAME
+   #define CHIP_DEVICE_CONFIG_LWIP_WIFI_AP_IF_NAME "ap"
+   #endif
+   
+   // -------------------- BLE/CHIPoBLE Configuration --------------------
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_CHIPOBLE
+   #define CHIP_DEVICE_CONFIG_ENABLE_CHIPOBLE 0
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_CHIPOBLE_SINGLE_CONNECTION
+   #define CHIP_DEVICE_CONFIG_CHIPOBLE_SINGLE_CONNECTION 1
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_CHIPOBLE_ENABLE_ADVERTISING_AUTOSTART
+   #define CHIP_DEVICE_CONFIG_CHIPOBLE_ENABLE_ADVERTISING_AUTOSTART 1
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_PAIRING_AUTOSTART
+   #define CHIP_DEVICE_CONFIG_ENABLE_PAIRING_AUTOSTART 1
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_BLE_DEVICE_NAME_PREFIX
+   #define CHIP_DEVICE_CONFIG_BLE_DEVICE_NAME_PREFIX "MATTER-"
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_BLE_FAST_ADVERTISING_INTERVAL_MIN
+   #define CHIP_DEVICE_CONFIG_BLE_FAST_ADVERTISING_INTERVAL_MIN 32
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_BLE_FAST_ADVERTISING_INTERVAL_MAX
+   #define CHIP_DEVICE_CONFIG_BLE_FAST_ADVERTISING_INTERVAL_MAX 96
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_BLE_SLOW_ADVERTISING_INTERVAL_MIN
+   #define CHIP_DEVICE_CONFIG_BLE_SLOW_ADVERTISING_INTERVAL_MIN 240
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_BLE_SLOW_ADVERTISING_INTERVAL_MAX
+   #define CHIP_DEVICE_CONFIG_BLE_SLOW_ADVERTISING_INTERVAL_MAX 1920
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_BLE_ADVERTISING_INTERVAL_CHANGE_TIME
+   #define CHIP_DEVICE_CONFIG_BLE_ADVERTISING_INTERVAL_CHANGE_TIME 30000
+   #endif
+   
+   // -------------------- Service Provisioning Configuration --------------------
+   
+   #ifndef CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_ENDPOINT_ID
+   #define CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_ENDPOINT_ID 0x18B4300200000010ULL
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_CONNECTIVITY_TIMEOUT
+   #define CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_CONNECTIVITY_TIMEOUT 10000
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_REQUEST_TIMEOUT
+   #define CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_REQUEST_TIMEOUT 10000
+   #endif
+   
+   // -------------------- Thread Configuration --------------------
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_THREAD
+   #define CHIP_DEVICE_CONFIG_ENABLE_THREAD 0
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_THREAD_FTD
+   #define CHIP_DEVICE_CONFIG_THREAD_FTD 1
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_THREAD_SSED
+   #define CHIP_DEVICE_CONFIG_THREAD_SSED 0
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_THREAD_TASK_NAME
+   #define CHIP_DEVICE_CONFIG_THREAD_TASK_NAME "THREAD"
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_THREAD_TASK_STACK_SIZE
+   #define CHIP_DEVICE_CONFIG_THREAD_TASK_STACK_SIZE 8192
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_THREAD_TASK_PRIORITY
+   #define CHIP_DEVICE_CONFIG_THREAD_TASK_PRIORITY 3
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_LWIP_THREAD_IF_NAME
+   #define CHIP_DEVICE_CONFIG_LWIP_THREAD_IF_NAME "th"
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_THREAD_IF_MTU
+   #define CHIP_DEVICE_CONFIG_THREAD_IF_MTU 1280
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_DEFAULT_THREAD_NETWORK_NAME_PREFIX
+   #define CHIP_DEVICE_CONFIG_DEFAULT_THREAD_NETWORK_NAME_PREFIX "CHIP-PAN-"
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_THREAD_CONNECTIVITY_TIMEOUT
+   #define CHIP_DEVICE_CONFIG_THREAD_CONNECTIVITY_TIMEOUT 30000
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_THREAD_ENABLE_CLI
+   #define CHIP_DEVICE_CONFIG_THREAD_ENABLE_CLI 0
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_THREAD_SRP_CLIENT
+   #define CHIP_DEVICE_CONFIG_ENABLE_THREAD_SRP_CLIENT 0
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_THREAD_SRP_MAX_SERVICES
+   #if CHIP_DEVICE_CONFIG_ENABLE_EXTENDED_DISCOVERY && CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONER_DISCOVERY
+   #define CHIP_DEVICE_CONFIG_THREAD_SRP_MAX_SERVICES (CHIP_CONFIG_MAX_FABRICS + 3)
+   #elif CHIP_DEVICE_CONFIG_ENABLE_EXTENDED_DISCOVERY || CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONER_DISCOVERY
+   #define CHIP_DEVICE_CONFIG_THREAD_SRP_MAX_SERVICES (CHIP_CONFIG_MAX_FABRICS + 2)
+   #else
+   #define CHIP_DEVICE_CONFIG_THREAD_SRP_MAX_SERVICES (CHIP_CONFIG_MAX_FABRICS + 1)
+   #endif
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_THREAD_COMMISSIONABLE_DISCOVERY
+   #define CHIP_DEVICE_CONFIG_ENABLE_THREAD_COMMISSIONABLE_DISCOVERY 0
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_THREAD_DNS_CLIENT
+   #define CHIP_DEVICE_CONFIG_ENABLE_THREAD_DNS_CLIENT 0
+   #endif
+   
+   // -------------------- Network Telemetry Configuration --------------------
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_WIFI_TELEMETRY
+   #define CHIP_DEVICE_CONFIG_ENABLE_WIFI_TELEMETRY (0)
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY
+   #define CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY (0)
+   #endif
+   
+   #if CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY && !CHIP_DEVICE_CONFIG_ENABLE_THREAD
+   #error "If CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY set, then CHIP_DEVICE_CONFIG_ENABLE_THREAD must also be set."
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY_FULL
+   #define CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY_FULL (0)
+   #endif
+   
+   #if CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY_FULL && !CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY
+   #error "If CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY_FULL set, then CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY must also be set."
+   #endif
+   
+   // Enable Network Telemetry feature if it is enabled for at lease one network.
+   #define CHIP_DEVICE_CONFIG_ENABLE_NETWORK_TELEMETRY                                                                                \
+       (CHIP_DEVICE_CONFIG_ENABLE_WIFI_TELEMETRY || CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY)
+   
+   #ifndef CHIP_DEVICE_CONFIG_DEFAULT_TELEMETRY_INTERVAL_MS
+   #define CHIP_DEVICE_CONFIG_DEFAULT_TELEMETRY_INTERVAL_MS 90000
+   #endif
+   
+   // -------------------- Test Setup (PASE) Configuration --------------------
+   
+   // TODO: When the SDK code is production ready this should be set to 0 and each platform
+   // will need to enable it indivually when needed.
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_TEST_SETUP_PARAMS
+   #define CHIP_DEVICE_CONFIG_ENABLE_TEST_SETUP_PARAMS 1
+   #endif
+   
+   #if CHIP_DEVICE_CONFIG_ENABLE_TEST_SETUP_PARAMS
+   
+   #ifndef CHIP_DEVICE_CONFIG_USE_TEST_SETUP_PIN_CODE
+   #define CHIP_DEVICE_CONFIG_USE_TEST_SETUP_PIN_CODE 20202021
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_USE_TEST_SETUP_DISCRIMINATOR
+   #define CHIP_DEVICE_CONFIG_USE_TEST_SETUP_DISCRIMINATOR 0xF00
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_ITERATION_COUNT
+   #define CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_ITERATION_COUNT 1000
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_SALT
+   #define CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_SALT "U1BBS0UyUCBLZXkgU2FsdA=="
+   #define CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_SALT_DEFAULT
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_VERIFIER
+   
+   #if CHIP_DEVICE_CONFIG_USE_TEST_SETUP_PIN_CODE != 20202021
+   #error "Non-default Spake2+ passcode configured but verifier left unchanged"
+   #endif
+   
+   #if CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_ITERATION_COUNT != 1000
+   #error "Non-default Spake2+ iteration count configured but verifier left unchanged"
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_SALT_DEFAULT
+   #error "Non-default Spake2+ salt configured but verifier left unchanged"
+   #endif
+   
+   // Generated with: spake2p gen-verifier -o - -i 1000 -s "U1BBS0UyUCBLZXkgU2FsdA==" -p 20202021
+   #define CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_VERIFIER                                                                               \
+       "uWFwqugDNGiEck/po7KHwwMwwqZgN10XuyBajPGuyzUEV/iree4lOrao5GuwnlQ65CJzbeUB49s31EH+NEkg0JVI5MGCQGMMT/SRPFNRODm3wH/MBiehuFc6FJ/"  \
+       "NH6Rmzw=="
+   #endif
+   
+   #else
+   
+   #undef CHIP_DEVICE_CONFIG_USE_TEST_SETUP_PIN_CODE
+   #undef CHIP_DEVICE_CONFIG_USE_TEST_SETUP_DISCRIMINATOR
+   #undef CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_ITERATION_COUNT
+   #undef CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_SALT
+   #undef CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_VERIFIER
+   
+   #endif
+   
+   // -------------------- Event Logging Configuration --------------------
+   
+   #ifndef CHIP_DEVICE_CONFIG_EVENT_LOGGING_CRIT_BUFFER_SIZE
+   #define CHIP_DEVICE_CONFIG_EVENT_LOGGING_CRIT_BUFFER_SIZE (1024)
+   #endif
+   
+   #if (CHIP_DEVICE_CONFIG_EVENT_LOGGING_CRIT_BUFFER_SIZE <= 0)
+   #error "The Prod critical event buffer must exist (CHIP_DEVICE_CONFIG_EVENT_LOGGING_CRIT_BUFFER_SIZE > 0)"
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_EVENT_LOGGING_INFO_BUFFER_SIZE
+   #define CHIP_DEVICE_CONFIG_EVENT_LOGGING_INFO_BUFFER_SIZE (512)
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_EVENT_LOGGING_DEBUG_BUFFER_SIZE
+   #define CHIP_DEVICE_CONFIG_EVENT_LOGGING_DEBUG_BUFFER_SIZE (512)
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_EVENT_ID_COUNTER_EPOCH
+   #define CHIP_DEVICE_CONFIG_EVENT_ID_COUNTER_EPOCH (0x10000)
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_EVENT_LOGGING_UTC_TIMESTAMPS
+   #define CHIP_DEVICE_CONFIG_EVENT_LOGGING_UTC_TIMESTAMPS 0
+   #endif
+   
+   // -------------------- Software Update Manager Configuration --------------------
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_SOFTWARE_UPDATE_MANAGER
+   #define CHIP_DEVICE_CONFIG_ENABLE_SOFTWARE_UPDATE_MANAGER 1
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_URI_LEN
+   #define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_URI_LEN 128
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_ENDPOINT_ID
+   #define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_ENDPOINT_ID 0x18B4300200000002ULL
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_FILE_DOWNLOAD_ENDPOINT_ID
+   #define CHIP_DEVICE_CONFIG_FILE_DOWNLOAD_ENDPOINT_ID 0x18B4300200000013ULL
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_RESPONSE_TIMEOUT
+   #define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_RESPONSE_TIMEOUT 10000
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_FILE_DOWNLOAD_RESPONSE_TIMEOUT
+   #define CHIP_DEVICE_CONFIG_FILE_DOWNLOAD_RESPONSE_TIMEOUT 10000
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_MAX_RETRIES
+   #define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_MAX_RETRIES 5
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_MAX_WAIT_TIME_INTERVAL_MS
+   #define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_MAX_WAIT_TIME_INTERVAL_MS 1 * 60 * 60 * 1000 // 1 hour
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_SWU_MIN_WAIT_TIME_INTERVAL_PERCENT_PER_STEP
+   #define CHIP_DEVICE_CONFIG_SWU_MIN_WAIT_TIME_INTERVAL_PERCENT_PER_STEP 50
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_SWU_WAIT_TIME_MULTIPLIER_MS
+   #define CHIP_DEVICE_CONFIG_SWU_WAIT_TIME_MULTIPLIER_MS 1 * 60 * 1000 // 1 minute
+   #endif
+   
+   #define CHIP_DEVICE_CONFIG_SWU_BDX_BLOCK_SIZE 1024
+   
+   #ifndef CHIP_DEVICE_CONFIG_FIRMWARE_BUILD_DATE
+   #define CHIP_DEVICE_CONFIG_FIRMWARE_BUILD_DATE __DATE__
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_FIRMWARE_BUILD_TIME
+   #define CHIP_DEVICE_CONFIG_FIRMWARE_BUILD_TIME __TIME__
+   #endif
+   
+   // -------------------- Device DNS-SD Configuration --------------------
+   
+   #ifndef CHIP_DEVICE_CONFIG_DISCOVERY_TIMEOUT_SECS
+   #define CHIP_DEVICE_CONFIG_DISCOVERY_TIMEOUT_SECS (15 * 60)
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_MAX_DISCOVERED_NODES
+   #define CHIP_DEVICE_CONFIG_MAX_DISCOVERED_NODES 10
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONER_DISCOVERY
+   #define CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONER_DISCOVERY 0
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_BOTH_COMMISSIONER_AND_COMMISSIONEE
+   #define CHIP_DEVICE_CONFIG_ENABLE_BOTH_COMMISSIONER_AND_COMMISSIONEE 0
+   #endif
+   
+   #ifndef CHIP_CONFIG_UNSAFE_SUBSCRIPTION_EXCHANGE_MANAGER_USE
+   #define CHIP_CONFIG_UNSAFE_SUBSCRIPTION_EXCHANGE_MANAGER_USE 0
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONER_DISCOVERY_CLIENT
+   #define CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONER_DISCOVERY_CLIENT 0
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_EXTENDED_DISCOVERY
+   #define CHIP_DEVICE_CONFIG_ENABLE_EXTENDED_DISCOVERY 0
+   #endif
+   
+   #define CHIP_DEVICE_CONFIG_DISCOVERY_DISABLED 0
+   #define CHIP_DEVICE_CONFIG_DISCOVERY_NO_TIMEOUT -1
+   #ifndef CHIP_DEVICE_CONFIG_EXTENDED_DISCOVERY_TIMEOUT_SECS
+   #define CHIP_DEVICE_CONFIG_EXTENDED_DISCOVERY_TIMEOUT_SECS (15 * 60)
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONABLE_DEVICE_TYPE
+   #define CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONABLE_DEVICE_TYPE 0
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_DEVICE_TYPE
+   #define CHIP_DEVICE_CONFIG_DEVICE_TYPE 65535 // 65535 = Invalid Device Type
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONABLE_DEVICE_NAME
+   #define CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONABLE_DEVICE_NAME 0
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_DEVICE_NAME
+   #define CHIP_DEVICE_CONFIG_DEVICE_NAME "Test Kitchen"
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_PAIRING_INITIAL_HINT
+   #define CHIP_DEVICE_CONFIG_PAIRING_INITIAL_HINT                                                                                    \
+       (1 << CHIP_COMMISSIONING_HINT_INDEX_POWER_CYCLE | 1 << CHIP_COMMISSIONING_HINT_INDEX_SEE_MANUAL)
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_PAIRING_INITIAL_INSTRUCTION
+   #define CHIP_DEVICE_CONFIG_PAIRING_INITIAL_INSTRUCTION ""
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_PAIRING_SECONDARY_HINT
+   #define CHIP_DEVICE_CONFIG_PAIRING_SECONDARY_HINT                                                                                  \
+       (1 << CHIP_COMMISSIONING_HINT_INDEX_SEE_ADMINISTRATOR_UX | 1 << CHIP_COMMISSIONING_HINT_INDEX_SEE_MANUAL)
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_PAIRING_SECONDARY_INSTRUCTION
+   #define CHIP_DEVICE_CONFIG_PAIRING_SECONDARY_INSTRUCTION ""
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_ENABLE_AUTOMATIC_CASE_RETRIES
+   #define CHIP_DEVICE_CONFIG_ENABLE_AUTOMATIC_CASE_RETRIES 1
+   #endif
+   
+   #if CHIP_DEVICE_CONFIG_ENABLE_AUTOMATIC_CASE_RETRIES
+   
+   #ifndef CHIP_DEVICE_CONFIG_AUTOMATIC_CASE_RETRY_INITIAL_DELAY_SECONDS
+   #define CHIP_DEVICE_CONFIG_AUTOMATIC_CASE_RETRY_INITIAL_DELAY_SECONDS 1
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_AUTOMATIC_CASE_RETRY_MAX_BACKOFF
+   #define CHIP_DEVICE_CONFIG_AUTOMATIC_CASE_RETRY_MAX_BACKOFF 5
+   #endif
+   
+   #endif // CHIP_DEVICE_CONFIG_ENABLE_AUTOMATIC_CASE_RETRIES
+   
+   // -------------------- App Platform Configuration --------------------
+   
+   #ifndef CHIP_DEVICE_CONFIG_APP_PLATFORM_ENABLED
+   #define CHIP_DEVICE_CONFIG_APP_PLATFORM_ENABLED 0
+   #endif
+   
+   #ifndef CHIP_DEVICE_CONFIG_DYNAMIC_ENDPOINT_COUNT
+   #define CHIP_DEVICE_CONFIG_DYNAMIC_ENDPOINT_COUNT 0
+   #endif
+   
+   #ifndef CHIP_DISPATCH_EVENT_LONG_DISPATCH_TIME_WARNING_THRESHOLD_MS
+   #define CHIP_DISPATCH_EVENT_LONG_DISPATCH_TIME_WARNING_THRESHOLD_MS 100
+   #endif

@@ -1,0 +1,14 @@
+.. _exhale_variable__device_info_provider_8h_1abc3abf1b6a659fba8b978790aee2fa07:
+
+Variable chip::DeviceLayer::kMaxActiveLocaleLength
+==================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_DeviceInfoProvider.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: chip::DeviceLayer::kMaxActiveLocaleLength
+   :project: My Project

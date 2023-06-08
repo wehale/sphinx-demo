@@ -1,0 +1,14 @@
+.. _exhale_variable_namespacechip_1_1_device_layer_1_1_network_commissioning_1a10910b0c8de2e1669304910014d6642c:
+
+Variable chip::DeviceLayer::NetworkCommissioning::kMaxNetworkIDLen
+==================================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_NetworkCommissioning.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: chip::DeviceLayer::NetworkCommissioning::kMaxNetworkIDLen
+   :project: My Project

@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1ae2e566731446ead205f33646ba0e4b9d:
+
+Define CHIP_DEVICE_CONFIG_ROTATING_DEVICE_ID_UNIQUE_ID_LENGTH
+=============================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_ROTATING_DEVICE_ID_UNIQUE_ID_LENGTH
+   :project: My Project

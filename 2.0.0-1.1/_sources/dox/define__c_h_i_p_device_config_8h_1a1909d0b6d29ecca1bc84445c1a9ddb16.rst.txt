@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1a1909d0b6d29ecca1bc84445c1a9ddb16:
+
+Define CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_ENDPOINT_ID
+==========================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_ENDPOINT_ID
+   :project: My Project

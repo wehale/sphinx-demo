@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1aff392dfffa95bdae91b83c33ef4d5cb7:
+
+Define CHIP_DEVICE_CONFIG_SUPPORTS_CONCURRENT_CONNECTION
+========================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_SUPPORTS_CONCURRENT_CONNECTION
+   :project: My Project

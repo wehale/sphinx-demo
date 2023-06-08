@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1a30918440005df2737588a4abc9022762:
+
+Define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_URI_LEN
+=================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_URI_LEN
+   :project: My Project

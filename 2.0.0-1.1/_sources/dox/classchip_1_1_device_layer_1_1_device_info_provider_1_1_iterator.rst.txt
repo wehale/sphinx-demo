@@ -1,0 +1,23 @@
+.. _exhale_class_classchip_1_1_device_layer_1_1_device_info_provider_1_1_iterator:
+
+Template Class DeviceInfoProvider::Iterator
+===========================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_DeviceInfoProvider.h`
+
+
+Nested Relationships
+--------------------
+
+This class is a nested type of :ref:`exhale_class_classchip_1_1_device_layer_1_1_device_info_provider`.
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: chip::DeviceLayer::DeviceInfoProvider::Iterator
+   :project: My Project
+   :members:
+   :protected-members:
+   :undoc-members:

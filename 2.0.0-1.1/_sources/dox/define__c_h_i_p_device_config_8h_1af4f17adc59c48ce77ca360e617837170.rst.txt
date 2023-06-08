@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1af4f17adc59c48ce77ca360e617837170:
+
+Define CHIP_DEVICE_CONFIG_BLE_SLOW_ADVERTISING_INTERVAL_MAX
+===========================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_BLE_SLOW_ADVERTISING_INTERVAL_MAX
+   :project: My Project

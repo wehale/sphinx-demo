@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1a8a7039418f59daf3e009a9c0f1897de3:
+
+Define CHIP_DEVICE_CONFIG_WIFI_AP_IDLE_TIMEOUT
+==============================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_WIFI_AP_IDLE_TIMEOUT
+   :project: My Project

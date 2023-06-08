@@ -1,0 +1,14 @@
+.. _exhale_typedef__c_h_i_p_device_event_8h_1a4536f0203bb21f8661c3fa8aacbf20e4:
+
+Typedef chip::DeviceLayer::AsyncWorkFunct
+=========================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceEvent.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: chip::DeviceLayer::AsyncWorkFunct
+   :project: My Project

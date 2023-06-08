@@ -1,0 +1,113 @@
+
+.. _program_listing_file__Users_wehale_git_matter-stash_src_include_platform_DeviceInfoProvider.h:
+
+Program Listing for File DeviceInfoProvider.h
+=============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__Users_wehale_git_matter-stash_src_include_platform_DeviceInfoProvider.h>` (``/Users/wehale/git/matter-stash/src/include/platform/DeviceInfoProvider.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+    *
+    *    Copyright (c) 2022 Project CHIP Authors
+    *
+    *    Licensed under the Apache License, Version 2.0 (the "License");
+    *    you may not use this file except in compliance with the License.
+    *    You may obtain a copy of the License at
+    *
+    *        http://www.apache.org/licenses/LICENSE-2.0
+    *
+    *    Unless required by applicable law or agreed to in writing, software
+    *    distributed under the License is distributed on an "AS IS" BASIS,
+    *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    *    See the License for the specific language governing permissions and
+    *    limitations under the License.
+    */
+   #pragma once
+   
+   #include <algorithm>
+   #include <stdint.h>
+   #include <sys/types.h>
+   
+   #include <app-common/zap-generated/cluster-objects.h>
+   #include <app/util/basic-types.h>
+   #include <lib/core/CHIPError.h>
+   #include <lib/core/CHIPPersistentStorageDelegate.h>
+   #include <platform/AttributeList.h>
+   
+   namespace chip {
+   namespace DeviceLayer {
+   
+   static constexpr size_t kMaxUserLabelListLength = 10;
+   static constexpr size_t kMaxLabelNameLength     = 16;
+   static constexpr size_t kMaxLabelValueLength    = 16;
+   static constexpr size_t kMaxActiveLocaleLength  = 35;
+   
+   class DeviceInfoProvider
+   {
+   public:
+       template <typename T>
+       class Iterator
+       {
+       public:
+           virtual ~Iterator() = default;
+           virtual size_t Count() = 0;
+           virtual bool Next(T & item) = 0;
+           virtual void Release() = 0;
+   
+       protected:
+           Iterator() = default;
+       };
+   
+       using FixedLabelType = app::Clusters::FixedLabel::Structs::LabelStruct::Type;
+       using UserLabelType  = app::Clusters::UserLabel::Structs::LabelStruct::Type;
+       using CalendarType   = app::Clusters::TimeFormatLocalization::CalendarTypeEnum;
+   
+       using FixedLabelIterator             = Iterator<FixedLabelType>;
+       using UserLabelIterator              = Iterator<UserLabelType>;
+       using SupportedLocalesIterator       = Iterator<CharSpan>;
+       using SupportedCalendarTypesIterator = Iterator<CalendarType>;
+   
+       DeviceInfoProvider() = default;
+   
+       virtual ~DeviceInfoProvider() = default;
+   
+       // Not copyable
+       DeviceInfoProvider(const DeviceInfoProvider &) = delete;
+       DeviceInfoProvider & operator=(const DeviceInfoProvider &) = delete;
+   
+       void SetStorageDelegate(PersistentStorageDelegate * storage);
+   
+       CHIP_ERROR SetUserLabelList(EndpointId endpoint, const AttributeList<UserLabelType, kMaxUserLabelListLength> & labelList);
+       CHIP_ERROR ClearUserLabelList(EndpointId endpoint);
+       CHIP_ERROR AppendUserLabel(EndpointId endpoint, const UserLabelType & label);
+   
+       // Iterators
+       virtual FixedLabelIterator * IterateFixedLabel(EndpointId endpoint) = 0;
+       virtual UserLabelIterator * IterateUserLabel(EndpointId endpoint)   = 0;
+   
+       virtual SupportedLocalesIterator * IterateSupportedLocales() = 0;
+   
+       virtual SupportedCalendarTypesIterator * IterateSupportedCalendarTypes() = 0;
+   
+   protected:
+       PersistentStorageDelegate * mStorage = nullptr;
+   
+       virtual CHIP_ERROR SetUserLabelAt(EndpointId endpoint, size_t index, const UserLabelType & userLabel) = 0;
+   
+       virtual CHIP_ERROR DeleteUserLabelAt(EndpointId endpoint, size_t index) = 0;
+   
+       virtual CHIP_ERROR SetUserLabelLength(EndpointId endpoint, size_t val) = 0;
+   
+       virtual CHIP_ERROR GetUserLabelLength(EndpointId endpoint, size_t & val) = 0;
+   };
+   
+   DeviceInfoProvider * GetDeviceInfoProvider();
+   
+   void SetDeviceInfoProvider(DeviceInfoProvider * provider);
+   
+   } // namespace DeviceLayer
+   } // namespace chip

@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File CHIPDeviceConfig.h &mdash; Silicon Labs Matter 2.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Silicon Labs Matter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../OVERVIEW.html">Silicon Labs Matter User’s Guide Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW_FEATURES.html">Silicon Labs Matter New Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_1_overview.html">Matter Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_2_prereq.html">Matter Development Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_3_general.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_6_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Library API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Silicon Labs Matter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Program Listing for File CHIPDeviceConfig.h</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dox/program_listing_file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-chipdeviceconfig-h">
+<span id="program-listing-file-users-wehale-git-matter-stash-src-include-platform-chipdeviceconfig-h"></span><h1>Program Listing for File CHIPDeviceConfig.h<a class="headerlink" href="#program-listing-for-file-chipdeviceconfig-h" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h.html#file-users-wehale-git-matter-stash-src-include-platform-chipdeviceconfig-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/Users/wehale/git/matter-stash/src/include/platform/CHIPDeviceConfig.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> *</span>
+<span class="cm"> *    Copyright (c) 2020 Project CHIP Authors</span>
+<span class="cm"> *    Copyright (c) 2019-2020 Google LLC.</span>
+<span class="cm"> *    Copyright (c) 2018 Nest Labs, Inc.</span>
+<span class="cm"> *</span>
+<span class="cm"> *    Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="cm"> *    you may not use this file except in compliance with the License.</span>
+<span class="cm"> *    You may obtain a copy of the License at</span>
+<span class="cm"> *</span>
+<span class="cm"> *        http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="cm"> *</span>
+<span class="cm"> *    Unless required by applicable law or agreed to in writing, software</span>
+<span class="cm"> *    distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="cm"> *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="cm"> *    See the License for the specific language governing permissions and</span>
+<span class="cm"> *    limitations under the License.</span>
+<span class="cm"> */</span>
+
+<span class="cp">#pragma once</span>
+
+<span class="cp">#if CHIP_HAVE_CONFIG_H</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;platform/CHIPDeviceBuildConfig.h&gt;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lib/core/CHIPConfig.h&gt;</span>
+
+<span class="cm">/* Include a project-specific configuration file, if defined.</span>
+<span class="cm"> *</span>
+<span class="cm"> * An application or module that incorporates the chip Device Layer can define a project</span>
+<span class="cm"> * configuration file to override standard chip configuration with application-specific</span>
+<span class="cm"> * values.  The project config file is typically located outside the Openchip source</span>
+<span class="cm"> * tree, alongside the source code for the application.</span>
+<span class="cm"> */</span>
+<span class="cp">#ifdef CHIP_DEVICE_PROJECT_CONFIG_INCLUDE</span>
+<span class="cp">#include CHIP_DEVICE_PROJECT_CONFIG_INCLUDE</span>
+<span class="cp">#endif</span>
+
+<span class="cm">/* Include a platform-specific configuration file, if defined.</span>
+<span class="cm"> *</span>
+<span class="cm"> * A platform configuration file contains overrides to standard chip Device Layer</span>
+<span class="cm"> * configuration that are specific to the platform or OS on which chip is running.</span>
+<span class="cm"> * It is typically provided as apart of an adaptation layer that adapts Openchip</span>
+<span class="cm"> * to the target environment.  This adaptation layer may be included in the Openchip</span>
+<span class="cm"> * source tree itself or implemented externally.</span>
+<span class="cm"> */</span>
+<span class="cp">#ifdef CHIP_DEVICE_PLATFORM_CONFIG_INCLUDE</span>
+<span class="cp">#include CHIP_DEVICE_PLATFORM_CONFIG_INCLUDE</span>
+<span class="cp">#endif</span>
+
+<span class="c1">// -------------------- General Configuration --------------------</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_CHIP_TASK_NAME</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_CHIP_TASK_NAME &quot;CHIP&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_CHIP_TASK_STACK_SIZE</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_CHIP_TASK_STACK_SIZE 4096</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_CHIP_TASK_PRIORITY</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_CHIP_TASK_PRIORITY 2</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_MAX_EVENT_QUEUE_SIZE</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_MAX_EVENT_QUEUE_SIZE 100</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_BG_EVENT_PROCESSING</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_BG_EVENT_PROCESSING 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_BG_TASK_NAME</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_BG_TASK_NAME &quot;BG&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_BG_TASK_STACK_SIZE</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_BG_TASK_STACK_SIZE (6 * 1024)</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_BG_TASK_PRIORITY</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_BG_TASK_PRIORITY 1</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_BG_MAX_EVENT_QUEUE_SIZE</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_BG_MAX_EVENT_QUEUE_SIZE 1</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_SED</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_SED 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_SED_IDLE_INTERVAL</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_SED_IDLE_INTERVAL 5000_ms32</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_SED_ACTIVE_INTERVAL</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_SED_ACTIVE_INTERVAL 200_ms32</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_SED_ACTIVE_THRESHOLD</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_SED_ACTIVE_THRESHOLD System::Clock::Milliseconds32(4000)</span>
+<span class="cp">#endif</span>
+
+<span class="c1">// -------------------- Device Identification Configuration --------------------</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_DEVICE_VENDOR_NAME</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_DEVICE_VENDOR_NAME &quot;TEST_VENDOR&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_DEVICE_VENDOR_ID</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_DEVICE_VENDOR_ID 0xFFF1</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_DEVICE_PRODUCT_NAME</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_DEVICE_PRODUCT_NAME &quot;TEST_PRODUCT&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_DEVICE_PRODUCT_ID</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_DEVICE_PRODUCT_ID 0x8001</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_DEFAULT_DEVICE_HARDWARE_VERSION_STRING</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_DEFAULT_DEVICE_HARDWARE_VERSION_STRING &quot;TEST_VERSION&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_DEFAULT_DEVICE_HARDWARE_VERSION</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_DEFAULT_DEVICE_HARDWARE_VERSION 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_DEVICE_SOFTWARE_VERSION_STRING</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_DEVICE_SOFTWARE_VERSION_STRING &quot;1.0&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_DEVICE_SOFTWARE_VERSION</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_DEVICE_SOFTWARE_VERSION 1</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_TEST_SERIAL_NUMBER</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_TEST_SERIAL_NUMBER &quot;TEST_SN&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_FAILSAFE_EXPIRY_LENGTH_SEC</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_FAILSAFE_EXPIRY_LENGTH_SEC 60</span>
+<span class="cp">#endif </span><span class="c1">// CHIP_DEVICE_CONFIG_FAILSAFE_EXPIRY_LENGTH_SEC</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_MAX_CUMULATIVE_FAILSAFE_SEC</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_MAX_CUMULATIVE_FAILSAFE_SEC 900</span>
+<span class="cp">#endif </span><span class="c1">// CHIP_DEVICE_CONFIG_MAX_CUMULATIVE_FAILSAFE_SEC</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_SUPPORTS_CONCURRENT_CONNECTION</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_SUPPORTS_CONCURRENT_CONNECTION 1</span>
+<span class="cp">#endif </span><span class="c1">// CHIP_DEVICE_CONFIG_SUPPORTS_CONCURRENT_CONNECTION</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_USER_SELECTED_MODE_TIMEOUT_SEC</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_USER_SELECTED_MODE_TIMEOUT_SEC 30</span>
+<span class="cp">#endif </span><span class="c1">// CHIP_DEVICE_CONFIG_USER_SELECTED_MODE_TIMEOUT_SEC</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ROTATING_DEVICE_ID_UNIQUE_ID</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ROTATING_DEVICE_ID_UNIQUE_ID                                                                            \</span>
+<span class="cp">    {                                                                                                                              \</span>
+<span class="cp">        0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff                             \</span>
+<span class="cp">    }</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ROTATING_DEVICE_ID_UNIQUE_ID_LENGTH</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ROTATING_DEVICE_ID_UNIQUE_ID_LENGTH 16</span>
+<span class="cp">#endif</span>
+
+<span class="c1">// -------------------- WiFi Station Configuration --------------------</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_WIFI_STATION</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_WIFI_STATION 1</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_WIFI_STATION_RECONNECT_INTERVAL</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_WIFI_STATION_RECONNECT_INTERVAL 5000</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_MAX_SCAN_NETWORKS_RESULTS</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_MAX_SCAN_NETWORKS_RESULTS 10</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_WIFI_SCAN_COMPLETION_TIMEOUT</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_WIFI_SCAN_COMPLETION_TIMEOUT 10000</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_WIFI_CONNECTIVITY_TIMEOUT</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_WIFI_CONNECTIVITY_TIMEOUT 30000</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_LWIP_WIFI_STATION_IF_NAME</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_LWIP_WIFI_STATION_IF_NAME &quot;wl&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_WIFI_STATION_IF_NAME</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_WIFI_STATION_IF_NAME &quot;wlan0&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="c1">// -------------------- WiFi AP Configuration --------------------</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_WIFI_AP</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_WIFI_AP 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_WIFI_AP_SSID_PREFIX</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_WIFI_AP_SSID_PREFIX &quot;MATTER-&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_WIFI_AP_CHANNEL</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_WIFI_AP_CHANNEL 1</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_WIFI_AP_MAX_STATIONS</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_WIFI_AP_MAX_STATIONS 4</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_WIFI_AP_BEACON_INTERVAL</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_WIFI_AP_BEACON_INTERVAL 100</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_WIFI_AP_IDLE_TIMEOUT</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_WIFI_AP_IDLE_TIMEOUT 120000</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_LWIP_WIFI_AP_IF_NAME</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_LWIP_WIFI_AP_IF_NAME &quot;ap&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="c1">// -------------------- BLE/CHIPoBLE Configuration --------------------</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_CHIPOBLE</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_CHIPOBLE 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_CHIPOBLE_SINGLE_CONNECTION</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_CHIPOBLE_SINGLE_CONNECTION 1</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_CHIPOBLE_ENABLE_ADVERTISING_AUTOSTART</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_CHIPOBLE_ENABLE_ADVERTISING_AUTOSTART 1</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_PAIRING_AUTOSTART</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_PAIRING_AUTOSTART 1</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_BLE_DEVICE_NAME_PREFIX</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_BLE_DEVICE_NAME_PREFIX &quot;MATTER-&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_BLE_FAST_ADVERTISING_INTERVAL_MIN</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_BLE_FAST_ADVERTISING_INTERVAL_MIN 32</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_BLE_FAST_ADVERTISING_INTERVAL_MAX</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_BLE_FAST_ADVERTISING_INTERVAL_MAX 96</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_BLE_SLOW_ADVERTISING_INTERVAL_MIN</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_BLE_SLOW_ADVERTISING_INTERVAL_MIN 240</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_BLE_SLOW_ADVERTISING_INTERVAL_MAX</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_BLE_SLOW_ADVERTISING_INTERVAL_MAX 1920</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_BLE_ADVERTISING_INTERVAL_CHANGE_TIME</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_BLE_ADVERTISING_INTERVAL_CHANGE_TIME 30000</span>
+<span class="cp">#endif</span>
+
+<span class="c1">// -------------------- Service Provisioning Configuration --------------------</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_ENDPOINT_ID</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_ENDPOINT_ID 0x18B4300200000010ULL</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_CONNECTIVITY_TIMEOUT</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_CONNECTIVITY_TIMEOUT 10000</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_REQUEST_TIMEOUT</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_SERVICE_PROVISIONING_REQUEST_TIMEOUT 10000</span>
+<span class="cp">#endif</span>
+
+<span class="c1">// -------------------- Thread Configuration --------------------</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_THREAD</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_THREAD 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_THREAD_FTD</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_THREAD_FTD 1</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_THREAD_SSED</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_THREAD_SSED 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_THREAD_TASK_NAME</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_THREAD_TASK_NAME &quot;THREAD&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_THREAD_TASK_STACK_SIZE</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_THREAD_TASK_STACK_SIZE 8192</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_THREAD_TASK_PRIORITY</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_THREAD_TASK_PRIORITY 3</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_LWIP_THREAD_IF_NAME</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_LWIP_THREAD_IF_NAME &quot;th&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_THREAD_IF_MTU</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_THREAD_IF_MTU 1280</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_DEFAULT_THREAD_NETWORK_NAME_PREFIX</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_DEFAULT_THREAD_NETWORK_NAME_PREFIX &quot;CHIP-PAN-&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_THREAD_CONNECTIVITY_TIMEOUT</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_THREAD_CONNECTIVITY_TIMEOUT 30000</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_THREAD_ENABLE_CLI</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_THREAD_ENABLE_CLI 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_THREAD_SRP_CLIENT</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_THREAD_SRP_CLIENT 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_THREAD_SRP_MAX_SERVICES</span>
+<span class="cp">#if CHIP_DEVICE_CONFIG_ENABLE_EXTENDED_DISCOVERY &amp;&amp; CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONER_DISCOVERY</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_THREAD_SRP_MAX_SERVICES (CHIP_CONFIG_MAX_FABRICS + 3)</span>
+<span class="cp">#elif CHIP_DEVICE_CONFIG_ENABLE_EXTENDED_DISCOVERY || CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONER_DISCOVERY</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_THREAD_SRP_MAX_SERVICES (CHIP_CONFIG_MAX_FABRICS + 2)</span>
+<span class="cp">#else</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_THREAD_SRP_MAX_SERVICES (CHIP_CONFIG_MAX_FABRICS + 1)</span>
+<span class="cp">#endif</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_THREAD_COMMISSIONABLE_DISCOVERY</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_THREAD_COMMISSIONABLE_DISCOVERY 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_THREAD_DNS_CLIENT</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_THREAD_DNS_CLIENT 0</span>
+<span class="cp">#endif</span>
+
+<span class="c1">// -------------------- Network Telemetry Configuration --------------------</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_WIFI_TELEMETRY</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_WIFI_TELEMETRY (0)</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY (0)</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#if CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY &amp;&amp; !CHIP_DEVICE_CONFIG_ENABLE_THREAD</span>
+<span class="cp">#error &quot;If CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY set, then CHIP_DEVICE_CONFIG_ENABLE_THREAD must also be set.&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY_FULL</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY_FULL (0)</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#if CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY_FULL &amp;&amp; !CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY</span>
+<span class="cp">#error &quot;If CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY_FULL set, then CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY must also be set.&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="c1">// Enable Network Telemetry feature if it is enabled for at lease one network.</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_NETWORK_TELEMETRY                                                                                \</span>
+<span class="cp">    (CHIP_DEVICE_CONFIG_ENABLE_WIFI_TELEMETRY || CHIP_DEVICE_CONFIG_ENABLE_THREAD_TELEMETRY)</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_DEFAULT_TELEMETRY_INTERVAL_MS</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_DEFAULT_TELEMETRY_INTERVAL_MS 90000</span>
+<span class="cp">#endif</span>
+
+<span class="c1">// -------------------- Test Setup (PASE) Configuration --------------------</span>
+
+<span class="c1">// TODO: When the SDK code is production ready this should be set to 0 and each platform</span>
+<span class="c1">// will need to enable it indivually when needed.</span>
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_TEST_SETUP_PARAMS</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_TEST_SETUP_PARAMS 1</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#if CHIP_DEVICE_CONFIG_ENABLE_TEST_SETUP_PARAMS</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_USE_TEST_SETUP_PIN_CODE</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_USE_TEST_SETUP_PIN_CODE 20202021</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_USE_TEST_SETUP_DISCRIMINATOR</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_USE_TEST_SETUP_DISCRIMINATOR 0xF00</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_ITERATION_COUNT</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_ITERATION_COUNT 1000</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_SALT</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_SALT &quot;U1BBS0UyUCBLZXkgU2FsdA==&quot;</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_SALT_DEFAULT</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_VERIFIER</span>
+
+<span class="cp">#if CHIP_DEVICE_CONFIG_USE_TEST_SETUP_PIN_CODE != 20202021</span>
+<span class="cp">#error &quot;Non-default Spake2+ passcode configured but verifier left unchanged&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#if CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_ITERATION_COUNT != 1000</span>
+<span class="cp">#error &quot;Non-default Spake2+ iteration count configured but verifier left unchanged&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_SALT_DEFAULT</span>
+<span class="cp">#error &quot;Non-default Spake2+ salt configured but verifier left unchanged&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="c1">// Generated with: spake2p gen-verifier -o - -i 1000 -s &quot;U1BBS0UyUCBLZXkgU2FsdA==&quot; -p 20202021</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_VERIFIER                                                                               \</span>
+<span class="cp">    &quot;uWFwqugDNGiEck/po7KHwwMwwqZgN10XuyBajPGuyzUEV/iree4lOrao5GuwnlQ65CJzbeUB49s31EH+NEkg0JVI5MGCQGMMT/SRPFNRODm3wH/MBiehuFc6FJ/&quot;  \</span>
+<span class="cp">    &quot;NH6Rmzw==&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#else</span>
+
+<span class="cp">#undef CHIP_DEVICE_CONFIG_USE_TEST_SETUP_PIN_CODE</span>
+<span class="cp">#undef CHIP_DEVICE_CONFIG_USE_TEST_SETUP_DISCRIMINATOR</span>
+<span class="cp">#undef CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_ITERATION_COUNT</span>
+<span class="cp">#undef CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_SALT</span>
+<span class="cp">#undef CHIP_DEVICE_CONFIG_USE_TEST_SPAKE2P_VERIFIER</span>
+
+<span class="cp">#endif</span>
+
+<span class="c1">// -------------------- Event Logging Configuration --------------------</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_EVENT_LOGGING_CRIT_BUFFER_SIZE</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_EVENT_LOGGING_CRIT_BUFFER_SIZE (1024)</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#if (CHIP_DEVICE_CONFIG_EVENT_LOGGING_CRIT_BUFFER_SIZE &lt;= 0)</span>
+<span class="cp">#error &quot;The Prod critical event buffer must exist (CHIP_DEVICE_CONFIG_EVENT_LOGGING_CRIT_BUFFER_SIZE &gt; 0)&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_EVENT_LOGGING_INFO_BUFFER_SIZE</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_EVENT_LOGGING_INFO_BUFFER_SIZE (512)</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_EVENT_LOGGING_DEBUG_BUFFER_SIZE</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_EVENT_LOGGING_DEBUG_BUFFER_SIZE (512)</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_EVENT_ID_COUNTER_EPOCH</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_EVENT_ID_COUNTER_EPOCH (0x10000)</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_EVENT_LOGGING_UTC_TIMESTAMPS</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_EVENT_LOGGING_UTC_TIMESTAMPS 0</span>
+<span class="cp">#endif</span>
+
+<span class="c1">// -------------------- Software Update Manager Configuration --------------------</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_SOFTWARE_UPDATE_MANAGER</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_SOFTWARE_UPDATE_MANAGER 1</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_URI_LEN</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_URI_LEN 128</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_ENDPOINT_ID</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_ENDPOINT_ID 0x18B4300200000002ULL</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_FILE_DOWNLOAD_ENDPOINT_ID</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_FILE_DOWNLOAD_ENDPOINT_ID 0x18B4300200000013ULL</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_RESPONSE_TIMEOUT</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_RESPONSE_TIMEOUT 10000</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_FILE_DOWNLOAD_RESPONSE_TIMEOUT</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_FILE_DOWNLOAD_RESPONSE_TIMEOUT 10000</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_MAX_RETRIES</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_MAX_RETRIES 5</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_MAX_WAIT_TIME_INTERVAL_MS</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_MAX_WAIT_TIME_INTERVAL_MS 1 * 60 * 60 * 1000 </span><span class="c1">// 1 hour</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_SWU_MIN_WAIT_TIME_INTERVAL_PERCENT_PER_STEP</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_SWU_MIN_WAIT_TIME_INTERVAL_PERCENT_PER_STEP 50</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_SWU_WAIT_TIME_MULTIPLIER_MS</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_SWU_WAIT_TIME_MULTIPLIER_MS 1 * 60 * 1000 </span><span class="c1">// 1 minute</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#define CHIP_DEVICE_CONFIG_SWU_BDX_BLOCK_SIZE 1024</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_FIRMWARE_BUILD_DATE</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_FIRMWARE_BUILD_DATE __DATE__</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_FIRMWARE_BUILD_TIME</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_FIRMWARE_BUILD_TIME __TIME__</span>
+<span class="cp">#endif</span>
+
+<span class="c1">// -------------------- Device DNS-SD Configuration --------------------</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_DISCOVERY_TIMEOUT_SECS</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_DISCOVERY_TIMEOUT_SECS (15 * 60)</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_MAX_DISCOVERED_NODES</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_MAX_DISCOVERED_NODES 10</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONER_DISCOVERY</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONER_DISCOVERY 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_BOTH_COMMISSIONER_AND_COMMISSIONEE</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_BOTH_COMMISSIONER_AND_COMMISSIONEE 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_CONFIG_UNSAFE_SUBSCRIPTION_EXCHANGE_MANAGER_USE</span>
+<span class="cp">#define CHIP_CONFIG_UNSAFE_SUBSCRIPTION_EXCHANGE_MANAGER_USE 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONER_DISCOVERY_CLIENT</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONER_DISCOVERY_CLIENT 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_EXTENDED_DISCOVERY</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_EXTENDED_DISCOVERY 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#define CHIP_DEVICE_CONFIG_DISCOVERY_DISABLED 0</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_DISCOVERY_NO_TIMEOUT -1</span>
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_EXTENDED_DISCOVERY_TIMEOUT_SECS</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_EXTENDED_DISCOVERY_TIMEOUT_SECS (15 * 60)</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONABLE_DEVICE_TYPE</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONABLE_DEVICE_TYPE 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_DEVICE_TYPE</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_DEVICE_TYPE 65535 </span><span class="c1">// 65535 = Invalid Device Type</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONABLE_DEVICE_NAME</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONABLE_DEVICE_NAME 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_DEVICE_NAME</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_DEVICE_NAME &quot;Test Kitchen&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_PAIRING_INITIAL_HINT</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_PAIRING_INITIAL_HINT                                                                                    \</span>
+<span class="cp">    (1 &lt;&lt; CHIP_COMMISSIONING_HINT_INDEX_POWER_CYCLE | 1 &lt;&lt; CHIP_COMMISSIONING_HINT_INDEX_SEE_MANUAL)</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_PAIRING_INITIAL_INSTRUCTION</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_PAIRING_INITIAL_INSTRUCTION &quot;&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_PAIRING_SECONDARY_HINT</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_PAIRING_SECONDARY_HINT                                                                                  \</span>
+<span class="cp">    (1 &lt;&lt; CHIP_COMMISSIONING_HINT_INDEX_SEE_ADMINISTRATOR_UX | 1 &lt;&lt; CHIP_COMMISSIONING_HINT_INDEX_SEE_MANUAL)</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_PAIRING_SECONDARY_INSTRUCTION</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_PAIRING_SECONDARY_INSTRUCTION &quot;&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_ENABLE_AUTOMATIC_CASE_RETRIES</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_ENABLE_AUTOMATIC_CASE_RETRIES 1</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#if CHIP_DEVICE_CONFIG_ENABLE_AUTOMATIC_CASE_RETRIES</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_AUTOMATIC_CASE_RETRY_INITIAL_DELAY_SECONDS</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_AUTOMATIC_CASE_RETRY_INITIAL_DELAY_SECONDS 1</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_AUTOMATIC_CASE_RETRY_MAX_BACKOFF</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_AUTOMATIC_CASE_RETRY_MAX_BACKOFF 5</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#endif </span><span class="c1">// CHIP_DEVICE_CONFIG_ENABLE_AUTOMATIC_CASE_RETRIES</span>
+
+<span class="c1">// -------------------- App Platform Configuration --------------------</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_APP_PLATFORM_ENABLED</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_APP_PLATFORM_ENABLED 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DEVICE_CONFIG_DYNAMIC_ENDPOINT_COUNT</span>
+<span class="cp">#define CHIP_DEVICE_CONFIG_DYNAMIC_ENDPOINT_COUNT 0</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef CHIP_DISPATCH_EVENT_LONG_DISPATCH_TIME_WARNING_THRESHOLD_MS</span>
+<span class="cp">#define CHIP_DISPATCH_EVENT_LONG_DISPATCH_TIME_WARNING_THRESHOLD_MS 100</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Silicon Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

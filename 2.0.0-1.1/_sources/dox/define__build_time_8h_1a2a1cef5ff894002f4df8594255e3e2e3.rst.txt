@@ -1,0 +1,14 @@
+.. _exhale_define__build_time_8h_1a2a1cef5ff894002f4df8594255e3e2e3:
+
+Define BUILD_DATE_IS_BAD
+========================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_BuildTime.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: BUILD_DATE_IS_BAD
+   :project: My Project

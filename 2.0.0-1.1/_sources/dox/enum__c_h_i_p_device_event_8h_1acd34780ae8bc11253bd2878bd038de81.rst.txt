@@ -1,0 +1,14 @@
+.. _exhale_enum__c_h_i_p_device_event_8h_1acd34780ae8bc11253bd2878bd038de81:
+
+Enum InterfaceIpChangeType
+==========================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceEvent.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: chip::DeviceLayer::InterfaceIpChangeType
+   :project: My Project

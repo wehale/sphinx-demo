@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template Class GenericConnectivityManagerImpl_Thread &mdash; Silicon Labs Matter 2.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Template Class GenericConnectivityManagerImpl_UDP" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___u_d_p.html" />
+    <link rel="prev" title="Template Class GenericConnectivityManagerImpl_TCP" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___t_c_p.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Silicon Labs Matter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../OVERVIEW.html">Silicon Labs Matter User’s Guide Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW_FEATURES.html">Silicon Labs Matter New Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_1_overview.html">Matter Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_2_prereq.html">Matter Development Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_3_general.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_6_faq.html">FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Library API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_chip_device_event.html">Struct ChipDeviceEvent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_connectivity_manager_1_1_s_e_d_intervals_config.html">Struct ConnectivityManager::SEDIntervalsConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl_1_1_app_event_handler.html">Struct GenericPlatformManagerImpl::AppEventHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_network.html">Struct Network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_scan_response.html">Struct ThreadScanResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_scan_response.html">Struct WiFiScanResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_interface.html">Struct NetworkInterface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_thread_metrics.html">Struct ThreadMetrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_o_t_a_image_progress.html">Struct OTAImageProgress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_platform_1_1_persisted_storage_1_1internal_1_1_empty_key.html">Template Struct EmptyKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_platform_1_1_persisted_storage_1_1internal_1_1_empty_key_3_01const_01char_01_5_01_4.html">Template Struct EmptyKey&lt; const char * &gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_attribute_list.html">Template Class AttributeList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_attribute_list_1_1_iterator.html">Class AttributeList::Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_commissionable_data_provider.html">Class CommissionableDataProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_configuration_manager.html">Class ConfigurationManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager.html">Class ConnectivityManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager_delegate.html">Class ConnectivityManagerDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_control_server.html">Class DeviceControlServer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_info_provider.html">Class DeviceInfoProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_info_provider_1_1_iterator.html">Template Class DeviceInfoProvider::Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_instance_info_provider.html">Class DeviceInstanceInfoProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_diagnostic_data_provider.html">Class DiagnosticDataProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_general_faults.html">Template Class GeneralFaults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_general_faults_1_1_iterator.html">Class GeneralFaults::Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_device_network_info.html">Class DeviceNetworkInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_configuration_manager_impl.html">Template Class GenericConfigurationManagerImpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl.html">Template Class GenericConnectivityManagerImpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___b_l_e.html">Template Class GenericConnectivityManagerImpl_BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___no_b_l_e.html">Template Class GenericConnectivityManagerImpl_NoBLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___no_thread.html">Template Class GenericConnectivityManagerImpl_NoThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___no_wi_fi.html">Template Class GenericConnectivityManagerImpl_NoWiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___t_c_p.html">Template Class GenericConnectivityManagerImpl_TCP</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Template Class GenericConnectivityManagerImpl_Thread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___u_d_p.html">Template Class GenericConnectivityManagerImpl_UDP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___wi_fi.html">Template Class GenericConnectivityManagerImpl_WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_device_instance_info_provider.html">Template Class GenericDeviceInstanceInfoProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl.html">Template Class GenericPlatformManagerImpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___free_r_t_o_s.html">Template Class GenericPlatformManagerImpl_FreeRTOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___p_o_s_i_x.html">Template Class GenericPlatformManagerImpl_POSIX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr.html">Template Class GenericPlatformManagerImpl_Zephyr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___free_r_t_o_s.html">Template Class GenericThreadStackManagerImpl_FreeRTOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___open_thread.html">Template Class GenericThreadStackManagerImpl_OpenThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___open_thread___lw_i_p.html">Template Class GenericThreadStackManagerImpl_OpenThread_LwIP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_ethernet_driver.html">Class EthernetDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_base_driver.html">Class BaseDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_base_driver_1_1_network_status_change_callback.html">Class BaseDriver::NetworkStatusChangeCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_wireless_driver.html">Class WirelessDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_wireless_driver_1_1_connect_callback.html">Class WirelessDriver::ConnectCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_iterator.html">Template Class Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_driver.html">Class ThreadDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_driver_1_1_scan_callback.html">Class ThreadDriver::ScanCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_driver.html">Class WiFiDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_driver_1_1_scan_callback.html">Class WiFiDriver::ScanCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_n_f_c_manager.html">Class NFCManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_persisted_storage_1_1_key_value_store_manager.html">Class KeyValueStoreManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_platform_manager.html">Class PlatformManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_platform_manager_delegate.html">Class PlatformManagerDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_stack_lock.html">Class StackLock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_stack_unlock.html">Class StackUnlock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_test_only_commissionable_data_provider.html">Class TestOnlyCommissionableDataProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_thread_stack_manager.html">Class ThreadStackManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_wi_fi_diagnostics_delegate.html">Class WiFiDiagnosticsDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_kvs_persistent_storage_delegate.html">Class KvsPersistentStorageDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_o_t_a_image_processor_interface.html">Class OTAImageProcessorInterface</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Silicon Labs Matter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Library API</a></li>
+      <li class="breadcrumb-item active">Template Class GenericConnectivityManagerImpl_Thread</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dox/classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="template-class-genericconnectivitymanagerimpl-thread">
+<span id="exhale-class-classchip-1-1-device-layer-1-1-internal-1-1-generic-connectivity-manager-impl-thread"></span><h1>Template Class GenericConnectivityManagerImpl_Thread<a class="headerlink" href="#template-class-genericconnectivitymanagerimpl-thread" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_Thread.h.html#file-users-wehale-git-matter-stash-src-include-platform-internal-genericconnectivitymanagerimpl-thread-h"><span class="std std-ref">File GenericConnectivityManagerImpl_Thread.h</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_ThreadE">
+<span id="_CPPv3I0EN4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_ThreadE"></span><span id="_CPPv2I0EN4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_ThreadE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ImplClass</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenericConnectivityManagerImpl_Thread</span></span></span><a class="headerlink" href="#_CPPv4I0EN4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_ThreadE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Provides a generic implementation of WiFi-specific <a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager.html#classchip_1_1_device_layer_1_1_connectivity_manager"><span class="std std-ref">ConnectivityManager</span></a> features for use on platforms that support Thread.</p>
+<p>This class is intended to be inherited (directly or indirectly) by the ConnectivityManagerImpl class, which also appears as the template’s ImplClass parameter.</p>
+<p>The GenericConnectivityManagerImpl_Thread&lt;&gt; class is designed to be independent of the particular Thread stack in use, implying, for example, that the code does not make direct use of any OpenThread APIs. This is achieved by delegating all stack-specific operations to the <a class="reference internal" href="classchip_1_1_device_layer_1_1_thread_stack_manager.html#classchip_1_1_device_layer_1_1_thread_stack_manager"><span class="std std-ref">ThreadStackManager</span></a> class. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread5_InitEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread5_InitEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread5_InitEv"></span><span id="chip::DeviceLayer::Internal::GenericConnectivityManagerImpl_Thread::_Init"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread_1a777ed848b44c3bf58a15c28a7e5b5854"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_Init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread5_InitEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread16_OnPlatformEventEPK15ChipDeviceEvent">
+<span id="_CPPv3N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread16_OnPlatformEventEPK15ChipDeviceEvent"></span><span id="_CPPv2N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread16_OnPlatformEventEPK15ChipDeviceEvent"></span><span id="chip::DeviceLayer::Internal::GenericConnectivityManagerImpl_Thread::_OnPlatformEvent__ChipDeviceEventCP"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread_1a6d11cebc965bb04917ee313fc94b6e8b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_OnPlatformEvent</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structchip_1_1_device_layer_1_1_chip_device_event.html#_CPPv4N4chip11DeviceLayer15ChipDeviceEventE" title="chip::DeviceLayer::ChipDeviceEvent"><span class="n"><span class="pre">ChipDeviceEvent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">event</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread16_OnPlatformEventEPK15ChipDeviceEvent" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread14_GetThreadModeEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread14_GetThreadModeEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread14_GetThreadModeEv"></span><span id="chip::DeviceLayer::Internal::GenericConnectivityManagerImpl_Thread::_GetThreadMode"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread_1a2b551b2199b24cdbf6868615b3daf87e"></span><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager.html#_CPPv4N4chip11DeviceLayer19ConnectivityManagerE" title="chip::DeviceLayer::ConnectivityManager"><span class="n"><span class="pre">ConnectivityManager</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager.html#_CPPv4N4chip11DeviceLayer19ConnectivityManager10ThreadModeE" title="chip::DeviceLayer::ConnectivityManager::ThreadMode"><span class="n"><span class="pre">ThreadMode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_GetThreadMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread14_GetThreadModeEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread14_SetThreadModeEN19ConnectivityManager10ThreadModeE">
+<span id="_CPPv3N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread14_SetThreadModeEN19ConnectivityManager10ThreadModeE"></span><span id="_CPPv2N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread14_SetThreadModeEN19ConnectivityManager10ThreadModeE"></span><span id="chip::DeviceLayer::Internal::GenericConnectivityManagerImpl_Thread::_SetThreadMode__ConnectivityManager::ThreadMode"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread_1a0537fe56cfd65e630718ff5e00953535"></span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_SetThreadMode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager.html#_CPPv4N4chip11DeviceLayer19ConnectivityManagerE" title="chip::DeviceLayer::ConnectivityManager"><span class="n"><span class="pre">ConnectivityManager</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager.html#_CPPv4N4chip11DeviceLayer19ConnectivityManager10ThreadModeE" title="chip::DeviceLayer::ConnectivityManager::ThreadMode"><span class="n"><span class="pre">ThreadMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread14_SetThreadModeEN19ConnectivityManager10ThreadModeE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread16_IsThreadEnabledEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread16_IsThreadEnabledEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread16_IsThreadEnabledEv"></span><span id="chip::DeviceLayer::Internal::GenericConnectivityManagerImpl_Thread::_IsThreadEnabled"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread_1aafad48f93dd2cf7f158632f77e174c40"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_IsThreadEnabled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread16_IsThreadEnabledEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread30_IsThreadApplicationControlledEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread30_IsThreadApplicationControlledEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread30_IsThreadApplicationControlledEv"></span><span id="chip::DeviceLayer::Internal::GenericConnectivityManagerImpl_Thread::_IsThreadApplicationControlled"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread_1ada8ae793b407e697cdabc7229bc1c721"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_IsThreadApplicationControlled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread30_IsThreadApplicationControlledEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread20_GetThreadDeviceTypeEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread20_GetThreadDeviceTypeEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread20_GetThreadDeviceTypeEv"></span><span id="chip::DeviceLayer::Internal::GenericConnectivityManagerImpl_Thread::_GetThreadDeviceType"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread_1acc3bd38772c8a83e436703bf514275ba"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager.html#_CPPv4N4chip11DeviceLayer19ConnectivityManagerE" title="chip::DeviceLayer::ConnectivityManager"><span class="n"><span class="pre">ConnectivityManager</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager.html#_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceTypeE" title="chip::DeviceLayer::ConnectivityManager::ThreadDeviceType"><span class="n"><span class="pre">ThreadDeviceType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_GetThreadDeviceType</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread20_GetThreadDeviceTypeEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread20_SetThreadDeviceTypeEN19ConnectivityManager16ThreadDeviceTypeE">
+<span id="_CPPv3N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread20_SetThreadDeviceTypeEN19ConnectivityManager16ThreadDeviceTypeE"></span><span id="_CPPv2N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread20_SetThreadDeviceTypeEN19ConnectivityManager16ThreadDeviceTypeE"></span><span id="chip::DeviceLayer::Internal::GenericConnectivityManagerImpl_Thread::_SetThreadDeviceType__ConnectivityManager::ThreadDeviceType"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread_1a23847f1faa8ab3a2dbd2b61f48130001"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_SetThreadDeviceType</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager.html#_CPPv4N4chip11DeviceLayer19ConnectivityManagerE" title="chip::DeviceLayer::ConnectivityManager"><span class="n"><span class="pre">ConnectivityManager</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager.html#_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceTypeE" title="chip::DeviceLayer::ConnectivityManager::ThreadDeviceType"><span class="n"><span class="pre">ThreadDeviceType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">deviceType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread20_SetThreadDeviceTypeEN19ConnectivityManager16ThreadDeviceTypeE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread17_IsThreadAttachedEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread17_IsThreadAttachedEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread17_IsThreadAttachedEv"></span><span id="chip::DeviceLayer::Internal::GenericConnectivityManagerImpl_Thread::_IsThreadAttached"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread_1ae974602d7ac3d0060eff84e176519ada"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_IsThreadAttached</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread17_IsThreadAttachedEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread20_IsThreadProvisionedEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread20_IsThreadProvisionedEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread20_IsThreadProvisionedEv"></span><span id="chip::DeviceLayer::Internal::GenericConnectivityManagerImpl_Thread::_IsThreadProvisioned"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread_1a8fdf549e4091ef8f30d0ae2a4ddd47d9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_IsThreadProvisioned</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread20_IsThreadProvisionedEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread20_ErasePersistentInfoEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread20_ErasePersistentInfoEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread20_ErasePersistentInfoEv"></span><span id="chip::DeviceLayer::Internal::GenericConnectivityManagerImpl_Thread::_ErasePersistentInfo"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread_1a313274002ac60fb7760327f8009d1ee1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_ErasePersistentInfo</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread20_ErasePersistentInfoEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread36_ResetThreadNetworkDiagnosticsCountsEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread36_ResetThreadNetworkDiagnosticsCountsEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread36_ResetThreadNetworkDiagnosticsCountsEv"></span><span id="chip::DeviceLayer::Internal::GenericConnectivityManagerImpl_Thread::_ResetThreadNetworkDiagnosticsCounts"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread_1abed9ede89f37020345d5bc2f9030f5a5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_ResetThreadNetworkDiagnosticsCounts</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread36_ResetThreadNetworkDiagnosticsCountsEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread43_WriteThreadNetworkDiagnosticAttributeToTlvE11AttributeIdRN3app21AttributeValueEncoderE">
+<span id="_CPPv3N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread43_WriteThreadNetworkDiagnosticAttributeToTlvE11AttributeIdRN3app21AttributeValueEncoderE"></span><span id="_CPPv2N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread43_WriteThreadNetworkDiagnosticAttributeToTlvE11AttributeIdRN3app21AttributeValueEncoderE"></span><span id="chip::DeviceLayer::Internal::GenericConnectivityManagerImpl_Thread::_WriteThreadNetworkDiagnosticAttributeToTlv__AttributeId.app::AttributeValueEncoderR"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread_1af0dbee6eba4402a077ca535107724e4f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_WriteThreadNetworkDiagnosticAttributeToTlv</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">AttributeId</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">attributeId</span></span>, <span class="n"><span class="pre">app</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AttributeValueEncoder</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">encoder</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread43_WriteThreadNetworkDiagnosticAttributeToTlvE11AttributeIdRN3app21AttributeValueEncoderE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread25UpdateServiceConnectivityEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread25UpdateServiceConnectivityEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread25UpdateServiceConnectivityEv"></span><span id="chip::DeviceLayer::Internal::GenericConnectivityManagerImpl_Thread::UpdateServiceConnectivity"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread_1aa5c662bb30b49f171e229d44f37d6932"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UpdateServiceConnectivity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal37GenericConnectivityManagerImpl_Thread25UpdateServiceConnectivityEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___t_c_p.html" class="btn btn-neutral float-left" title="Template Class GenericConnectivityManagerImpl_TCP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___u_d_p.html" class="btn btn-neutral float-right" title="Template Class GenericConnectivityManagerImpl_UDP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Silicon Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

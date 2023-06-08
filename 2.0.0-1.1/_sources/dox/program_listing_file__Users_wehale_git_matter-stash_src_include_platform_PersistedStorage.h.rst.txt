@@ -1,0 +1,72 @@
+
+.. _program_listing_file__Users_wehale_git_matter-stash_src_include_platform_PersistedStorage.h:
+
+Program Listing for File PersistedStorage.h
+===========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__Users_wehale_git_matter-stash_src_include_platform_PersistedStorage.h>` (``/Users/wehale/git/matter-stash/src/include/platform/PersistedStorage.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+    *
+    *    Copyright (c) 2020 Project CHIP Authors
+    *    Copyright (c) 2016-2017 Nest Labs, Inc.
+    *
+    *    Licensed under the Apache License, Version 2.0 (the "License");
+    *    you may not use this file except in compliance with the License.
+    *    You may obtain a copy of the License at
+    *
+    *        http://www.apache.org/licenses/LICENSE-2.0
+    *
+    *    Unless required by applicable law or agreed to in writing, software
+    *    distributed under the License is distributed on an "AS IS" BASIS,
+    *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    *    See the License for the specific language governing permissions and
+    *    limitations under the License.
+    */
+   
+   #pragma once
+   
+   #include <climits>
+   #include <cstddef>
+   #include <cstdint>
+   #include <type_traits>
+   
+   #include <lib/core/CHIPConfig.h>
+   #include <lib/core/CHIPError.h>
+   
+   namespace chip {
+   namespace Platform {
+   namespace PersistedStorage {
+   
+   // Persistent storage key type is const char * in core config, however
+   // it is uint8_t/uint16_t on other platforms (EFR32 and nRF5 respectively)
+   typedef CHIP_CONFIG_PERSISTED_STORAGE_KEY_TYPE Key;
+   
+   namespace internal {
+   template <typename T>
+   struct EmptyKey
+   {
+       static constexpr T value = 0; // handles numeric values
+   };
+   
+   template <>
+   struct EmptyKey<const char *>
+   {
+       static constexpr const char * value = nullptr;
+   };
+   
+   } // namespace internal
+   
+   constexpr Key kEmptyKey = internal::EmptyKey<Key>::value;
+   
+   CHIP_ERROR Read(Key aKey, uint32_t & aValue);
+   
+   CHIP_ERROR Write(Key aKey, uint32_t aValue);
+   
+   } // namespace PersistedStorage
+   } // namespace Platform
+   } // namespace chip

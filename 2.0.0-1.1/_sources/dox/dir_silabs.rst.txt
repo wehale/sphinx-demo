@@ -1,0 +1,16 @@
+.. _dir_silabs:
+
+
+Directory silabs
+================
+
+
+*Directory path:* ``silabs``
+
+Subdirectories
+--------------
+
+- :ref:`dir_silabs_src`
+
+
+

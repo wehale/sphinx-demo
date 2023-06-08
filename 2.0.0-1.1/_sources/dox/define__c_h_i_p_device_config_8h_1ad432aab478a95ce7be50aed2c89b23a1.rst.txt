@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1ad432aab478a95ce7be50aed2c89b23a1:
+
+Define CHIP_DEVICE_CONFIG_WIFI_STATION_RECONNECT_INTERVAL
+=========================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_WIFI_STATION_RECONNECT_INTERVAL
+   :project: My Project

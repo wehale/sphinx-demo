@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1abb118a1cca6d244a3a4f0e8ee4254791:
+
+Define CHIP_DEVICE_CONFIG_ENABLE_SOFTWARE_UPDATE_MANAGER
+========================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_ENABLE_SOFTWARE_UPDATE_MANAGER
+   :project: My Project

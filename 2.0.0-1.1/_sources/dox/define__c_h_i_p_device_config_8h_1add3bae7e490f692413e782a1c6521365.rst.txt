@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1add3bae7e490f692413e782a1c6521365:
+
+Define CHIP_DEVICE_CONFIG_EVENT_LOGGING_UTC_TIMESTAMPS
+======================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_EVENT_LOGGING_UTC_TIMESTAMPS
+   :project: My Project

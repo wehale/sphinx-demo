@@ -1,0 +1,129 @@
+
+.. _file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceEvent.h:
+
+File CHIPDeviceEvent.h
+======================
+
+|exhale_lsh| :ref:`Parent directory <dir__Users_wehale_git_matter-stash_src_include_platform>` (``/Users/wehale/git/matter-stash/src/include/platform``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/Users/wehale/git/matter-stash/src/include/platform/CHIPDeviceEvent.h``)
+--------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceEvent.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Defines events used by the chip Device Layer to signal actions or changes in device state. 
+
+
+
+
+Includes
+--------
+
+
+- ``ble/BleConfig.h``
+
+- ``inet/IPAddress.h``
+
+- ``inet/InetInterface.h``
+
+- ``lib/core/DataModelTypes.h``
+
+- ``lib/support/LambdaBridge.h``
+
+- ``stdint.h``
+
+- ``system/SystemEvent.h``
+
+- ``system/SystemLayer.h``
+
+- ``system/SystemPacketBuffer.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_ConnectivityManager.h`
+
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_PlatformManager.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_chip`
+
+- :ref:`namespace_chip__DeviceLayer`
+
+- :ref:`namespace_chip__DeviceLayer__DeviceEventType`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structchip_1_1_device_layer_1_1_chip_device_event`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum__c_h_i_p_device_event_8h_1aef1c7e674b01ee668caab41f66047360`
+
+- :ref:`exhale_enum__c_h_i_p_device_event_8h_1ab3c3ea311c2305ed17b0cf44ccddf534`
+
+- :ref:`exhale_enum__c_h_i_p_device_event_8h_1ab38aad425385be65cc64005db7ee84a5`
+
+- :ref:`exhale_enum__c_h_i_p_device_event_8h_1a1eb90a44684ec0cbd04ac9987461ce96`
+
+- :ref:`exhale_enum__c_h_i_p_device_event_8h_1a7aa0be93d6d46d98e312115703b9fd50`
+
+- :ref:`exhale_enum__c_h_i_p_device_event_8h_1a06d37ccd4891b45fe9303a788558c41c`
+
+- :ref:`exhale_enum__c_h_i_p_device_event_8h_1acd34780ae8bc11253bd2878bd038de81`
+
+- :ref:`exhale_enum__c_h_i_p_device_event_8h_1a7116e568dd927b2769c4f6314284e766`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function__c_h_i_p_device_event_8h_1a4ff7472e7c3a7dfca140e7b18798cd2b`
+
+- :ref:`exhale_function__c_h_i_p_device_event_8h_1afb2445b2c3f713f86143a7aae18ea659`
+
+- :ref:`exhale_function__c_h_i_p_device_event_8h_1af7c3e483f285aeb1d39ecf4b92d5d9c6`
+
+- :ref:`exhale_function__c_h_i_p_device_event_8h_1a7d1dc096420ee05b923d1cb67bb38dfd`
+
+- :ref:`exhale_function__c_h_i_p_device_event_8h_1ae023912fc2c263a09ad7f43f92f7e84a`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef__c_h_i_p_device_event_8h_1a4536f0203bb21f8661c3fa8aacbf20e4`
+

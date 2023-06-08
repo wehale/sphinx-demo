@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File GenericPlatformManagerImpl_POSIX.ipp &mdash; Silicon Labs Matter 2.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Silicon Labs Matter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../OVERVIEW.html">Silicon Labs Matter User’s Guide Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW_FEATURES.html">Silicon Labs Matter New Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_1_overview.html">Matter Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_2_prereq.html">Matter Development Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_3_general.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_6_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Library API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Silicon Labs Matter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Program Listing for File GenericPlatformManagerImpl_POSIX.ipp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dox/program_listing_file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl_POSIX.ipp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-genericplatformmanagerimpl-posix-ipp">
+<span id="program-listing-file-users-wehale-git-matter-stash-src-include-platform-internal-genericplatformmanagerimpl-posix-ipp"></span><h1>Program Listing for File GenericPlatformManagerImpl_POSIX.ipp<a class="headerlink" href="#program-listing-for-file-genericplatformmanagerimpl-posix-ipp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl_POSIX.ipp.html#file-users-wehale-git-matter-stash-src-include-platform-internal-genericplatformmanagerimpl-posix-ipp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/Users/wehale/git/matter-stash/src/include/platform/internal/GenericPlatformManagerImpl_POSIX.ipp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> *</span>
+<span class="cm"> *    Copyright (c) 2020-2021 Project CHIP Authors</span>
+<span class="cm"> *</span>
+<span class="cm"> *    Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="cm"> *    you may not use this file except in compliance with the License.</span>
+<span class="cm"> *    You may obtain a copy of the License at</span>
+<span class="cm"> *</span>
+<span class="cm"> *        http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="cm"> *</span>
+<span class="cm"> *    Unless required by applicable law or agreed to in writing, software</span>
+<span class="cm"> *    distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="cm"> *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="cm"> *    See the License for the specific language governing permissions and</span>
+<span class="cm"> *    limitations under the License.</span>
+<span class="cm"> */</span>
+
+<span class="cp">#ifndef GENERIC_PLATFORM_MANAGER_IMPL_POSIX_CPP</span>
+<span class="cp">#define GENERIC_PLATFORM_MANAGER_IMPL_POSIX_CPP</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;platform/PlatformManager.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;platform/internal/CHIPDeviceLayerInternal.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;platform/internal/GenericPlatformManagerImpl_POSIX.h&gt;</span>
+
+<span class="c1">// Include the non-inline definitions for the GenericPlatformManagerImpl&lt;&gt; template,</span>
+<span class="c1">// from which the GenericPlatformManagerImpl_POSIX&lt;&gt; template inherits.</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;platform/internal/GenericPlatformManagerImpl.ipp&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;system/SystemError.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;system/SystemLayer.h&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;assert.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;errno.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fcntl.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;poll.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sched.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unistd.h&gt;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">chip</span><span class="w"> </span><span class="p">{</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">DeviceLayer</span><span class="w"> </span><span class="p">{</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Internal</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="p">{</span>
+<span class="n">System</span><span class="o">::</span><span class="n">LayerSocketsLoop</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="nf">SystemLayerSocketsLoop</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">System</span><span class="o">::</span><span class="n">LayerSocketsLoop</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="p">(</span><span class="n">DeviceLayer</span><span class="o">::</span><span class="n">SystemLayer</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// anonymous namespace</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericPlatformManagerImpl_POSIX</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_InitChipStack</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Call up to the base class _InitChipStack() to perform the bulk of the initialization.</span>
+<span class="w">    </span><span class="n">ReturnErrorOnFailure</span><span class="p">(</span><span class="n">GenericPlatformManagerImpl</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_InitChipStack</span><span class="p">());</span>
+
+<span class="w">    </span><span class="n">mShouldRunEventLoop</span><span class="p">.</span><span class="n">store</span><span class="p">(</span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">memory_order_relaxed</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pthread_cond_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mEventQueueStoppedCond</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+<span class="w">    </span><span class="n">VerifyOrReturnError</span><span class="p">(</span><span class="n">ret</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">CHIP_ERROR_POSIX</span><span class="p">(</span><span class="n">ret</span><span class="p">));</span>
+
+<span class="w">    </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pthread_mutex_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mStateLock</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+<span class="w">    </span><span class="n">VerifyOrReturnError</span><span class="p">(</span><span class="n">ret</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">CHIP_ERROR_POSIX</span><span class="p">(</span><span class="n">ret</span><span class="p">));</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_NO_ERROR</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">GenericPlatformManagerImpl_POSIX</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_LockChipStack</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pthread_mutex_lock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mChipStackLock</span><span class="p">);</span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+
+<span class="cp">#if CHIP_STACK_LOCK_TRACKING_ENABLED</span>
+<span class="w">    </span><span class="n">mChipStackIsLocked</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">    </span><span class="n">mChipStackLockOwnerThread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pthread_self</span><span class="p">();</span>
+<span class="cp">#endif</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">GenericPlatformManagerImpl_POSIX</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_TryLockChipStack</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">locked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">pthread_mutex_trylock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mChipStackLock</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="cp">#if CHIP_STACK_LOCK_TRACKING_ENABLED</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">locked</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mChipStackIsLocked</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="n">mChipStackLockOwnerThread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pthread_self</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="cp">#endif</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">locked</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">GenericPlatformManagerImpl_POSIX</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_UnlockChipStack</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="cp">#if CHIP_STACK_LOCK_TRACKING_ENABLED</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">mChipStackIsLocked</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ChipLogError</span><span class="p">(</span><span class="n">DeviceLayer</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;_UnlockChipStack may error status&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">mChipStackIsLocked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="cp">#endif</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pthread_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mChipStackLock</span><span class="p">);</span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cp">#if CHIP_STACK_LOCK_TRACKING_ENABLED</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">GenericPlatformManagerImpl_POSIX</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_IsChipStackLockedByCurrentThread</span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// If no Matter thread is currently running we do not have to worry about</span>
+<span class="w">    </span><span class="c1">// locking. Hence, this function always returns true in that case.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mState</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">memory_order_relaxed</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">State</span><span class="o">::</span><span class="n">kStopped</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">mChipStackIsLocked</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">pthread_equal</span><span class="p">(</span><span class="n">pthread_self</span><span class="p">(),</span><span class="w"> </span><span class="n">mChipStackLockOwnerThread</span><span class="p">));</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericPlatformManagerImpl_POSIX</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_StartChipTimer</span><span class="p">(</span><span class="n">System</span><span class="o">::</span><span class="n">Clock</span><span class="o">::</span><span class="n">Timeout</span><span class="w"> </span><span class="n">delay</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Let System::LayerSocketsLoop.PrepareEvents() handle timers.</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_NO_ERROR</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericPlatformManagerImpl_POSIX</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_PostEvent</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ChipDeviceEvent</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">event</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">mChipEventQueue</span><span class="p">.</span><span class="n">Push</span><span class="p">(</span><span class="o">*</span><span class="n">event</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">SystemLayerSocketsLoop</span><span class="p">().</span><span class="n">Signal</span><span class="p">();</span><span class="w"> </span><span class="c1">// Trigger wake select on CHIP thread</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_NO_ERROR</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">GenericPlatformManagerImpl_POSIX</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">ProcessDeviceEvents</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">mChipEventQueue</span><span class="p">.</span><span class="n">Empty</span><span class="p">())</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">ChipDeviceEvent</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mChipEventQueue</span><span class="p">.</span><span class="n">PopFront</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Impl</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">DispatchEvent</span><span class="p">(</span><span class="o">&amp;</span><span class="n">event</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">GenericPlatformManagerImpl_POSIX</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_RunEventLoop</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">pthread_mutex_lock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mStateLock</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// If we haven&#39;t set mInternallyManagedChipTask by now, it means that the application did not call</span>
+<span class="w">    </span><span class="c1">// StartEventLoopTask and consequently, are running the event loop from their own, externally managed</span>
+<span class="w">    </span><span class="c1">// task.</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">mInternallyManagedChipTask</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mChipTask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pthread_self</span><span class="p">();</span>
+<span class="w">        </span><span class="n">mState</span><span class="p">.</span><span class="n">store</span><span class="p">(</span><span class="n">State</span><span class="o">::</span><span class="n">kRunning</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">memory_order_relaxed</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">pthread_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mStateLock</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">Impl</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">LockChipStack</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">SystemLayerSocketsLoop</span><span class="p">().</span><span class="n">EventLoopBegins</span><span class="p">();</span>
+<span class="w">    </span><span class="k">do</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">SystemLayerSocketsLoop</span><span class="p">().</span><span class="n">PrepareEvents</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">Impl</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">UnlockChipStack</span><span class="p">();</span>
+<span class="w">        </span><span class="n">SystemLayerSocketsLoop</span><span class="p">().</span><span class="n">WaitForEvents</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Impl</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">LockChipStack</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">SystemLayerSocketsLoop</span><span class="p">().</span><span class="n">HandleEvents</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">ProcessDeviceEvents</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">mShouldRunEventLoop</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">memory_order_relaxed</span><span class="p">));</span>
+<span class="w">    </span><span class="n">SystemLayerSocketsLoop</span><span class="p">().</span><span class="n">EventLoopEnds</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">Impl</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">UnlockChipStack</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">pthread_mutex_lock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mStateLock</span><span class="p">);</span>
+<span class="w">    </span><span class="n">mState</span><span class="p">.</span><span class="n">store</span><span class="p">(</span><span class="n">State</span><span class="o">::</span><span class="n">kStopping</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">memory_order_relaxed</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pthread_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mStateLock</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// Wake up anyone blocked waiting for the event queue to stop in</span>
+<span class="w">    </span><span class="c1">// StopEventLoopTask().</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="n">pthread_cond_signal</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mEventQueueStoppedCond</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// Mark event loop as truly stopped. After that line, we can not use any</span>
+<span class="w">    </span><span class="c1">// non-simple type member variables, because they can be destroyed by the</span>
+<span class="w">    </span><span class="c1">// Shutdown() method.</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="n">mState</span><span class="p">.</span><span class="n">store</span><span class="p">(</span><span class="n">State</span><span class="o">::</span><span class="n">kStopped</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">memory_order_relaxed</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">GenericPlatformManagerImpl_POSIX</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">EventLoopTaskMain</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">arg</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ChipLogDetail</span><span class="p">(</span><span class="n">DeviceLayer</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CHIP task running&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">GenericPlatformManagerImpl_POSIX</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Impl</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">RunEventLoop</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericPlatformManagerImpl_POSIX</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_StartEventLoopTask</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">err</span><span class="p">;</span>
+<span class="w">    </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pthread_attr_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mChipTaskAttr</span><span class="p">);</span>
+<span class="w">    </span><span class="n">VerifyOrReturnError</span><span class="p">(</span><span class="n">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">CHIP_ERROR_POSIX</span><span class="p">(</span><span class="n">err</span><span class="p">));</span>
+<span class="w">    </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pthread_attr_getschedparam</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mChipTaskAttr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mChipTaskSchedParam</span><span class="p">);</span>
+<span class="w">    </span><span class="n">VerifyOrReturnError</span><span class="p">(</span><span class="n">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">CHIP_ERROR_POSIX</span><span class="p">(</span><span class="n">err</span><span class="p">));</span>
+
+<span class="cp">#if CHIP_DEVICE_CONFIG_RUN_AS_ROOT</span>
+<span class="w">    </span><span class="c1">// set SCHED_RR need root/admin on Android</span>
+<span class="w">    </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pthread_attr_setschedpolicy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mChipTaskAttr</span><span class="p">,</span><span class="w"> </span><span class="n">SCHED_RR</span><span class="p">);</span>
+<span class="w">    </span><span class="n">VerifyOrReturnError</span><span class="p">(</span><span class="n">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">CHIP_ERROR_POSIX</span><span class="p">(</span><span class="n">err</span><span class="p">));</span>
+<span class="cp">#endif</span>
+
+<span class="w">    </span><span class="n">mShouldRunEventLoop</span><span class="p">.</span><span class="n">store</span><span class="p">(</span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">memory_order_relaxed</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// We need to grab the lock here since we have to protect setting</span>
+<span class="w">    </span><span class="c1">// mHasValidChipTask, which will be read right away upon creating the</span>
+<span class="w">    </span><span class="c1">// thread below.</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="n">pthread_mutex_lock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mStateLock</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pthread_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mChipTask</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mChipTaskAttr</span><span class="p">,</span><span class="w"> </span><span class="n">EventLoopTaskMain</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mInternallyManagedChipTask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="n">mState</span><span class="p">.</span><span class="n">store</span><span class="p">(</span><span class="n">State</span><span class="o">::</span><span class="n">kRunning</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">memory_order_relaxed</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">pthread_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mStateLock</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_ERROR_POSIX</span><span class="p">(</span><span class="n">err</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="n">CHIP_ERROR</span><span class="w"> </span><span class="n">GenericPlatformManagerImpl_POSIX</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_StopEventLoopTask</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// Signal to the runloop to stop.</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="n">mShouldRunEventLoop</span><span class="p">.</span><span class="n">store</span><span class="p">(</span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">memory_order_relaxed</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">pthread_mutex_lock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mStateLock</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// If we&#39;re calling this from a different thread than the one running chip, then</span>
+<span class="w">    </span><span class="c1">// we need to wait till the event queue has completely stopped before proceeding.</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">isRunning</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mState</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">memory_order_relaxed</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">State</span><span class="o">::</span><span class="n">kRunning</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isRunning</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">pthread_equal</span><span class="p">(</span><span class="n">pthread_self</span><span class="p">(),</span><span class="w"> </span><span class="n">mChipTask</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">pthread_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mStateLock</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// We need to grab the lock to protect critical sections accessed by the WakeSelect() call within</span>
+<span class="w">        </span><span class="c1">// System::Layer.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="n">Impl</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">LockChipStack</span><span class="p">();</span>
+<span class="w">        </span><span class="n">SystemLayerSocketsLoop</span><span class="p">().</span><span class="n">Signal</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Impl</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">UnlockChipStack</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">pthread_mutex_lock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mStateLock</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">mState</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">memory_order_relaxed</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">State</span><span class="o">::</span><span class="n">kRunning</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pthread_cond_wait</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mEventQueueStoppedCond</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mStateLock</span><span class="p">);</span>
+<span class="w">            </span><span class="n">VerifyOrExit</span><span class="p">(</span><span class="n">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">pthread_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mStateLock</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// Wait further for the thread to terminate if we had previously created it.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mInternallyManagedChipTask</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pthread_join</span><span class="p">(</span><span class="n">mChipTask</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+<span class="w">            </span><span class="n">VerifyOrExit</span><span class="p">(</span><span class="n">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">pthread_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mStateLock</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="nl">exit</span><span class="p">:</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CHIP_ERROR_POSIX</span><span class="p">(</span><span class="n">err</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">ImplClass</span><span class="o">&gt;</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">GenericPlatformManagerImpl_POSIX</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_Shutdown</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// We cannot shutdown the stack while the event loop is still running. This can lead</span>
+<span class="w">    </span><span class="c1">// to use after free errors - here we are destroying mutex and condition variable that</span>
+<span class="w">    </span><span class="c1">// are still in use by the event loop!</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="n">VerifyOrDie</span><span class="p">(</span><span class="n">mState</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">memory_order_relaxed</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">State</span><span class="o">::</span><span class="n">kStopped</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">pthread_mutex_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mStateLock</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pthread_cond_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mEventQueueStoppedCond</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">// Call up to the base class _Shutdown() to perform the actual stack de-initialization</span>
+<span class="w">    </span><span class="c1">// and clean-up</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="n">GenericPlatformManagerImpl</span><span class="o">&lt;</span><span class="n">ImplClass</span><span class="o">&gt;::</span><span class="n">_Shutdown</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// Fully instantiate the generic implementation class in whatever compilation unit includes this file.</span>
+<span class="c1">// NB: This must come after all templated class members are defined.</span>
+<span class="k">template</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">GenericPlatformManagerImpl_POSIX</span><span class="o">&lt;</span><span class="n">PlatformManagerImpl</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace Internal</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace DeviceLayer</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace chip</span>
+
+<span class="cp">#endif </span><span class="c1">// GENERIC_PLATFORM_MANAGER_IMPL_POSIX_CPP</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Silicon Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

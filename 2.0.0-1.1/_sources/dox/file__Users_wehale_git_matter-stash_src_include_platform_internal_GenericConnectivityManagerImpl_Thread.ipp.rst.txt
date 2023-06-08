@@ -1,0 +1,66 @@
+
+.. _file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_Thread.ipp:
+
+File GenericConnectivityManagerImpl_Thread.ipp
+==============================================
+
+|exhale_lsh| :ref:`Parent directory <dir__Users_wehale_git_matter-stash_src_include_platform_internal>` (``/Users/wehale/git/matter-stash/src/include/platform/internal``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/Users/wehale/git/matter-stash/src/include/platform/internal/GenericConnectivityManagerImpl_Thread.ipp``)
+-----------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_Thread.ipp.rst
+
+
+
+Detailed Description
+--------------------
+
+Provides an generic implementation of ConnectivityManager features for use on platforms that support Thread. 
+
+
+
+
+Includes
+--------
+
+
+- ``lib/support/CodeUtils.h``
+
+- ``platform/internal/CHIPDeviceLayerInternal.h`` (:ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_CHIPDeviceLayerInternal.h`)
+
+- ``platform/internal/GenericConnectivityManagerImpl_Thread.h`` (:ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_Thread.h`)
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_chip`
+
+- :ref:`namespace_chip__DeviceLayer`
+
+- :ref:`namespace_chip__DeviceLayer__Internal`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define__generic_connectivity_manager_impl___thread_8ipp_1a8b9bdf5b53564a5bc0da670e6eae8cc8`
+

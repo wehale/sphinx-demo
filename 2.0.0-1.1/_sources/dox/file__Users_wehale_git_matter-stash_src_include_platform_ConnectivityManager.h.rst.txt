@@ -1,0 +1,103 @@
+
+.. _file__Users_wehale_git_matter-stash_src_include_platform_ConnectivityManager.h:
+
+File ConnectivityManager.h
+==========================
+
+|exhale_lsh| :ref:`Parent directory <dir__Users_wehale_git_matter-stash_src_include_platform>` (``/Users/wehale/git/matter-stash/src/include/platform``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/Users/wehale/git/matter-stash/src/include/platform/ConnectivityManager.h``)
+------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__Users_wehale_git_matter-stash_src_include_platform_ConnectivityManager.h.rst
+
+
+
+Detailed Description
+--------------------
+
+Defines the public interface for the Device Layer ConnectivityManager object. 
+
+
+
+
+Includes
+--------
+
+
+- ``app-common/zap-generated/cluster-objects.h``
+
+- ``app/AttributeAccessInterface.h``
+
+- ``app/util/basic-types.h``
+
+- ``inet/UDPEndPoint.h``
+
+- ``lib/support/CodeUtils.h``
+
+- ``memory``
+
+- ``platform/CHIPDeviceBuildConfig.h``
+
+- ``platform/CHIPDeviceConfig.h`` (:ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`)
+
+- ``platform/CHIPDeviceEvent.h`` (:ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceEvent.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceLayer.h`
+
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_BLEManager.h`
+
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_WiFi.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_chip`
+
+- :ref:`namespace_chip__Ble`
+
+- :ref:`namespace_chip__DeviceLayer`
+
+- :ref:`namespace_chip__DeviceLayer__Internal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structchip_1_1_device_layer_1_1_connectivity_manager_1_1_s_e_d_intervals_config`
+
+- :ref:`exhale_class_classchip_1_1_device_layer_1_1_connectivity_manager`
+
+- :ref:`exhale_class_classchip_1_1_device_layer_1_1_connectivity_manager_delegate`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function__connectivity_manager_8h_1ae3364f4ad1379eb7fb38490e701307e6`
+
+- :ref:`exhale_function__connectivity_manager_8h_1a17ec2ecb960975c25c4a890d7a72cbfb`
+

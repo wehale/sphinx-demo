@@ -1,0 +1,17 @@
+.. _exhale_struct_structchip_1_1_o_t_a_image_progress:
+
+Struct OTAImageProgress
+=======================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_OTAImageProcessor.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: chip::OTAImageProgress
+   :project: My Project
+   :members:
+   :protected-members:
+   :undoc-members:

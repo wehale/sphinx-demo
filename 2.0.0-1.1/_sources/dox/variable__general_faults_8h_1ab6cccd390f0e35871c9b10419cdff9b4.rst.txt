@@ -1,0 +1,14 @@
+.. _exhale_variable__general_faults_8h_1ab6cccd390f0e35871c9b10419cdff9b4:
+
+Variable chip::DeviceLayer::kMaxRadioFaults
+===========================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_GeneralFaults.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: chip::DeviceLayer::kMaxRadioFaults
+   :project: My Project

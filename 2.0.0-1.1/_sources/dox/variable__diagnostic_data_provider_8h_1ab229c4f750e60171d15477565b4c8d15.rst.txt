@@ -1,0 +1,14 @@
+.. _exhale_variable__diagnostic_data_provider_8h_1ab229c4f750e60171d15477565b4c8d15:
+
+Variable chip::DeviceLayer::kMaxIPv6AddrSize
+============================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_DiagnosticDataProvider.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: chip::DeviceLayer::kMaxIPv6AddrSize
+   :project: My Project

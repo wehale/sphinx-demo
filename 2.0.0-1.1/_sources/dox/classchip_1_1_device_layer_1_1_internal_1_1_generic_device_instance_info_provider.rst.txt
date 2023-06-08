@@ -1,0 +1,26 @@
+.. _exhale_class_classchip_1_1_device_layer_1_1_internal_1_1_generic_device_instance_info_provider:
+
+Template Class GenericDeviceInstanceInfoProvider
+================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericDeviceInstanceInfoProvider.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public chip::DeviceLayer::DeviceInstanceInfoProvider`` (:ref:`exhale_class_classchip_1_1_device_layer_1_1_device_instance_info_provider`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: chip::DeviceLayer::Internal::GenericDeviceInstanceInfoProvider
+   :project: My Project
+   :members:
+   :protected-members:
+   :undoc-members:

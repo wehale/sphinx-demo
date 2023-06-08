@@ -1,0 +1,14 @@
+.. _exhale_function__diagnostic_data_provider_8h_1aca17c3d8af88a47b8657ec7be803bf7d:
+
+Function chip::DeviceLayer::GetDiagnosticDataProvider
+=====================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_DiagnosticDataProvider.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: chip::DeviceLayer::GetDiagnosticDataProvider()
+   :project: My Project

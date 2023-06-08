@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template Class GenericPlatformManagerImpl_Zephyr &mdash; Silicon Labs Matter 2.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Template Class GenericThreadStackManagerImpl_FreeRTOS" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___free_r_t_o_s.html" />
+    <link rel="prev" title="Template Class GenericPlatformManagerImpl_POSIX" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___p_o_s_i_x.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Silicon Labs Matter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../OVERVIEW.html">Silicon Labs Matter User’s Guide Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW_FEATURES.html">Silicon Labs Matter New Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_1_overview.html">Matter Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_2_prereq.html">Matter Development Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_3_general.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_6_faq.html">FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Library API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_chip_device_event.html">Struct ChipDeviceEvent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_connectivity_manager_1_1_s_e_d_intervals_config.html">Struct ConnectivityManager::SEDIntervalsConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl_1_1_app_event_handler.html">Struct GenericPlatformManagerImpl::AppEventHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_network.html">Struct Network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_scan_response.html">Struct ThreadScanResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_scan_response.html">Struct WiFiScanResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_interface.html">Struct NetworkInterface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_thread_metrics.html">Struct ThreadMetrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_o_t_a_image_progress.html">Struct OTAImageProgress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_platform_1_1_persisted_storage_1_1internal_1_1_empty_key.html">Template Struct EmptyKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_platform_1_1_persisted_storage_1_1internal_1_1_empty_key_3_01const_01char_01_5_01_4.html">Template Struct EmptyKey&lt; const char * &gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_attribute_list.html">Template Class AttributeList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_attribute_list_1_1_iterator.html">Class AttributeList::Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_commissionable_data_provider.html">Class CommissionableDataProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_configuration_manager.html">Class ConfigurationManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager.html">Class ConnectivityManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager_delegate.html">Class ConnectivityManagerDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_control_server.html">Class DeviceControlServer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_info_provider.html">Class DeviceInfoProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_info_provider_1_1_iterator.html">Template Class DeviceInfoProvider::Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_instance_info_provider.html">Class DeviceInstanceInfoProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_diagnostic_data_provider.html">Class DiagnosticDataProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_general_faults.html">Template Class GeneralFaults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_general_faults_1_1_iterator.html">Class GeneralFaults::Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_device_network_info.html">Class DeviceNetworkInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_configuration_manager_impl.html">Template Class GenericConfigurationManagerImpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl.html">Template Class GenericConnectivityManagerImpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___b_l_e.html">Template Class GenericConnectivityManagerImpl_BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___no_b_l_e.html">Template Class GenericConnectivityManagerImpl_NoBLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___no_thread.html">Template Class GenericConnectivityManagerImpl_NoThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___no_wi_fi.html">Template Class GenericConnectivityManagerImpl_NoWiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___t_c_p.html">Template Class GenericConnectivityManagerImpl_TCP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread.html">Template Class GenericConnectivityManagerImpl_Thread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___u_d_p.html">Template Class GenericConnectivityManagerImpl_UDP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___wi_fi.html">Template Class GenericConnectivityManagerImpl_WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_device_instance_info_provider.html">Template Class GenericDeviceInstanceInfoProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl.html">Template Class GenericPlatformManagerImpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___free_r_t_o_s.html">Template Class GenericPlatformManagerImpl_FreeRTOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___p_o_s_i_x.html">Template Class GenericPlatformManagerImpl_POSIX</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Template Class GenericPlatformManagerImpl_Zephyr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___free_r_t_o_s.html">Template Class GenericThreadStackManagerImpl_FreeRTOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___open_thread.html">Template Class GenericThreadStackManagerImpl_OpenThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___open_thread___lw_i_p.html">Template Class GenericThreadStackManagerImpl_OpenThread_LwIP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_ethernet_driver.html">Class EthernetDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_base_driver.html">Class BaseDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_base_driver_1_1_network_status_change_callback.html">Class BaseDriver::NetworkStatusChangeCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_wireless_driver.html">Class WirelessDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_wireless_driver_1_1_connect_callback.html">Class WirelessDriver::ConnectCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_iterator.html">Template Class Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_driver.html">Class ThreadDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_driver_1_1_scan_callback.html">Class ThreadDriver::ScanCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_driver.html">Class WiFiDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_driver_1_1_scan_callback.html">Class WiFiDriver::ScanCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_n_f_c_manager.html">Class NFCManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_persisted_storage_1_1_key_value_store_manager.html">Class KeyValueStoreManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_platform_manager.html">Class PlatformManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_platform_manager_delegate.html">Class PlatformManagerDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_stack_lock.html">Class StackLock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_stack_unlock.html">Class StackUnlock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_test_only_commissionable_data_provider.html">Class TestOnlyCommissionableDataProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_thread_stack_manager.html">Class ThreadStackManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_wi_fi_diagnostics_delegate.html">Class WiFiDiagnosticsDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_kvs_persistent_storage_delegate.html">Class KvsPersistentStorageDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_o_t_a_image_processor_interface.html">Class OTAImageProcessorInterface</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Silicon Labs Matter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Library API</a></li>
+      <li class="breadcrumb-item active">Template Class GenericPlatformManagerImpl_Zephyr</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dox/classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="template-class-genericplatformmanagerimpl-zephyr">
+<span id="exhale-class-classchip-1-1-device-layer-1-1-internal-1-1-generic-platform-manager-impl-zephyr"></span><h1>Template Class GenericPlatformManagerImpl_Zephyr<a class="headerlink" href="#template-class-genericplatformmanagerimpl-zephyr" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl_Zephyr.h.html#file-users-wehale-git-matter-stash-src-include-platform-internal-genericplatformmanagerimpl-zephyr-h"><span class="std std-ref">File GenericPlatformManagerImpl_Zephyr.h</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">chip::DeviceLayer::Internal::GenericPlatformManagerImpl&lt;</span> <span class="pre">ImplClass</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl.html#exhale-class-classchip-1-1-device-layer-1-1-internal-1-1-generic-platform-manager-impl"><span class="std std-ref">Template Class GenericPlatformManagerImpl</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_ZephyrE">
+<span id="_CPPv3I0EN4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_ZephyrE"></span><span id="_CPPv2I0EN4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_ZephyrE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ImplClass</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenericPlatformManagerImpl_Zephyr</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">chip</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">DeviceLayer</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Internal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl.html#_CPPv4I0EN4chip11DeviceLayer8Internal26GenericPlatformManagerImplE" title="chip::DeviceLayer::Internal::GenericPlatformManagerImpl"><span class="n"><span class="pre">GenericPlatformManagerImpl</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_ZephyrE" title="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::ImplClass"><span class="n"><span class="pre">ImplClass</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_ZephyrE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Provides a generic implementation of <a class="reference internal" href="classchip_1_1_device_layer_1_1_platform_manager.html#classchip_1_1_device_layer_1_1_platform_manager"><span class="std std-ref">PlatformManager</span></a> features that works on Zephyr RTOS platforms.</p>
+<p>This template contains implementations of selected features from the <a class="reference internal" href="classchip_1_1_device_layer_1_1_platform_manager.html#classchip_1_1_device_layer_1_1_platform_manager"><span class="std std-ref">PlatformManager</span></a> abstract interface that are suitable for use on Zephyr-based platforms. It is intended to be inherited (directly or indirectly) by the PlatformManagerImpl class, which also appears as the template’s ImplClass parameter. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-types">Protected Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr11ThreadStackE">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr11ThreadStackE"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr11ThreadStackE"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1a313c52bfeb7f3237965829fd66d0d907"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ThreadStack</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">k_thread_stack_t</span></span><span class="p"><span class="pre">*</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr11ThreadStackE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr14_InitChipStackEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr14_InitChipStackEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr14_InitChipStackEv"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::_InitChipStack"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1a880aace793df4a1bd6d980cb42cc6163"></span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_InitChipStack</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr14_InitChipStackEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr14_LockChipStackEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr14_LockChipStackEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr14_LockChipStackEv"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::_LockChipStack__void"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1aa31f11e08ea835597b5c254bb3696f79"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_LockChipStack</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr14_LockChipStackEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr17_TryLockChipStackEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr17_TryLockChipStackEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr17_TryLockChipStackEv"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::_TryLockChipStack__void"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1ae0f0f8155ff56a7f591f07b1c70743bb"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_TryLockChipStack</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr17_TryLockChipStackEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr16_UnlockChipStackEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr16_UnlockChipStackEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr16_UnlockChipStackEv"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::_UnlockChipStack__void"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1a2da2006391891bab4fe17accb1c95f72"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_UnlockChipStack</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr16_UnlockChipStackEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr10_PostEventEPK15ChipDeviceEvent">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr10_PostEventEPK15ChipDeviceEvent"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr10_PostEventEPK15ChipDeviceEvent"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::_PostEvent__ChipDeviceEventCP"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1aea7f42b0f563f43adfcaf84cfcdf7cad"></span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_PostEvent</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structchip_1_1_device_layer_1_1_chip_device_event.html#_CPPv4N4chip11DeviceLayer15ChipDeviceEventE" title="chip::DeviceLayer::ChipDeviceEvent"><span class="n"><span class="pre">ChipDeviceEvent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">event</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr10_PostEventEPK15ChipDeviceEvent" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr13_RunEventLoopEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr13_RunEventLoopEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr13_RunEventLoopEv"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::_RunEventLoop__void"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1a6960947f82638fd5282c52c629c94e30"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_RunEventLoop</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr13_RunEventLoopEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr19_StartEventLoopTaskEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr19_StartEventLoopTaskEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr19_StartEventLoopTaskEv"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::_StartEventLoopTask__void"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1afa540ec1a13cbb137b48736e91f165cf"></span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_StartEventLoopTask</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr19_StartEventLoopTaskEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr18_StopEventLoopTaskEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr18_StopEventLoopTaskEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr18_StopEventLoopTaskEv"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::_StopEventLoopTask"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1aef30fe77c32fc517c1735f041038c28c"></span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_StopEventLoopTask</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr18_StopEventLoopTaskEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr15_StartChipTimerEN6System5Clock7TimeoutE">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr15_StartChipTimerEN6System5Clock7TimeoutE"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr15_StartChipTimerEN6System5Clock7TimeoutE"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::_StartChipTimer__System::Clock::Timeout"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1ae7c78d4301f0bad2507f0d74bf95ca08"></span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_StartChipTimer</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">System</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Clock</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Timeout</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">duration</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr15_StartChipTimerEN6System5Clock7TimeoutE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr9_ShutdownEv">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr9_ShutdownEv"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr9_ShutdownEv"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::_Shutdown__void"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1afd0a5c0159c4d8a2a642bf2983781c15"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_Shutdown</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr9_ShutdownEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr33GenericPlatformManagerImpl_ZephyrE11ThreadStack">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr33GenericPlatformManagerImpl_ZephyrE11ThreadStack"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr33GenericPlatformManagerImpl_ZephyrE11ThreadStack"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::GenericPlatformManagerImpl_Zephyr__ThreadStack"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1a72b04a7d3858a876343f97a0e0920908"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenericPlatformManagerImpl_Zephyr</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr11ThreadStackE" title="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::ThreadStack"><span class="n"><span class="pre">ThreadStack</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">stack</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr33GenericPlatformManagerImpl_ZephyrE11ThreadStack" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr6mMaxFdE">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr6mMaxFdE"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr6mMaxFdE"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::mMaxFd__i"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1af6f2bb1dac091a57ce1b293b06ab07b1"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mMaxFd</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr6mMaxFdE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr8mReadSetE">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr8mReadSetE"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr8mReadSetE"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::mReadSet__fd_set"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1adcc346e210ec84a0a39522db948f8ea1"></span><span class="n"><span class="pre">fd_set</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mReadSet</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr8mReadSetE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr9mWriteSetE">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr9mWriteSetE"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr9mWriteSetE"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::mWriteSet__fd_set"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1a7de2e7b194743eda0d321ded3bf5ee13"></span><span class="n"><span class="pre">fd_set</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mWriteSet</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr9mWriteSetE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr9mErrorSetE">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr9mErrorSetE"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr9mErrorSetE"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::mErrorSet__fd_set"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1a06a39af5349b535fe4f6666aca666815"></span><span class="n"><span class="pre">fd_set</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mErrorSet</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr9mErrorSetE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr12mNextTimeoutE">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr12mNextTimeoutE"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr12mNextTimeoutE"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::mNextTimeout__timeval"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1a398fde48421ed4276d5b408990407dca"></span><span class="n"><span class="pre">timeval</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mNextTimeout</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr12mNextTimeoutE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr14mChipStackLockE">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr14mChipStackLockE"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr14mChipStackLockE"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::mChipStackLock__k_mutex"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1af5e89b946f1b948dbdf8eac29ec28d17"></span><span class="n"><span class="pre">k_mutex</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mChipStackLock</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr14mChipStackLockE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr20mChipEventRingBufferE">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr20mChipEventRingBufferE"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr20mChipEventRingBufferE"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::mChipEventRingBuffer__ChipDeviceEventA"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1a254a8a70ad4a9b7abdaf44d79d57f84e"></span><a class="reference internal" href="structchip_1_1_device_layer_1_1_chip_device_event.html#_CPPv4N4chip11DeviceLayer15ChipDeviceEventE" title="chip::DeviceLayer::ChipDeviceEvent"><span class="n"><span class="pre">ChipDeviceEvent</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mChipEventRingBuffer</span></span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">CHIP_DEVICE_CONFIG_MAX_EVENT_QUEUE_SIZE</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr20mChipEventRingBufferE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr15mChipEventQueueE">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr15mChipEventQueueE"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr15mChipEventQueueE"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::mChipEventQueue__k_msgq"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1a59c44047a173a1dbe046a5bb94388e64"></span><span class="n"><span class="pre">k_msgq</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mChipEventQueue</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr15mChipEventQueueE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr16mChipThreadStackE">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr16mChipThreadStackE"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr16mChipThreadStackE"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::mChipThreadStack__ThreadStack"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1a51cf097364ad07dc150412702e57523d"></span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr11ThreadStackE" title="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::ThreadStack"><span class="n"><span class="pre">ThreadStack</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mChipThreadStack</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr16mChipThreadStackE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr11mChipThreadE">
+<span id="_CPPv3N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr11mChipThreadE"></span><span id="_CPPv2N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr11mChipThreadE"></span><span id="chip::DeviceLayer::Internal::GenericPlatformManagerImpl_Zephyr::mChipThread__k_thread"></span><span class="target" id="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr_1ac9844159a81f32f6702a8e1f2a31a888"></span><span class="n"><span class="pre">k_thread</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mChipThread</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer8Internal33GenericPlatformManagerImpl_Zephyr11mChipThreadE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___p_o_s_i_x.html" class="btn btn-neutral float-left" title="Template Class GenericPlatformManagerImpl_POSIX" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___free_r_t_o_s.html" class="btn btn-neutral float-right" title="Template Class GenericThreadStackManagerImpl_FreeRTOS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Silicon Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

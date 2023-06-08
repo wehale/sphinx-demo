@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1a2ae53038ff4009af57d0623db0ddd0eb:
+
+Define CHIP_DEVICE_CONFIG_SWU_MIN_WAIT_TIME_INTERVAL_PERCENT_PER_STEP
+=====================================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_SWU_MIN_WAIT_TIME_INTERVAL_PERCENT_PER_STEP
+   :project: My Project

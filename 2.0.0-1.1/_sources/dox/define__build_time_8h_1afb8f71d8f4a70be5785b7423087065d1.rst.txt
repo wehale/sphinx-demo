@@ -1,0 +1,14 @@
+.. _exhale_define__build_time_8h_1afb8f71d8f4a70be5785b7423087065d1:
+
+Define COMPUTE_BUILD_SEC
+========================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_BuildTime.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: COMPUTE_BUILD_SEC
+   :project: My Project

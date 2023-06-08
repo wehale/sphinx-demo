@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1a1b1b0bd39deaca1675c4353a35d4e398:
+
+Define CHIP_DEVICE_CONFIG_ENABLE_PAIRING_AUTOSTART
+==================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_ENABLE_PAIRING_AUTOSTART
+   :project: My Project

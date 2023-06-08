@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1aeec4592fff6f4ca3036a3de6b5e151d6:
+
+Define CHIP_DISPATCH_EVENT_LONG_DISPATCH_TIME_WARNING_THRESHOLD_MS
+==================================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DISPATCH_EVENT_LONG_DISPATCH_TIME_WARNING_THRESHOLD_MS
+   :project: My Project

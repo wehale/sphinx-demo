@@ -1,0 +1,14 @@
+.. _exhale_variable__device_network_info_8h_1ae03c77de98cc199fca920bfa91ae552a:
+
+Variable chip::DeviceLayer::Internal::kMaxWiFiSSIDLength
+========================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_DeviceNetworkInfo.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: chip::DeviceLayer::Internal::kMaxWiFiSSIDLength
+   :project: My Project

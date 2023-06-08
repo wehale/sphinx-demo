@@ -1,0 +1,332 @@
+:orphan:
+
+
+Full API
+========
+
+Directories
+***********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__Users_wehale_git_matter-stash_src.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__Users_wehale_git_matter-stash_src_include.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__Users_wehale_git_matter-stash_src_include_platform.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__Users_wehale_git_matter-stash_src_include_platform_internal.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__Users_wehale_git_matter-stash_src_include_platform_internal_testing.rst
+
+Files
+*****
+
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_AttributeList.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_BLEManager.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_BuildTime.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceError.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceEvent.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceLayer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_CHIPDeviceLayerInternal.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_CommissionableDataProvider.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_testing_ConfigUnitTest.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_ConfigurationManager.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_ConnectivityManager.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_DeviceControlServer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_DeviceInfoProvider.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_DeviceInstanceInfoProvider.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_DeviceNetworkInfo.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_DiagnosticDataProvider.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_EventLogging.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_GeneralFaults.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_GeneralUtils.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConfigurationManagerImpl.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConfigurationManagerImpl.ipp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_BLE.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_BLE.ipp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_NoBLE.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_NoThread.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_NoWiFi.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_TCP.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_TCP.ipp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_Thread.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_Thread.ipp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_UDP.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_UDP.ipp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_WiFi.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_WiFi.ipp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericDeviceInstanceInfoProvider.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericDeviceInstanceInfoProvider.ipp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl.ipp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl_FreeRTOS.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl_FreeRTOS.ipp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl_POSIX.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl_POSIX.ipp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl_Zephyr.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl_Zephyr.ipp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_KeyValueStoreManager.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_KvsPersistentStorageDelegate.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_LockTracker.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_NetworkCommissioning.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_NFCManager.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_OTAImageProcessor.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_PersistedStorage.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_PlatformManager.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_README.md.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_TestOnlyCommissionableDataProvider.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__Users_wehale_git_matter-stash_src_include_platform_ThreadStackManager.h.rst
+
+Pages
+*****
+
+
+.. toctree::
+   :maxdepth: 5
+
+   page_md__Users_wehale_git_matter_stash_src_include_README.rst

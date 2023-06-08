@@ -1,0 +1,14 @@
+.. _exhale_function__c_h_i_p_device_event_8h_1afb2445b2c3f713f86143a7aae18ea659:
+
+Function chip::DeviceLayer::DeviceEventType::IsPlatformGeneric
+==============================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceEvent.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: chip::DeviceLayer::DeviceEventType::IsPlatformGeneric(uint16_t)
+   :project: My Project

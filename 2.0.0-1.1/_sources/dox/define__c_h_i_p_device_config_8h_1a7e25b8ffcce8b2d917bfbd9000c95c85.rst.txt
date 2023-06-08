@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1a7e25b8ffcce8b2d917bfbd9000c95c85:
+
+Define CHIP_DEVICE_CONFIG_SED_ACTIVE_INTERVAL
+=============================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_SED_ACTIVE_INTERVAL
+   :project: My Project

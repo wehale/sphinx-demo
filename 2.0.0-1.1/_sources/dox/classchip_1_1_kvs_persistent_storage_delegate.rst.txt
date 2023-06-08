@@ -1,0 +1,26 @@
+.. _exhale_class_classchip_1_1_kvs_persistent_storage_delegate:
+
+Class KvsPersistentStorageDelegate
+==================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_KvsPersistentStorageDelegate.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public PersistentStorageDelegate``
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: chip::KvsPersistentStorageDelegate
+   :project: My Project
+   :members:
+   :protected-members:
+   :undoc-members:

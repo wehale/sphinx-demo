@@ -1,0 +1,64 @@
+
+.. _namespace_chip:
+
+Namespace chip
+==============
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+
+
+
+Detailed Description
+--------------------
+
+Defines support for asserting that the chip stack is locked by the current thread via the macro:
+
+assertChipStackLockedByCurrentThread()
+
+Makes use of the following preprocessor macros:
+
+CHIP_STACK_LOCK_TRACKING_ENABLED - keeps track of who locks/unlocks the chip stack CHIP_STACK_LOCK_TRACKING_ERROR_FATAL - lock tracking errors will cause the chip stack to abort/die 
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_chip__Ble`
+
+- :ref:`namespace_chip__DeviceLayer`
+
+- :ref:`namespace_chip__Dnssd`
+
+- :ref:`namespace_chip__Platform`
+
+- :ref:`namespace_chip__Thread`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structchip_1_1_o_t_a_image_progress`
+
+- :ref:`exhale_class_classchip_1_1_kvs_persistent_storage_delegate`
+
+- :ref:`exhale_class_classchip_1_1_o_t_a_image_processor_interface`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_namespacechip_1a95c22fdb1278477588b4253c346019e8`
+
+- :ref:`exhale_variable_namespacechip_1ad20186de757cae5664a16c0dc1a2c85c`
+
+- :ref:`exhale_variable_namespacechip_1a71e3d0a42e5aac9e633793b2fdff341d`

@@ -1,0 +1,17 @@
+.. _exhale_class_classchip_1_1_device_layer_1_1_connectivity_manager_delegate:
+
+Class ConnectivityManagerDelegate
+=================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_ConnectivityManager.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: chip::DeviceLayer::ConnectivityManagerDelegate
+   :project: My Project
+   :members:
+   :protected-members:
+   :undoc-members:

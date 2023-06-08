@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namespace chip::DeviceLayer::NetworkCommissioning &mdash; Silicon Labs Matter 2.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Namespace chip::DeviceLayer::NetworkCommissioning::Internal" href="namespace_chip__DeviceLayer__NetworkCommissioning__Internal.html" />
+    <link rel="prev" title="Namespace chip::DeviceLayer::Internal::@44" href="namespace_chip__DeviceLayer__Internal__%4044.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Silicon Labs Matter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../OVERVIEW.html">Silicon Labs Matter User’s Guide Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW_FEATURES.html">Silicon Labs Matter New Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_1_overview.html">Matter Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_2_prereq.html">Matter Development Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_3_general.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_6_faq.html">FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Library API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#namespaces">Namespaces</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="namespace_app.html">Namespace app</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_app__Clusters.html">Namespace app::Clusters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_app__Clusters__GeneralDiagnostics.html">Namespace app::Clusters::GeneralDiagnostics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_app__Clusters__GeneralDiagnostics__Structs.html">Namespace app::Clusters::GeneralDiagnostics::Structs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_app__Clusters__GeneralDiagnostics__Structs__NetworkInterface.html">Namespace app::Clusters::GeneralDiagnostics::Structs::NetworkInterface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_app__Clusters__SoftwareDiagnostics.html">Namespace app::Clusters::SoftwareDiagnostics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_app__Clusters__SoftwareDiagnostics__Structs.html">Namespace app::Clusters::SoftwareDiagnostics::Structs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_app__Clusters__SoftwareDiagnostics__Structs__ThreadMetricsStruct.html">Namespace app::Clusters::SoftwareDiagnostics::Structs::ThreadMetricsStruct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_chip.html">Namespace chip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_chip__Ble.html">Namespace chip::Ble</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_chip__DeviceLayer.html">Namespace chip::DeviceLayer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_chip__DeviceLayer__DeviceEventType.html">Namespace chip::DeviceLayer::DeviceEventType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_chip__DeviceLayer__Internal.html">Namespace chip::DeviceLayer::Internal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_chip__DeviceLayer__Internal__%4042.html">Namespace chip::DeviceLayer::Internal::&#64;42</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_chip__DeviceLayer__Internal__%4044.html">Namespace chip::DeviceLayer::Internal::&#64;44</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Namespace chip::DeviceLayer::NetworkCommissioning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_chip__DeviceLayer__NetworkCommissioning__Internal.html">Namespace chip::DeviceLayer::NetworkCommissioning::Internal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_chip__DeviceLayer__PersistedStorage.html">Namespace chip::DeviceLayer::PersistedStorage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_chip__Dnssd.html">Namespace chip::Dnssd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_chip__Platform.html">Namespace chip::Platform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_chip__Platform__PersistedStorage.html">Namespace chip::Platform::PersistedStorage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_chip__Platform__PersistedStorage__internal.html">Namespace chip::Platform::PersistedStorage::internal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_chip__Thread.html">Namespace chip::Thread</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Silicon Labs Matter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Library API</a></li>
+      <li class="breadcrumb-item active">Namespace chip::DeviceLayer::NetworkCommissioning</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dox/namespace_chip__DeviceLayer__NetworkCommissioning.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="namespace-chip-devicelayer-networkcommissioning">
+<span id="id1"></span><h1>Namespace chip::DeviceLayer::NetworkCommissioning<a class="headerlink" href="#namespace-chip-devicelayer-networkcommissioning" title="Permalink to this headline"></a></h1>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#detailed-description" id="id2">Detailed Description</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id3">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#classes" id="id4">Classes</a></p></li>
+<li><p><a class="reference internal" href="#typedefs" id="id5">Typedefs</a></p></li>
+<li><p><a class="reference internal" href="#variables" id="id6">Variables</a></p></li>
+</ul>
+</div>
+<section id="detailed-description">
+<h2>Detailed Description<a class="headerlink" href="#detailed-description" title="Permalink to this headline"></a></h2>
+<p>We are using a namespace here, for most use cases, this namespace will be used by <code class="docutils literal notranslate"><span class="pre">None</span></code>, but this still worth a dedicated namespace since:</p>
+<ul class="simple">
+<li><p>The BaseDriver / WirelessDriver is not expected to be implemented directly by users, the only occurrence is in the network commissioning cluster.</p></li>
+<li><p>We can safely name the drivers as <a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_driver.html#exhale-class-classchip-1-1-device-layer-1-1-network-commissioning-1-1-wi-fi-driver"><span class="std std-ref">Class WiFiDriver</span></a> / <a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_driver.html#exhale-class-classchip-1-1-device-layer-1-1-network-commissioning-1-1-thread-driver"><span class="std std-ref">Class ThreadDriver</span></a>, it should not be ambiguous for most cases</p></li>
+<li><p>We can safely name the Status enum to Status, and some other structs  if we are using using, then we should in the context of writing something dedicated to network commissioning, then a single word Status should be clear enough.</p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_chip__DeviceLayer__NetworkCommissioning__Internal.html#namespace-chip-devicelayer-networkcommissioning-internal"><span class="std std-ref">Namespace chip::DeviceLayer::NetworkCommissioning::Internal</span></a></p></li>
+</ul>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_network.html#exhale-struct-structchip-1-1-device-layer-1-1-network-commissioning-1-1-network"><span class="std std-ref">Struct Network</span></a></p></li>
+<li><p><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_scan_response.html#exhale-struct-structchip-1-1-device-layer-1-1-network-commissioning-1-1-thread-scan-response"><span class="std std-ref">Struct ThreadScanResponse</span></a></p></li>
+<li><p><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_scan_response.html#exhale-struct-structchip-1-1-device-layer-1-1-network-commissioning-1-1-wi-fi-scan-response"><span class="std std-ref">Struct WiFiScanResponse</span></a></p></li>
+<li><p><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_ethernet_driver.html#exhale-class-classchip-1-1-device-layer-1-1-network-commissioning-1-1-ethernet-driver"><span class="std std-ref">Class EthernetDriver</span></a></p></li>
+<li><p><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_iterator.html#exhale-class-classchip-1-1-device-layer-1-1-network-commissioning-1-1-iterator"><span class="std std-ref">Template Class Iterator</span></a></p></li>
+<li><p><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_driver.html#exhale-class-classchip-1-1-device-layer-1-1-network-commissioning-1-1-thread-driver"><span class="std std-ref">Class ThreadDriver</span></a></p></li>
+<li><p><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_driver_1_1_scan_callback.html#exhale-class-classchip-1-1-device-layer-1-1-network-commissioning-1-1-thread-driver-1-1-scan-callback"><span class="std std-ref">Class ThreadDriver::ScanCallback</span></a></p></li>
+<li><p><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_driver.html#exhale-class-classchip-1-1-device-layer-1-1-network-commissioning-1-1-wi-fi-driver"><span class="std std-ref">Class WiFiDriver</span></a></p></li>
+<li><p><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_driver_1_1_scan_callback.html#exhale-class-classchip-1-1-device-layer-1-1-network-commissioning-1-1-wi-fi-driver-1-1-scan-callback"><span class="std std-ref">Class WiFiDriver::ScanCallback</span></a></p></li>
+</ul>
+</section>
+<section id="typedefs">
+<h2>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="typedef_namespacechip_1_1_device_layer_1_1_network_commissioning_1a6ff9588383daf413cbb201d3f75a1ec3.html#exhale-typedef-namespacechip-1-1-device-layer-1-1-network-commissioning-1a6ff9588383daf413cbb201d3f75a1ec3"><span class="std std-ref">Typedef chip::DeviceLayer::NetworkCommissioning::NetworkIterator</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespacechip_1_1_device_layer_1_1_network_commissioning_1a79ac0e9712171bf8c03ab1b0ed137988.html#exhale-typedef-namespacechip-1-1-device-layer-1-1-network-commissioning-1a79ac0e9712171bf8c03ab1b0ed137988"><span class="std std-ref">Typedef chip::DeviceLayer::NetworkCommissioning::Status</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespacechip_1_1_device_layer_1_1_network_commissioning_1af412008b10bfdc95f33a96c6dfde44e0.html#exhale-typedef-namespacechip-1-1-device-layer-1-1-network-commissioning-1af412008b10bfdc95f33a96c6dfde44e0"><span class="std std-ref">Typedef chip::DeviceLayer::NetworkCommissioning::ThreadScanResponseIterator</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespacechip_1_1_device_layer_1_1_network_commissioning_1a67d9d69efd7467c02c8aaef1dfc61c2b.html#exhale-typedef-namespacechip-1-1-device-layer-1-1-network-commissioning-1a67d9d69efd7467c02c8aaef1dfc61c2b"><span class="std std-ref">Typedef chip::DeviceLayer::NetworkCommissioning::WiFiBand</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespacechip_1_1_device_layer_1_1_network_commissioning_1a2421249a59799c47c4609712e8d2430d.html#exhale-typedef-namespacechip-1-1-device-layer-1-1-network-commissioning-1a2421249a59799c47c4609712e8d2430d"><span class="std std-ref">Typedef chip::DeviceLayer::NetworkCommissioning::WiFiScanResponseIterator</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespacechip_1_1_device_layer_1_1_network_commissioning_1abf256d8c6d66786b323cadfdc6fba497.html#exhale-typedef-namespacechip-1-1-device-layer-1-1-network-commissioning-1abf256d8c6d66786b323cadfdc6fba497"><span class="std std-ref">Typedef chip::DeviceLayer::NetworkCommissioning::WiFiSecurity</span></a></p></li>
+</ul>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="variable_namespacechip_1_1_device_layer_1_1_network_commissioning_1a10910b0c8de2e1669304910014d6642c.html#exhale-variable-namespacechip-1-1-device-layer-1-1-network-commissioning-1a10910b0c8de2e1669304910014d6642c"><span class="std std-ref">Variable chip::DeviceLayer::NetworkCommissioning::kMaxNetworkIDLen</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="namespace_chip__DeviceLayer__Internal__%4044.html" class="btn btn-neutral float-left" title="Namespace chip::DeviceLayer::Internal::@44" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="namespace_chip__DeviceLayer__NetworkCommissioning__Internal.html" class="btn btn-neutral float-right" title="Namespace chip::DeviceLayer::NetworkCommissioning::Internal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Silicon Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

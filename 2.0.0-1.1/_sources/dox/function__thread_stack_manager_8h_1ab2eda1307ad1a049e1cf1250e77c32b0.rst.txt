@@ -1,0 +1,14 @@
+.. _exhale_function__thread_stack_manager_8h_1ab2eda1307ad1a049e1cf1250e77c32b0:
+
+Function chip::DeviceLayer::ThreadStackMgr
+==========================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_ThreadStackManager.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: chip::DeviceLayer::ThreadStackMgr()
+   :project: My Project

@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1ac1d1a8c2fc43688e70616803f78d66a3:
+
+Define CHIP_DEVICE_CONFIG_DEVICE_VENDOR_NAME
+============================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_DEVICE_VENDOR_NAME
+   :project: My Project

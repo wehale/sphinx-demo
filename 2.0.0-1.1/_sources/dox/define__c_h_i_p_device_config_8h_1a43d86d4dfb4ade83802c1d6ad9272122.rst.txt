@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1a43d86d4dfb4ade83802c1d6ad9272122:
+
+Define CHIP_DEVICE_CONFIG_LWIP_THREAD_IF_NAME
+=============================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_LWIP_THREAD_IF_NAME
+   :project: My Project

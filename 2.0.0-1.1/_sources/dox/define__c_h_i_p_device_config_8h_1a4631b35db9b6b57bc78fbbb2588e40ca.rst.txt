@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1a4631b35db9b6b57bc78fbbb2588e40ca:
+
+Define CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONER_DISCOVERY_CLIENT
+==============================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_ENABLE_COMMISSIONER_DISCOVERY_CLIENT
+   :project: My Project

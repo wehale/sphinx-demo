@@ -1,0 +1,27 @@
+.. _exhale_class_classchip_1_1_device_layer_1_1_general_faults:
+
+Template Class GeneralFaults
+============================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_GeneralFaults.h`
+
+
+Nested Relationships
+--------------------
+
+
+Nested Types
+************
+
+- :ref:`exhale_class_classchip_1_1_device_layer_1_1_general_faults_1_1_iterator`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: chip::DeviceLayer::GeneralFaults
+   :project: My Project
+   :members:
+   :protected-members:
+   :undoc-members:

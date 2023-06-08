@@ -1,0 +1,17 @@
+.. _exhale_struct_structchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_scan_response:
+
+Struct WiFiScanResponse
+=======================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_NetworkCommissioning.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: chip::DeviceLayer::NetworkCommissioning::WiFiScanResponse
+   :project: My Project
+   :members:
+   :protected-members:
+   :undoc-members:

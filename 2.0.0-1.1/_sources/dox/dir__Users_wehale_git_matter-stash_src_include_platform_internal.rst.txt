@@ -1,0 +1,55 @@
+.. _dir__Users_wehale_git_matter-stash_src_include_platform_internal:
+
+
+Directory internal
+==================
+
+
+|exhale_lsh| :ref:`Parent directory <dir__Users_wehale_git_matter-stash_src_include_platform>` (``/Users/wehale/git/matter-stash/src/include/platform``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+*Directory path:* ``/Users/wehale/git/matter-stash/src/include/platform/internal``
+
+Subdirectories
+--------------
+
+- :ref:`dir__Users_wehale_git_matter-stash_src_include_platform_internal_testing`
+
+
+Files
+-----
+
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_BLEManager.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_CHIPDeviceLayerInternal.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_DeviceNetworkInfo.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_EventLogging.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConfigurationManagerImpl.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConfigurationManagerImpl.ipp`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_BLE.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_BLE.ipp`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_NoBLE.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_NoThread.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_NoWiFi.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_TCP.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_TCP.ipp`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_Thread.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_Thread.ipp`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_UDP.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_UDP.ipp`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_WiFi.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_WiFi.ipp`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericDeviceInstanceInfoProvider.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericDeviceInstanceInfoProvider.ipp`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl.ipp`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl_FreeRTOS.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl_FreeRTOS.ipp`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl_POSIX.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl_POSIX.ipp`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl_Zephyr.h`
+- :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericPlatformManagerImpl_Zephyr.ipp`
+
+

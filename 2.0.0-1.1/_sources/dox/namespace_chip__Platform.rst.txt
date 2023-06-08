@@ -1,0 +1,20 @@
+
+.. _namespace_chip__Platform:
+
+Namespace chip::Platform
+========================
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_chip__Platform__PersistedStorage`

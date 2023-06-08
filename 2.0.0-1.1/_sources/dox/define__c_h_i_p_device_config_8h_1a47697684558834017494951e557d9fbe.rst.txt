@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1a47697684558834017494951e557d9fbe:
+
+Define CHIP_DEVICE_CONFIG_WIFI_AP_SSID_PREFIX
+=============================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_WIFI_AP_SSID_PREFIX
+   :project: My Project

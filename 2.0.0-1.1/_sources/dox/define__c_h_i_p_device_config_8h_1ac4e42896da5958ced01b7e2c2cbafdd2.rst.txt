@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1ac4e42896da5958ced01b7e2c2cbafdd2:
+
+Define CHIP_DEVICE_CONFIG_EVENT_LOGGING_INFO_BUFFER_SIZE
+========================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_EVENT_LOGGING_INFO_BUFFER_SIZE
+   :project: My Project

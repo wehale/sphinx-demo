@@ -1,0 +1,14 @@
+.. _exhale_define__c_h_i_p_device_config_8h_1ac7a6763ea0801dc71acc54bc4d9a6e36:
+
+Define CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_MAX_WAIT_TIME_INTERVAL_MS
+===================================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CHIP_DEVICE_CONFIG_SOFTWARE_UPDATE_MAX_WAIT_TIME_INTERVAL_MS
+   :project: My Project

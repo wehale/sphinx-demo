@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class ConnectivityManager &mdash; Silicon Labs Matter 2.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class ConnectivityManagerDelegate" href="classchip_1_1_device_layer_1_1_connectivity_manager_delegate.html" />
+    <link rel="prev" title="Class ConfigurationManager" href="classchip_1_1_device_layer_1_1_configuration_manager.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Silicon Labs Matter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../OVERVIEW.html">Silicon Labs Matter User’s Guide Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW_FEATURES.html">Silicon Labs Matter New Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_1_overview.html">Matter Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_2_prereq.html">Matter Development Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_3_general.html">Developer Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nav_6_faq.html">FAQ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Library API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_chip_device_event.html">Struct ChipDeviceEvent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_connectivity_manager_1_1_s_e_d_intervals_config.html">Struct ConnectivityManager::SEDIntervalsConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl_1_1_app_event_handler.html">Struct GenericPlatformManagerImpl::AppEventHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_network.html">Struct Network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_scan_response.html">Struct ThreadScanResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_scan_response.html">Struct WiFiScanResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_network_interface.html">Struct NetworkInterface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_device_layer_1_1_thread_metrics.html">Struct ThreadMetrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_o_t_a_image_progress.html">Struct OTAImageProgress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_platform_1_1_persisted_storage_1_1internal_1_1_empty_key.html">Template Struct EmptyKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structchip_1_1_platform_1_1_persisted_storage_1_1internal_1_1_empty_key_3_01const_01char_01_5_01_4.html">Template Struct EmptyKey&lt; const char * &gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_attribute_list.html">Template Class AttributeList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_attribute_list_1_1_iterator.html">Class AttributeList::Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_commissionable_data_provider.html">Class CommissionableDataProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_configuration_manager.html">Class ConfigurationManager</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class ConnectivityManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager_delegate.html">Class ConnectivityManagerDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_control_server.html">Class DeviceControlServer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_info_provider.html">Class DeviceInfoProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_info_provider_1_1_iterator.html">Template Class DeviceInfoProvider::Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_device_instance_info_provider.html">Class DeviceInstanceInfoProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_diagnostic_data_provider.html">Class DiagnosticDataProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_general_faults.html">Template Class GeneralFaults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_general_faults_1_1_iterator.html">Class GeneralFaults::Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_device_network_info.html">Class DeviceNetworkInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_configuration_manager_impl.html">Template Class GenericConfigurationManagerImpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl.html">Template Class GenericConnectivityManagerImpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___b_l_e.html">Template Class GenericConnectivityManagerImpl_BLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___no_b_l_e.html">Template Class GenericConnectivityManagerImpl_NoBLE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___no_thread.html">Template Class GenericConnectivityManagerImpl_NoThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___no_wi_fi.html">Template Class GenericConnectivityManagerImpl_NoWiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___t_c_p.html">Template Class GenericConnectivityManagerImpl_TCP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___thread.html">Template Class GenericConnectivityManagerImpl_Thread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___u_d_p.html">Template Class GenericConnectivityManagerImpl_UDP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___wi_fi.html">Template Class GenericConnectivityManagerImpl_WiFi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_device_instance_info_provider.html">Template Class GenericDeviceInstanceInfoProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl.html">Template Class GenericPlatformManagerImpl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___free_r_t_o_s.html">Template Class GenericPlatformManagerImpl_FreeRTOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___p_o_s_i_x.html">Template Class GenericPlatformManagerImpl_POSIX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_platform_manager_impl___zephyr.html">Template Class GenericPlatformManagerImpl_Zephyr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___free_r_t_o_s.html">Template Class GenericThreadStackManagerImpl_FreeRTOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___open_thread.html">Template Class GenericThreadStackManagerImpl_OpenThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_internal_1_1_generic_thread_stack_manager_impl___open_thread___lw_i_p.html">Template Class GenericThreadStackManagerImpl_OpenThread_LwIP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_ethernet_driver.html">Class EthernetDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_base_driver.html">Class BaseDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_base_driver_1_1_network_status_change_callback.html">Class BaseDriver::NetworkStatusChangeCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_wireless_driver.html">Class WirelessDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_internal_1_1_wireless_driver_1_1_connect_callback.html">Class WirelessDriver::ConnectCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_iterator.html">Template Class Iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_driver.html">Class ThreadDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_thread_driver_1_1_scan_callback.html">Class ThreadDriver::ScanCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_driver.html">Class WiFiDriver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_network_commissioning_1_1_wi_fi_driver_1_1_scan_callback.html">Class WiFiDriver::ScanCallback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_n_f_c_manager.html">Class NFCManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_persisted_storage_1_1_key_value_store_manager.html">Class KeyValueStoreManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_platform_manager.html">Class PlatformManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_platform_manager_delegate.html">Class PlatformManagerDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_stack_lock.html">Class StackLock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_stack_unlock.html">Class StackUnlock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_test_only_commissionable_data_provider.html">Class TestOnlyCommissionableDataProvider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_thread_stack_manager.html">Class ThreadStackManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_device_layer_1_1_wi_fi_diagnostics_delegate.html">Class WiFiDiagnosticsDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_kvs_persistent_storage_delegate.html">Class KvsPersistentStorageDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classchip_1_1_o_t_a_image_processor_interface.html">Class OTAImageProcessorInterface</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Silicon Labs Matter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Library API</a></li>
+      <li class="breadcrumb-item active">Class ConnectivityManager</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dox/classchip_1_1_device_layer_1_1_connectivity_manager.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-connectivitymanager">
+<span id="exhale-class-classchip-1-1-device-layer-1-1-connectivity-manager"></span><h1>Class ConnectivityManager<a class="headerlink" href="#class-connectivitymanager" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__Users_wehale_git_matter-stash_src_include_platform_ConnectivityManager.h.html#file-users-wehale-git-matter-stash-src-include-platform-connectivitymanager-h"><span class="std std-ref">File ConnectivityManager.h</span></a></p></li>
+</ul>
+<section id="nested-relationships">
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Permalink to this headline"></a></h2>
+<section id="nested-types">
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="structchip_1_1_device_layer_1_1_connectivity_manager_1_1_s_e_d_intervals_config.html#exhale-struct-structchip-1-1-device-layer-1-1-connectivity-manager-1-1-s-e-d-intervals-config"><span class="std std-ref">Struct ConnectivityManager::SEDIntervalsConfig</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManagerE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManagerE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManagerE"></span><span id="chip::DeviceLayer::ConnectivityManager"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConnectivityManager</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManagerE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Provides control of network connectivity for a chip device. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager15WiFiStationModeE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager15WiFiStationModeE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager15WiFiStationModeE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a3c150539805bedd184720c830723318b"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WiFiStationMode</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager15WiFiStationModeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager15WiFiStationMode29kWiFiStationMode_NotSupportedE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager15WiFiStationMode29kWiFiStationMode_NotSupportedE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager15WiFiStationMode29kWiFiStationMode_NotSupportedE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a3c150539805bedd184720c830723318ba147d60b6550eb604e74f5e14e4af27b8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiStationMode_NotSupported</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager15WiFiStationMode29kWiFiStationMode_NotSupportedE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager15WiFiStationMode38kWiFiStationMode_ApplicationControlledE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager15WiFiStationMode38kWiFiStationMode_ApplicationControlledE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager15WiFiStationMode38kWiFiStationMode_ApplicationControlledE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a3c150539805bedd184720c830723318ba71d3153e0dc03d58e50554219d464197"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiStationMode_ApplicationControlled</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager15WiFiStationMode38kWiFiStationMode_ApplicationControlledE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager15WiFiStationMode25kWiFiStationMode_DisabledE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager15WiFiStationMode25kWiFiStationMode_DisabledE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager15WiFiStationMode25kWiFiStationMode_DisabledE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a3c150539805bedd184720c830723318ba0fd3c62d9ab77b7c81b4f724dae9424f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiStationMode_Disabled</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager15WiFiStationMode25kWiFiStationMode_DisabledE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager15WiFiStationMode24kWiFiStationMode_EnabledE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager15WiFiStationMode24kWiFiStationMode_EnabledE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager15WiFiStationMode24kWiFiStationMode_EnabledE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a3c150539805bedd184720c830723318ba8b94341970e7710b74bed3357ff0a408"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiStationMode_Enabled</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager15WiFiStationMode24kWiFiStationMode_EnabledE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPModeE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager10WiFiAPModeE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager10WiFiAPModeE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a79639b5b4305587adc9fdc609a84c8f5"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WiFiAPMode</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPModeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode24kWiFiAPMode_NotSupportedE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode24kWiFiAPMode_NotSupportedE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode24kWiFiAPMode_NotSupportedE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a79639b5b4305587adc9fdc609a84c8f5abf8b11380c16f4f4a14da3a7041e3580"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiAPMode_NotSupported</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode24kWiFiAPMode_NotSupportedE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode33kWiFiAPMode_ApplicationControlledE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode33kWiFiAPMode_ApplicationControlledE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode33kWiFiAPMode_ApplicationControlledE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a79639b5b4305587adc9fdc609a84c8f5a88d1bb069db5bca4d0cbb9ed4d034c23"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiAPMode_ApplicationControlled</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode33kWiFiAPMode_ApplicationControlledE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode20kWiFiAPMode_DisabledE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode20kWiFiAPMode_DisabledE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode20kWiFiAPMode_DisabledE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a79639b5b4305587adc9fdc609a84c8f5adcc16890b0752ea7c35b123997e718b8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiAPMode_Disabled</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode20kWiFiAPMode_DisabledE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode19kWiFiAPMode_EnabledE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode19kWiFiAPMode_EnabledE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode19kWiFiAPMode_EnabledE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a79639b5b4305587adc9fdc609a84c8f5a12416b8ad4fa62893c607dd188b30dcb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiAPMode_Enabled</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode19kWiFiAPMode_EnabledE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode20kWiFiAPMode_OnDemandE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode20kWiFiAPMode_OnDemandE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode20kWiFiAPMode_OnDemandE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a79639b5b4305587adc9fdc609a84c8f5ae4bc2d9ced8a256ec06c74638e432f17"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiAPMode_OnDemand</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode20kWiFiAPMode_OnDemandE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode39kWiFiAPMode_OnDemand_NoStationProvisionE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode39kWiFiAPMode_OnDemand_NoStationProvisionE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode39kWiFiAPMode_OnDemand_NoStationProvisionE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a79639b5b4305587adc9fdc609a84c8f5a338684b51d59a06fe0c99cc1f5420d22"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiAPMode_OnDemand_NoStationProvision</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPMode39kWiFiAPMode_OnDemand_NoStationProvisionE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager10ThreadModeE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager10ThreadModeE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager10ThreadModeE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a7f46754404068e9c6165b8b264b5854f"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ThreadMode</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10ThreadModeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager10ThreadMode24kThreadMode_NotSupportedE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager10ThreadMode24kThreadMode_NotSupportedE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager10ThreadMode24kThreadMode_NotSupportedE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a7f46754404068e9c6165b8b264b5854fafbb23aafb315b98494ebd2f333bdac49"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kThreadMode_NotSupported</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10ThreadMode24kThreadMode_NotSupportedE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager10ThreadMode33kThreadMode_ApplicationControlledE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager10ThreadMode33kThreadMode_ApplicationControlledE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager10ThreadMode33kThreadMode_ApplicationControlledE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a7f46754404068e9c6165b8b264b5854fa387a73c230a1c65814b9b23213a0210e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kThreadMode_ApplicationControlled</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10ThreadMode33kThreadMode_ApplicationControlledE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager10ThreadMode20kThreadMode_DisabledE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager10ThreadMode20kThreadMode_DisabledE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager10ThreadMode20kThreadMode_DisabledE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a7f46754404068e9c6165b8b264b5854fa7150f2e5a47accc355f91b402be22d31"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kThreadMode_Disabled</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10ThreadMode20kThreadMode_DisabledE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager10ThreadMode19kThreadMode_EnabledE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager10ThreadMode19kThreadMode_EnabledE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager10ThreadMode19kThreadMode_EnabledE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a7f46754404068e9c6165b8b264b5854fa708ec1089e3b2cb038ea8c5630682526"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kThreadMode_Enabled</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10ThreadMode19kThreadMode_EnabledE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiStationStateE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16WiFiStationStateE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16WiFiStationStateE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a5bbc91dfce95591099b020782f31a4d2"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WiFiStationState</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiStationStateE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiStationState30kWiFiStationState_NotConnectedE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16WiFiStationState30kWiFiStationState_NotConnectedE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16WiFiStationState30kWiFiStationState_NotConnectedE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a5bbc91dfce95591099b020782f31a4d2adfa4aea84f8682f64a8db0a1d0208ce9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiStationState_NotConnected</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiStationState30kWiFiStationState_NotConnectedE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiStationState28kWiFiStationState_ConnectingE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16WiFiStationState28kWiFiStationState_ConnectingE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16WiFiStationState28kWiFiStationState_ConnectingE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a5bbc91dfce95591099b020782f31a4d2a1645ffac192ff7ef274e04813a0a54b8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiStationState_Connecting</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiStationState28kWiFiStationState_ConnectingE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiStationState38kWiFiStationState_Connecting_SucceededE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16WiFiStationState38kWiFiStationState_Connecting_SucceededE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16WiFiStationState38kWiFiStationState_Connecting_SucceededE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a5bbc91dfce95591099b020782f31a4d2a17d8b63e3087bec41803ccb06e9b268d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiStationState_Connecting_Succeeded</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiStationState38kWiFiStationState_Connecting_SucceededE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiStationState35kWiFiStationState_Connecting_FailedE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16WiFiStationState35kWiFiStationState_Connecting_FailedE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16WiFiStationState35kWiFiStationState_Connecting_FailedE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a5bbc91dfce95591099b020782f31a4d2a37cb69c99dd3936f86e9601d75007514"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiStationState_Connecting_Failed</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiStationState35kWiFiStationState_Connecting_FailedE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiStationState27kWiFiStationState_ConnectedE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16WiFiStationState27kWiFiStationState_ConnectedE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16WiFiStationState27kWiFiStationState_ConnectedE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a5bbc91dfce95591099b020782f31a4d2a93fa135b0995d0869befff828061fb7f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiStationState_Connected</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiStationState27kWiFiStationState_ConnectedE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiStationState31kWiFiStationState_DisconnectingE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16WiFiStationState31kWiFiStationState_DisconnectingE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16WiFiStationState31kWiFiStationState_DisconnectingE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a5bbc91dfce95591099b020782f31a4d2a0265bd1cfaa6b3a86008276ff3263e79"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiStationState_Disconnecting</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiStationState31kWiFiStationState_DisconnectingE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager11WiFiAPStateE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager11WiFiAPStateE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager11WiFiAPStateE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ac28f3aa1be6e499e3d2a03b83c14f3b1"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WiFiAPState</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager11WiFiAPStateE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager11WiFiAPState22kWiFiAPState_NotActiveE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager11WiFiAPState22kWiFiAPState_NotActiveE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager11WiFiAPState22kWiFiAPState_NotActiveE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ac28f3aa1be6e499e3d2a03b83c14f3b1aa7eaa1f27ef16e98671a99737d77c6d8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiAPState_NotActive</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager11WiFiAPState22kWiFiAPState_NotActiveE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager11WiFiAPState23kWiFiAPState_ActivatingE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager11WiFiAPState23kWiFiAPState_ActivatingE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager11WiFiAPState23kWiFiAPState_ActivatingE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ac28f3aa1be6e499e3d2a03b83c14f3b1a8dbe52f872f2b4726cd37fb9c76d1eab"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiAPState_Activating</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager11WiFiAPState23kWiFiAPState_ActivatingE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager11WiFiAPState19kWiFiAPState_ActiveE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager11WiFiAPState19kWiFiAPState_ActiveE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager11WiFiAPState19kWiFiAPState_ActiveE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ac28f3aa1be6e499e3d2a03b83c14f3b1a70693196465a945a5889d6622edde56b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiAPState_Active</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager11WiFiAPState19kWiFiAPState_ActiveE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager11WiFiAPState25kWiFiAPState_DeactivatingE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager11WiFiAPState25kWiFiAPState_DeactivatingE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager11WiFiAPState25kWiFiAPState_DeactivatingE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ac28f3aa1be6e499e3d2a03b83c14f3b1a12d11327dffc1bbb782894733e30df9f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kWiFiAPState_Deactivating</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager11WiFiAPState25kWiFiAPState_DeactivatingE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceModeE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceModeE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceModeE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a918876d0395f5c4ff1a7ef802ff268af"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CHIPoBLEServiceMode</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceModeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceMode33kCHIPoBLEServiceMode_NotSupportedE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceMode33kCHIPoBLEServiceMode_NotSupportedE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceMode33kCHIPoBLEServiceMode_NotSupportedE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a918876d0395f5c4ff1a7ef802ff268afa97351cce261cc9bb9ed68804d32316a8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kCHIPoBLEServiceMode_NotSupported</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceMode33kCHIPoBLEServiceMode_NotSupportedE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceMode28kCHIPoBLEServiceMode_EnabledE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceMode28kCHIPoBLEServiceMode_EnabledE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceMode28kCHIPoBLEServiceMode_EnabledE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a918876d0395f5c4ff1a7ef802ff268afabf2e0bb19c1c97914ae7a14bfda8994d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kCHIPoBLEServiceMode_Enabled</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceMode28kCHIPoBLEServiceMode_EnabledE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceMode29kCHIPoBLEServiceMode_DisabledE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceMode29kCHIPoBLEServiceMode_DisabledE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceMode29kCHIPoBLEServiceMode_DisabledE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a918876d0395f5c4ff1a7ef802ff268afa853df05201e6c817997a681d9b38232e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kCHIPoBLEServiceMode_Disabled</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceMode29kCHIPoBLEServiceMode_DisabledE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceTypeE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceTypeE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceTypeE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ab3d1f32b512ccabb86bf40a30b769821"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ThreadDeviceType</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceTypeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType30kThreadDeviceType_NotSupportedE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType30kThreadDeviceType_NotSupportedE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType30kThreadDeviceType_NotSupportedE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ab3d1f32b512ccabb86bf40a30b769821a4c559011a7a37825bb7bd7ca2941ea35"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kThreadDeviceType_NotSupported</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType30kThreadDeviceType_NotSupportedE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType24kThreadDeviceType_RouterE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType24kThreadDeviceType_RouterE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType24kThreadDeviceType_RouterE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ab3d1f32b512ccabb86bf40a30b769821a49e3cea51bea6e4378cf376130f6d7fe"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kThreadDeviceType_Router</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType24kThreadDeviceType_RouterE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType31kThreadDeviceType_FullEndDeviceE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType31kThreadDeviceType_FullEndDeviceE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType31kThreadDeviceType_FullEndDeviceE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ab3d1f32b512ccabb86bf40a30b769821a1c7085011367bf20eb42248d10983ef7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kThreadDeviceType_FullEndDevice</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType31kThreadDeviceType_FullEndDeviceE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType34kThreadDeviceType_MinimalEndDeviceE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType34kThreadDeviceType_MinimalEndDeviceE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType34kThreadDeviceType_MinimalEndDeviceE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ab3d1f32b512ccabb86bf40a30b769821a6994731b71cd789bf16a8982af4544d4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kThreadDeviceType_MinimalEndDevice</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType34kThreadDeviceType_MinimalEndDeviceE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType33kThreadDeviceType_SleepyEndDeviceE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType33kThreadDeviceType_SleepyEndDeviceE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType33kThreadDeviceType_SleepyEndDeviceE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ab3d1f32b512ccabb86bf40a30b769821a1c70317c580412239d8e60b1671e6ea7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kThreadDeviceType_SleepyEndDevice</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType33kThreadDeviceType_SleepyEndDeviceE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType45kThreadDeviceType_SynchronizedSleepyEndDeviceE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType45kThreadDeviceType_SynchronizedSleepyEndDeviceE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType45kThreadDeviceType_SynchronizedSleepyEndDeviceE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ab3d1f32b512ccabb86bf40a30b769821aa980a87291f44740955b75b37312617b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kThreadDeviceType_SynchronizedSleepyEndDevice</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceType45kThreadDeviceType_SynchronizedSleepyEndDeviceE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager18BLEAdvertisingModeE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager18BLEAdvertisingModeE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager18BLEAdvertisingModeE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a60af5dc0cca9010a4711ab30a5fca31c"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BLEAdvertisingMode</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager18BLEAdvertisingModeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager18BLEAdvertisingMode16kFastAdvertisingE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager18BLEAdvertisingMode16kFastAdvertisingE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager18BLEAdvertisingMode16kFastAdvertisingE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a60af5dc0cca9010a4711ab30a5fca31ca85185c216bf431544881d319a389f94b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kFastAdvertising</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager18BLEAdvertisingMode16kFastAdvertisingE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager18BLEAdvertisingMode16kSlowAdvertisingE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager18BLEAdvertisingMode16kSlowAdvertisingE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager18BLEAdvertisingMode16kSlowAdvertisingE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a60af5dc0cca9010a4711ab30a5fca31cabd825623924c7867dfcb639a0ff0bd7f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kSlowAdvertising</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager18BLEAdvertisingMode16kSlowAdvertisingE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager15SEDIntervalModeE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager15SEDIntervalModeE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager15SEDIntervalModeE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1af281aadb232658ccdd37c1ab672deddb"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEDIntervalMode</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager15SEDIntervalModeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager15SEDIntervalMode4IdleE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager15SEDIntervalMode4IdleE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager15SEDIntervalMode4IdleE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1af281aadb232658ccdd37c1ab672deddbae599161956d626eda4cb0a5ffb85271c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Idle</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager15SEDIntervalMode4IdleE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager15SEDIntervalMode6ActiveE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager15SEDIntervalMode6ActiveE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager15SEDIntervalMode6ActiveE"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1af281aadb232658ccdd37c1ab672deddba4d3d769b812b6faa6b76e1a8abaece2d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Active</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager15SEDIntervalMode6ActiveE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager11SetDelegateEP27ConnectivityManagerDelegate">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager11SetDelegateEP27ConnectivityManagerDelegate"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager11SetDelegateEP27ConnectivityManagerDelegate"></span><span id="chip::DeviceLayer::ConnectivityManager::SetDelegate__ConnectivityManagerDelegateP"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a71bf4dc4c9dea5027d770b89c2b00276"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetDelegate</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager_delegate.html#_CPPv4N4chip11DeviceLayer27ConnectivityManagerDelegateE" title="chip::DeviceLayer::ConnectivityManagerDelegate"><span class="n"><span class="pre">ConnectivityManagerDelegate</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">delegate</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager11SetDelegateEP27ConnectivityManagerDelegate" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4chip11DeviceLayer19ConnectivityManager11GetDelegateEv">
+<span id="_CPPv3NK4chip11DeviceLayer19ConnectivityManager11GetDelegateEv"></span><span id="_CPPv2NK4chip11DeviceLayer19ConnectivityManager11GetDelegateEv"></span><span id="chip::DeviceLayer::ConnectivityManager::GetDelegateC"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1af9379a18bb2c4225694675f62e88b793"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="classchip_1_1_device_layer_1_1_connectivity_manager_delegate.html#_CPPv4N4chip11DeviceLayer27ConnectivityManagerDelegateE" title="chip::DeviceLayer::ConnectivityManagerDelegate"><span class="n"><span class="pre">ConnectivityManagerDelegate</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetDelegate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4chip11DeviceLayer19ConnectivityManager11GetDelegateEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager18UDPEndPointManagerEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager18UDPEndPointManagerEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager18UDPEndPointManagerEv"></span><span id="chip::DeviceLayer::ConnectivityManager::UDPEndPointManager"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a71802f6c9d3b16c86bc3b3ed12a253f1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">chip</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Inet</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">EndPointManager</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Inet</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">UDPEndPoint</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">UDPEndPointManager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager18UDPEndPointManagerEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager18GetWiFiStationModeEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager18GetWiFiStationModeEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager18GetWiFiStationModeEv"></span><span id="chip::DeviceLayer::ConnectivityManager::GetWiFiStationMode"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1af6db947ffa3de629e85a56e07cadeba3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager15WiFiStationModeE" title="chip::DeviceLayer::ConnectivityManager::WiFiStationMode"><span class="n"><span class="pre">WiFiStationMode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetWiFiStationMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager18GetWiFiStationModeEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager18SetWiFiStationModeE15WiFiStationMode">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager18SetWiFiStationModeE15WiFiStationMode"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager18SetWiFiStationModeE15WiFiStationMode"></span><span id="chip::DeviceLayer::ConnectivityManager::SetWiFiStationMode__WiFiStationMode"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a5331b990a2cf17ffeccd22aa6f55dea5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetWiFiStationMode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager15WiFiStationModeE" title="chip::DeviceLayer::ConnectivityManager::WiFiStationMode"><span class="n"><span class="pre">WiFiStationMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager18SetWiFiStationModeE15WiFiStationMode" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager20IsWiFiStationEnabledEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager20IsWiFiStationEnabledEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager20IsWiFiStationEnabledEv"></span><span id="chip::DeviceLayer::ConnectivityManager::IsWiFiStationEnabled"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a2ad83c3e2fdeb3c6443a771c7d03cb5b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsWiFiStationEnabled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager20IsWiFiStationEnabledEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager34IsWiFiStationApplicationControlledEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager34IsWiFiStationApplicationControlledEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager34IsWiFiStationApplicationControlledEv"></span><span id="chip::DeviceLayer::ConnectivityManager::IsWiFiStationApplicationControlled"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ac90614d60d7b102860dff17ccc234cdf"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsWiFiStationApplicationControlled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager34IsWiFiStationApplicationControlledEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager22IsWiFiStationConnectedEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager22IsWiFiStationConnectedEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager22IsWiFiStationConnectedEv"></span><span id="chip::DeviceLayer::ConnectivityManager::IsWiFiStationConnected"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a1f5f1c0a63ef3b8ad489936b8d58948c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsWiFiStationConnected</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager22IsWiFiStationConnectedEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager31GetWiFiStationReconnectIntervalEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager31GetWiFiStationReconnectIntervalEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager31GetWiFiStationReconnectIntervalEv"></span><span id="chip::DeviceLayer::ConnectivityManager::GetWiFiStationReconnectInterval"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1aa0455d980e42c4a00ba7616f98a624b2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">System</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Clock</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Timeout</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetWiFiStationReconnectInterval</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager31GetWiFiStationReconnectIntervalEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager31SetWiFiStationReconnectIntervalEN6System5Clock7TimeoutE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager31SetWiFiStationReconnectIntervalEN6System5Clock7TimeoutE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager31SetWiFiStationReconnectIntervalEN6System5Clock7TimeoutE"></span><span id="chip::DeviceLayer::ConnectivityManager::SetWiFiStationReconnectInterval__System::Clock::Timeout"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a5bc9e22631bd091a47d4711cc3fec9ce"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetWiFiStationReconnectInterval</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">System</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Clock</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Timeout</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager31SetWiFiStationReconnectIntervalEN6System5Clock7TimeoutE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager24IsWiFiStationProvisionedEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager24IsWiFiStationProvisionedEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager24IsWiFiStationProvisionedEv"></span><span id="chip::DeviceLayer::ConnectivityManager::IsWiFiStationProvisioned"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a94b166b3178570e3551288ba0510d6f0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsWiFiStationProvisioned</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager24IsWiFiStationProvisionedEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager25ClearWiFiStationProvisionEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager25ClearWiFiStationProvisionEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager25ClearWiFiStationProvisionEv"></span><span id="chip::DeviceLayer::ConnectivityManager::ClearWiFiStationProvision"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1acc47309711b79a797c02933209b8da2b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ClearWiFiStationProvision</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager25ClearWiFiStationProvisionEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager26GetAndLogWiFiStatsCountersEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager26GetAndLogWiFiStatsCountersEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager26GetAndLogWiFiStatsCountersEv"></span><span id="chip::DeviceLayer::ConnectivityManager::GetAndLogWiFiStatsCounters"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1af96db085c75d92e651fbe11044c85fd6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetAndLogWiFiStatsCounters</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager26GetAndLogWiFiStatsCountersEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager13GetWiFiAPModeEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager13GetWiFiAPModeEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager13GetWiFiAPModeEv"></span><span id="chip::DeviceLayer::ConnectivityManager::GetWiFiAPMode"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1af1aa15abae6450323cfa4445a150e3d6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPModeE" title="chip::DeviceLayer::ConnectivityManager::WiFiAPMode"><span class="n"><span class="pre">WiFiAPMode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetWiFiAPMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager13GetWiFiAPModeEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager13SetWiFiAPModeE10WiFiAPMode">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager13SetWiFiAPModeE10WiFiAPMode"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager13SetWiFiAPModeE10WiFiAPMode"></span><span id="chip::DeviceLayer::ConnectivityManager::SetWiFiAPMode__WiFiAPMode"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a5e511c8147b2add3024276efef8d22ad"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetWiFiAPMode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPModeE" title="chip::DeviceLayer::ConnectivityManager::WiFiAPMode"><span class="n"><span class="pre">WiFiAPMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager13SetWiFiAPModeE10WiFiAPMode" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager14IsWiFiAPActiveEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager14IsWiFiAPActiveEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager14IsWiFiAPActiveEv"></span><span id="chip::DeviceLayer::ConnectivityManager::IsWiFiAPActive"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a14077697a5a181ed13f2517690a97826"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsWiFiAPActive</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager14IsWiFiAPActiveEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager29IsWiFiAPApplicationControlledEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager29IsWiFiAPApplicationControlledEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager29IsWiFiAPApplicationControlledEv"></span><span id="chip::DeviceLayer::ConnectivityManager::IsWiFiAPApplicationControlled"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a980fa898b0dcf75069f44189f46527de"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsWiFiAPApplicationControlled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager29IsWiFiAPApplicationControlledEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager17DemandStartWiFiAPEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager17DemandStartWiFiAPEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager17DemandStartWiFiAPEv"></span><span id="chip::DeviceLayer::ConnectivityManager::DemandStartWiFiAP"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a14e7fed53e726d148cd8c370c68770b6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DemandStartWiFiAP</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager17DemandStartWiFiAPEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager18StopOnDemandWiFiAPEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager18StopOnDemandWiFiAPEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager18StopOnDemandWiFiAPEv"></span><span id="chip::DeviceLayer::ConnectivityManager::StopOnDemandWiFiAP"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ab35cb518f5ef394bce811598041b4341"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StopOnDemandWiFiAP</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager18StopOnDemandWiFiAPEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager22MaintainOnDemandWiFiAPEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager22MaintainOnDemandWiFiAPEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager22MaintainOnDemandWiFiAPEv"></span><span id="chip::DeviceLayer::ConnectivityManager::MaintainOnDemandWiFiAP"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a7503a58bb2eda03df9cc13191dfa8b7d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MaintainOnDemandWiFiAP</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager22MaintainOnDemandWiFiAPEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager20GetWiFiAPIdleTimeoutEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager20GetWiFiAPIdleTimeoutEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager20GetWiFiAPIdleTimeoutEv"></span><span id="chip::DeviceLayer::ConnectivityManager::GetWiFiAPIdleTimeout"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a168cfa0f576e6ccb7270890a3928b5a9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">System</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Clock</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Timeout</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetWiFiAPIdleTimeout</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager20GetWiFiAPIdleTimeoutEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager20SetWiFiAPIdleTimeoutEN6System5Clock7TimeoutE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager20SetWiFiAPIdleTimeoutEN6System5Clock7TimeoutE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager20SetWiFiAPIdleTimeoutEN6System5Clock7TimeoutE"></span><span id="chip::DeviceLayer::ConnectivityManager::SetWiFiAPIdleTimeout__System::Clock::Timeout"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a74607d6dff2db2716cf805d83a7f1310"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetWiFiAPIdleTimeout</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">System</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Clock</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Timeout</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager20SetWiFiAPIdleTimeoutEN6System5Clock7TimeoutE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager13GetThreadModeEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager13GetThreadModeEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager13GetThreadModeEv"></span><span id="chip::DeviceLayer::ConnectivityManager::GetThreadMode"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ac1617cbd8020a10c4ce5c4d518873d90"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10ThreadModeE" title="chip::DeviceLayer::ConnectivityManager::ThreadMode"><span class="n"><span class="pre">ThreadMode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetThreadMode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager13GetThreadModeEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager13SetThreadModeE10ThreadMode">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager13SetThreadModeE10ThreadMode"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager13SetThreadModeE10ThreadMode"></span><span id="chip::DeviceLayer::ConnectivityManager::SetThreadMode__ThreadMode"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a4c1c0012f7dd2d8a863c288480f06e6e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetThreadMode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10ThreadModeE" title="chip::DeviceLayer::ConnectivityManager::ThreadMode"><span class="n"><span class="pre">ThreadMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager13SetThreadModeE10ThreadMode" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager15IsThreadEnabledEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager15IsThreadEnabledEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager15IsThreadEnabledEv"></span><span id="chip::DeviceLayer::ConnectivityManager::IsThreadEnabled"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1aeb211e96d85219445b402df3ca5b9690"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsThreadEnabled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager15IsThreadEnabledEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager29IsThreadApplicationControlledEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager29IsThreadApplicationControlledEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager29IsThreadApplicationControlledEv"></span><span id="chip::DeviceLayer::ConnectivityManager::IsThreadApplicationControlled"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ad5026ae956a58871d2c4864e6de0444d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsThreadApplicationControlled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager29IsThreadApplicationControlledEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager19GetThreadDeviceTypeEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager19GetThreadDeviceTypeEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager19GetThreadDeviceTypeEv"></span><span id="chip::DeviceLayer::ConnectivityManager::GetThreadDeviceType"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a29db33eafac133dd0e4cd77bcc74abca"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceTypeE" title="chip::DeviceLayer::ConnectivityManager::ThreadDeviceType"><span class="n"><span class="pre">ThreadDeviceType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetThreadDeviceType</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager19GetThreadDeviceTypeEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager19SetThreadDeviceTypeE16ThreadDeviceType">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager19SetThreadDeviceTypeE16ThreadDeviceType"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager19SetThreadDeviceTypeE16ThreadDeviceType"></span><span id="chip::DeviceLayer::ConnectivityManager::SetThreadDeviceType__ThreadDeviceType"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a7d3895d4d4ea6f1e133c0297c0ac2139"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetThreadDeviceType</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16ThreadDeviceTypeE" title="chip::DeviceLayer::ConnectivityManager::ThreadDeviceType"><span class="n"><span class="pre">ThreadDeviceType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">deviceType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager19SetThreadDeviceTypeE16ThreadDeviceType" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16IsThreadAttachedEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16IsThreadAttachedEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16IsThreadAttachedEv"></span><span id="chip::DeviceLayer::ConnectivityManager::IsThreadAttached"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a0ac95729d727c9c843be57ff88a548c0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsThreadAttached</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16IsThreadAttachedEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager19IsThreadProvisionedEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager19IsThreadProvisionedEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager19IsThreadProvisionedEv"></span><span id="chip::DeviceLayer::ConnectivityManager::IsThreadProvisioned"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a7b5e64de37c46a0c369cf094437719be"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsThreadProvisioned</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager19IsThreadProvisionedEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager19ErasePersistentInfoEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager19ErasePersistentInfoEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager19ErasePersistentInfoEv"></span><span id="chip::DeviceLayer::ConnectivityManager::ErasePersistentInfo"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1aa275f39d735c0883066b0ee65b46da9f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ErasePersistentInfo</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager19ErasePersistentInfoEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager35ResetThreadNetworkDiagnosticsCountsEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager35ResetThreadNetworkDiagnosticsCountsEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager35ResetThreadNetworkDiagnosticsCountsEv"></span><span id="chip::DeviceLayer::ConnectivityManager::ResetThreadNetworkDiagnosticsCounts"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1af355076cac27cb8ff7547d7c543d021a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ResetThreadNetworkDiagnosticsCounts</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager35ResetThreadNetworkDiagnosticsCountsEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager42WriteThreadNetworkDiagnosticAttributeToTlvE11AttributeIdRN3app21AttributeValueEncoderE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager42WriteThreadNetworkDiagnosticAttributeToTlvE11AttributeIdRN3app21AttributeValueEncoderE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager42WriteThreadNetworkDiagnosticAttributeToTlvE11AttributeIdRN3app21AttributeValueEncoderE"></span><span id="chip::DeviceLayer::ConnectivityManager::WriteThreadNetworkDiagnosticAttributeToTlv__AttributeId.app::AttributeValueEncoderR"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1accfc5128e113b119e8ed3a60a9f75d3f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WriteThreadNetworkDiagnosticAttributeToTlv</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">AttributeId</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">attributeId</span></span>, <span class="n"><span class="pre">app</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AttributeValueEncoder</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">encoder</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager42WriteThreadNetworkDiagnosticAttributeToTlvE11AttributeIdRN3app21AttributeValueEncoderE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager11GetBleLayerEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager11GetBleLayerEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager11GetBleLayerEv"></span><span id="chip::DeviceLayer::ConnectivityManager::GetBleLayer"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a810834e8f952859c906a4a2732105171"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">Ble</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BleLayer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetBleLayer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager11GetBleLayerEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager23IsBLEAdvertisingEnabledEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager23IsBLEAdvertisingEnabledEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager23IsBLEAdvertisingEnabledEv"></span><span id="chip::DeviceLayer::ConnectivityManager::IsBLEAdvertisingEnabled"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a9ffa7fa0d968c8c1e6eb950e8368acec"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsBLEAdvertisingEnabled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager23IsBLEAdvertisingEnabledEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager24SetBLEAdvertisingEnabledEb">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager24SetBLEAdvertisingEnabledEb"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager24SetBLEAdvertisingEnabledEb"></span><span id="chip::DeviceLayer::ConnectivityManager::SetBLEAdvertisingEnabled__b"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a2f50ad9f26bbf4353f1c62a04cb1377a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetBLEAdvertisingEnabled</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager24SetBLEAdvertisingEnabledEb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Enable or disable BLE advertising.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>CHIP_ERROR_UNSUPPORTED_CHIP_FEATURE if BLE advertising is not supported or other error on other failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16IsBLEAdvertisingEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16IsBLEAdvertisingEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16IsBLEAdvertisingEv"></span><span id="chip::DeviceLayer::ConnectivityManager::IsBLEAdvertising"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a6dba1fdad0c465d4e24015330c684fd6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsBLEAdvertising</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16IsBLEAdvertisingEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager21SetBLEAdvertisingModeE18BLEAdvertisingMode">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager21SetBLEAdvertisingModeE18BLEAdvertisingMode"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager21SetBLEAdvertisingModeE18BLEAdvertisingMode"></span><span id="chip::DeviceLayer::ConnectivityManager::SetBLEAdvertisingMode__BLEAdvertisingMode"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1ad757e469dd14e11eae45912a456b8160"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetBLEAdvertisingMode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager18BLEAdvertisingModeE" title="chip::DeviceLayer::ConnectivityManager::BLEAdvertisingMode"><span class="n"><span class="pre">BLEAdvertisingMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager21SetBLEAdvertisingModeE18BLEAdvertisingMode" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16GetBLEDeviceNameEPc6size_t">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16GetBLEDeviceNameEPc6size_t"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16GetBLEDeviceNameEPc6size_t"></span><span id="chip::DeviceLayer::ConnectivityManager::GetBLEDeviceName__cP.s"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1aefbd1e2ee9f8cd0a38e2819880d3c165"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetBLEDeviceName</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buf</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bufSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16GetBLEDeviceNameEPc6size_t" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16SetBLEDeviceNameEPKc">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16SetBLEDeviceNameEPKc"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16SetBLEDeviceNameEPKc"></span><span id="chip::DeviceLayer::ConnectivityManager::SetBLEDeviceName__cCP"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1abeb325cda71eda3f4e514fcbb28290f6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">CHIP_ERROR</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetBLEDeviceName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">deviceName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16SetBLEDeviceNameEPKc" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager17NumBLEConnectionsEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager17NumBLEConnectionsEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager17NumBLEConnectionsEv"></span><span id="chip::DeviceLayer::ConnectivityManager::NumBLEConnections"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a6b36dc7d6421afc6743020a20f76df2d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NumBLEConnections</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager17NumBLEConnectionsEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager24IsUserSelectedModeActiveEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager24IsUserSelectedModeActiveEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager24IsUserSelectedModeActiveEv"></span><span id="chip::DeviceLayer::ConnectivityManager::IsUserSelectedModeActive"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a6708d9c709fc3532b36d38f5aa40a35a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsUserSelectedModeActive</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager24IsUserSelectedModeActiveEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager19SetUserSelectedModeEb">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager19SetUserSelectedModeEb"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager19SetUserSelectedModeEb"></span><span id="chip::DeviceLayer::ConnectivityManager::SetUserSelectedMode__b"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1aadedd1227161f5f1c5f2ef504be93b2b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetUserSelectedMode</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager19SetUserSelectedModeEb" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager26GetUserSelectedModeTimeoutEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager26GetUserSelectedModeTimeoutEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager26GetUserSelectedModeTimeoutEv"></span><span id="chip::DeviceLayer::ConnectivityManager::GetUserSelectedModeTimeout"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a972bfb216054143c4233ddcd0a1371fb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetUserSelectedModeTimeout</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager26GetUserSelectedModeTimeoutEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager26SetUserSelectedModeTimeoutE8uint16_t">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager26SetUserSelectedModeTimeoutE8uint16_t"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager26SetUserSelectedModeTimeoutE8uint16_t"></span><span id="chip::DeviceLayer::ConnectivityManager::SetUserSelectedModeTimeout__uint16_t"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1abfc893ed9ad939a39fe8cdc71dddc24a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SetUserSelectedModeTimeout</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager26SetUserSelectedModeTimeoutE8uint16_t" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager20WiFiStationModeToStrE15WiFiStationMode">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager20WiFiStationModeToStrE15WiFiStationMode"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager20WiFiStationModeToStrE15WiFiStationMode"></span><span id="chip::DeviceLayer::ConnectivityManager::WiFiStationModeToStr__WiFiStationMode"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a57d8be43566dd6d1f900edc96223cd8e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">WiFiStationModeToStr</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager15WiFiStationModeE" title="chip::DeviceLayer::ConnectivityManager::WiFiStationMode"><span class="n"><span class="pre">WiFiStationMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager20WiFiStationModeToStrE15WiFiStationMode" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager15WiFiAPModeToStrE10WiFiAPMode">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager15WiFiAPModeToStrE10WiFiAPMode"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager15WiFiAPModeToStrE10WiFiAPMode"></span><span id="chip::DeviceLayer::ConnectivityManager::WiFiAPModeToStr__WiFiAPMode"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a64d333f2db31385ed5f009f27abe7473"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">WiFiAPModeToStr</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager10WiFiAPModeE" title="chip::DeviceLayer::ConnectivityManager::WiFiAPMode"><span class="n"><span class="pre">WiFiAPMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager15WiFiAPModeToStrE10WiFiAPMode" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager21WiFiStationStateToStrE16WiFiStationState">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager21WiFiStationStateToStrE16WiFiStationState"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager21WiFiStationStateToStrE16WiFiStationState"></span><span id="chip::DeviceLayer::ConnectivityManager::WiFiStationStateToStr__WiFiStationState"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1acac39af5bfc96a4f2d200b39559ed9fa"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">WiFiStationStateToStr</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiStationStateE" title="chip::DeviceLayer::ConnectivityManager::WiFiStationState"><span class="n"><span class="pre">WiFiStationState</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager21WiFiStationStateToStrE16WiFiStationState" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiAPStateToStrE11WiFiAPState">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager16WiFiAPStateToStrE11WiFiAPState"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager16WiFiAPStateToStrE11WiFiAPState"></span><span id="chip::DeviceLayer::ConnectivityManager::WiFiAPStateToStr__WiFiAPState"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1aa92fb01b1af877583963babff28e31da"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">WiFiAPStateToStr</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager11WiFiAPStateE" title="chip::DeviceLayer::ConnectivityManager::WiFiAPState"><span class="n"><span class="pre">WiFiAPState</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager16WiFiAPStateToStrE11WiFiAPState" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager24CHIPoBLEServiceModeToStrE19CHIPoBLEServiceMode">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager24CHIPoBLEServiceModeToStrE19CHIPoBLEServiceMode"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager24CHIPoBLEServiceModeToStrE19CHIPoBLEServiceMode"></span><span id="chip::DeviceLayer::ConnectivityManager::CHIPoBLEServiceModeToStr__CHIPoBLEServiceMode"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a1b29d4f3c8962c58f7b5b673dfe2f697"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">CHIPoBLEServiceModeToStr</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager19CHIPoBLEServiceModeE" title="chip::DeviceLayer::ConnectivityManager::CHIPoBLEServiceMode"><span class="n"><span class="pre">CHIPoBLEServiceMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager24CHIPoBLEServiceModeToStrE19CHIPoBLEServiceMode" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager19ConnectivityManagerEv">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager19ConnectivityManagerEv"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager19ConnectivityManagerEv"></span><span id="chip::DeviceLayer::ConnectivityManager::ConnectivityManager"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1abd8f991b382c72693129f2affb966227"></span><span class="sig-name descname"><span class="n"><span class="pre">ConnectivityManager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager19ConnectivityManagerEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManagerD0Ev">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManagerD0Ev"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManagerD0Ev"></span><span id="chip::DeviceLayer::ConnectivityManager::~ConnectivityManager"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a6d6d2cd50fc790669993cb13ba725e03"></span><span class="sig-name descname"><span class="n"><span class="pre">~ConnectivityManager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManagerD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager19ConnectivityManagerERK19ConnectivityManager">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager19ConnectivityManagerERK19ConnectivityManager"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager19ConnectivityManagerERK19ConnectivityManager"></span><span id="chip::DeviceLayer::ConnectivityManager::ConnectivityManager__ConnectivityManagerCR"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a3ff78d454af0be515aadc42115957239"></span><span class="sig-name descname"><span class="n"><span class="pre">ConnectivityManager</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager19ConnectivityManagerERK19ConnectivityManager" title="chip::DeviceLayer::ConnectivityManager::ConnectivityManager"><span class="n"><span class="pre">ConnectivityManager</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager19ConnectivityManagerERK19ConnectivityManager" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager19ConnectivityManagerERRK19ConnectivityManager">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager19ConnectivityManagerERRK19ConnectivityManager"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager19ConnectivityManagerERRK19ConnectivityManager"></span><span id="chip::DeviceLayer::ConnectivityManager::ConnectivityManager__ConnectivityManagerCRR"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1a687eeabb790ba7fbcf87c10ed2fd7011"></span><span class="sig-name descname"><span class="n"><span class="pre">ConnectivityManager</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager19ConnectivityManagerERRK19ConnectivityManager" title="chip::DeviceLayer::ConnectivityManager::ConnectivityManager"><span class="n"><span class="pre">ConnectivityManager</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager19ConnectivityManagerERRK19ConnectivityManager" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManageraSERK19ConnectivityManager">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManageraSERK19ConnectivityManager"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManageraSERK19ConnectivityManager"></span><span id="chip::DeviceLayer::ConnectivityManager::assign-operator__ConnectivityManagerCR"></span><span class="target" id="classchip_1_1_device_layer_1_1_connectivity_manager_1af50494f496921e20875058c0f58a613c"></span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManagerE" title="chip::DeviceLayer::ConnectivityManager"><span class="n"><span class="pre">ConnectivityManager</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManagerE" title="chip::DeviceLayer::ConnectivityManager"><span class="n"><span class="pre">ConnectivityManager</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManageraSERK19ConnectivityManager" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">Internal::GenericPlatformManagerImpl</span></dt>
+</dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">Internal::GenericPlatformManagerImpl_FreeRTOS</span></dt>
+</dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">Internal::GenericPlatformManagerImpl_POSIX</span></dt>
+</dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager18SEDIntervalsConfigE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager18SEDIntervalsConfigE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager18SEDIntervalsConfigE"></span><span id="chip::DeviceLayer::ConnectivityManager::SEDIntervalsConfig"></span><span class="target" id="structchip_1_1_device_layer_1_1_connectivity_manager_1_1_s_e_d_intervals_config"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEDIntervalsConfig</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager18SEDIntervalsConfigE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Information describing the desired intervals for a sleepy end device (SED). </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager18SEDIntervalsConfig16ActiveIntervalMSE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager18SEDIntervalsConfig16ActiveIntervalMSE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager18SEDIntervalsConfig16ActiveIntervalMSE"></span><span id="chip::DeviceLayer::ConnectivityManager::SEDIntervalsConfig::ActiveIntervalMS__System::Clock::Milliseconds32"></span><span class="target" id="structchip_1_1_device_layer_1_1_connectivity_manager_1_1_s_e_d_intervals_config_1abd339dbba91ce747adc35deed3833313"></span><span class="n"><span class="pre">System</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Clock</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Milliseconds32</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ActiveIntervalMS</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager18SEDIntervalsConfig16ActiveIntervalMSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Interval at which the device is able to communicate with its parent when there are active chip exchanges in progress. Only meaningful when the device is acting as a sleepy end node. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4chip11DeviceLayer19ConnectivityManager18SEDIntervalsConfig14IdleIntervalMSE">
+<span id="_CPPv3N4chip11DeviceLayer19ConnectivityManager18SEDIntervalsConfig14IdleIntervalMSE"></span><span id="_CPPv2N4chip11DeviceLayer19ConnectivityManager18SEDIntervalsConfig14IdleIntervalMSE"></span><span id="chip::DeviceLayer::ConnectivityManager::SEDIntervalsConfig::IdleIntervalMS__System::Clock::Milliseconds32"></span><span class="target" id="structchip_1_1_device_layer_1_1_connectivity_manager_1_1_s_e_d_intervals_config_1a58a2a4d2eda19452b2b519dbda7b8f70"></span><span class="n"><span class="pre">System</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Clock</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Milliseconds32</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IdleIntervalMS</span></span></span><a class="headerlink" href="#_CPPv4N4chip11DeviceLayer19ConnectivityManager18SEDIntervalsConfig14IdleIntervalMSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Interval at which the device is able to communicate with its parent when there are NO active chip exchanges in progress. Only meaningful when the device is acting as a sleepy end node. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classchip_1_1_device_layer_1_1_configuration_manager.html" class="btn btn-neutral float-left" title="Class ConfigurationManager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classchip_1_1_device_layer_1_1_connectivity_manager_delegate.html" class="btn btn-neutral float-right" title="Class ConnectivityManagerDelegate" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Silicon Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+.. _exhale_define__build_time_8h_1a21157681a8341eeb8800af48c2b7384a:
+
+Define COMPUTE_BUILD_HOUR
+=========================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_BuildTime.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: COMPUTE_BUILD_HOUR
+   :project: My Project

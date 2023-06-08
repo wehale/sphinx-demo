@@ -1,0 +1,17 @@
+.. _exhale_class_classchip_1_1_device_layer_1_1_internal_1_1_generic_connectivity_manager_impl___wi_fi:
+
+Template Class GenericConnectivityManagerImpl_WiFi
+==================================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_internal_GenericConnectivityManagerImpl_WiFi.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: chip::DeviceLayer::Internal::GenericConnectivityManagerImpl_WiFi
+   :project: My Project
+   :members:
+   :protected-members:
+   :undoc-members:

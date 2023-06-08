@@ -1,0 +1,14 @@
+.. _exhale_function__c_h_i_p_device_layer_8h_1a2080ac596bc249e14f562f1261f854b0:
+
+Function chip::DeviceLayer::UDPEndPointManager
+==============================================
+
+- Defined in :ref:`file__Users_wehale_git_matter-stash_src_include_platform_CHIPDeviceLayer.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: chip::DeviceLayer::UDPEndPointManager()
+   :project: My Project
