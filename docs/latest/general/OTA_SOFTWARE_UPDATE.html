@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matter Software Update with EFR32 Example Applications &mdash; Silicon Labs Matter 2.1.0-1.1 documentation</title>
+  <title>Matter Software Update with EFR32 Example Applications &mdash; Matter 2.1.0-1.1 2.1.0-1.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -13,10 +13,11 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -33,7 +34,8 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Silicon Labs Matter
+            Matter 2.1.0-1.1
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -77,7 +79,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: dark blue" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Silicon Labs Matter</a>
+          <a href="../index.html">Matter 2.1.0-1.1</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -96,13 +98,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="matter-software-update-with-efr32-example-applications">
-<h1>Matter Software Update with EFR32 Example Applications<a class="headerlink" href="#matter-software-update-with-efr32-example-applications" title="Permalink to this headline"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="matter-software-update-with-efr32-example-applications">
+<h1>Matter Software Update with EFR32 Example Applications<a class="headerlink" href="#matter-software-update-with-efr32-example-applications" title="Permalink to this heading"></a></h1>
 <p>The Over The Air (OTA) Software Update functionality is enabled by default for
 all of the EFR32 example applications. Its inclusion in an application is
 controlled by the <code class="docutils literal notranslate"><span class="pre">chip_enable_ota_requestor</span></code> compile flag.</p>
 <section id="running-the-ota-download-scenario">
-<h2>Running the OTA Download Scenario<a class="headerlink" href="#running-the-ota-download-scenario" title="Permalink to this headline"></a></h2>
+<h2>Running the OTA Download Scenario<a class="headerlink" href="#running-the-ota-download-scenario" title="Permalink to this heading"></a></h2>
 <ul>
 <li><p>For Matter with OpenThread: Bring up the OpenThread Border Router as
 discussed in <a class="reference internal" href="../thread/DEMO_OVERVIEW.html"><span class="std std-doc">Thread Demo Overview</span></a> and get its operational
@@ -122,7 +124,7 @@ bootloader using the external flash select the “external SPI” bootloader
 type configured with a single slot of at least 1000 KB. For the bootloader
 using the internal flash see the Internal Storage Bootloader section below.
 Pre-built binaries for some configurations are available on the
-<a class="reference internal" href="ARTIFACTS.html"><span class="std std-doc">Matter Artifacts page</span></a>, see README.md for details.</p></li>
+<a class="reference internal" href="ARTIFACTS.html"><span class="std std-doc">Matter Artifacts page</span></a>, see <a class="reference external" href="http://README.md">README.md</a> for details.</p></li>
 <li><p>Using the commander tool, upload the bootloader to the device running the
 application.</p></li>
 <li><p>Create a bootable image file (using the Lighting application image as an
@@ -171,7 +173,7 @@ downloaded image.</p></li>
 </ul>
 </section>
 <section id="internal-storage-bootloader">
-<h2>Internal Storage Bootloader<a class="headerlink" href="#internal-storage-bootloader" title="Permalink to this headline"></a></h2>
+<h2>Internal Storage Bootloader<a class="headerlink" href="#internal-storage-bootloader" title="Permalink to this heading"></a></h2>
 <p>Internal storage bootloader for Matter OTA software update is supported on MG24
 boards only. In this use case both the running image and the downloadable update
 image must fit on the internal flash at the same time. This in turn requires
@@ -203,7 +205,7 @@ Silicon Labs <code class="docutils literal notranslate"><span class="pre">Simpli
 0x080EC000 and slot size of 548864</p>
 </section>
 <section id="managing-the-software-version">
-<h2>Managing the Software Version<a class="headerlink" href="#managing-the-software-version" title="Permalink to this headline"></a></h2>
+<h2>Managing the Software Version<a class="headerlink" href="#managing-the-software-version" title="Permalink to this heading"></a></h2>
 <p>In order for the Provider to successfully serve the image to a device during the
 OTA Software Update process the Software Version parameter that the .ota file
 was built with must be greater than the
@@ -221,7 +223,7 @@ for the update must be built with CHIP_DEVICE_CONFIG_DEVICE_SOFTWARE_VERSION set
 to 2).</p>
 </section>
 <section id="managing-the-vendor-and-product-id">
-<h2>Managing the Vendor and Product ID<a class="headerlink" href="#managing-the-vendor-and-product-id" title="Permalink to this headline"></a></h2>
+<h2>Managing the Vendor and Product ID<a class="headerlink" href="#managing-the-vendor-and-product-id" title="Permalink to this heading"></a></h2>
 <p>Starting the ota-provider-app with the –otaImageList command line option allows
 the user to supply a JSON file specifying the Software Version, Vendor and
 Product ID that identify the image served by the Provider, see
@@ -239,7 +241,7 @@ Product ID that identify the image served by the Provider, see
 </div>
 </section>
 <section id="additional-info">
-<h2>Additional Info<a class="headerlink" href="#additional-info" title="Permalink to this headline"></a></h2>
+<h2>Additional Info<a class="headerlink" href="#additional-info" title="Permalink to this heading"></a></h2>
 <p>Developers can find more resources on
 <a class="reference external" href="https://community.silabs.com/s/article/connected-home-over-ip-chip-faq?language=en_US">Silicon Labs Matter Community Page</a>
 .</p>

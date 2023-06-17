@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Using the Pre-Built Rasberry Pi “Matter Hub” Image &mdash; Silicon Labs Matter 2.1.0-1.1 documentation</title>
+  <title>Using the Pre-Built Rasberry Pi “Matter Hub” Image &mdash; Matter 2.1.0-1.1 2.1.0-1.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -13,10 +13,11 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -33,7 +34,8 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Silicon Labs Matter
+            Matter 2.1.0-1.1
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -92,7 +94,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: dark blue" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Silicon Labs Matter</a>
+          <a href="../index.html">Matter 2.1.0-1.1</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -111,15 +113,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="using-the-pre-built-rasberry-pi-matter-hub-image">
-<h1>Using the Pre-Built Rasberry Pi “Matter Hub” Image<a class="headerlink" href="#using-the-pre-built-rasberry-pi-matter-hub-image" title="Permalink to this headline"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="using-the-pre-built-rasberry-pi-matter-hub-image">
+<h1>Using the Pre-Built Rasberry Pi “Matter Hub” Image<a class="headerlink" href="#using-the-pre-built-rasberry-pi-matter-hub-image" title="Permalink to this heading"></a></h1>
 <p>When using a Raspberry Pi as a controller in your Matter network you have two
 options</p>
 </section>
-<section id="building-environment-using-raspberry-pi-4">
-<h1>Building Environment using Raspberry Pi 4<a class="headerlink" href="#building-environment-using-raspberry-pi-4" title="Permalink to this headline"></a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="building-environment-using-raspberry-pi-4">
+<h1>Building Environment using Raspberry Pi 4<a class="headerlink" href="#building-environment-using-raspberry-pi-4" title="Permalink to this heading"></a></h1>
 <section id="to-flash-the-ubuntu-os-onto-the-sd-card">
-<h2>To flash the Ubuntu OS onto the SD card:<a class="headerlink" href="#to-flash-the-ubuntu-os-onto-the-sd-card" title="Permalink to this headline"></a></h2>
+<h2>To flash the Ubuntu OS onto the SD card:<a class="headerlink" href="#to-flash-the-ubuntu-os-onto-the-sd-card" title="Permalink to this heading"></a></h2>
 <ol class="arabic">
 <li><p>Insert the flashed SD card (directly or using a card reader) into the
 laptop/PC that will run the Raspberry Pi Imager tool.</p></li>
@@ -148,11 +150,11 @@ on the SD card. It will then start flashing the OS onto the SD card.</p></li>
 shown below:</p></li>
 </ol>
 <!-- ![Inserting SD into Pi](images/sd_into_pi.png) -->
-<img src="images/sd_into_pi.png" alt="Inserting SD into Pi" width="550"/>
+<a class="reference internal image-reference" href="../_images/sd_into_pi.png"><img alt="Inserting SD into Pi" src="../_images/sd_into_pi.png" style="width: 550px;" /></a>
 <p>On powering up the board, the red and green lights should start blinking.</p>
 </section>
 <section id="to-start-using-the-raspberry-pi">
-<h2>To start using the Raspberry Pi:<a class="headerlink" href="#to-start-using-the-raspberry-pi" title="Permalink to this headline"></a></h2>
+<h2>To start using the Raspberry Pi:<a class="headerlink" href="#to-start-using-the-raspberry-pi" title="Permalink to this heading"></a></h2>
 <ol class="arabic">
 <li><p>Use this <a class="reference internal" href="../general/FIND_RASPI.html"><span class="std std-doc">reference</span></a> to find the IP address of your Raspberry Pi.</p></li>
 <li><p>Once you find the IP address, launch Putty, select <code class="docutils literal notranslate"><span class="pre">Session</span></code>, enter the IP
@@ -182,7 +184,7 @@ $<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>
 </ol>
 </section>
 <section id="build-environment">
-<h2>Build Environment<a class="headerlink" href="#build-environment" title="Permalink to this headline"></a></h2>
+<h2>Build Environment<a class="headerlink" href="#build-environment" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Installing prerequisites on Raspberry Pi 4
 Follow the instructions in
@@ -193,7 +195,7 @@ in the section “Installing prerequisites on Raspberry Pi
 </ol>
 </section>
 <section id="bluetooth-setup">
-<h2>Bluetooth Setup<a class="headerlink" href="#bluetooth-setup" title="Permalink to this headline"></a></h2>
+<h2>Bluetooth Setup<a class="headerlink" href="#bluetooth-setup" title="Permalink to this heading"></a></h2>
 <p>Make sure Bluetooth LE (BLE) is up and running on Raspberry Pi. Raspberry Pi internally has
 some issues with BLE that may cause it to crash. Because BLE is used for
 commissioning on Matter, make sure BLE is running.</p>

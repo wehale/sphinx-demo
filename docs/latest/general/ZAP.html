@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZCL Advanced Platform (ZAP) Tool for Matter &mdash; Silicon Labs Matter 2.1.0-1.1 documentation</title>
+  <title>ZCL Advanced Platform (ZAP) Tool for Matter &mdash; Matter 2.1.0-1.1 2.1.0-1.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -13,10 +13,11 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -33,7 +34,8 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Silicon Labs Matter
+            Matter 2.1.0-1.1
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -85,7 +87,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: dark blue" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Silicon Labs Matter</a>
+          <a href="../index.html">Matter 2.1.0-1.1</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -104,10 +106,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="zcl-advanced-platform-zap-tool-for-matter">
-<h1>ZCL Advanced Platform (ZAP) Tool for Matter<a class="headerlink" href="#zcl-advanced-platform-zap-tool-for-matter" title="Permalink to this headline"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="zcl-advanced-platform-zap-tool-for-matter">
+<h1>ZCL Advanced Platform (ZAP) Tool for Matter<a class="headerlink" href="#zcl-advanced-platform-zap-tool-for-matter" title="Permalink to this heading"></a></h1>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>EFR32 example applications provide a baseline demonstration of a lock device,
 built using the Matter SDK and the Silicon Labs GeckoSDK. It can be controlled
 by a CHIP controller over Openthread network.</p>
@@ -151,7 +153,7 @@ schedules</p></li>
 <br>
 </section>
 <section id="clusters">
-<h2>Clusters<a class="headerlink" href="#clusters" title="Permalink to this headline"></a></h2>
+<h2>Clusters<a class="headerlink" href="#clusters" title="Permalink to this heading"></a></h2>
 <p>Every Matter Application uses multiple clusters leveraged from the Zigbee
 Cluster Library(ZCL). A cluster can be seen as a building block for the Data
 Model of a Matter application. Clusters contains attributes, commands, and
@@ -168,7 +170,7 @@ manufacturer. For example, the storage and management of users and credentials i
 the lock-app is left up to the application developer.</p>
 </section>
 <section id="zap-tool">
-<h2>ZAP Tool<a class="headerlink" href="#zap-tool" title="Permalink to this headline"></a></h2>
+<h2>ZAP Tool<a class="headerlink" href="#zap-tool" title="Permalink to this heading"></a></h2>
 <p>The ZAP tool is built and maintained by Silicon Labs and developers in the ZAP
 opensource community. It inherits its name and features from the Zigbee Cluster
 Library, which was the starting point for the Matter data model. ZAP is used for
@@ -218,7 +220,7 @@ Endpoint 0. Examples of clusters one might find in Endpoint 0: Device Descriptor
 cluster, Network Diagnostics cluster.</p>
 <p>Endpoint 1 contains information specific to the device type. Conveniently, the
 ZAP tool offers a Door lock cluster, which contains Commands(lock, unlock, set
-credential, etc..) and Attributes(Lock state, Require PIN) that a standard door
+credential, etc…) and Attributes(Lock state, Require PIN) that a standard door
 lock application might use.</p>
 <p>More endpoints can be added. Each endpoint acts like a port on a network
 interface.</p>
@@ -233,7 +235,7 @@ cluster should already be enabled as “Server”.</p>
 <br>
 </section>
 <section id="attributes">
-<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline"></a></h2>
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h2>
 <p>Attributes are analogous to member variables of a class. Each attribute is
 provided with generated setter/getter code from the ZAP tool. They can be
 enabled or disabled for each cluster on a Matter endpoint. Some attributes are
@@ -249,7 +251,7 @@ a default value for attributes, commands and events for Endpoint 1.</p>
 <br>
 </section>
 <section id="commands">
-<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline"></a></h2>
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this heading"></a></h2>
 <p>Commands can be enabled/disabled like attributes. Some commands are required for
 an application to function properly. Many of the functions run when a command is
 received are implemented on the server side. But some of these are left up to
@@ -260,7 +262,7 @@ store these differently.</p>
 <br>
 </section>
 <section id="generation-of-code">
-<h2>Generation of Code<a class="headerlink" href="#generation-of-code" title="Permalink to this headline"></a></h2>
+<h2>Generation of Code<a class="headerlink" href="#generation-of-code" title="Permalink to this heading"></a></h2>
 <p>Once you have chosen the cluster options, save the current ZAP configuration using the application menu in the upper left corner.</p>
 <p>Before v1.1.0-1.1 you needed to click the Generate button to generate code. Now, code is generated automatically in the save function. You will be prompted to choose a save location for the generated ZAP code. In the Silicon Labs Matter repository, the lock-app generated files belong in
 matter/zzz_generated/lock-app/zap-generated .</p>

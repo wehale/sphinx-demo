@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matter Sleepy End Devices over Wi-Fi &mdash; Silicon Labs Matter 2.1.0-1.1 documentation</title>
+  <title>Matter Sleepy End Devices over Wi-Fi &mdash; Matter 2.1.0-1.1 2.1.0-1.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -13,10 +13,11 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -33,7 +34,8 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Silicon Labs Matter
+            Matter 2.1.0-1.1
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -91,7 +93,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: dark blue" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Silicon Labs Matter</a>
+          <a href="../index.html">Matter 2.1.0-1.1</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -110,11 +112,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="matter-sleepy-end-devices-over-wi-fi">
-<h1>Matter Sleepy End Devices over Wi-Fi<a class="headerlink" href="#matter-sleepy-end-devices-over-wi-fi" title="Permalink to this headline"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="matter-sleepy-end-devices-over-wi-fi">
+<h1>Matter Sleepy End Devices over Wi-Fi<a class="headerlink" href="#matter-sleepy-end-devices-over-wi-fi" title="Permalink to this heading"></a></h1>
 <p>This page explains how Matter Wi-Fi Sleepy End devices (SEDs) work and how to configure a Matter Wi-Fi SED example.</p>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>Matter provides a Sleepy End Device (SED) operating mode to extend the battery life of a power-limited devices. This operating mode leverages native Wi-Fi functionality to enhance the power management features provided within the Matter protocol.</p>
 <p>Wi-Fi module power saving is achieved by the Wi-Fi Station notifying the Access Point (AP) that it is entering its power save (PS) mode. Afterwards, the Wi-Fi station will shut down its RF and Wi-Fi SoC blocks to enter power saving mode.</p>
 <p>The Access Point (AP) buffers the frames destined to a Wi-Fi station while it is in power save mode. The Access Point (AP) will send the buffered frames to the Wi-Fi station when requested to do so.</p>
@@ -128,14 +130,14 @@
 </div></blockquote>
 </section>
 <section id="power-save-methods">
-<h2>Power Save Methods<a class="headerlink" href="#power-save-methods" title="Permalink to this headline"></a></h2>
+<h2>Power Save Methods<a class="headerlink" href="#power-save-methods" title="Permalink to this heading"></a></h2>
 <section id="deep-sleep-power-save-mode-for-efr32">
-<h3>Deep Sleep Power Save Mode for EFR32<a class="headerlink" href="#deep-sleep-power-save-mode-for-efr32" title="Permalink to this headline"></a></h3>
+<h3>Deep Sleep Power Save Mode for EFR32<a class="headerlink" href="#deep-sleep-power-save-mode-for-efr32" title="Permalink to this heading"></a></h3>
 <p>The EFR32 will go into deep sleep (EM2) power save mode by using the power manager module. The power manager is used to transition the system to a power mode when the application is the Idle Task.</p>
 <p>In EM2 energy mode, all high frequency clock sources are shut down. Peripherals that require a high frequency clock are unavailable or have limited functionality.</p>
 </section>
 <section id="ps-poll-legacy-power-save-for-wi-fi-module">
-<h3>PS-Poll Legacy Power Save for Wi-Fi Module<a class="headerlink" href="#ps-poll-legacy-power-save-for-wi-fi-module" title="Permalink to this headline"></a></h3>
+<h3>PS-Poll Legacy Power Save for Wi-Fi Module<a class="headerlink" href="#ps-poll-legacy-power-save-for-wi-fi-module" title="Permalink to this heading"></a></h3>
 <p>The PS-Poll Legacy power save mode leverages the PS-Poll frame to retrieve the buffered frames from the Access Point (AP). The PS-Poll frame is a short Control Frame containing the Association Identifier (AID) value of the Wi-Fi station.
 In the Legacy power save mode, when the Wi-Fi station receives a beacon with its Association Identifier (AID) in the TIM element, it initiates the buffered frame delivery by transmitting a PS-POLL control frame to the Access Point (AP).
 The AP acknowledges the PS-Poll frame and responds with a single buffered frame.</p>
@@ -146,7 +148,7 @@ The Wi-Fi station continues to retrieve buffered frames using the PS-Poll frame 
 When it detects that the Traffic Indication Map (TIM) field for it has been set, it sends a PS-Poll control frame to the AP.</p>
 </section>
 <section id="delivery-traffic-indication-message-dtim">
-<h3>Delivery Traffic Indication Message (DTIM)<a class="headerlink" href="#delivery-traffic-indication-message-dtim" title="Permalink to this headline"></a></h3>
+<h3>Delivery Traffic Indication Message (DTIM)<a class="headerlink" href="#delivery-traffic-indication-message-dtim" title="Permalink to this heading"></a></h3>
 <p>A Wi-Fi station in DTIM Power Save mode can wake at any time to transmit uplink traffic, but can only receive downlink traffic (broadcast, multicast or unicast) immediately after receiving a DTIM beacon.
 In order to inform the Wi-Fi station in Power Save mode that the access point has buffered downlink traffic, the access point uses the Traffic Indication Map element present in the beacon frames.
 The Wi-Fi station in Power Save mode wakes up to receive the DTIM beacon and checks the status of the TIM element. This element indicates whether any frames need to be retrieved from the Access Point (AP).</p>
@@ -156,9 +158,9 @@ The Wi-Fi station in Power Save mode wakes up to receive the DTIM beacon and che
 </section>
 </section>
 <section id="building">
-<h2>Building<a class="headerlink" href="#building" title="Permalink to this headline"></a></h2>
+<h2>Building<a class="headerlink" href="#building" title="Permalink to this heading"></a></h2>
 <section id="enabling-sleepy-functionalities">
-<h3>Enabling Sleepy Functionalities<a class="headerlink" href="#enabling-sleepy-functionalities" title="Permalink to this headline"></a></h3>
+<h3>Enabling Sleepy Functionalities<a class="headerlink" href="#enabling-sleepy-functionalities" title="Permalink to this heading"></a></h3>
 <p>To enable sleepy functionality, the <code class="docutils literal notranslate"><span class="pre">enable_sleepy_device</span></code> build argument needs to be set to true. It will enable the following macro: <code class="docutils literal notranslate"><span class="pre">CHIP_DEVICE_CONFIG_ENABLE_SED</span></code></p>
 <p>Here is an example to build the lock-app as an SED for the EFR32MG24 + RS9116.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./scripts/examples/gn_efr32_example.sh<span class="w"> </span>examples/lock-app/silabs/efr32/<span class="w"> </span>out/rs9116/lock_sleep<span class="w"> </span>BRD41xxx<span class="w"> </span><span class="nv">enable_sleepy_device</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">disable_lcd</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">use_external_flash</span><span class="o">=</span><span class="nb">false</span><span class="w"> </span><span class="nv">chip_enable_ble_rs911x</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span>--wifi<span class="w"> </span>rs9116
@@ -177,7 +179,7 @@ The Wi-Fi station in Power Save mode wakes up to receive the DTIM beacon and che
 </div></blockquote>
 </section>
 <section id="minimal-power-consumption">
-<h3>Minimal Power Consumption<a class="headerlink" href="#minimal-power-consumption" title="Permalink to this headline"></a></h3>
+<h3>Minimal Power Consumption<a class="headerlink" href="#minimal-power-consumption" title="Permalink to this heading"></a></h3>
 <p>Simply enabling Sleepy functionalities does not give the application the best power consumption.
 By default, several features that increase power consumption are enabled in the example applications.
 The following set of features increase power consumption.</p>

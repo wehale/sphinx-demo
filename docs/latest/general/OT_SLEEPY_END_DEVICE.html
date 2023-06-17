@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matter Sleepy End Devices over OpenThread &mdash; Silicon Labs Matter 2.1.0-1.1 documentation</title>
+  <title>Matter Sleepy End Devices over OpenThread &mdash; Matter 2.1.0-1.1 2.1.0-1.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -13,10 +13,11 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -33,7 +34,8 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Silicon Labs Matter
+            Matter 2.1.0-1.1
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -77,7 +79,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: dark blue" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Silicon Labs Matter</a>
+          <a href="../index.html">Matter 2.1.0-1.1</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -96,17 +98,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="matter-sleepy-end-devices-over-openthread">
-<h1>Matter Sleepy End Devices over OpenThread<a class="headerlink" href="#matter-sleepy-end-devices-over-openthread" title="Permalink to this headline"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="matter-sleepy-end-devices-over-openthread">
+<h1>Matter Sleepy End Devices over OpenThread<a class="headerlink" href="#matter-sleepy-end-devices-over-openthread" title="Permalink to this heading"></a></h1>
 <p>This page explains how Matter OpenThread Sleepy End devices (SEDs) work and how to configure an SED example.</p>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>Matter provides a Sleepy End Device (SED) operating mode to extend the battery life of a power-limited devices.
 This operating mode leverages OpenThread functionalities to enhance the provided Matter features.
 Matter Sleepy functionalities currently focus on allowing an application to define the interval of time where a device is asleep.</p>
 </section>
 <section id="operating-modes">
-<h2>Operating Modes<a class="headerlink" href="#operating-modes" title="Permalink to this headline"></a></h2>
+<h2>Operating Modes<a class="headerlink" href="#operating-modes" title="Permalink to this heading"></a></h2>
 <p>SEDs have two operating modes, Idle and Active.</p>
 <ul class="simple">
 <li><p><em>Active Mode</em> sets the SED into a fast-polling interval for maximum responsiveness when the Node is engaged in ongoing communication, such as an active exchange.
@@ -121,12 +123,12 @@ Once all exchanges are closed, the device will switch operating modes to Idle Mo
 If the OpenThread router has an outstanding message for the SED, the SED will enter its Active polling mode to process the message.</p>
 </section>
 <section id="thread-communication">
-<h2>Thread Communication<a class="headerlink" href="#thread-communication" title="Permalink to this headline"></a></h2>
+<h2>Thread Communication<a class="headerlink" href="#thread-communication" title="Permalink to this heading"></a></h2>
 <p>To receive message that were sent while the SED was sleeping, SED relies on its associated Thread router to buffer any incoming messages.
 The Thread router will send all buffered messages to the SED when the SED polls the router at the end of its slow-polling interval.</p>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline"></a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h2>
 <p>Matter exposes three defines that can be set to configure the SLEEPY_ACTIVE_INTERVAL, SLEEPY_IDLE_INTERVAL and SLEEPY_ACTIVE_THRESHOLD parameters.</p>
 <table class="docutils align-default">
 <thead>
@@ -159,7 +161,7 @@ The Thread router will send all buffered messages to the SED when the SED polls 
 </tbody>
 </table>
 <section id="usage">
-<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h3>
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h3>
 <p>The default values for the these defines for the Silabs platform are located in <code class="docutils literal notranslate"><span class="pre">src/platform/silabs/CHIPDevicePlatformConfig.h</span></code>.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * CHIP_DEVICE_CONFIG_SED_IDLE_INTERVAL</span>
@@ -214,9 +216,9 @@ For the lighting-app, the file is <code class="docutils literal notranslate"><sp
 </section>
 </section>
 <section id="building">
-<h2>Building<a class="headerlink" href="#building" title="Permalink to this headline"></a></h2>
+<h2>Building<a class="headerlink" href="#building" title="Permalink to this heading"></a></h2>
 <section id="enabling-sleepy-functionalities">
-<h3>Enabling Sleepy Functionalities<a class="headerlink" href="#enabling-sleepy-functionalities" title="Permalink to this headline"></a></h3>
+<h3>Enabling Sleepy Functionalities<a class="headerlink" href="#enabling-sleepy-functionalities" title="Permalink to this heading"></a></h3>
 <p>To build an OpenThread SED example, two conditions must be met: 1) The following macro must be defined : <code class="docutils literal notranslate"><span class="pre">CHIP_DEVICE_CONFIG_ENABLE_SED</span></code> and 2) the example must use the MTD OpenThread libraries to be able to leverage OpenThread Sleepy functionalities.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">--sed</span></code> macro can be added to the build command to enable sleepy functionalities. Here is an example to build the light-switch-app as a SED for the EFR32MG24 BRD4186C.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./scripts/examples/gn_efr32_example.sh<span class="w"> </span>./examples/light-switch-app/efr32/<span class="w"> </span>./out/light-switch-app_SED<span class="w"> </span>BRD4186C<span class="w"> </span>--sed
@@ -224,7 +226,7 @@ For the lighting-app, the file is <code class="docutils literal notranslate"><sp
 </div>
 </section>
 <section id="minimal-power-consumption">
-<h3>Minimal Power Consumption<a class="headerlink" href="#minimal-power-consumption" title="Permalink to this headline"></a></h3>
+<h3>Minimal Power Consumption<a class="headerlink" href="#minimal-power-consumption" title="Permalink to this heading"></a></h3>
 <p>Simply enabling Sleepy functionalities does not give the application the best power consumption.
 By default, several features that increase power consumption are enabled in the example applications.
 The following set of features increase power consumption.</p>

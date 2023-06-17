@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matter Intermittently Connected Devices (ICD) &mdash; Silicon Labs Matter 2.1.0-1.1 documentation</title>
+  <title>Matter Intermittently Connected Devices (ICD) &mdash; Matter 2.1.0-1.1 2.1.0-1.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -13,10 +13,11 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -33,7 +34,8 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Silicon Labs Matter
+            Matter 2.1.0-1.1
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -81,7 +83,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: dark blue" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Silicon Labs Matter</a>
+          <a href="../index.html">Matter 2.1.0-1.1</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -100,14 +102,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="matter-intermittently-connected-devices-icd">
-<h1>Matter Intermittently Connected Devices (ICD)<a class="headerlink" href="#matter-intermittently-connected-devices-icd" title="Permalink to this headline"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="matter-intermittently-connected-devices-icd">
+<h1>Matter Intermittently Connected Devices (ICD)<a class="headerlink" href="#matter-intermittently-connected-devices-icd" title="Permalink to this heading"></a></h1>
 <p>With the 1.1 release, Matter introduced the concept of Intermittently Connected Devices (ICD) in the SDK and in the specification.
 An Intermittently Connected Device is the Matter representation of a device that is not always reachable.
 This covers battery-powered devices that disable their underlying hardware when in a low-power mode or devices that can be disconnected from the network, like a phone app.</p>
 <p>This page focuses on features designed to improve the performance and reliability of battery-powered devices.</p>
 <section id="subscription-maximum-interval">
-<h2>Subscription Maximum Interval<a class="headerlink" href="#subscription-maximum-interval" title="Permalink to this headline"></a></h2>
+<h2>Subscription Maximum Interval<a class="headerlink" href="#subscription-maximum-interval" title="Permalink to this heading"></a></h2>
 <p>The subscription mechanism is used by ecosystems and controllers to receive attribute change updates and liveness checks.
 The maximum interval of a subscription request is what defines the frequency at which a device will send a liveness check if there are no attribute changes.</p>
 <p>Within the subscription request / response model, a device has the opportunity to decide the maximum interval at which it will send its liveness check (Empty Report Update).
@@ -135,7 +137,7 @@ The device can set a maximum interval within this range:</p>
 </tbody>
 </table>
 <section id="maximum-interval-negotiation">
-<h3>Maximum Interval Negotiation<a class="headerlink" href="#maximum-interval-negotiation" title="Permalink to this headline"></a></h3>
+<h3>Maximum Interval Negotiation<a class="headerlink" href="#maximum-interval-negotiation" title="Permalink to this heading"></a></h3>
 <p>For a device to be able to Negotiate the Maximum Interval when receiving a subscribe request,
 the application first needs to implement the <code class="docutils literal notranslate"><span class="pre">ApplicationCallback</span></code> class from the <code class="docutils literal notranslate"><span class="pre">ReadHandler.h</span></code> header.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
@@ -244,7 +246,7 @@ the application first needs to implement the <code class="docutils literal notra
 </section>
 </section>
 <section id="persistent-subscriptions">
-<h2>Persistent Subscriptions<a class="headerlink" href="#persistent-subscriptions" title="Permalink to this headline"></a></h2>
+<h2>Persistent Subscriptions<a class="headerlink" href="#persistent-subscriptions" title="Permalink to this heading"></a></h2>
 <p>Persistent subscriptions were added to Matter as a means to ensure that an ICD can re-establish its subscription and by extension its secure session to a subscriber in the event of a power cycle.
 When a device accepts a subscription request, it will persist the subscription.
 When the device reboots, it will try to re-establish its subscription with the subscriber.

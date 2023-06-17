@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matter over Thread Demo Overview &mdash; Silicon Labs Matter 2.1.0-1.1 documentation</title>
+  <title>Matter over Thread Demo Overview &mdash; Matter 2.1.0-1.1 2.1.0-1.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -13,10 +13,11 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -33,7 +34,8 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Silicon Labs Matter
+            Matter 2.1.0-1.1
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -78,7 +80,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: dark blue" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Silicon Labs Matter</a>
+          <a href="../index.html">Matter 2.1.0-1.1</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -97,8 +99,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="matter-over-thread-demo-overview">
-<h1>Matter over Thread Demo Overview<a class="headerlink" href="#matter-over-thread-demo-overview" title="Permalink to this headline"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="matter-over-thread-demo-overview">
+<h1>Matter over Thread Demo Overview<a class="headerlink" href="#matter-over-thread-demo-overview" title="Permalink to this heading"></a></h1>
 <p>This section reviews the steps for running an example lighting app for Matter
 over Thread. See <a class="reference internal" href="THREAD.html"><span class="std std-doc">this file</span></a> for an introduction to the Matter over
 Thread setup.</p>
@@ -107,14 +109,14 @@ new device to the Thread network using Bluetooth LE, and finally sending a basic
 OnOff command to the end device.</p>
 <br>
 <section id="step-0-prerequisites">
-<h2>Step 0: Prerequisites<a class="headerlink" href="#step-0-prerequisites" title="Permalink to this headline"></a></h2>
+<h2>Step 0: Prerequisites<a class="headerlink" href="#step-0-prerequisites" title="Permalink to this heading"></a></h2>
 <p>Before beginning your Silicon Labs Matter over Thread project be sure you have satisfied all
 of the <a class="reference internal" href="../general/HARDWARE_REQUIREMENTS.html"><span class="std std-doc">Matter Hardware</span></a> and
 <a class="reference internal" href="../general/SOFTWARE_REQUIREMENTS.html"><span class="std std-doc">Matter Software</span></a> Requirements.</p>
 <br>
 </section>
 <section id="step-1-setting-up-the-matter-hub-raspberry-pi">
-<h2>Step 1: Setting up the Matter Hub (Raspberry Pi)<a class="headerlink" href="#step-1-setting-up-the-matter-hub-raspberry-pi" title="Permalink to this headline"></a></h2>
+<h2>Step 1: Setting up the Matter Hub (Raspberry Pi)<a class="headerlink" href="#step-1-setting-up-the-matter-hub-raspberry-pi" title="Permalink to this heading"></a></h2>
 <p>The Matter Hub consists of the Open Thread Border Router (OTBR) and the chip-tool running on a Raspberry Pi.
 Silicon Labs has developed a Raspberry Pi image combining the OTBR and chip-tool that can be downloaded and
 flashed onto an SD Card, which is then inserted into the Raspberry Pi.</p>
@@ -126,7 +128,7 @@ instructions.</p>
 <br>
 </section>
 <section id="step-2-flash-the-rcp">
-<h2>Step 2: Flash the RCP<a class="headerlink" href="#step-2-flash-the-rcp" title="Permalink to this headline"></a></h2>
+<h2>Step 2: Flash the RCP<a class="headerlink" href="#step-2-flash-the-rcp" title="Permalink to this heading"></a></h2>
 <p>The Radio Co-Processor (RCP) is a Thread device that connects to the Raspberry
 Pi via USB. To flash the RCP, connect it to your laptop via USB. Thereafter, it
 should be connected to the Raspberry Pi via USB as well. Prebuilt RCP images are
@@ -136,7 +138,7 @@ available for the demo</p>
 <br>
 </section>
 <section id="step-3-build-and-flash-the-mad">
-<h2>Step 3: Build and Flash the MAD<a class="headerlink" href="#step-3-build-and-flash-the-mad" title="Permalink to this headline"></a></h2>
+<h2>Step 3: Build and Flash the MAD<a class="headerlink" href="#step-3-build-and-flash-the-mad" title="Permalink to this heading"></a></h2>
 <p>The Matter Accessory Device (MAD) is the actual Matter device that will be
 commissioned onto the Matter network and controlled using the chip-tool. Prebuilt
 MAD images are available for the demo.</p>
@@ -146,7 +148,7 @@ located here:
 <br>
 </section>
 <section id="step-4-commission-and-control-the-mad">
-<h2>Step 4: Commission and Control the MAD<a class="headerlink" href="#step-4-commission-and-control-the-mad" title="Permalink to this headline"></a></h2>
+<h2>Step 4: Commission and Control the MAD<a class="headerlink" href="#step-4-commission-and-control-the-mad" title="Permalink to this heading"></a></h2>
 <p>Once the Matter Accessory device has been flashed onto your hardware you can
 commission it from the Matter Hub using the commands provided in the Raspberry
 Pi image:</p>

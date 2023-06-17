@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Building the Unify Matter Bridge for Debian Bullseye (Or similar Ubunutu) x86_64 &mdash; Silicon Labs Matter 2.1.0-1.1 documentation</title>
+  <title>Building the Unify Matter Bridge for Debian Bullseye (Or similar Ubunutu) x86_64 &mdash; Matter 2.1.0-1.1 2.1.0-1.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -13,10 +13,11 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -33,7 +34,8 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Silicon Labs Matter
+            Matter 2.1.0-1.1
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -52,8 +54,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Unify Matter Bridge</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="readme_user.html">Unify Matter Bridge User’s Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="readme_overview.html">Unify Matter Bridge Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme_user.html">Unify Matter Bridge User’s Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="readme_building.html">Building the Unify Matter Bridge</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Building the Unify Matter Bridge for Debian Bullseye (Or similar Ubunutu) x86_64</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#set-up-the-matter-build-environment">Set Up the Matter Build Environment</a></li>
@@ -79,7 +81,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: dark blue" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Silicon Labs Matter</a>
+          <a href="../index.html">Matter 2.1.0-1.1</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -98,8 +100,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="building-the-unify-matter-bridge-for-debian-bullseye-or-similar-ubunutu-x86-64">
-<h1>Building the Unify Matter Bridge for Debian Bullseye (Or similar Ubunutu) x86_64<a class="headerlink" href="#building-the-unify-matter-bridge-for-debian-bullseye-or-similar-ubunutu-x86-64" title="Permalink to this headline"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="building-the-unify-matter-bridge-for-debian-bullseye-or-similar-ubunutu-x86-64">
+<h1>Building the Unify Matter Bridge for Debian Bullseye (Or similar Ubunutu) x86_64<a class="headerlink" href="#building-the-unify-matter-bridge-for-debian-bullseye-or-similar-ubunutu-x86-64" title="Permalink to this heading"></a></h1>
 <blockquote>
 <div><p><strong>Note:</strong>
 In the following subsections the commands should either be run on your local development machine or inside a running Docker container, as distinguished by the structure of the example.</p>
@@ -117,18 +119,18 @@ In the following subsections the commands should either be run on your local dev
 </ul>
 </div></blockquote>
 <section id="set-up-the-matter-build-environment">
-<h2>Set Up the Matter Build Environment<a class="headerlink" href="#set-up-the-matter-build-environment" title="Permalink to this headline"></a></h2>
+<h2>Set Up the Matter Build Environment<a class="headerlink" href="#set-up-the-matter-build-environment" title="Permalink to this heading"></a></h2>
 <p>Once you have all the necessary submodules, source the Matter environment with the following command. This loads a number of build tools and makes sure the correct toolchains and compilers are used for compiling the Unify Matter Bridge.</p>
 </section>
 <section id="check-out-submodules">
-<h2>Check Out Submodules<a class="headerlink" href="#check-out-submodules" title="Permalink to this headline"></a></h2>
+<h2>Check Out Submodules<a class="headerlink" href="#check-out-submodules" title="Permalink to this heading"></a></h2>
 <p>Check out the necessary submodules with the following command.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dev-machine:~/matter$<span class="w"> </span>./scripts/checkout_submodules.py<span class="w"> </span>--platform<span class="w"> </span>linux
 </pre></div>
 </div>
 </section>
 <section id="clone-and-stage-the-unify-sdk-repository">
-<h2>Clone and Stage the Unify SDK Repository<a class="headerlink" href="#clone-and-stage-the-unify-sdk-repository" title="Permalink to this headline"></a></h2>
+<h2>Clone and Stage the Unify SDK Repository<a class="headerlink" href="#clone-and-stage-the-unify-sdk-repository" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p>🔴 Assuming you have cloned the matter repo in <code class="docutils literal notranslate"><span class="pre">~/matter</span></code></p>
 </div></blockquote>
@@ -137,13 +139,13 @@ In the following subsections the commands should either be run on your local dev
 </div>
 </section>
 <section id="build-the-docker-container-host-compilation">
-<h2>Build the docker container (host compilation)<a class="headerlink" href="#build-the-docker-container-host-compilation" title="Permalink to this headline"></a></h2>
+<h2>Build the docker container (host compilation)<a class="headerlink" href="#build-the-docker-container-host-compilation" title="Permalink to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dev-machine:~/matter$<span class="w"> </span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>unify-matter-host<span class="w"> </span>--build-arg<span class="w"> </span><span class="nv">ARCH</span><span class="o">=</span>amd64<span class="w"> </span>silabs_examples/unify-matter-bridge/docker/
 </pre></div>
 </div>
 </section>
 <section id="run-the-docker-container-host-compilation">
-<h2>Run the docker container (host compilation)<a class="headerlink" href="#run-the-docker-container-host-compilation" title="Permalink to this headline"></a></h2>
+<h2>Run the docker container (host compilation)<a class="headerlink" href="#run-the-docker-container-host-compilation" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p>🔴
 Make sure the directory structure is like follows where Unify repo <code class="docutils literal notranslate"><span class="pre">uic-matter/</span></code> and matter repo <code class="docutils literal notranslate"><span class="pre">matter/</span></code> are at same directory level</p>
@@ -171,7 +173,7 @@ root@docker:/uic$<span class="w"> </span><span class="nb">export</span><span cla
 </div>
 </section>
 <section id="compile-the-unify-matter-bridge">
-<h2>Compile the Unify Matter Bridge<a class="headerlink" href="#compile-the-unify-matter-bridge" title="Permalink to this headline"></a></h2>
+<h2>Compile the Unify Matter Bridge<a class="headerlink" href="#compile-the-unify-matter-bridge" title="Permalink to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@docker:/matter$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>silabs_examples/unify-matter-bridge/linux/
 root@docker:/matter/silabs_examples/unify-matter-bridge/linux$<span class="w"> </span>gn<span class="w"> </span>gen<span class="w"> </span>out/host
 root@docker:/matter/silabs_examples/unify-matter-bridge/linux$<span class="w"> </span>ninja<span class="w"> </span>-C<span class="w"> </span>out/host
@@ -182,7 +184,7 @@ root@docker:/matter/silabs_examples/unify-matter-bridge/linux$<span class="w"> <
 </div></blockquote>
 </section>
 <section id="compile-the-chip-tool">
-<h2>Compile the chip-tool<a class="headerlink" href="#compile-the-chip-tool" title="Permalink to this headline"></a></h2>
+<h2>Compile the chip-tool<a class="headerlink" href="#compile-the-chip-tool" title="Permalink to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">chip-tool</span></code> is a CLI tool that can be used to commission the bridge and to control end devices.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@docker:/matter$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>examples/chip-tool
 
@@ -196,7 +198,7 @@ root@docker:/matter/examples/chip-tool$<span class="w"> </span>ninja<span class=
 </div></blockquote>
 </section>
 <section id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline"></a></h2>
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading"></a></h2>
 <p>Refer to Troubleshooting section in <a class="reference internal" href="readme_building.html"><span class="std std-doc">readme_building.md</span></a></p>
 </section>
 </section>

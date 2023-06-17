@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Power Measurements for Wi-Fi Devices &mdash; Silicon Labs Matter 2.1.0-1.1 documentation</title>
+  <title>Power Measurements for Wi-Fi Devices &mdash; Matter 2.1.0-1.1 2.1.0-1.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -13,10 +13,11 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -33,7 +34,8 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Silicon Labs Matter
+            Matter 2.1.0-1.1
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -92,7 +94,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: dark blue" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Silicon Labs Matter</a>
+          <a href="../index.html">Matter 2.1.0-1.1</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -111,11 +113,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="power-measurements-for-wi-fi-devices">
-<h1>Power Measurements for Wi-Fi Devices<a class="headerlink" href="#power-measurements-for-wi-fi-devices" title="Permalink to this headline"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="power-measurements-for-wi-fi-devices">
+<h1>Power Measurements for Wi-Fi Devices<a class="headerlink" href="#power-measurements-for-wi-fi-devices" title="Permalink to this heading"></a></h1>
 <p>This page explains how to measure the power values for EFR and Wi-Fi co-processor.</p>
 <section id="efr32-rs9116-setup-for-sleepy-devices">
-<h2>EFR32 + RS9116 Setup for Sleepy Devices<a class="headerlink" href="#efr32-rs9116-setup-for-sleepy-devices" title="Permalink to this headline"></a></h2>
+<h2>EFR32 + RS9116 Setup for Sleepy Devices<a class="headerlink" href="#efr32-rs9116-setup-for-sleepy-devices" title="Permalink to this heading"></a></h2>
 <p><img alt="Power measurment GPIO pin connection for 9116" src="../_images/WiFi_9116_GPIO_Connection.png" /></p>
 <blockquote>
 <div><p>Note: The following GPIO pins should be connected for 9116 and Host handshakes. <br />
@@ -123,7 +125,7 @@ pin 7 and 9 to UULP_2 and UULP_0 respectively.</p>
 </div></blockquote>
 </section>
 <section id="using-simplicity-studio-energy-profiler-for-current-measurement">
-<h2>Using Simplicity Studio Energy Profiler for Current Measurement<a class="headerlink" href="#using-simplicity-studio-energy-profiler-for-current-measurement" title="Permalink to this headline"></a></h2>
+<h2>Using Simplicity Studio Energy Profiler for Current Measurement<a class="headerlink" href="#using-simplicity-studio-energy-profiler-for-current-measurement" title="Permalink to this heading"></a></h2>
 <p>After flashing the Matter application to the module, Energy profiler or a power meter can be used for power measurements.</p>
 <p><img alt="Power measurment connection overview" src="../_images/WiFi_PowerSave_Overview.png" /></p>
 <p>In Simplicity Studio, click <strong>Tools</strong> on the toolbar, select Energy Profiler, and click “OK”.</p>
@@ -135,18 +137,18 @@ pin 7 and 9 to UULP_2 and UULP_0 respectively.</p>
 </div></blockquote>
 </section>
 <section id="power-consumption-measurment-efr-using-energy-profiler">
-<h2>Power Consumption Measurment (EFR) Using Energy Profiler<a class="headerlink" href="#power-consumption-measurment-efr-using-energy-profiler" title="Permalink to this headline"></a></h2>
+<h2>Power Consumption Measurment (EFR) Using Energy Profiler<a class="headerlink" href="#power-consumption-measurment-efr-using-energy-profiler" title="Permalink to this heading"></a></h2>
 <p>Analyze the power values using Energy Profiler.
 <img alt="Power measurment for EFR using EnergyProfiler" src="../_images/WiFi_EFR_Power_EnergyProfiler.png" /></p>
 </section>
 <section id="power-consumption-mmasurment-using-a-power-meter">
-<h2>Power Consumption mMasurment Using a Power Meter<a class="headerlink" href="#power-consumption-mmasurment-using-a-power-meter" title="Permalink to this headline"></a></h2>
+<h2>Power Consumption mMasurment Using a Power Meter<a class="headerlink" href="#power-consumption-mmasurment-using-a-power-meter" title="Permalink to this heading"></a></h2>
 <section id="power-consumption-measurement-pins-for-rs9116-evk-boards">
-<h3>Power Consumption Measurement Pins for RS9116 Evk Boards<a class="headerlink" href="#power-consumption-measurement-pins-for-rs9116-evk-boards" title="Permalink to this headline"></a></h3>
+<h3>Power Consumption Measurement Pins for RS9116 Evk Boards<a class="headerlink" href="#power-consumption-measurement-pins-for-rs9116-evk-boards" title="Permalink to this heading"></a></h3>
 <p><img alt="Power measurment pins for NCP mode" src="../_images/WiFi_9116_PowerMeter_WiFiModule.png" /></p>
 </section>
 <section id="power-consumption-measurement-pins-for-exp-boards">
-<h3>Power Consumption Measurement Pins for EXP Boards<a class="headerlink" href="#power-consumption-measurement-pins-for-exp-boards" title="Permalink to this headline"></a></h3>
+<h3>Power Consumption Measurement Pins for EXP Boards<a class="headerlink" href="#power-consumption-measurement-pins-for-exp-boards" title="Permalink to this heading"></a></h3>
 <p><img alt="Power measurment pins for NCP mode" src="../_images/SiWx917_Ncp_PowerMeasurment_pins.png" /></p>
 <p>The power meter’s negative probe is used for pin-1 and the positive probe is used for pin-2.</p>
 <p>Analyze the power values using the power meter.

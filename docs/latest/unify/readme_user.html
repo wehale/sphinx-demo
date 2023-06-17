@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unify Matter Bridge User’s Guide &mdash; Silicon Labs Matter 2.1.0-1.1 documentation</title>
+  <title>Unify Matter Bridge User’s Guide &mdash; Matter 2.1.0-1.1 2.1.0-1.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -13,15 +13,16 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Unify Matter Bridge Overview" href="readme_overview.html" />
-    <link rel="prev" title="Unify Matter Bridge" href="index.html" /> 
+    <link rel="next" title="Building the Unify Matter Bridge" href="readme_building.html" />
+    <link rel="prev" title="Unify Matter Bridge Overview" href="readme_overview.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -33,7 +34,8 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Silicon Labs Matter
+            Matter 2.1.0-1.1
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -52,6 +54,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Unify Matter Bridge</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="readme_overview.html">Unify Matter Bridge Overview</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Unify Matter Bridge User’s Guide</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#running-the-matter-bridge">Running the Matter Bridge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#commissioning-the-bridge-to-a-network">Commissioning the Bridge to a Network</a></li>
@@ -61,7 +64,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#running-chip-tool-tests-on-unify-matter-bridge-endpoints">Running chip-tool tests on Unify Matter Bridge endpoints</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="readme_overview.html">Unify Matter Bridge Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="readme_building.html">Building the Unify Matter Bridge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="readme_building_x86_64.html">Building the Unify Matter Bridge for Debian Bullseye (Or similar Ubunutu) x86_64</a></li>
 </ul>
@@ -77,7 +79,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: dark blue" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Silicon Labs Matter</a>
+          <a href="../index.html">Matter 2.1.0-1.1</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -96,8 +98,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="unify-matter-bridge-user-s-guide">
-<h1>Unify Matter Bridge User’s Guide<a class="headerlink" href="#unify-matter-bridge-user-s-guide" title="Permalink to this headline"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="unify-matter-bridge-users-guide">
+<h1>Unify Matter Bridge User’s Guide<a class="headerlink" href="#unify-matter-bridge-users-guide" title="Permalink to this heading"></a></h1>
 <p>The Unify Matter Bridge is a Unify IoT Service that enables interaction with
 Unify devices from a Matter fabric. For a more thorough description see the
 <a class="reference internal" href="#../../silabs_examples/unify-matter-bridge/readme_overview.md"><span class="xref myst">Unify Matter Bridge Overview</span></a>.</p>
@@ -113,15 +115,15 @@ application by following the <a class="reference internal" href="readme_building
 transferred the <code class="docutils literal notranslate"><span class="pre">unify-matter-bridge</span></code> to your Raspberry Pi 4 (RPi4) running
 the 64-bit version of Raspberry Pi OS Bullseye.</p>
 <section id="running-the-matter-bridge">
-<h2>Running the Matter Bridge<a class="headerlink" href="#running-the-matter-bridge" title="Permalink to this headline"></a></h2>
+<h2>Running the Matter Bridge<a class="headerlink" href="#running-the-matter-bridge" title="Permalink to this heading"></a></h2>
 <p>At start-up, the Matter Bridge needs to connect to the Matter Fabric as well as
 the MQTT Broker. It is therefore critical that you have access to port 1883, the
 default MQTT Broker’s port, as well as a network setup that allows mDNS through.</p>
 <p>A few important runtime configurations must be considered, along with some other
 configuration options. A full list of command-line parameters is provided in the
-<a class="reference internal" href="#command-line-arguments"><span class="xref myst">Command line arguments</span></a> section.</p>
+<a class="reference internal" href="#command-line-arguments">Command line arguments</a> section.</p>
 <section id="important-configuration-settings">
-<h3>Important Configuration Settings<a class="headerlink" href="#important-configuration-settings" title="Permalink to this headline"></a></h3>
+<h3>Important Configuration Settings<a class="headerlink" href="#important-configuration-settings" title="Permalink to this heading"></a></h3>
 <ul>
 <li><h4 class="rubric" id="network-interface">Network Interface</h4>
 <p>Specify the network interface on which the Matter Fabric runs. In a regular
@@ -162,7 +164,7 @@ need to set a specific VID and PID for the Matter Bridge.</p>
 </ul>
 </section>
 <section id="starting-the-matter-bridge">
-<h3>Starting the Matter Bridge<a class="headerlink" href="#starting-the-matter-bridge" title="Permalink to this headline"></a></h3>
+<h3>Starting the Matter Bridge<a class="headerlink" href="#starting-the-matter-bridge" title="Permalink to this heading"></a></h3>
 <p>Once the configuration parameters are set it is time to start the bridge
 application.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./unify-matter-bridge<span class="w"> </span>--interface<span class="w"> </span>eth0<span class="w"> </span>--kvs<span class="w"> </span>./matter-bridge.kvs<span class="w"> </span>--mqtt.host<span class="w"> </span>localhost<span class="w"> </span>--mqtt.port<span class="w"> </span><span class="m">1337</span>
@@ -171,7 +173,7 @@ application.</p>
 </section>
 </section>
 <section id="commissioning-the-bridge-to-a-network">
-<h2>Commissioning the Bridge to a Network<a class="headerlink" href="#commissioning-the-bridge-to-a-network" title="Permalink to this headline"></a></h2>
+<h2>Commissioning the Bridge to a Network<a class="headerlink" href="#commissioning-the-bridge-to-a-network" title="Permalink to this heading"></a></h2>
 <p>To include the bridge in the Matter network, it must first be commissioned. The
 first time the bridge starts it will automatically go into commissioning mode.
 After 10 minutes the bridge will exit commissioning mode. If the bridge has not
@@ -205,7 +207,7 @@ Raspberry Pi. Note that by default the bridge binds to the eth0 interface. If
 another interface is to be used, see the description of the command line
 arguments for setting <a class="reference internal" href="#network-interface"><span class="xref myst">Network Interface</span></a>.</p>
 <section id="using-the-chip-tool-to-commission">
-<h3>Using the chip-tool to Commission<a class="headerlink" href="#using-the-chip-tool-to-commission" title="Permalink to this headline"></a></h3>
+<h3>Using the chip-tool to Commission<a class="headerlink" href="#using-the-chip-tool-to-commission" title="Permalink to this heading"></a></h3>
 <p>In the following procedure make sure to use the pairing code taken from the
 console output, as described above. To commission the Matter Bridge with the
 <code class="docutils literal notranslate"><span class="pre">chip-tool</span></code> and assign the bridge the Node ID 1:</p>
@@ -214,7 +216,7 @@ console output, as described above. To commission the Matter Bridge with the
 </div>
 </section>
 <section id="using-google-nest-hub">
-<h3>Using Google Nest Hub<a class="headerlink" href="#using-google-nest-hub" title="Permalink to this headline"></a></h3>
+<h3>Using Google Nest Hub<a class="headerlink" href="#using-google-nest-hub" title="Permalink to this heading"></a></h3>
 <p>It is possible to use the Google Nest Hub (2nd. Gen) for controlling the Matter devices on the Unify Matter Bridge. Go through the following steps to configure this:</p>
 <p>Prerequisites:</p>
 <ul class="simple">
@@ -257,7 +259,7 @@ console output, as described above. To commission the Matter Bridge with the
 </ul>
 </section>
 <section id="toggle-an-onoff-device">
-<h3>Toggle an OnOff device<a class="headerlink" href="#toggle-an-onoff-device" title="Permalink to this headline"></a></h3>
+<h3>Toggle an OnOff device<a class="headerlink" href="#toggle-an-onoff-device" title="Permalink to this heading"></a></h3>
 <p>To send an OnOff cluster Toggle command to a bridged endpoint with id 2, via
 Matter Fabric Node ID 1:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chip-tool<span class="w"> </span>onoff<span class="w"> </span>toggle<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span>
@@ -268,7 +270,7 @@ Matter Fabric Node ID 1:</p>
 </section>
 </section>
 <section id="toggle-a-group-of-onoff-devices">
-<h2>Toggle a Group of OnOff Devices<a class="headerlink" href="#toggle-a-group-of-onoff-devices" title="Permalink to this headline"></a></h2>
+<h2>Toggle a Group of OnOff Devices<a class="headerlink" href="#toggle-a-group-of-onoff-devices" title="Permalink to this heading"></a></h2>
 <p>The Matter Bridge has support for forwarding group messages from the Matter
 Fabric to Unify Nodes. The protocol controllers will send the group messages as
 actual group cast messages on the destination network (Z-Wave/Zigbee).</p>
@@ -296,7 +298,7 @@ chip-tool<span class="w"> </span>groupsettings<span class="w"> </span>bind-keyse
 </div>
 </section>
 <section id="running-the-matter-bridge-in-strict-device-mapping-mode">
-<h2>Running the matter bridge in strict device mapping mode<a class="headerlink" href="#running-the-matter-bridge-in-strict-device-mapping-mode" title="Permalink to this headline"></a></h2>
+<h2>Running the matter bridge in strict device mapping mode<a class="headerlink" href="#running-the-matter-bridge-in-strict-device-mapping-mode" title="Permalink to this heading"></a></h2>
 <p>By default Unify Matter Bridge tries and map devices that does not necessarily conform to the
 Matter specificaiton.</p>
 <p>To enable a mode where Unify Matter Bridge strictly only maps devices from the Unify
@@ -307,7 +309,7 @@ Matter specification. You can run the bridge with the command line argument</p>
 </div>
 </section>
 <section id="command-line-arguments">
-<h2>Command Line Arguments<a class="headerlink" href="#command-line-arguments" title="Permalink to this headline"></a></h2>
+<h2>Command Line Arguments<a class="headerlink" href="#command-line-arguments" title="Permalink to this heading"></a></h2>
 <p>The Unify Matter Bridge provides the following command line arguments:</p>
 <p>Using –help displays the following text.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Usage:<span class="w"> </span>./unify_matter_bridge<span class="w"> </span><span class="o">[</span>Options<span class="o">]</span>
@@ -352,7 +354,7 @@ the command line take precedence over the options and values in the config file.
 </div>
 </section>
 <section id="running-chip-tool-tests-on-unify-matter-bridge-endpoints">
-<h2>Running chip-tool tests on Unify Matter Bridge endpoints<a class="headerlink" href="#running-chip-tool-tests-on-unify-matter-bridge-endpoints" title="Permalink to this headline"></a></h2>
+<h2>Running chip-tool tests on Unify Matter Bridge endpoints<a class="headerlink" href="#running-chip-tool-tests-on-unify-matter-bridge-endpoints" title="Permalink to this heading"></a></h2>
 <p>For e.g. OnOff Cluster chip-tool test Test_TC_OO_2_3 can be ran on Unify Matter
 Bridge endpoint 2 for node 1 as follows.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./chip-tool<span class="w"> </span>tests<span class="w"> </span>Test_TC_OO_2_3<span class="w"> </span>--nodeId<span class="w"> </span><span class="m">1</span><span class="w"> </span>--endpoint<span class="w"> </span><span class="m">2</span><span class="w"> </span>--delayInMs<span class="w"> </span><span class="m">1400</span>
@@ -370,7 +372,7 @@ not shown in the epmap. But these endpoints support some clusters as well. For
 e.g. Identify. Where you might want to run chip-tool tests on those endpoints</p>
 <p>For further information on chip-tool tests, refer to the <a class="reference internal" href="#../../src/app/tests/suites/README.md"><span class="xref myst">test suite’s README</span></a></p>
 <section id="troubleshooting">
-<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline"></a></h3>
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Time sensitive chip-tool tests might fail because of the latencies in Unify Matter Bridge. The <code class="docutils literal notranslate"> <span class="pre">--delayInMs</span> <span class="pre">&lt;number</span> <span class="pre">of</span> <span class="pre">mili</span> <span class="pre">seconds&gt;</span></code> command line option to chip-tool can be helpful in such cases.</p></li>
 <li><p>The Unify Matter Bridge needs to be commissioned to the Matter fabric before running the tests. Or you will see following message on the chip-tool tests</p></li>
@@ -414,8 +416,8 @@ attributes from the test refer to PICS Usage from <a class="reference internal" 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Unify Matter Bridge" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="readme_overview.html" class="btn btn-neutral float-right" title="Unify Matter Bridge Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="readme_overview.html" class="btn btn-neutral float-left" title="Unify Matter Bridge Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="readme_building.html" class="btn btn-neutral float-right" title="Building the Unify Matter Bridge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

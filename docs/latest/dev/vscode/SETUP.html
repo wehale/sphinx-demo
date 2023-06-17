@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Set Up the VS Code environment &mdash; Silicon Labs Matter 2.1.0-1.1 documentation</title>
+  <title>Set Up the VS Code environment &mdash; Matter 2.1.0-1.1 2.1.0-1.1 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
@@ -13,10 +13,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -33,7 +34,8 @@
           
           
           <a href="../../index.html" class="icon icon-home">
-            Silicon Labs Matter
+            Matter 2.1.0-1.1
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -76,7 +78,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: dark blue" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Silicon Labs Matter</a>
+          <a href="../../index.html">Matter 2.1.0-1.1</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -95,18 +97,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="set-up-the-vs-code-environment">
-<h1>Set Up the VS Code environment<a class="headerlink" href="#set-up-the-vs-code-environment" title="Permalink to this headline"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="set-up-the-vs-code-environment">
+<h1>Set Up the VS Code environment<a class="headerlink" href="#set-up-the-vs-code-environment" title="Permalink to this heading"></a></h1>
 <section id="general-requirements">
-<h2>General Requirements<a class="headerlink" href="#general-requirements" title="Permalink to this headline"></a></h2>
+<h2>General Requirements<a class="headerlink" href="#general-requirements" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Install Visual Studio Code for your operating system of choice here:
-https://code.visualstudio.com/Download</p></li>
+<a class="reference external" href="https://code.visualstudio.com/Download">https://code.visualstudio.com/Download</a></p></li>
 <li><p>Install <a class="reference external" href="https://git-scm.com/">Git</a> if you haven’t already</p></li>
 <li><p><em>Windows Only</em> Enable git to use LF instead of CLRF by default:
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">core.autocrlf</span> <span class="pre">false</span></code></p></li>
 <li><p>Git clone the Silicon Labs Matter repository here:
-https://github.com/SiliconLabs/matter</p></li>
+<a class="reference external" href="https://github.com/SiliconLabs/matter">https://github.com/SiliconLabs/matter</a></p></li>
 <li><p>Launch Visual Studio Code, and open the cloned folder</p></li>
 <li><p>When prompted to “install recommended extensions” please select “Install”</p>
 <ul class="simple">
@@ -122,14 +124,14 @@ https://github.com/SiliconLabs/matter</p></li>
 </ol>
 </li>
 <li><p>ARM GCC Toolchain
-(https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads) -
+(<a class="reference external" href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads">https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads</a>) -
 required arm-none-eabi tools</p></li>
 <li><p>J-Link Software Tools - required J-Link GDB Server for J-Link-based debuggers
-(https://www.segger.com/downloads/jlink)</p></li>
-<li><p>Python - (https://www.python.org/downloads/)</p></li>
+(<a class="reference external" href="https://www.segger.com/downloads/jlink">https://www.segger.com/downloads/jlink</a>)</p></li>
+<li><p>Python - (<a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>)</p></li>
 </ol>
 <section id="installing-prerequisites-on-macos">
-<h3>Installing prerequisites on macOS<a class="headerlink" href="#installing-prerequisites-on-macos" title="Permalink to this headline"></a></h3>
+<h3>Installing prerequisites on macOS<a class="headerlink" href="#installing-prerequisites-on-macos" title="Permalink to this heading"></a></h3>
 <p>On macOS, you must install Xcode from the Mac App Store. The remaining
 dependencies can be installed and satisfied using <a class="reference external" href="https://brew.sh/">Brew</a>:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>brew<span class="w"> </span>install<span class="w"> </span>openssl<span class="w"> </span>pkg-config
@@ -152,7 +154,7 @@ OpenSSL installed by Brew.</p>
 </div></blockquote>
 </section>
 <section id="mac-os-apple-silicon-users">
-<h3>Mac OS (Apple Silicon) Users<a class="headerlink" href="#mac-os-apple-silicon-users" title="Permalink to this headline"></a></h3>
+<h3>Mac OS (Apple Silicon) Users<a class="headerlink" href="#mac-os-apple-silicon-users" title="Permalink to this heading"></a></h3>
 <p>These requirements are are needed for Mac OS (Apple Silicon) in addition to
 those mentioned above. <br></p>
 <ol class="arabic">
@@ -174,7 +176,7 @@ these lines of code as well:</p>
 </ol>
 </section>
 <section id="installing-prerequisites-on-linux">
-<h3>Installing prerequisites on Linux<a class="headerlink" href="#installing-prerequisites-on-linux" title="Permalink to this headline"></a></h3>
+<h3>Installing prerequisites on Linux<a class="headerlink" href="#installing-prerequisites-on-linux" title="Permalink to this heading"></a></h3>
 <p>On Debian-based Linux distributions such as Ubuntu, these dependencies can be
 satisfied with the following:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>gcc<span class="w"> </span>g++<span class="w"> </span>pkg-config<span class="w"> </span>libssl-dev<span class="w"> </span>libdbus-1-dev<span class="w"> </span>libglib2.0-dev<span class="w"> </span>libavahi-client-dev<span class="w"> </span>ninja-build<span class="w"> </span>python3-venv<span class="w"> </span>python3-dev<span class="w"> </span>python3-pip<span class="w"> </span>unzip<span class="w"> </span>libgirepository1.0-dev<span class="w"> </span>libcairo2-dev<span class="w"> </span>libreadline-dev
@@ -183,7 +185,7 @@ satisfied with the following:</p>
 </section>
 </section>
 <section id="bootstrapping-your-source-tree-one-time">
-<h2>Bootstrapping your source tree (one time)<a class="headerlink" href="#bootstrapping-your-source-tree-one-time" title="Permalink to this headline"></a></h2>
+<h2>Bootstrapping your source tree (one time)<a class="headerlink" href="#bootstrapping-your-source-tree-one-time" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Under the “Terminal” menu (or using shortcut Ctrl+shift+p), select “Run
 Task…”</p></li>

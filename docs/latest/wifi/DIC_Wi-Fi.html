@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matter Wi-Fi Direct Internet Connectivity &mdash; Silicon Labs Matter 2.1.0-1.1 documentation</title>
+  <title>Matter Wi-Fi Direct Internet Connectivity &mdash; Matter 2.1.0-1.1 2.1.0-1.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -13,10 +13,11 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -33,7 +34,8 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Silicon Labs Matter
+            Matter 2.1.0-1.1
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -92,7 +94,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: dark blue" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Silicon Labs Matter</a>
+          <a href="../index.html">Matter 2.1.0-1.1</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -111,27 +113,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="matter-wi-fi-direct-internet-connectivity">
-<h1>Matter Wi-Fi Direct Internet Connectivity<a class="headerlink" href="#matter-wi-fi-direct-internet-connectivity" title="Permalink to this headline"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="matter-wi-fi-direct-internet-connectivity">
+<h1>Matter Wi-Fi Direct Internet Connectivity<a class="headerlink" href="#matter-wi-fi-direct-internet-connectivity" title="Permalink to this heading"></a></h1>
 <ul class="simple">
 <li><p>Direct Internet Connectivity (DIC) is a silabs only feature to connect matter devices to proprietary cloud solutions(AWS,GCP,APPLE …) directly.  As such, a Matter Wi-Fi device must support connecting locally on the Matter Fabric, via IPv6, and connecting to the Internet via IPv4.</p></li>
 <li><p>Matter devices can be controlled by chip-tool or controller and the respective status of the attribute modified will be published to the cloud.</p></li>
 <li><p>Remote user can install the cloud specific application to get the notifiction on the attribute status.</p></li>
 </ul>
 <section id="feature-design">
-<h2>Feature Design<a class="headerlink" href="#feature-design" title="Permalink to this headline"></a></h2>
+<h2>Feature Design<a class="headerlink" href="#feature-design" title="Permalink to this heading"></a></h2>
 <p><img alt="Silicon Labs - DIC design" src="../_images/END_to_END_FLOW.png" /></p>
 </section>
 <section id="end-to-end-set-up-bring-up">
-<h2>End-to-End Set-up bring up<a class="headerlink" href="#end-to-end-set-up-bring-up" title="Permalink to this headline"></a></h2>
+<h2>End-to-End Set-up bring up<a class="headerlink" href="#end-to-end-set-up-bring-up" title="Permalink to this heading"></a></h2>
 </section>
 <section id="message-queuing-telemetry-transport-mqtt">
-<h2>Message Queuing Telemetry Transport (MQTT)<a class="headerlink" href="#message-queuing-telemetry-transport-mqtt" title="Permalink to this headline"></a></h2>
+<h2>Message Queuing Telemetry Transport (MQTT)<a class="headerlink" href="#message-queuing-telemetry-transport-mqtt" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>MQTT is an OASIS standard messaging protocol for the Internet of Things (IoT). It is designed as an extremely lightweight publish/subscribe messaging transport that is ideal for connecting remote devices with a small code footprint and minimal network bandwidth. Refer https://mqtt.org/ for more details</p></li>
+<li><p>MQTT is an OASIS standard messaging protocol for the Internet of Things (IoT). It is designed as an extremely lightweight publish/subscribe messaging transport that is ideal for connecting remote devices with a small code footprint and minimal network bandwidth. Refer <a class="reference external" href="https://mqtt.org/">https://mqtt.org/</a> for more details</p></li>
 </ul>
 <section id="configuration-of-mqtt-server">
-<h3>Configuration of MQTT server<a class="headerlink" href="#configuration-of-mqtt-server" title="Permalink to this headline"></a></h3>
+<h3>Configuration of MQTT server<a class="headerlink" href="#configuration-of-mqtt-server" title="Permalink to this heading"></a></h3>
 <p>To set up and configure AWS or Mosquitto for DIC support please see the following documentation:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#./AWS_CONFIGURATION_REGISTERATION.md"><span class="xref myst">AWS installation</span></a></p></li>
@@ -139,14 +141,14 @@
 </ul>
 </section>
 <section id="remote-user-setup-mqtt-explorer">
-<h3>Remote User Setup (MQTT Explorer)<a class="headerlink" href="#remote-user-setup-mqtt-explorer" title="Permalink to this headline"></a></h3>
+<h3>Remote User Setup (MQTT Explorer)<a class="headerlink" href="#remote-user-setup-mqtt-explorer" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>A remote user is used to check the state of device. In this context MQTT explorer is used as a remote user.</p></li>
 <li><p><a class="reference internal" href="MQTT_EXPLORER_SETUP.html"><span class="std std-doc">MQTT explorer setup and configuration</span></a></p></li>
 </ul>
 </section>
 <section id="dut-setup">
-<h3>DUT Setup<a class="headerlink" href="#dut-setup" title="Permalink to this headline"></a></h3>
+<h3>DUT Setup<a class="headerlink" href="#dut-setup" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Software and Hardware prerequisites for working with Silicon Labs Matter.</p></li>
 </ul>
@@ -161,7 +163,7 @@
 </section>
 </section>
 <section id="end-to-end-test-of-dic-light-application">
-<h2>End-to-End Test of DIC Light Application<a class="headerlink" href="#end-to-end-test-of-dic-light-application" title="Permalink to this headline"></a></h2>
+<h2>End-to-End Test of DIC Light Application<a class="headerlink" href="#end-to-end-test-of-dic-light-application" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>User Setup (MQTT Explorer)</p>
 <ul>

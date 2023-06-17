@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Using Simplicity Studio’s Pintool and Project Configuration with Matter &mdash; Silicon Labs Matter 2.1.0-1.1 documentation</title>
+  <title>Using Simplicity Studio’s Pintool and Project Configuration with Matter &mdash; Matter 2.1.0-1.1 2.1.0-1.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -13,10 +13,11 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -33,7 +34,8 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Silicon Labs Matter
+            Matter 2.1.0-1.1
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -84,7 +86,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: dark blue" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Silicon Labs Matter</a>
+          <a href="../index.html">Matter 2.1.0-1.1</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -103,13 +105,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="using-simplicity-studio-s-pintool-and-project-configuration-with-matter">
-<h1>Using Simplicity Studio’s Pintool and Project Configuration with Matter<a class="headerlink" href="#using-simplicity-studio-s-pintool-and-project-configuration-with-matter" title="Permalink to this headline"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="using-simplicity-studios-pintool-and-project-configuration-with-matter">
+<h1>Using Simplicity Studio’s Pintool and Project Configuration with Matter<a class="headerlink" href="#using-simplicity-studios-pintool-and-project-configuration-with-matter" title="Permalink to this heading"></a></h1>
 <p>At some point during product development you may need to move your project over to your custom hardware. In this case,
 you will likely need to change the pinout and hardware configuration in the example project to reflect your own custom project. You can do this
 with Simplicity Studio’s Pintool starting from a blank C++ project.</p>
 <section id="locating-the-board-support-files-in-the-matter-repo">
-<h2>1. Locating the board support files in the Matter repo<a class="headerlink" href="#locating-the-board-support-files-in-the-matter-repo" title="Permalink to this headline"></a></h2>
+<h2>1. Locating the board support files in the Matter repo<a class="headerlink" href="#locating-the-board-support-files-in-the-matter-repo" title="Permalink to this heading"></a></h2>
 <p>The pin and peripheral configuration for your example application is stored
 within the Silicon Labs Matter support directory. For all the examples used in
 the matter repository, the peripheral and pin configurations are stored at</p>
@@ -123,7 +125,7 @@ within the Matter repository.</p></li>
 </ol>
 </section>
 <section id="create-a-sample-empty-c-project-in-simplicity-studio">
-<h2>2. Create a sample “Empty C++ project” in Simplicity Studio<a class="headerlink" href="#create-a-sample-empty-c-project-in-simplicity-studio" title="Permalink to this headline"></a></h2>
+<h2>2. Create a sample “Empty C++ project” in Simplicity Studio<a class="headerlink" href="#create-a-sample-empty-c-project-in-simplicity-studio" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>In Simplicity Studio click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">a</span> <span class="pre">New</span> <span class="pre">Project</span></code>
 to start the project wizard. Choose your development board type, and the
@@ -133,21 +135,21 @@ latest Gecko SDK you’ll be working from. Click <strong>Next</strong>.</p></li>
 </ol>
 </section>
 <section id="customize-your-components-and-pin-configuration-in-simplicity-studio">
-<h2>3. Customize your Components and Pin configuration in Simplicity Studio<a class="headerlink" href="#customize-your-components-and-pin-configuration-in-simplicity-studio" title="Permalink to this headline"></a></h2>
+<h2>3. Customize your Components and Pin configuration in Simplicity Studio<a class="headerlink" href="#customize-your-components-and-pin-configuration-in-simplicity-studio" title="Permalink to this heading"></a></h2>
 <p>Once you have your project created you will see your project and project
 configuration in Simplicity Studio’s Project Configurator. Full documentation on
 the use of the Project Configurator and Pin Tool are located here:
 <a class="reference external" href="https://docs.silabs.com/simplicity-studio-5-users-guide/latest/ss-5-users-guide-developing-with-project-configurator/">Simplicity Studio 5 User’s Guide</a></p>
 </section>
 <section id="generate-your-component-and-pin-configuration-in-simplicity-studio">
-<h2>4. Generate your Component and Pin configuration in Simplicity Studio<a class="headerlink" href="#generate-your-component-and-pin-configuration-in-simplicity-studio" title="Permalink to this headline"></a></h2>
+<h2>4. Generate your Component and Pin configuration in Simplicity Studio<a class="headerlink" href="#generate-your-component-and-pin-configuration-in-simplicity-studio" title="Permalink to this heading"></a></h2>
 <p>When you save your project configuration, Simplicity Studio
 saves all the generated header files out into a <code class="docutils literal notranslate"><span class="pre">config</span></code> directory in your
 project. These are the files that make up the software component and pin tool
 configuration for your device.</p>
 </section>
 <section id="move-your-pin-configuration-over-to-your-matter-project">
-<h2>5. Move your pin configuration over to your Matter project<a class="headerlink" href="#move-your-pin-configuration-over-to-your-matter-project" title="Permalink to this headline"></a></h2>
+<h2>5. Move your pin configuration over to your Matter project<a class="headerlink" href="#move-your-pin-configuration-over-to-your-matter-project" title="Permalink to this heading"></a></h2>
 <p>All of the header files in your <code class="docutils literal notranslate"><span class="pre">config</span></code> project directory constitute the
 hardware configuration for your device. Copy these files
 into your Matter project so that they can be used in place of the ones provided

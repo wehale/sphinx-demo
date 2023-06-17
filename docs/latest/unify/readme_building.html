@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Building the Unify Matter Bridge &mdash; Silicon Labs Matter 2.1.0-1.1 documentation</title>
+  <title>Building the Unify Matter Bridge &mdash; Matter 2.1.0-1.1 2.1.0-1.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -13,15 +13,16 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Building the Unify Matter Bridge for Debian Bullseye (Or similar Ubunutu) x86_64" href="readme_building_x86_64.html" />
-    <link rel="prev" title="Unify Matter Bridge Overview" href="readme_overview.html" /> 
+    <link rel="prev" title="Unify Matter Bridge User’s Guide" href="readme_user.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -33,7 +34,8 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Silicon Labs Matter
+            Matter 2.1.0-1.1
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -52,8 +54,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../nav_4_thread.html">Matter Over Thread</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../nav_5_wifi.html">Matter Over Wi-Fi</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Unify Matter Bridge</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="readme_user.html">Unify Matter Bridge User’s Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="readme_overview.html">Unify Matter Bridge Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme_user.html">Unify Matter Bridge User’s Guide</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Building the Unify Matter Bridge</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#check-out-submodules">Check Out Submodules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#clone-and-stage-the-unify-sdk-repository">Clone and Stage the Unify SDK Repository</a></li>
@@ -81,7 +83,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: dark blue" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Silicon Labs Matter</a>
+          <a href="../index.html">Matter 2.1.0-1.1</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -100,8 +102,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="building-the-unify-matter-bridge">
-<h1>Building the Unify Matter Bridge<a class="headerlink" href="#building-the-unify-matter-bridge" title="Permalink to this headline"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="building-the-unify-matter-bridge">
+<h1>Building the Unify Matter Bridge<a class="headerlink" href="#building-the-unify-matter-bridge" title="Permalink to this heading"></a></h1>
 <p>This build guide cross-compiles for arm64 architecture to be run on Unify’s reference platform - a Raspberry Pi 4 (RPi4) with the 64-bit version of Debian Bullseye.</p>
 <blockquote>
 <div><p><strong>Note:</strong>
@@ -120,7 +122,7 @@ In the following subsections the commands should either be run on your local dev
 </ul>
 </div></blockquote>
 <section id="check-out-submodules">
-<h2>Check Out Submodules<a class="headerlink" href="#check-out-submodules" title="Permalink to this headline"></a></h2>
+<h2>Check Out Submodules<a class="headerlink" href="#check-out-submodules" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p>🔴 Assuming you have cloned the matter repo in <code class="docutils literal notranslate"><span class="pre">~/matter</span></code></p>
 </div></blockquote>
@@ -130,7 +132,7 @@ In the following subsections the commands should either be run on your local dev
 </div>
 </section>
 <section id="clone-and-stage-the-unify-sdk-repository">
-<h2>Clone and Stage the Unify SDK Repository<a class="headerlink" href="#clone-and-stage-the-unify-sdk-repository" title="Permalink to this headline"></a></h2>
+<h2>Clone and Stage the Unify SDK Repository<a class="headerlink" href="#clone-and-stage-the-unify-sdk-repository" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p>🔴 Assuming you have cloned the matter repo in <code class="docutils literal notranslate"><span class="pre">~/matter</span></code></p>
 </div></blockquote>
@@ -139,13 +141,13 @@ In the following subsections the commands should either be run on your local dev
 </div>
 </section>
 <section id="build-the-docker-container-arm64-compilation">
-<h2>Build the Docker Container (arm64 compilation)<a class="headerlink" href="#build-the-docker-container-arm64-compilation" title="Permalink to this headline"></a></h2>
+<h2>Build the Docker Container (arm64 compilation)<a class="headerlink" href="#build-the-docker-container-arm64-compilation" title="Permalink to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dev-machine:~/matter$<span class="w"> </span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>unify-matter<span class="w"> </span>silabs_examples/unify-matter-bridge/docker/
 </pre></div>
 </div>
 </section>
 <section id="run-the-docker-container-arm64-compilation">
-<h2>Run the docker container  (arm64 compilation)<a class="headerlink" href="#run-the-docker-container-arm64-compilation" title="Permalink to this headline"></a></h2>
+<h2>Run the docker container  (arm64 compilation)<a class="headerlink" href="#run-the-docker-container-arm64-compilation" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p>🔴
 Make sure the directory structure is like follows where Unify repo <code class="docutils literal notranslate"><span class="pre">uic-matter/</span></code> and matter repo <code class="docutils literal notranslate"><span class="pre">matter/</span></code> are at same directory level</p>
@@ -162,7 +164,7 @@ dev-machine:~/matter$<span class="w"> </span>docker<span class="w"> </span>run<s
 </div>
 </section>
 <section id="build-libunify">
-<h2>Build libunify<a class="headerlink" href="#build-libunify" title="Permalink to this headline"></a></h2>
+<h2>Build libunify<a class="headerlink" href="#build-libunify" title="Permalink to this heading"></a></h2>
 <p>The Unify Matter Bridge depends on the libunify library from the Unify project.</p>
 <p>This library must first be compiled for the target system, by changing directory to the <code class="docutils literal notranslate"><span class="pre">/uic</span></code> directory and running the following:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@docker:/uic$<span class="w"> </span>cmake<span class="w"> </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span><span class="nv">$PWD</span>/stage<span class="w"> </span>-GNinja<span class="w"> </span>-DCMAKE_TOOLCHAIN_FILE<span class="o">=</span>../cmake/arm64_debian.cmake<span class="w">  </span>-B<span class="w"> </span>build_unify_arm64/<span class="w"> </span>-S<span class="w"> </span>components<span class="w"> </span>-DBUILD_TESTING<span class="o">=</span>OFF
@@ -182,7 +184,7 @@ root@docker:/uic$<span class="w"> </span><span class="nb">export</span><span cla
 </div>
 </section>
 <section id="run-activate-in-matter">
-<h2>Run activate in matter<a class="headerlink" href="#run-activate-in-matter" title="Permalink to this headline"></a></h2>
+<h2>Run activate in matter<a class="headerlink" href="#run-activate-in-matter" title="Permalink to this heading"></a></h2>
 <p>Once you have all the necessary submodules, source the Matter environment with the following command. This loads a number of build tools and makes sure the correct toolchains and compilers are used for compiling the Unify Matter Bridge.</p>
 <p>Make sure you are in <code class="docutils literal notranslate"><span class="pre">matter/</span></code> directory</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@docker:/matter$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>./scripts/activate.sh
@@ -190,7 +192,7 @@ root@docker:/uic$<span class="w"> </span><span class="nb">export</span><span cla
 </div>
 </section>
 <section id="compile-the-unify-bridge">
-<h2>Compile the Unify Bridge<a class="headerlink" href="#compile-the-unify-bridge" title="Permalink to this headline"></a></h2>
+<h2>Compile the Unify Bridge<a class="headerlink" href="#compile-the-unify-bridge" title="Permalink to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@docker:/matter$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>silabs_examples/unify-matter-bridge/linux/
 
 root@docker:/matter/silabs_examples/unify-matter-bridge/linux$<span class="w"> </span>gn<span class="w"> </span>gen<span class="w"> </span>out/arm64<span class="w"> </span>--args<span class="o">=</span><span class="s1">&#39;target_cpu=&quot;arm64&quot;&#39;</span>
@@ -203,7 +205,7 @@ root@docker:/matter/silabs_examples/unify-matter-bridge/linux$<span class="w"> <
 </div></blockquote>
 </section>
 <section id="compile-the-chip-tool">
-<h2>Compile the chip-tool<a class="headerlink" href="#compile-the-chip-tool" title="Permalink to this headline"></a></h2>
+<h2>Compile the chip-tool<a class="headerlink" href="#compile-the-chip-tool" title="Permalink to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">chip-tool</span></code> is a CLI tool that can be used to commission the bridge and to control end devices.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@docker:/matter$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>examples/chip-tool
 
@@ -217,21 +219,21 @@ root@docker:/matter/examples/chip-tool$<span class="w"> </span>ninja<span class=
 </div></blockquote>
 </section>
 <section id="unit-testing">
-<h2>Unit Testing<a class="headerlink" href="#unit-testing" title="Permalink to this headline"></a></h2>
+<h2>Unit Testing<a class="headerlink" href="#unit-testing" title="Permalink to this heading"></a></h2>
 <p>Unit testing is always a good idea for quality software. Documentation on writing unit tests for the Matter Unify Bridge is in the
 <a class="reference internal" href="#linux/src/tests/README.md"><span class="xref myst">README.md</span></a> in the <code class="docutils literal notranslate"><span class="pre">linux/src/tests</span></code> folder.</p>
 </section>
 <section id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline"></a></h2>
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>If you do not source the <code class="docutils literal notranslate"><span class="pre">matter/scripts/activate.sh</span></code> as described above in <a class="reference internal" href="#set-up-the-matter-build-environment"><span class="xref myst">Set Up the Matter Build Environment</span></a>, <code class="docutils literal notranslate"><span class="pre">gn</span></code> and other common
 build tools will not be found.</p></li>
-<li><p>If you do not export the <code class="docutils literal notranslate"><span class="pre">pkgconfig</span></code> for the <code class="docutils literal notranslate"><span class="pre">aarch64-linux-gnu</span></code> toolchain as described above in <a class="reference internal" href="#build-libunify"><span class="xref myst">Build libunify</span></a>
+<li><p>If you do not export the <code class="docutils literal notranslate"><span class="pre">pkgconfig</span></code> for the <code class="docutils literal notranslate"><span class="pre">aarch64-linux-gnu</span></code> toolchain as described above in <a class="reference internal" href="#build-libunify">Build libunify</a>
 you will get errors such as <code class="docutils literal notranslate"><span class="pre">G_STATIC_ASSERT(sizeof</span> <span class="pre">(unsigned</span> <span class="pre">long</span> <span class="pre">long)</span> <span class="pre">==</span> <span class="pre">sizeof</span> <span class="pre">(guint64));</span></code></p></li>
 <li><p>If you are compiling unit tests, do not try to compile the Unify Matter Bridge at
 the same time. This will not work as when compiling unit tests you are also
 compiling unit tests for all other sub-components.</p></li>
-<li><p>If you encounter errors linking to <code class="docutils literal notranslate"><span class="pre">libunify</span></code>, try redoing the <a class="reference internal" href="#build-libunify"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">libunify</span></code> compile steps</span></a>.</p></li>
+<li><p>If you encounter errors linking to <code class="docutils literal notranslate"><span class="pre">libunify</span></code>, try redoing the <a class="reference internal" href="#build-libunify"><code class="docutils literal notranslate"><span class="pre">libunify</span></code> compile steps</a>.</p></li>
 <li><p>Encountering problems with the submodules can be due to trying to check out
 the submodules inside the docker container.</p></li>
 <li><p>If the Unify Matter Bridge gets stuck while booting. Try to pass <code class="docutils literal notranslate"><span class="pre">--args=&quot;chip_config_network_layer_ble=false&quot;</span></code> to <code class="docutils literal notranslate"><span class="pre">gn</span> <span class="pre">gen</span></code> command while building</p></li>
@@ -243,7 +245,7 @@ the submodules inside the docker container.</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="readme_overview.html" class="btn btn-neutral float-left" title="Unify Matter Bridge Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="readme_user.html" class="btn btn-neutral float-left" title="Unify Matter Bridge User’s Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="readme_building_x86_64.html" class="btn btn-neutral float-right" title="Building the Unify Matter Bridge for Debian Bullseye (Or similar Ubunutu) x86_64" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

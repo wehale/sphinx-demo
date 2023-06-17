@@ -18,6 +18,7 @@ application by following the [Build Guide](./readme_building.md) and have
 transferred the `unify-matter-bridge` to your Raspberry Pi 4 (RPi4) running
 the 64-bit version of Raspberry Pi OS Bullseye.
 
+
 ## Running the Matter Bridge
 
 At start-up, the Matter Bridge needs to connect to the Matter Fabric as well as

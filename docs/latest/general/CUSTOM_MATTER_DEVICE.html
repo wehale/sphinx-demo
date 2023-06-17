@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Custom Matter Device Development &mdash; Silicon Labs Matter 2.1.0-1.1 documentation</title>
+  <title>Custom Matter Device Development &mdash; Matter 2.1.0-1.1 2.1.0-1.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -13,10 +13,11 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -33,7 +34,8 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Silicon Labs Matter
+            Matter 2.1.0-1.1
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -88,7 +90,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: dark blue" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Silicon Labs Matter</a>
+          <a href="../index.html">Matter 2.1.0-1.1</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -107,16 +109,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="custom-matter-device-development">
-<h1>Custom Matter Device Development<a class="headerlink" href="#custom-matter-device-development" title="Permalink to this headline"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="custom-matter-device-development">
+<h1>Custom Matter Device Development<a class="headerlink" href="#custom-matter-device-development" title="Permalink to this heading"></a></h1>
 <p>Build a customizable lighting app using the Matter protocol.</p>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>This guide covers the basics of building a customizable lighting application
 using Matter.</p>
 </section>
 <section id="using-matter-with-clusters">
-<h2>Using Matter with Clusters<a class="headerlink" href="#using-matter-with-clusters" title="Permalink to this headline"></a></h2>
+<h2>Using Matter with Clusters<a class="headerlink" href="#using-matter-with-clusters" title="Permalink to this heading"></a></h2>
 <p>In Matter, commands can be issued by using a cluster. A cluster is a set of
 attributes and commands which are grouped together under a relevant theme.</p>
 <p>Attributes store values (think of them as variables). Commands are used to
@@ -128,7 +130,7 @@ command or it can be set to “0” by sending an “Off” command.</p>
 Note that you can also create your own custom cluster.</p>
 </section>
 <section id="zap-configuration">
-<h2>ZAP Configuration<a class="headerlink" href="#zap-configuration" title="Permalink to this headline"></a></h2>
+<h2>ZAP Configuration<a class="headerlink" href="#zap-configuration" title="Permalink to this heading"></a></h2>
 <p>From the matter repository, run the following command in a terminal to launch
 the ZAP user interface (UI). This will open up the ZAP configuration for the EFR32 lighting
 application example.</p>
@@ -165,7 +167,7 @@ generate ZAP code.</p>
 </div>
 </section>
 <section id="receiving-matter-commands">
-<h2>Receiving Matter Commands<a class="headerlink" href="#receiving-matter-commands" title="Permalink to this headline"></a></h2>
+<h2>Receiving Matter Commands<a class="headerlink" href="#receiving-matter-commands" title="Permalink to this heading"></a></h2>
 <p>All Matter commands reach the application through the intermediate function
 MatterPostAttributeChangeCallback(). When a request is made by a Matter client,
 the information contained in the request is forwarded to a Matter application
@@ -174,7 +176,7 @@ to call the proper application functions based on the most recent command
 received.</p>
 </section>
 <section id="adding-a-cluster-to-a-zap-configuration">
-<h2>Adding a Cluster to a ZAP Configuration<a class="headerlink" href="#adding-a-cluster-to-a-zap-configuration" title="Permalink to this headline"></a></h2>
+<h2>Adding a Cluster to a ZAP Configuration<a class="headerlink" href="#adding-a-cluster-to-a-zap-configuration" title="Permalink to this heading"></a></h2>
 <p>In the ZAP UI, navigate to the Level Control cluster. Make sure this cluster is
 enabled as a server in the drop-down menu in the “Enable” column. Then click on
 the blue settings wheel in the “Configure” column. This cluster can be used to
@@ -182,17 +184,17 @@ gather power source configuration settings from a Matter device. It contains a
 few required attributes, and a number of optional attributes.</p>
 </section>
 <section id="adding-a-new-attribute">
-<h2>Adding a New Attribute<a class="headerlink" href="#adding-a-new-attribute" title="Permalink to this headline"></a></h2>
+<h2>Adding a New Attribute<a class="headerlink" href="#adding-a-new-attribute" title="Permalink to this heading"></a></h2>
 <p>In the Level Control cluster configurations, ensure the CurrentLevel attribute
 is set to enabled. Set the default value of this attribute as 1.</p>
 </section>
 <section id="adding-a-new-command">
-<h2>Adding a New Command<a class="headerlink" href="#adding-a-new-command" title="Permalink to this headline"></a></h2>
+<h2>Adding a New Command<a class="headerlink" href="#adding-a-new-command" title="Permalink to this heading"></a></h2>
 <p>Navigate to the commands tab in zap and enable the MoveToLevel command. Now save
-the current zap configuration, and run the generate.py script above.</p>
+the current zap configuration, and run the <a class="reference external" href="http://generate.py">generate.py</a> script above.</p>
 </section>
 <section id="react-to-level-control-cluster-commands-in-zclcallbacks">
-<h2>React to Level Control Cluster Commands in ZclCallbacks<a class="headerlink" href="#react-to-level-control-cluster-commands-in-zclcallbacks" title="Permalink to this headline"></a></h2>
+<h2>React to Level Control Cluster Commands in ZclCallbacks<a class="headerlink" href="#react-to-level-control-cluster-commands-in-zclcallbacks" title="Permalink to this heading"></a></h2>
 <p>In the MatterPostAttributeCallback function in ZclCallbacks, add the following
 line of code or a similar line. This will give the application the ability to react to
 MoveToLevel commands. You can define platform-specific behavior for a
@@ -213,7 +215,7 @@ MoveToLevel action.</p>
 </div>
 </section>
 <section id="send-a-movetolevel-command-and-read-the-currentlevel-attribute">
-<h2>Send a MoveToLevel Command and Read the CurrentLevel Attribute<a class="headerlink" href="#send-a-movetolevel-command-and-read-the-currentlevel-attribute" title="Permalink to this headline"></a></h2>
+<h2>Send a MoveToLevel Command and Read the CurrentLevel Attribute<a class="headerlink" href="#send-a-movetolevel-command-and-read-the-currentlevel-attribute" title="Permalink to this heading"></a></h2>
 <p>Rebuild the application and load the new executable on your EFR32 device. Send
 the following mattertool commands and verify that the current-level default
 attribute was updated as was configured. Replace {desired_level} with 10, and
