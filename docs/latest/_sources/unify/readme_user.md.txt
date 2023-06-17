@@ -2,7 +2,7 @@
 
 The Unify Matter Bridge is a Unify IoT Service that enables interaction with
 Unify devices from a Matter fabric. For a more thorough description see the
-[Unify Matter Bridge Overview](../../silabs_examples/unify-matter-bridge/readme_overview.md).
+[Unify Matter Bridge Overview](./readme_overview.md).
 
 As a prerequisite for the Matter Bridge to work, at least one Unify protocol
 controller should be set up and running. This guide assumes that you have set up
@@ -187,7 +187,7 @@ chip-tool onoff toggle 1 2
 ```
 
 For more information on how to use the `chip-tool` see the
-[chip-tool manual](../../docs/guides/chip_tool_guide.md) on the Matter website.
+[chip-tool manual](https://github.com/SiliconLabs/matter/blob/latest/docs/guides/chip_tool_guide.md) on the Matter website.
 
 ## Toggle a Group of OnOff Devices
 
@@ -307,7 +307,7 @@ Note: Endpoint 0(Root) and Endpoint 1(Aggregator) are Bridge itself. They are
 not shown in the epmap. But these endpoints support some clusters as well. For
 e.g. Identify. Where you might want to run chip-tool tests on those endpoints
 
-For further information on chip-tool tests, refer to the [test suite's README](../../src/app/tests/suites/README.md)
+For further information on chip-tool tests, refer to the [test suite's README](https://github.com/SiliconLabs/matter/blob/latest/src/app/tests/suites/README.md)
 
 ### Troubleshooting
 
@@ -351,4 +351,4 @@ will be reflected in Unify Matter Bridge.
 The above MQTT debug messages can also be traced in Unify logs.
 
 - Alternatively to disable a particular command or disable reading particular
-attributes from the test refer to PICS Usage from [README](../../src/app/tests/suites/README.md)
+attributes from the test refer to PICS Usage from [README](https://github.com/SiliconLabs/matter/blob/latest/src/app/tests/suites/README.md)

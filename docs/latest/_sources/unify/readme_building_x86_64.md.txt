@@ -38,7 +38,7 @@ dev-machine:~/matter$ docker build -t unify-matter-host --build-arg ARCH=amd64 s
 > 🔴
 > Make sure the directory structure is like follows where Unify repo `uic-matter/` and matter repo `matter/` are at same directory level
 > 
-> ```
+> ```shell
 > .
 > ├── matter
 > └── uic-matter

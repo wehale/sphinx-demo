@@ -39,7 +39,7 @@ dev-machine:~/matter$ docker build -t unify-matter silabs_examples/unify-matter-
 > 🔴
 > Make sure the directory structure is like follows where Unify repo `uic-matter/` and matter repo `matter/` are at same directory level
 > 
-> ```
+> ```shell
 > .
 > ├── matter
 > └── uic-matter
@@ -116,11 +116,11 @@ root@docker:/matter/examples/chip-tool$ ninja -C out/arm64
 ## Unit Testing
 
 Unit testing is always a good idea for quality software. Documentation on writing unit tests for the Matter Unify Bridge is in the
-[README.md](linux/src/tests/README.md) in the `linux/src/tests` folder.
+[README.md](https://github.com/SiliconLabs/matter/blob/latest/silabs_examples/unify/linux/src/tests/README.md) in the `linux/src/tests` folder.
 
 ## Troubleshooting
 
-1. If you do not source the `matter/scripts/activate.sh` as described above in [Set Up the Matter Build Environment](#set-up-the-matter-build-environment), `gn` and other common
+1. If you do not source the `matter/scripts/activate.sh` as described above in [Set Up the Matter Build Environment](../general/SOFTWARE_REQUIREMENTS.md), `gn` and other common
    build tools will not be found.
 2. If you do not export the `pkgconfig` for the `aarch64-linux-gnu` toolchain as described above in [Build libunify](#build-libunify)
    you will get errors such as `G_STATIC_ASSERT(sizeof (unsigned long long) == sizeof (guint64));`

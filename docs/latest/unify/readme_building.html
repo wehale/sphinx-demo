@@ -151,9 +151,9 @@ In the following subsections the commands should either be run on your local dev
 <blockquote>
 <div><p>🔴
 Make sure the directory structure is like follows where Unify repo <code class="docutils literal notranslate"><span class="pre">uic-matter/</span></code> and matter repo <code class="docutils literal notranslate"><span class="pre">matter/</span></code> are at same directory level</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span>.
-├── matter
-└── uic-matter
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>.
+├──<span class="w"> </span>matter
+└──<span class="w"> </span>uic-matter
 </pre></div>
 </div>
 </div></blockquote>
@@ -221,12 +221,12 @@ root@docker:/matter/examples/chip-tool$<span class="w"> </span>ninja<span class=
 <section id="unit-testing">
 <h2>Unit Testing<a class="headerlink" href="#unit-testing" title="Permalink to this heading"></a></h2>
 <p>Unit testing is always a good idea for quality software. Documentation on writing unit tests for the Matter Unify Bridge is in the
-<a class="reference internal" href="#linux/src/tests/README.md"><span class="xref myst">README.md</span></a> in the <code class="docutils literal notranslate"><span class="pre">linux/src/tests</span></code> folder.</p>
+<a class="reference external" href="https://github.com/SiliconLabs/matter/blob/latest/silabs_examples/unify/linux/src/tests/README.md">README.md</a> in the <code class="docutils literal notranslate"><span class="pre">linux/src/tests</span></code> folder.</p>
 </section>
 <section id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>If you do not source the <code class="docutils literal notranslate"><span class="pre">matter/scripts/activate.sh</span></code> as described above in <a class="reference internal" href="#set-up-the-matter-build-environment"><span class="xref myst">Set Up the Matter Build Environment</span></a>, <code class="docutils literal notranslate"><span class="pre">gn</span></code> and other common
+<li><p>If you do not source the <code class="docutils literal notranslate"><span class="pre">matter/scripts/activate.sh</span></code> as described above in <a class="reference internal" href="../general/SOFTWARE_REQUIREMENTS.html"><span class="std std-doc">Set Up the Matter Build Environment</span></a>, <code class="docutils literal notranslate"><span class="pre">gn</span></code> and other common
 build tools will not be found.</p></li>
 <li><p>If you do not export the <code class="docutils literal notranslate"><span class="pre">pkgconfig</span></code> for the <code class="docutils literal notranslate"><span class="pre">aarch64-linux-gnu</span></code> toolchain as described above in <a class="reference internal" href="#build-libunify">Build libunify</a>
 you will get errors such as <code class="docutils literal notranslate"><span class="pre">G_STATIC_ASSERT(sizeof</span> <span class="pre">(unsigned</span> <span class="pre">long</span> <span class="pre">long)</span> <span class="pre">==</span> <span class="pre">sizeof</span> <span class="pre">(guint64));</span></code></p></li>
